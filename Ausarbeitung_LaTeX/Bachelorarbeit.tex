@@ -1,0 +1,198 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------ LaTeX-Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%---- Header (mit Formateinstellugen) laden, Inputencoding prüfen ------
+
+\input{header}
+
+%\usepackage[applemac]{inputenc} % Inputencoding fï¿½r Mac
+%\usepackage[latin1]{inputenc} % Inputencoding fï¿½r PC/Win
+\usepackage[utf8]{inputenc} % Inputencoding, universell
+%\usepackage[utf8x]{inputenc} % Inputencoding, universell
+
+
+%------------------------ Titelblatt-Layout laden ----------------------------------
+
+\input{titelblatt}
+
+%---------------------------- Titeldefinitionen --------------------------------------
+
+\newcommand{\vorname}{Sebastian}
+\newcommand{\nachname}{Bohn}
+\newcommand{\matrikelnummer}{2036605}
+
+\newcommand{\titel}{Analyse und Evaluierung von plattformübergreifenden Spiel-Engines und Frameworks,anhand der Implementierung einer mobilen Beispielapplikation}
+
+\newcommand{\erstpruef}{Prof. Dr. Edmund Weitz}
+\newcommand{\zweitpruef}{Prof. Dr. Andreas Plaß}
+
+\date{vorläufige Fassung vom \today}   % Vorab-Version 
+%\date{\sffamily Hamburg, DD. MM. YYYY}  % Abgabedatum!
+
+%----------------------------- ANFANG --------------------------------------
+
+\begin{document}
+\selectlanguage{ngerman}
+% Titelseite erzeugen
+\maketitle
+% Inhaltsverzeichnis erzeugen          
+\tableofcontents
+% Seitenumbruch
+\clearpage
+
+%----------------------------INHALT---------------------------------------
+
+%---------------------------ABSTRACT------------------------------------
+
+\thispagestyle{empty}
+\selectlanguage{english}
+\section*{\centering\abstractname}
+
+%TODO: English abstract
+
+\selectlanguage{ngerman}
+\section*{\centering\abstractname}
+
+%TODO: Deutsches abstract
+
+%----------------------------TEXT-----------------------------------------------
+
+%TODO: Kapitel 1
+\chapter{Einleitung}
+
+\section{Motivation}
+\section{Gliederung}
+
+%TODO: Kapitel 2
+\chapter{Mobile Systeme}
+
+\section{Aktuelle Systeme auf dem mobilen Markt}
+\subsection {iOS}
+\subsection{Android}
+\subsection{Windows Phone}
+\subsection{Weitere Systeme}
+
+\section{Bedarfsanalyse}
+\subsection{Markt- und Useranteile der jeweiligen Systeme}
+\subsection{Verfügbare Applikationen / Games der Stores}
+
+%TODO: Kapitel 3
+\chapter{Native Softwareentwicklung in den jeweiligen Systemen}
+\section{Hardwarevorraussetzungen}
+\section{Programmiersprachen}
+\section{Entwicklungsumgebungen}
+
+%TODO: Kapitel 4
+\chapter{Cross-Plattform Entwicklung}
+\section{Sinn und Gedanke von Cross-Plattform Entwicklung}
+\section{Funktionsweise von Cross-Plattform Entwicklung}
+\subsection{Technik}
+\subsection{Geteilter Content}
+\subsection{Übersetzung in die jeweiligen System}
+
+%TODO: Kapitel 5
+\chapter{Cross-Plattform Frameworks}
+\section{Tools und Anbieter zur Entwicklung}
+\section{Verweis auf Bachelorarbeit: „Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App“}
+\section{Gamespezifische Frameworks und Engines}
+\subsection{Monogame}
+\subsection{Cocos2D}
+\subsection{Libgdx}
+\subsection{Unity}
+\subsection{Unreal Engine}
+\subsection{Weitere Frameworks}
+\section{Entwicklungsumgebungen}
+\subsection{Unterstützte IDEs}
+\subsection{Systembedingte Einschränkungen}
+
+%TODO: Kapitel 6
+\chapter{Gegenüberstellung der Frameworks}
+%Features und Einschränkungen
+\section{Zielplattformen}
+\section{Skalierbarkeit der Menge der Plattformen} % ???
+\section{Programmiersprachen}
+\section{Unterstützung von 2D und 3D}
+\section{Zugriff auf Hardware}%Accelerometer etc
+\section{Free- und Pro- Versionen}
+\section{Einfluss auf Einstellungen}
+\section{Zusätzlich benötigte Software}
+\section{Aktualität - Versionen - Community}
+\section{Zukunftsaussichten}
+
+%OPTIONAL!!!
+%TODO: Kapitel 7
+\chapter{Analyse der Marktanteile}
+\section{Menge an Firmen und Entwicklern}
+\section{Menge an Games}
+
+%OPTIONAL!!!
+%TODO: Kapitel 8
+\chapter{Stores für mobile Spiele}
+\section{Allgemeine Bedingungen für Entwickler}
+\section{Maximale App-Größe}
+\section{Anforderungen an den Quellcode}
+\section{Kosten und Abgaben}
+
+%TODO: Kapitel 9
+\chapter{Kosten-Nutzen Vergleich}
+%Vergleichstabelle zu den Variationen der Projektanforderungen im Zusammenhang mit den Möglichkeiten und Kosten der Frameworks
+
+%TODO: Kapitel 10
+\chapter{Grundgerüst und Aufbau eines Cross-Plattform Projekts}
+\section{Geteilter Content}
+\section{Plattformabhängiger Content}
+\section{Grundaufbau bei Engines}
+\section{Grundaufbau bei Frameworks}
+
+%OPTIONAL!!!
+%TODO: Kapitel 11
+\chapter{Game-typische Design Patterns und Architekturen}
+\section{Architekturen}
+\section{Patterns}
+\section{Verweis auf Bachelorarbeit: „Use of Design Patterns for mobile game Development“}
+
+%OPTIONAL!!!
+%TODO: Kapitel 12
+\chapter{Nutzen von Architekturen}
+\section{Pro}
+\subsection{Skalierbarkeit}
+\subsection{Lesbarkeit}
+\subsection{Wiederverwertbarkeit}
+\section{Contra}
+\subsection{KISS - Keep it simple stupid}
+
+%TODO: Kapitel 13
+\chapter{Konzeption einer Applikation}
+\section{Ideen}
+\section{Anforderungen}
+\section{User Stories}
+
+%TODO: Kapitel 14
+\chapter{Implementierung der Applikation}
+\section{Verwendete Frameworks und Engines}
+\section{Verwendete APIs und SDKs}
+\section{Assets und deren Verwendung}
+
+\chapter{Analyse messbarer Metriken}
+%Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen)
+
+\chapter{Vergleich der Messprotokolle}
+
+\chapter{Fazit}
+
+
+
+%--------------------- VERZEICHNISSE -------------------------------------
+
+\listoffigures % Abbildungsverzeichnis erzeugen
+%\listoftables % Tabellenverzeichnis erzeugen
+
+%------------------------------ LITERATURVERZEICHNIS----------------------
+\begin{thebibliography}{}
+\end{thebibliography}
+%----------------------------- EIGENSTÄNDIGKEITSERKLÄRUNG-----------------
+\clearpage\thispagestyle{empty}
+\eigen  % im header definiert
+%----------------------------- ENDE --------------------------------------
+\end{document}
