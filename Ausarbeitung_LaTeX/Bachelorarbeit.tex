@@ -65,7 +65,7 @@
 \section{Motivation}
 \section{Gliederung}
 
-%TODO: Kapitel 2
+%Kapitel 2
 \chapter{Mobile Systeme}
 
 \section{Marktanalyse zur Gewichtung der mobilen Systeme und der Applikationen}
@@ -84,7 +84,7 @@ Eine Statistik über die Marktanteile der mobilen Betriebssysteme bei Smartphone
 
 Die Grafik verdeutlicht, dass aktuell Geräte mit Android Systemen den Markt eindeutig dominieren. Darauf folgen Geräte mit iOS und Windows Phone. Laut Prognose wird sich auch in den nächsten Jahren an dieser Hierarchie nichts ändern. Schlussfolgernd sind diese drei Systeme die relevantesten auf dem globalen Markt.
 
-In einer weiteren Grafik gibt Aufschluss über die Verteilung der Systeme nach ausgewählten Ländern. Die Daten beziehen sich auf die Verkäufe von August bis Oktober 2015, welche von Kantar im Dezember 2015 veröffentlicht wurden. Bei der Internationalisierung von Applikationen ist es von Vorteil zu wissen, wie stark die Gewichtung der Systeme in den einzelnen Ländern ist. (Abb. \ref{graph_mobile_systems_laender})
+Abbildung \ref{graph_mobile_systems_laender} gibt Aufschluss über die Verteilung der Systeme nach ausgewählten Ländern. Die Daten beziehen sich auf die Verkäufe von August bis Oktober 2015, welche von Kantar im Dezember 2015 veröffentlicht wurden. Bei der Internationalisierung von Applikationen ist es von Vorteil zu wissen, wie stark die Gewichtung der Systeme in den einzelnen Ländern ist.
 
 \begin{figure}[htbp]
 	\centering
@@ -92,11 +92,10 @@ In einer weiteren Grafik gibt Aufschluss über die Verteilung der Systeme nach a
 	\caption{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015}\label{graph_mobile_systems_laender}\citep{marktanteile_betriebssysteme_laender}
 \end{figure}
 
-%TODO
 \subsection{Verfügbare Applikationen und Kategorien der Stores}
 Die Menge an verfügbaren Apps in den jeweiligen Stores ist unterschiedlich groß.
 Eine Analyse über die aktiven Applikationen in den einzelnen Stores und die Gewichtung der Kategorien, soll einen Überblick verschaffen was die jeweiligen Plattformen aktuell zu bieten haben.
-In Abbildung \ref{graph_apps_in_stores} wird die Menge an verfügbaren Apps im Mai 2015 dargestellt. Um eine bessere Übersicht zu gewährleisten, wurden die Werte gerundet. Der Amazon Appstore bietet wie der Google Play Store nur Android Apps an. Da in diesen beiden Stores zum Teil die selben Anwendungen angeboten werden, sollten diese Werte nicht summiert werden.
+In Abbildung \ref{graph_apps_in_stores} wird die Menge an verfügbaren Apps im Mai 2015 dargestellt. Um eine bessere Übersicht zu gewährleisten, wurden die Werte gerundet. Der Amazon Appstore bietet wie der Google Play Store nur Android Apps an. Da es in diesen beiden Stores zum Teil zu Überschneidungen beim Angebot von Anwendungen kommt, werden diese Werte separat betrachtet und nicht summiert.
 
 \begin{figure}[htbp]
 	\centering
@@ -104,6 +103,8 @@ In Abbildung \ref{graph_apps_in_stores} wird die Menge an verfügbaren Apps im M
 	\caption{Anzahl der angebotenen Apps in den Top App-Stores im Mai 2015}\label{graph_apps_in_stores}\citep{apps_in_stores}
 \end{figure}
 
+Der Wert für den Windows Phone Store ist der Quelle nach von September 2014 und schließt damit noch nicht die Windows 10 Universal Apps mit ein. Diese kamen erst Mitte 2015 dazu und werden in einem getrenntem Windows Store hardwareübergreifend angeboten. Im September 2015 waren rund 80\% der Downloads aus dem Windows Phone Store von Geräten mit der Version 8.1, etwa 15\% von 8.0 Benutzern und etwa 5\% von der aussterbendem Version 7.8.
+Laut Windows wurden im September 2015 etwa 50\% der Applikationen mit Windows 10 aus dem neuen Windows Store heruntergeladen. Diese Statistik gibt jedoch wenig Aufschluss wie groß dabei der Anteil an mobilen Systemen ist. Jedoch dominiert die Kategorie "Games" bei Windows 10 Apps mit fast 45\% die Downloadzahlen.\citep{windows_store_trends_2015}
 
 \begin{figure}[htbp]
 	\centering
@@ -111,9 +112,43 @@ In Abbildung \ref{graph_apps_in_stores} wird die Menge an verfügbaren Apps im M
 	\caption{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014}\label{graph_play_store_kategorien}\citep{play_store_categories}
 \end{figure}
 
+Auch im Google Play Store werden Spiele Apps am häufigsten heruntergeladen und nehmen etwa 41\% des Downloadvolumens ein.(Abb.\ref{graph_play_store_kategorien})
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Bilder/Top_Kategorien_App_Store}
+	\caption{Ranking der Top-Kategorien im App Store im Dezember 2015}\label{graph_app_store_kategorien}\citep{app_store_categories}
+\end{figure}
+
+Die beliebtesten Kategorien des Apple App Store werden ebenfalls deutlich von den Spielen angeführt. Auch wenn der Abstand zur zweithäufigsten Kategorie geringer ist als bei den anderen Stores, macht der Spielebereich trotzdem etwa ein viertel aller Downloads aus.(Abb.\ref{graph_app_store_kategorien})
+\medskip
+
+Auch wenn jeder Store seine Applikationen auf eigene Weise kategorisiert, ist dennoch klar zu erkennen das Spiele bei jedem Anbieter das höchste Downloadvolumen ausmachen und sich stetig wachsender Beliebtheit erfreuen. Die Nachfrage nach mobilen Spielen ist demnach plattformübergreifend und berechtigt die Evaluierung von entsprechender Entwicklungssoftware.
+
 \section{Betrachtung der mobilen Systeme}
-Anhand der gewonnenen Erkenntnisse aus Kapitel \ref{subsec:Marktanteile_mobile_Systeme}, spielen derzeit die mobilen Systeme von Android, iOS und Windows Phone die größte Rolle auf dem Markt und den Usern. Folglich beschränken sich die weiteren Betrachtungen auf diese drei Systeme.
-Es soll sich ein grober Überblick über die Systeme verschafft werden.
+Anhand der gewonnenen Erkenntnisse aus Kapitel \ref{subsec:Marktanteile_mobile_Systeme}, spielen derzeit die mobilen Systeme von Android, iOS und Windows Phone die größte Rolle auf dem Markt und bei den Benutzern. Folglich werden weitere Systeme nicht weiter betrachtet und der Fokus auf diese drei Systeme gerichtet.
+
+\subsection{Android}
+Android ist ein Open Source Betriebssystem und gleichzeitig eine Software-Plattform, welches stark im mobilen Bereich vertreten ist und auf dem Linux-Kernel basiert. Zu finden ist diese auf Smartphones, Tablet-Computern, Netbooks und auch auf Smart-TV Geräten. \citep{android_overview} Entwickelt wird Android von der Open Handset Alliance (OHA), welche von Google gegründet wurde. Die OHA wurde im November 2007 gegründet und ist ein Konsortium von mehr als 80 Unternehmen aus den Bereichen Mobilfunknetz, Geräteherstellung, Halbleiterindustrie, Marketing und Software. \citep{alliance_members} Der Grund für die Entwicklung von Android war und ist es, einen offenen Standard für mobile Geräte zu schaffen. \citep{alliance_overview}
+
+Durch seine Offenheit ermöglicht Android Entwicklern große Freiheit bei der Programmierung von Applikationen. Eigene Entwicklungen können auch mit Anwendungen von Google, wie zum Beispiel Google Maps, verknüpft werden.
+
+Auch der Hardwarebereich bietet ein breites Spektrum an Geräten mit kostengünstigen, bis hochpreisigen Angeboten, sowohl mit einfacher bis qualitativ hochwertiger, technischer Ausstattung. Benutzer haben die Möglichkeit, ihre Geräte weitestgehend frei zu gestalten und einzustellen. Für die Installation von neuen Applikationen sind diese auch nicht an einen einzigen Store gebunden und können Apps auch aus verschiedensten Quellen beziehen.
+\\
+
+Vorteile:
+\begin{itemize}
+	\item Open Source
+	\item Unabhängigkeit von Anbietern
+	\item Personalisierung
+	\item Hardwareangebot
+\end{itemize}
+
+Nachteile:
+\begin{itemize}
+	\item Hohe Verbreitung von Schadsoftware
+	\item Aktualität der Version ist abhängig vom Gerätehersteller
+\end{itemize}
 
 \subsection{iOS}
 iOS ist das mobile Betriebssystem des Unternehmen Apple. Dieses ist ein Derivat von Mac OS X, welches selbst auf Unix basiert. Es wird ausschließlich von Apple entwickelt und ist somit nur auf den eigenen Geräten iPhone, iPad und iPod touch zu finden. Mit der Entwicklung wurde unter externer und interner Geheimhaltung 2005 begonnen und das Resultat der Öffentlichkeit zum ersten Mal Anfang 2007 vorgestellt. Bis zur Version 4.0 wurde iOS mit dem Namen iPhoneOS betitelt. Das Konzept und Design ist schwerpunktmäßig auf hohe Benutzerfreundlichkeit und Funktionalität ausgelegt. 
@@ -136,28 +171,6 @@ Bei der Wahl der Hardware ist man auf die Produktpalette von Apple angewiesen, w
 	\item Proprietäres System
 	\item Hardwareauswahl
 	\item Anwendungen nur über den App Store
-\end{itemize}
-
-\subsection{Android}
-Android ist ein Open Source Betriebssystem und gleichzeitig eine Software-Plattform, welches stark im mobilen Bereich vertreten ist und auf dem Linux-Kernel basiert. Zu finden ist diese auf Smartphones, Tablet-Computern, Netbooks und auch auf Smart-TV Geräten. \citep{android_overview} Entwickelt wird Android von der Open Handset Alliance (OHA), welche von Google gegründet wurde. Die OHA wurde im November 2007 gegründet und ist ein Konsortium von mehr als 80 Unternehmen aus den Bereichen Mobilfunknetz, Geräteherstellung, Halbleiterindustrie, Marketing und Software. \citep{alliance_members} Der Grund für die Entwicklung von Android war und ist es, einen offenen Standard für mobile Geräte zu schaffen. \citep{alliance_overview}
-
-Durch seine Offenheit ermöglicht Android Entwicklern große Freiheit bei der Programmierung von Applikationen. Eigene Entwicklungen können auch mit Anwendungen von Google, wie zum Beispiel Google Maps, verknüpft werden.
-
-Auch der Hardwarebereich bietet ein breites Spektrum an Geräten mit kostengünstigen, bis hochpreisigen Angeboten, sowohl mit einfacher bis qualitativ hochwertiger, technischer Ausstattung. Benutzer haben die Möglichkeit, ihre Geräte weitestgehend frei zu gestalten und einzustellen. Bei der Installation von Anwendungen sind sie auch nicht zwangsläufig an einen Anbieter gebunden.
-\\
-
-Vorteile:
-\begin{itemize}
-	\item Open Source
-	\item Unabhängigkeit von Anbietern
-	\item Personalisierung
-	\item Hardwareangebot
-\end{itemize}
-
-Nachteile:
-\begin{itemize}
-	\item Hohe Verbreitung von Schadsoftware
-	\item Aktualität der Version ist abhängig vom Gerätehersteller
 \end{itemize}
 
 \subsection{Windows Phone}
@@ -196,7 +209,7 @@ Softwareentwicklung für ein bestimmtes System wird als nativ (lat.: angeboren, 
 Welche Anforderungen iOS, Android und Windows Phone bezüglich nativer Entwicklung voraussetzen, soll in diesem Kapitel näher erläutert werden.
 
 \section{Systemvorraussetzungen}
-Um eine Applikation für eine bestimmte Zielplattform zu entwickeln, ist es unter Umständen nötig die Voraussetzung eines bestimmten Betriebssystems zu erfüllen.
+Um Applikationen für eine bestimmte Zielplattform zu entwickeln, werden unter Umständen Voraussetzungen an das Betriebssystem des Entwicklers gestellt.
 
 \subsection{iOS}
 %TODO
@@ -456,6 +469,14 @@ Android empfiehlt das eigene Android Studio, welches die offizielle IDE für And
 \bibitem[Distimo (2014)]{play_store_categories}
 \emph{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/321703/umfrage/beliebteste-app-kategorien-im-google-play-store-weltweit/}, letzter Zugriff: 14.12.2015
+
+\bibitem[Bernardo Zamora (2015)]{windows_store_trends_2015}
+\emph{Blogs.Windows - Windows Store Trends - September 2015},
+\url{https://blogs.windows.com/buildingapps/2015/10/12/windows-store-trends-september-2015/}, letzter Zugriff: 15.12.2015
+
+\bibitem[PocketGamer.biz (2015)]{app_store_categories}
+\emph{Ranking der Top-20-Kategorien im App Store im Dezember 2015. In Statista - Das Statistik-Portal.},
+\url{http://de.statista.com/statistik/daten/studie/166976/umfrage/beliebteste-kategorien-im-app-store/}, letzter Zugriff: 15.12.2015
 \end{thebibliography}
 %----------------------------- EIGENSTÄNDIGKEITSERKLÄRUNG-----------------
 \clearpage\thispagestyle{empty}
