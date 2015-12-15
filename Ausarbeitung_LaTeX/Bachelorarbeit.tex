@@ -67,6 +67,7 @@
 
 %Kapitel 2
 \chapter{Mobile Systeme}
+%TODO Einleitung Kapitel
 
 \section{Marktanalyse zur Gewichtung der mobilen Systeme und der Applikationen}
 Welche mobilen Systeme derzeit am meisten gefragt und verbreitet sind, soll in diesem Abschnitt analysiert werden. Dieses Wissen ist nötig, um vor dem Entwicklungsprozess die erfolgreichsten und erfolgversprechendsten Plattformen auszuwählen und miteinzubeziehen.
@@ -211,9 +212,6 @@ Welche Anforderungen iOS, Android und Windows Phone bezüglich nativer Entwicklu
 \section{Systemvorraussetzungen}
 Um Applikationen für eine bestimmte Zielplattform zu entwickeln, werden unter Umständen Voraussetzungen an das Betriebssystem des Entwicklers gestellt.
 
-\subsection{iOS}
-%TODO
-
 \subsection{Android}
 Die Entwicklung von Android Applikationen ist an kein bestimmtes System gebunden. Somit lassen sich diese unter Windows, OS X und Linux Systemen entwickeln. 
 Windows Benutzer sollten mindestens Windows XP nutzen. Darüber hinaus können alle aktuelleren Versionen genutzt werden, wobei alle 32-Bit Editionen unterstützt werden und ab Windows 7 auch die mit 64-Bit.
@@ -221,14 +219,29 @@ Mac Systeme werden ab OS X 10.5.8 von den offiziellen Entwicklungswerkzeugen unt
 Um auf einem Linux System zu entwickeln, kann man dies beispielsweise unter Ubuntu ab Version 8.04 tun. Bei 64-Bit Versionen ist es notwendig, dass diese fähig ist 32-Bit Anwendungen auszuführen. Da die Auswahl an Linux-Distributionen sehr umfangreich ist, wird an dieser Stelle auf diese nicht weiter eingegangen.
 \citep{android_sdk_requirements}
 
+\subsection{iOS}
+%TODO
+
 \subsection{Windows Phone}
 %TODO
 
 \section{SDKs und Versionen}
 Software Development Kits, kurz SDKs, liefern dem Entwickler die Werkzeuge, Anwendungen und bestenfalls eine aktuelle Dokumentation, um für eine bestimmte Zielplattform zu entwickeln. Auch sind sie notwendig, um geschriebenen Code zu interpretieren und kompilieren. Um die aktuellste Version eines mobilen Systems zu unterstützen, muss das SDK auf ebenso aktuellen Stand sein.
 
+\subsection{Android Versionen}
+Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben nach alphabetisch aufsteigend.
+%TODO: Tabellen in Latex generieren
+\begin{table}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Tabellen/Android_Versionen}
+	\caption{Android Versionen und ihr Erscheinungsdatum}\label{tab_android_vers}\citep{android_codenames,android_version_releases}
+\end{table}
+
+\clearpage
+
 \subsection{iOS Versionen}
 Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. Verbrauchern sind diese meist unbekannt, da diese überwiegend intern genutzt werden.
+%TODO: Tabellen in Latex generieren
 \begin{table}[htbp]
 \centering
 \includegraphics[width=0.5\textwidth]{Tabellen/iOS_Versionen_9-6}
@@ -241,27 +254,18 @@ Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. 
 \end{table}
 \clearpage
 
-\subsection{Android Versionen}
-Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben nach alphabetisch aufsteigend.
-\begin{table}[htbp]
-\centering
-\includegraphics[width=0.6\textwidth]{Tabellen/Android_Versionen}
-\caption{Android Versionen und ihr Erscheinungsdatum}\label{tab_android_vers}\citep{android_codenames,android_version_releases}
-\end{table}
-
-\clearpage
-
 \subsection{Windows Phone Versionen}
 %TODO
 
 \section{Programmiersprachen}
 In der nativen Entwicklung werden für jede Zielplattform bestimmte Programmiersprachen unterstützt. 
 
-\subsection{iOS}
-%TODO
 \subsection{Android}
 Android Applikationen werden in Java entwickelt. Demnach ist es notwendig vorab eine aktuelle Java Version (JDK) zu installieren. Diese wird von dem Unternehmen Oracle, mit der aktuellen Version 8 Update 66, vertrieben.
 \citep{java_jdk}
+
+\subsection{iOS}
+%TODO
 
 \subsection{Windows Phone}
 %TODO
@@ -272,11 +276,11 @@ Android Applikationen werden in Java entwickelt. Demnach ist es notwendig vorab 
 \section{Entwicklungsumgebungen}
 Für die Entwicklung werden jeweilig verschiedene IDEs (Integrated Development Environment) seitens der Betreiber unterstützt und empfohlen. Eine Besonderheit bei IDEs für mobile Systeme ist die Unterstützung eines Simulators. Dieser simuliert ein spezifiziertes Gerät auf virtuelle Weise, um Entwicklungen direkt testen zu können.
 
-\subsection{iOS}
-%TODO
 \subsection{Android}
 Android empfiehlt das eigene Android Studio, welches die offizielle IDE für Android Entwicklung darstellt und zusätzlich das aktuelle SDK mitliefert. Android Studio basiert auf der IDE IntelliJ IDEA und ist frei verfügbar.\citep{android_studio} Alternativer Vorgänger ist die quelloffene IDE Eclipse.
 
+\subsection{iOS}
+%TODO
 
 \subsection{Windows Phone}
 %TODO
@@ -392,6 +396,7 @@ Android empfiehlt das eigene Android Studio, welches die offizielle IDE für And
 
 %------------------------------ LITERATURVERZEICHNIS----------------------
 %TODO:Alphabetisch sortieren!
+%BIBTEX!?
 \begin{thebibliography}{}
 
 \bibitem[Open Handset Alliance - Android Overview(2015)]{android_overview}
@@ -423,7 +428,7 @@ Android empfiehlt das eigene Android Studio, welches die offizielle IDE für And
 \url{http://code.tutsplus.com/tutorials/android-sdk-requirements--mobile-20086}, letzter Zugriff: 24.11.2015
 
 \bibitem[the iphone wiki(2015)]{ios_codenames}
-\emph{Firmware},
+\emph{iOS Firmwares},
 \url{https://www.theiphonewiki.com/wiki/Firmware}, letzter Zugriff: 24.11.2015
 
 \bibitem[Oracle - Java SE(2015)]{java_jdk}
