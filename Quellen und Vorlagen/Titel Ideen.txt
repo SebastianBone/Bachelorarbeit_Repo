@@ -1,0 +1,10 @@
+Analyse und Vergleich von Cross-Plattform 
+Entwicklungsumgebungen und Frameworks für Mobile-Games, 
+anhand einer Beispielapplikation
+
+Analyse und Vergleich von Cross-Plattform 
+Engines und Frameworks, für die Entwicklung mobiler Games,
+anhand einer Beispielapplikation
+
+Analyse und Evaluierung von plattformŸbergreifenden Spiel-Engines und Frameworks,
+anhand der Implementierung einer mobilen Beispielapplikation

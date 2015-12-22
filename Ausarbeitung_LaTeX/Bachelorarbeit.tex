@@ -73,7 +73,7 @@
 Welche mobilen Systeme derzeit am meisten gefragt und verbreitet sind, soll in diesem Abschnitt analysiert werden. Dieses Wissen ist nötig, um vor dem Entwicklungsprozess die erfolgreichsten und erfolgversprechendsten Plattformen auszuwählen und miteinzubeziehen.
 Weiterhin soll geklärt werden wie viele Applikationen diese Plattformen in ihren Stores bereitstehen und wie die Kategorien gewichtet sind.
 
-\subsection{Marktanteile an mobilen Betriebssysteme}
+\subsection{Marktanteile der mobilen Betriebssysteme}
 \label{subsec:Marktanteile_mobile_Systeme}
 Eine Statistik über die Marktanteile der mobilen Betriebssysteme bei Smartphones, soll veranschaulichen welche Systeme aktuell zu den führenden gehören. Zusätzlich wird eine zukünftige Verteilung prognostiziert. Die Darstellungen beziehen sich auf Daten der International Data Corporation (IDC), über den globalen Absatz von Smartphones und wurde im August 2015 veröffentlicht. (Abb. \ref{graph_mobile_systems})
 
@@ -229,30 +229,84 @@ Um auf einem Linux System zu entwickeln, kann man dies beispielsweise unter Ubun
 Software Development Kits, kurz SDKs, liefern dem Entwickler die Werkzeuge, Anwendungen und bestenfalls eine aktuelle Dokumentation, um für eine bestimmte Zielplattform zu entwickeln. Auch sind sie notwendig, um geschriebenen Code zu interpretieren und kompilieren. Um die aktuellste Version eines mobilen Systems zu unterstützen, muss das SDK auf ebenso aktuellen Stand sein.
 
 \subsection{Android Versionen}
-Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben nach alphabetisch aufsteigend.
-%TODO: Tabellen in Latex generieren
+Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben nach alphabetisch aufsteigend. (Abb.\ref{tab_android_vers})
+
 \begin{table}[htbp]
 	\centering
-	\includegraphics[width=0.6\textwidth]{Tabellen/Android_Versionen}
+	\resizebox{0.8\textwidth}{!}{%
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Codename}} & {\color[HTML]{FFFFFF} \textbf{Version}} & {\color[HTML]{FFFFFF} \textbf{API Level}} & {\color[HTML]{FFFFFF} \textbf{Erscheinungsdatum}} \\ \hline
+			Marshmallow                              & 6                                       & 23                                        & 5. Oktober 2015                                   \\ \hline
+			Lollipop                                 & 5.1.x                                   & 22                                        & 9. März 2015                                      \\ \hline
+			Lollipop                                 & 5.0.x                                   & 21                                        & 3. November 2014 - 19. Dezember 2014              \\ \hline
+			Wear                                     & 4.4W                                    & 20                                        & Juni 2014                                         \\ \hline
+			KitKat                                   & 4.4.x                                   & 19                                        & 31. Oktober 2013 - 19. Juni 2014                  \\ \hline
+			Jelly Bean                               & 4.3.x                                   & 18                                        & 24. Juli 2013 - 4. Oktober 2013                   \\ \hline
+			Jelly Bean                               & 4.2.x                                   & 17                                        & 13. November 2012 - 12. Februar 2013              \\ \hline
+			Jelly Bean                               & 4.1.x                                   & 16                                        & 27. Juni 2012 - 10. Oktober 2012                  \\ \hline
+			Ice Cream Sandwich                       & 4.0.3 - 4.0.4                           & 15, NDK 8                                 & 16. Dezember 2011 - 4. Februar 2012               \\ \hline
+			Ice Cream Sandwich                       & 4.0 - 4.0.2                             & 14, NDK 7                                 & 19. Oktober 2011 - 15. Dezember 2011              \\ \hline
+			Honeycomb                                & 3.2.x                                   & 13                                        & 16. Juli 2011                                     \\ \hline
+			Honeycomb                                & 3.1                                     & 12, NDK 6                                 & 10. Mai 2011                                      \\ \hline
+			Honeycomb                                & 3                                       & 11                                        & 23. Februar 2011                                  \\ \hline
+			Gingerbread                              & 2.3.3 - 2.3.7                           & 10                                        & 23. Februar 2011 - 20. September 2011             \\ \hline
+			Gingerbread                              & 2.3 - 2.3.2                             & 9, NDK 5                                  & 6. Dezember 2010 - Januar 2011                    \\ \hline
+			Froyo                                    & 2.2 - 2.2.2                             & 8, NDK 4                                  & 20. Mai 2010 - Januar 2011                        \\ \hline
+			Eclair                                   & 2,1                                     & 7, NDK 3                                  & 12. Dezember 2010                                 \\ \hline
+			Eclair                                   & 2.0.1                                   & 6                                         & 3. Dezember 2009                                  \\ \hline
+			Eclair                                   & 2                                       & 5                                         & 26. Oktober 2009                                  \\ \hline
+			Donut                                    & 1.6                                     & 4, NDK 2                                  & 15. September 2009                                \\ \hline
+			Cupcake                                  & 1.5                                     & 3, NDK 1                                  & 30. April 2009                                    \\ \hline
+			ohne Codename                            & 1.1                                     & 2                                         & 10. Februar 2009                                  \\ \hline
+			ohne Codename                            & 1                                       & 1                                         & 23. September 2008                                \\ \hline
+		\end{tabular}
+	}
 	\caption{Android Versionen und ihr Erscheinungsdatum}\label{tab_android_vers}\citep{android_codenames,android_version_releases}
 \end{table}
 
-\clearpage
-
 \subsection{iOS Versionen}
-Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. Verbrauchern sind diese meist unbekannt, da diese überwiegend intern genutzt werden.
-%TODO: Tabellen in Latex generieren
+Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. Verbrauchern sind diese meist unbekannt, da diese überwiegend intern genutzt werden. (Abb.\ref{tab_ios_vers})
+
 \begin{table}[htbp]
-\centering
-\includegraphics[width=0.5\textwidth]{Tabellen/iOS_Versionen_9-6}
-\caption{iOS Versionen 9 - 6 und ihr Erscheinungsdatum}\label{tab_ios_vers_9-6}\citep{ios_codenames}
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Codename}} & {\color[HTML]{FFFFFF} \textbf{Version}} & {\color[HTML]{FFFFFF} \textbf{Erscheinungsdatum}} \\ \hline
+			Monarch                                  & 9.2 Beta                                & 3. November 2015                                  \\ \hline
+			Monarch                                  & 9.1                                     & 21. Oktober 2015                                  \\ \hline
+			Monarch                                  & 9.0.x                                   & 16. September 2015                                \\ \hline
+			Copper                                   & 8.4.x                                   & 30. Juni 2015                                     \\ \hline
+			Stowe                                    & 8.3                                     & 8. April 2015                                     \\ \hline
+			OkemoZurs                                & 8.2                                     & 9. März 2015                                      \\ \hline
+			OkemoTaos                                & 8.1.x                                   & 9. Dezember 2015                                  \\ \hline
+			Okemo                                    & 8.0.x                                   & 17. September 2014                                \\ \hline
+			Sochi                                    & 7.1.x                                   & 10. März 2014                                     \\ \hline
+			Innsbruck                                & 7.0.x                                   & 18. September 2013                                \\ \hline
+			Brighton                                 & 6.1.x                                   & 21. Februar 2013                                  \\ \hline
+			Sundance                                 & 6.0.x                                   & 19. September 2012                                \\ \hline
+			Hoodoo                                   & 5.1.x                                   & 7. März 2012                                      \\ \hline
+			Telluride                                & 5.0.x                                   & 12. Oktober 2011                                  \\ \hline
+			Durango                                  & 4.3.x                                   & 9. März 2011                                      \\ \hline
+			Jasper                                   & 4.2.x                                   & 22. November 2010                                 \\ \hline
+			Baker                                    & 4.1                                     & 8. September 2010                                 \\ \hline
+			Apex                                     & 4.0.x                                   & 21. Juni 2010                                     \\ \hline
+			Wildcat                                  & 3.2.x                                   & 3. April 2010                                     \\ \hline
+			Northstar                                & 3.1.x                                   & 9. September 2009                                 \\ \hline
+			Kirkwood                                 & 3.0.x                                   & 17. Juni 2009                                     \\ \hline
+			Timberline                               & 2.2.x                                   & 21. November 2008                                 \\ \hline
+			Sugarbowl                                & 2.1.x                                   & 9. September 2008                                 \\ \hline
+			Big Bear                                 & 2.x                                     & 11. Juli 2008                                     \\ \hline
+			Little Bear                              & 1.1.x                                   & 14. September 2007                                \\ \hline
+			Alpine                                   & 1.0.x                                   & 29. Juni 2007                                     \\ \hline
+		\end{tabular}
+	}
+\caption{iOS Versionen und ihr Erscheinungsdatum}\label{tab_ios_vers}\citep{ios_codenames}
 \end{table}
-\begin{table}[htbp]
-\centering
-\includegraphics[width=0.5\textwidth]{Tabellen/iOS_Versionen_5-1}
-\caption{iOS Versionen 5 - 1 und ihr Erscheinungsdatum}\label{tab_ios_vers_5-1}\citep{ios_codenames}
-\end{table}
-\clearpage
+
 
 \subsection{Windows Phone Versionen}
 %TODO
@@ -297,15 +351,61 @@ Android empfiehlt das eigene Android Studio, welches die offizielle IDE für And
 %\section{Kosten und Abgaben}
 
 %TODO: Kapitel 4
-\chapter{Cross-Platform Entwicklung}
+\chapter{Plattformübergreifende Entwicklung}
+Die Entwicklung von Software-Produkten und Services, welche auf mehreren Systemen oder Laufzeitumgebungen funktioniert, wird als plattformübergreifende oder auch Cross-Plattform Entwicklung definiert. Um dies zu gewährleisten nutzen Entwickler unterschiedliche Methoden und Techniken, um verschiedene Systeme mit einer Projektstruktur zu erreichen.\citep{cross_plattform_explanation}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Bilder/nativ_vs_cross}
+	\caption{Traditionelle und plattformübergreifende Entwicklungsmodelle}\label{graph_nativ_vs_cross}
+\end{figure}
+
+
 \section{Ziel}
-\section{Funktionsweise}
-\subsection{Technik}
-\subsection{Geteilter Content}
-\subsection{Übersetzung in die jeweiligen System}
+Die Idee und das Ziel von plattformübergreifender Entwicklung sind, dass eine Softwareanwendung auf mehr als einer spezifischen digitalen Umgebung zufriedenstellend funktioniert. Diese Vorgehensweise wird angewandt, um ein Softwareprodukt auf mehreren proprietären Betriebssystemen zu vertreiben. Dies soll die Entwicklungszeit und sich daraus ergebene Kosten einsparen. Durch die Entwicklung von mobilen Geräten, sowie die zunehmende Verbreitung von Open Source Technologien, entstanden sukzessiv unterschiedliche Ansätze zur Realisierung.
+
+Die Nutzung dieser Arbeitsweisen hat aber nicht nur Vorteile. Als nachteilig gilt die potentiell geringere Effizienz der Anwendung gegenüber der nativen Entwicklung. Beispielsweise enthält es redundante Prozesse oder für jede Plattform einen eigenen Datenspeicherordner. Die Reduzierung von Komplexitäten kann auch bis zur „Verdummung“ ausarten, um das Programm für weniger anspruchsvolle Softwareumgebungen anzugleichen. 
+
+Trotz mancher momentanen Grenzen bietet die plattformübergreifende Entwicklung ausreichende Möglichkeiten, die eine derartige Projektstruktur befürworten.\citep{cross_plattform_explanation}
+
+\section{Funktionsweise und Realisierungsansätze}
+Zu den grundlegenden Strategien gehört, dass ein Projekt oder Programm in verschiedene spezifische Betriebssystemversionen kompiliert wird. Weitere Methoden beinhalten die Verwendung von Teilbäumen in der Projektstruktur, um die Anwendung bestmöglich an die Eigenheiten der entsprechenden Zielplattform anzupassen. Ein anderer Ansatz ist die Abstraktion des Codes auf unterschiedlichen Ebenen, um sich mehreren Softwareumgebungen anzunähern. Softwareprojekte die diese Verfahren anwenden, kann man als plattformunabhängig, genauer gesagt plattformübergreifend bezeichnen, da sie die unterstützten Systeme gleich wertet und keines bevorzugt.\citep{cross_plattform_explanation}
+
+\medskip
+%QUELLEN! Taxonomy of Cross-Platform Mobile Applications Development Approaches
+Die Entwicklung von plattformübergreifenden Anwendungen auf mobilen Systemen wird in sechs verschiedene Ansätze kategorisiert. (Abb.\ref{graph_cross_plattform_approaches})
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Bilder/Cross_Plattform_Ansaetze}
+	\caption{Haupt- und Nebenansätze zur Entwicklung von mobilen plattformübergreifenden Anwendungen}\label{graph_cross_plattform_approaches}
+\end{figure}
+
+\subsection{Kompilierung}
+Kompilierung(Compilation) ist ein Ansatz mit zwei Unterkategorien:
+
+\begin{itemize}
+	\item Cross-Compiler
+	\item Trans-Compiler
+\end{itemize}
+
+Der Compiler ist ein Programm, welches den Quellcode einer High-Level Programmiersprache in einen Low-Level Code übersetzt wird. Dieser Low-Level Code ist ein Binärcode in Maschinensprache, der von dem Prozessor verstanden wird. Dieser Konvertierungsprozess wird als Kompilierung bezeichnet.
+
+\medskip
+Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unterschiedlich zu dem System ist, auf dem der kompilierte Code läuft. Die Zielsysteme können Betriebssysteme, Prozessoren oder eine Kombination aus beiden sein.
+
+\medskip
+Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in eine andere High-Level Programmiersprache. Da viele Sprachen jedoch unterschiedliche Eigenschaften und Leistungsmerkmale besitzen, muss der generierte Code unter Umständen nachbearbeitet werden, wenn der Compiler diese bei der Übersetzung nicht unterstützt. Auch ist der Code durch die automatisierte Erzeugung in der Regel nur schwer lesbar. Es besteht auch eine Abhängigkeit zu regelmäßigen Updates, um die Änderungen der Quell- und Zielsysteme aktuell zu halten.
+
+%TODO
+\subsection{Komponentenbasiert}
+\subsection{Interpretierung}
+\subsection{Modellierung}
+\subsection{Cloudbasiert}
+\subsection{Vereinigung}
 
 %TODO: Kapitel 5
-\chapter{Cross-Platform Frameworks}
+\chapter{Plattformübergreifende Frameworks}
 \section{Tools und Anbieter zur Entwicklung}
 \section{Verweis auf Bachelorarbeit: „Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App“}
 \section{Gamespezifische Frameworks und Engines}
@@ -482,6 +582,11 @@ Android empfiehlt das eigene Android Studio, welches die offizielle IDE für And
 \bibitem[PocketGamer.biz (2015)]{app_store_categories}
 \emph{Ranking der Top-20-Kategorien im App Store im Dezember 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/166976/umfrage/beliebteste-kategorien-im-app-store/}, letzter Zugriff: 15.12.2015
+
+\bibitem[techopedia (2015)]{cross_plattform_explanation}
+\emph{Cross-Platform Development},
+\url{https://www.techopedia.com/definition/30026/cross-platform-development}, letzter Zugriff: 21.12.2015
+
 \end{thebibliography}
 %----------------------------- EIGENSTÄNDIGKEITSERKLÄRUNG-----------------
 \clearpage\thispagestyle{empty}
