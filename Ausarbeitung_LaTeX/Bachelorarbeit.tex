@@ -339,6 +339,24 @@ Android empfiehlt das eigene Android Studio, welches die offizielle IDE für And
 \subsection{Windows Phone}
 %TODO
 
+\section{Zusammengefasste Übersicht}
+Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzelnen Systeme bieten.
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{c|c|c|c|c|c|c|c|c|}
+			\cline{2-9}
+			& \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Virtuelle Maschine}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Programmiersprache}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{User Interface}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Memory Management}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{IDE}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Plattform}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Geräte}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{App Markt}} \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Android}}}       & Dalvik VM                                                                  & Java                                                                       & XML files                                                              & Garbage collector                                                         & Eclipse, Android Studio                                                     & Multi-platform                                                    & Heterogen                                                      & Google Play Store                                                 \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{iOS}}}           & -                                                                          & Objective-C, Swift                                                         & Cocoa Touch                                                            & Reference counting                                                        & XCode                                                       & Mac OS X                                                          & Homogen                                                        & Apple Apps Store                                                  \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Windows Phone}}} & CLR                                                                        & C\# and .Net                                                               & XAML files                                                             & Garbage collector                                                         & Visual Studio                                               & Windows                                                           & Homogen                                                        & Windows Phone Store                                               \\ \hline
+		\end{tabular}
+	}
+	\caption{Unterschiede zwischen Android, iOS und Windows Phone}
+	\label{platform_differnces}
+\end{table}
+
 %OPTIONAL!!!
 %\section{Kompilierung}
 
@@ -372,7 +390,6 @@ Trotz mancher momentanen Grenzen bietet die plattformübergreifende Entwicklung 
 Zu den grundlegenden Strategien gehört, dass ein Projekt oder Programm in verschiedene spezifische Betriebssystemversionen kompiliert wird. Weitere Methoden beinhalten die Verwendung von Teilbäumen in der Projektstruktur, um die Anwendung bestmöglich an die Eigenheiten der entsprechenden Zielplattform anzupassen. Ein anderer Ansatz ist die Abstraktion des Codes auf unterschiedlichen Ebenen, um sich mehreren Softwareumgebungen anzunähern. Softwareprojekte die diese Verfahren anwenden, kann man als plattformunabhängig, genauer gesagt plattformübergreifend bezeichnen, da sie die unterstützten Systeme gleich wertet und keines bevorzugt.\citep{cross_plattform_explanation}
 
 \medskip
-%QUELLEN! Taxonomy of Cross-Platform Mobile Applications Development Approaches
 Die Entwicklung von plattformübergreifenden Anwendungen auf mobilen Systemen wird in sechs verschiedene Ansätze kategorisiert. (Abb.\ref{graph_cross_plattform_approaches})
 
 \begin{figure}[htbp]
@@ -380,6 +397,8 @@ Die Entwicklung von plattformübergreifenden Anwendungen auf mobilen Systemen wi
 	\includegraphics[width=0.5\textwidth]{Bilder/Cross_Plattform_Ansaetze}
 	\caption{Haupt- und Nebenansätze zur Entwicklung von mobilen plattformübergreifenden Anwendungen}\label{graph_cross_plattform_approaches}
 \end{figure}
+
+In den folgenden Unterkapiteln werden die einzelnen Ansätze und Unteransätze näher betrachtet. Die Analyse und Betrachtung basiert auf den Informationen der Ausaurbeitung von \citep{cross_plattform_approaches}.
 
 \subsection{Kompilierung}
 Kompilierung(Compilation) ist ein Ansatz mit zwei Unterkategorien:
@@ -392,28 +411,106 @@ Kompilierung(Compilation) ist ein Ansatz mit zwei Unterkategorien:
 Der Compiler ist ein Programm, welches den Quellcode einer High-Level Programmiersprache in einen Low-Level Code übersetzt wird. Dieser Low-Level Code ist ein Binärcode in Maschinensprache, der von dem Prozessor verstanden wird. Dieser Konvertierungsprozess wird als Kompilierung bezeichnet.
 
 \medskip
-Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unterschiedlich zu dem System ist, auf dem der kompilierte Code läuft. Die Zielsysteme können Betriebssysteme, Prozessoren oder eine Kombination aus beiden sein.
+Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unterschiedlich zu dem System ist, auf dem der kompilierte Code läuft. Die Zielsysteme können Betriebssysteme, Prozessoren oder eine Kombination aus beiden sein. Abb. \ref{graph_compilation_XMLVM} stellt eine von XMLVM gebotene Lösung zu Cross-Compiling dar.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Bilder/Compilation_Cross_XMLVM}
+	\caption{XMLVM Prozess mit Java oder .NET Quellcode}\label{graph_compilation_XMLVM}\citep{XMLVM_Toolchain}
+\end{figure}
 
 \medskip
 Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in eine andere High-Level Programmiersprache. Da viele Sprachen jedoch unterschiedliche Eigenschaften und Leistungsmerkmale besitzen, muss der generierte Code unter Umständen nachbearbeitet werden, wenn der Compiler diese bei der Übersetzung nicht unterstützt. Auch ist der Code durch die automatisierte Erzeugung in der Regel nur schwer lesbar. Es besteht auch eine Abhängigkeit zu regelmäßigen Updates, um die Änderungen der Quell- und Zielsysteme aktuell zu halten.
 
 %TODO
 \subsection{Komponentenbasiert}
+
 \subsection{Interpretierung}
+Bei der Interpretierung übersetzt ein Interpreter (Dolmetscher) den Quellcode in ausführbare Anweisungen. Dies geschieht in Echtzeit mit Hilfe einer dedizierten Maschine. Hierbei existieren drei Unteransätze:
+
+\begin{itemize}
+	\item Virtuelle Maschine (VM)
+	\item Webbasiert (Web-based)
+	\item Laufzeit Interpretation (Runtime Interpretation)
+\end{itemize}
+
+Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). Diese verfügt über eine eigene komplette Hardwarearchitektur wie einer CPU, Stack, Register und ein korrespondierendes Befehlssystem. Die Grundidee hierbei ist es die mobile App mit einer plattformübergreifenden Sprache zu entwickeln, die auf der dedizierten, virtuellen Maschine läuft und auf entsprechenden Plattformen installiert ist. In Abb. \ref{graph_interpreter_Dalvik} wird der Interpretierungsablauf der von Android bekannten Dalvik VM dargestellt.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Bilder/Interpretation_VM_Dalvik}
+	\caption{Ablauf des Dalvik VM Interpreter}\label{graph_interpreter_Dalvik}
+\end{figure}
+
+\medskip
+\textbf{Webbasierte} Tools verwenden Technologien wie HTML(5), Javascript und CSS, die auf verschiedenen Plattformen ausführbar sind. Der Zugriff auf Hardwarekomponenten wie Kamera und Sensoren erfolgt durch Wrapper. Wrapper sind Adapter oder Schnittstellen, um auf die nativen APIs zugreifen zu können. Abb. \ref{graph_interpreter_PhoneGap} zeigt die Kommunikation und Interpretierung des Webbasierten Interpreters PhoneGap von Adobe.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\textwidth]{Bilder/Interpretation_Web_PhoneGap}
+	\caption{Ablauf des PhoneGap Interpreters von Adobe}\label{graph_interpreter_PhoneGap}
+\end{figure} 
+
+\medskip
+Die \textbf{Laufzeit} ist eine Ausführungsumgebung und eine Schicht, welche die mobile App auf der nativen Plattform lauffähig macht. Bei diesem Ansatz wird der Quellcode in Bytecode umgewandelt und dann zur Laufzeit von einer virtuellen Maschine ausgeführt. In Abb. \ref{graph_interpreter_Titanium} wird die Verarbeitung von Appcelerators Titanium-Interpreters dargestellt.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Bilder/Interpretation_Runtime_Titanium}
+	\caption{Ablauf des Titanium Interpreters von Appcelerator}\label{graph_interpreter_Titanium}
+\end{figure}
+
 \subsection{Modellierung}
+Bei der Modellierung verwenden Entwickler abstrakte Modelle, um die Funktionen und / oder die Benutzeroberfläche der Anwendungen zu beschreiben. Diese Modelle werden für jede Zielplattform in entsprechenden Quellcode transformiert. Hierbei gibt es die Ansätze des Model-Based User Interface Development (MB-UID) und des Model-Driven Development (MDD).
+
+\medskip
+\textbf{MB-UID} wird genutzt, um die Benutzeroberfläche durch die formale Beschreibung von Aufgaben, Daten und Benutzern einer App automatisch zu generieren. Hierbei wird zwischen der Benutzeroberfläche und der App-Logik unterschieden.
+Für die Generierung existieren zwei Strategien.
+
+\begin{itemize}
+	\item Eine Generierung zur Laufzeit der App, die eine Websysteme adaptiert und basiert auf Anfrage- und Antwortprotokollen (request / response). Eingeschränkt wird dies durch die Voraussetzung einer dauerhaften Verbindung zu einem Server.
+	
+	\item Die Generierung während der Entwicklungszeit, also vor Ausführung der Anwendung. Hier kann der Entwickler das generierte Interface überprüfen und zu jeder Plattform spezifische Funktionalitäten hinzufügen. Dabei kann die Funktion zur Verbindungsart festgelegt werden, also ob eine dauerhafte Verbindung bestehen soll oder zu einem selbst bestimmten Zeitpunkt synchronisiert werden soll.
+\end{itemize}
+
+\medskip
+Das Hauptkonzept von \textbf{MDD} ist die Generierung von plattformspezifischen Versionen, basierend auf dem plattformunabhängigen, abstrakten Modell. Das Modell wird zum Beispiel durch Domain-Specific Language (DSL) beschrieben.
+
+%TODO
 \subsection{Cloudbasiert}
+In diesem Ansatz geschieht die Verarbeitung der Anwendung nicht lokal auf dem Gerät, sondern auf einem Cloudserver. Dabei werden einige Cloudeigenschaften verwendet, wie Flexibilität, Virtualisierung, Sicherheit und dynamisches Management. Die Clientanwendung ist dabei weitest möglich reduziert, da diese nur Basisprozesse benötigt. Dies wird Thin-Client genannt, da wie in Abb. \ref{client_aufgaben} nur Ein- und Ausgabe verarbeitet werden müssen. Cloudbasierte Anwendungen gelten dadurch besonders als potenziell energieeffizient.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Bilder/Aufgaben_Endgeraet}
+	\caption{Aufgaben von Client-Anwendungen}\label{client_aufgaben}
+\end{figure}
+
+%TODO
 \subsection{Vereinigung}
+Dieser Ansatz versucht die besten Eigenschaften verschiedener Ansätze zusammenzuführen, von den jeweiligen Vorteilen zu profitieren und Nachteile zu minimieren.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Bilder/Merge_Component_based}
+	\caption{Funktion eines komponentenbasierten Mergeansatz}\label{graph_merge_component_based}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Bilder/Merge_Integrated_based}
+	\caption{Funktion eines integrationsbasierten Mergeansatz}\label{graph_merge_integrated_based}
+\end{figure}
+
+\section{Entwicklung mobiler Applikationen ohne den Schwerpunkt Spieleentwicklung}
+%Verweis auf Bachelorarbeit: „Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App“
 
 %TODO: Kapitel 5
-\chapter{Plattformübergreifende Frameworks}
-\section{Tools und Anbieter zur Entwicklung}
-\section{Verweis auf Bachelorarbeit: „Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App“}
+\chapter{Plattformübergreifende Frameworks zur Spieleentwicklung}
 \section{Gamespezifische Frameworks und Engines}
-\subsection{Monogame}
 \subsection{Cocos2D}
 \subsection{Libgdx}
 \subsection{Unity}
-\subsection{Unreal Engine}
 \subsection{Weitere Frameworks}
 \section{Entwicklungsumgebungen}
 \subsection{Unterstützte IDEs}
@@ -435,9 +532,9 @@ Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in ein
 
 %OPTIONAL!!!
 %TODO: Kapitel 7
-\chapter{Analyse der Marktanteile}
-\section{Menge an Firmen und Entwicklern}
-\section{Menge an Games}
+%\chapter{Analyse der Marktanteile}
+%\section{Menge an Firmen und Entwicklern}
+%\section{Menge an Games}
 
 %TODO: Kapitel 9
 \chapter{Kosten-Nutzen Vergleich}
@@ -469,17 +566,15 @@ Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in ein
 %\subsection{KISS - Keep it simple stupid}
 
 %TODO: Kapitel 13
-\chapter{Konzeption einer Applikation}
+\chapter{Konzeption und Implementierung einer Test-Applikation}
 \section{Ideen}
 \section{Anforderungen}
-\section{User Stories}
-
-%TODO: Kapitel 14
-\chapter{Implementierung der Applikation}
 \section{Verwendete Frameworks und Engines}
 \section{Verwendete APIs und SDKs}
 \section{Assets und deren Verwendung}
+%\section{User Stories}
 
+%TODO
 \chapter{Analyse messbarer Metriken}
 %Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen)
 
@@ -586,6 +681,15 @@ Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in ein
 \bibitem[techopedia (2015)]{cross_plattform_explanation}
 \emph{Cross-Platform Development},
 \url{https://www.techopedia.com/definition/30026/cross-platform-development}, letzter Zugriff: 21.12.2015
+
+\bibitem[El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M.(2015)]{cross_plattform_approaches} 
+El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M. :
+\glqq Taxonomy of Cross-Platform Mobile Applications Development Approaches\grqq, 
+\emph{Ain Shams Engineering Journal}, 2015
+
+\bibitem[XMLVM (2011)]{XMLVM_Toolchain}
+\emph{XMLVM - Overview: Toolchain},
+\url{http://xmlvm.org/toolchain/}, letzter Zugriff: 25.12.2015
 
 \end{thebibliography}
 %----------------------------- EIGENSTÄNDIGKEITSERKLÄRUNG-----------------
