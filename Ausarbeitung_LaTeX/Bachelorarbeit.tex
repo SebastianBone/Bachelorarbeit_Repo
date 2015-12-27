@@ -411,7 +411,7 @@ Kompilierung(Compilation) ist ein Ansatz mit zwei Unterkategorien:
 Der Compiler ist ein Programm, welches den Quellcode einer High-Level Programmiersprache in einen Low-Level Code übersetzt wird. Dieser Low-Level Code ist ein Binärcode in Maschinensprache, der von dem Prozessor verstanden wird. Dieser Konvertierungsprozess wird als Kompilierung bezeichnet.
 
 \medskip
-Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unterschiedlich zu dem System ist, auf dem der kompilierte Code läuft. Die Zielsysteme können Betriebssysteme, Prozessoren oder eine Kombination aus beiden sein. Abb. \ref{graph_compilation_XMLVM} stellt eine von XMLVM gebotene Lösung zu Cross-Compiling dar.
+Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unterschiedlich zu dem System ist, auf dem der kompilierte Code läuft. Die Zielsysteme können Betriebssysteme, Prozessoren oder eine Kombination aus beiden sein. Abb. \ref{graph_compilation_XMLVM} stellt eine von XMLVM gebotene Lösung zu Cross-Compiling dar. Dies nutzt XML für die Frontend Darstellung und für die Verarbeitung des Bytecodes eine virtuelle Maschine(VM).
 
 \begin{figure}[htbp]
 	\centering
@@ -424,6 +424,11 @@ Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in ein
 
 %TODO
 \subsection{Komponentenbasiert}
+Die Komponente besteht aus einem Paket oder einem Modul, dessen Funktionen und Daten untereinander in Relation stehen. Jede Komponente besitzt eine Schnittstelle, dass die Servicedienste spezifiziert, welche von anderen Komponenten genutzt werden können. Die Kommunikation findet ausschließlich über die Schnittstellen statt, so dass eine Komponente keinerlei Informationen über den Aufbau einer anderen benötigt. 
+
+\medskip
+Ein beispielhafter Lösungsansatz ist der \textbf{Component-Based Mobile Web Application of Cross-Plattform}. Dieser komponentenbasierte Ansatz versucht die Entwicklung mobiler Web-Apps dahingehend zu vereinfachen, dass durch das Konzept von Softwarekomponenten, die Kernfunktionalitäten modular aufgeteilt werden. Diese Module beinhalten Speichermanagement, Netzwerkkommunikation, Grafik, Dateisystem und die Systemdienstkomponenten. Dadurch erhalten die Komponenten eine Wiederverwertbarkeit und vereinfacht die Migration auf andere Plattformen. Jede Plattform kann dieselben Schnittstellen nutzen, benötigt jedoch eine eigene innere Implementierung für die Unterstützung. 
+
 
 \subsection{Interpretierung}
 Bei der Interpretierung übersetzt ein Interpreter (Dolmetscher) den Quellcode in ausführbare Anweisungen. Dies geschieht in Echtzeit mit Hilfe einer dedizierten Maschine. Hierbei existieren drei Unteransätze:
@@ -448,7 +453,7 @@ Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.3\textwidth]{Bilder/Interpretation_Web_PhoneGap}
-	\caption{Ablauf des PhoneGap Interpreters von Adobe}\label{graph_interpreter_PhoneGap}
+	\caption{Vereinfachter Ablauf des PhoneGap Interpreters von Adobe}\label{graph_interpreter_PhoneGap}
 \end{figure} 
 
 \medskip
@@ -476,9 +481,8 @@ Für die Generierung existieren zwei Strategien.
 \medskip
 Das Hauptkonzept von \textbf{MDD} ist die Generierung von plattformspezifischen Versionen, basierend auf dem plattformunabhängigen, abstrakten Modell. Das Modell wird zum Beispiel durch Domain-Specific Language (DSL) beschrieben.
 
-%TODO
 \subsection{Cloudbasiert}
-In diesem Ansatz geschieht die Verarbeitung der Anwendung nicht lokal auf dem Gerät, sondern auf einem Cloudserver. Dabei werden einige Cloudeigenschaften verwendet, wie Flexibilität, Virtualisierung, Sicherheit und dynamisches Management. Die Clientanwendung ist dabei weitest möglich reduziert, da diese nur Basisprozesse benötigt. Dies wird Thin-Client genannt, da wie in Abb. \ref{client_aufgaben} nur Ein- und Ausgabe verarbeitet werden müssen. Cloudbasierte Anwendungen gelten dadurch besonders als potenziell energieeffizient.
+In diesem Ansatz geschieht die Verarbeitung der Anwendung nicht lokal auf dem Gerät, sondern auf einem Cloudserver. Dabei werden einige Cloudeigenschaften verwendet, wie Flexibilität, Virtualisierung, Sicherheit und dynamisches Management. Die Clientanwendung ist dabei weitest möglich reduziert, da diese nur Basisprozesse benötigt. Dies wird Thin-Client genannt, da wie in Abb. \ref{client_aufgaben} nur Ein- und Ausgabe verarbeitet werden müssen. Cloudbasierte Anwendungen sollen dadurch besonders energieeffizient sein.
 
 \begin{figure}[htbp]
 	\centering
@@ -486,24 +490,67 @@ In diesem Ansatz geschieht die Verarbeitung der Anwendung nicht lokal auf dem Ge
 	\caption{Aufgaben von Client-Anwendungen}\label{client_aufgaben}
 \end{figure}
 
+Da zur Zeit der Bearbeitung zu diesem Ansatz keine direkten Realisierungen gefunden worden, sondern überwiegend der theoretische Aufbau einer solchen Applikation, wird dieser Teil nicht weiter vertieft.
+
 %TODO
 \subsection{Vereinigung}
 Dieser Ansatz versucht die besten Eigenschaften verschiedener Ansätze zusammenzuführen, von den jeweiligen Vorteilen zu profitieren und Nachteile zu minimieren.
 
+\medskip
+Ein \textbf{unbetitelter Lösungsansatz} vereinigt den komponentenbasierten Ansatz mit dem Cross Compiler und einer darauf angepassten Universalsprache. Um die nativen Hardwarefunktionen wie Kamera und GPS, sowie native Softwareeigenschaften wie Buttons und andere Interaktionsfelder anzusprechen, wird eine Sammlung an Komponenten erstellt. Implementierungen dieser Komponenten können durch gemeinsame Schnittstellen für jede Zielplattform erfolgen. Dieses Framework soll dem Entwickler ermöglichen, Applikationen zu entwickeln, die auf nativen Code und der Universalsprache basieren. Diese Sprache wird der App als zusätzliche Kommunikationsschicht und Schnittstelle hinzugefügt, um die Komponenten und deren Methoden anzusprechen.(Abb. \ref{graph_merge_component_based}) Der Entwickler implementiert nur eine minimale Struktur der App auf nativer Basis, welche die Benutzerschnittstelle und Navigation beinhaltet. An welcher Stelle und auf welche Weise die Komponenten integriert werden, wird durch die Universalsprache definiert. Das Framework regelt die Codeintegrierung innerhalb des nativen Codes. Bei diesem Lösungsansatz ist es erforderlich die Benutzerschnittstelle für jede Plattform manuell zu definieren. Dabei liegt der funktionale Fokus auf allgemeingültigen Funktionen, ohne Berücksichtigung der plattformspezifischen.
+
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Bilder/Merge_Component_based}
+	\includegraphics[width=0.8\textwidth]{Bilder/Merge_Component_based}
 	\caption{Funktion eines komponentenbasierten Mergeansatz}\label{graph_merge_component_based}
 \end{figure}
 
+\medskip
+\textbf{Integrated Cross-Platform Mobile Development (ICPMD)} ist eine weitere Lösung die auf dem Merge-Prinzip aufbaut und drei Verwendungsszenarios unterstützt. Diese Szenarios sind, wie in Abb. \ref{graph_merge_integrated_based} dargestellt, abhängig von dem gegebenen Input. 
+Der Entwickler hat…
+ 
+\begin{enumerate}
+	\item …bereits ein bestehendes Projekt (z.B. Windows Phone) und möchte dies auf weitere Plattformen (z.B. iOS und Android) ausweiten.
+	
+	\item …definierte Anforderungen und möchte daraus, auf bestimmte Zielplattformen, eine mobile App erzeugen.
+	
+	\item …ein Projekt basierend auf dem abstrakten Modell und möchte dies aktualisieren und dann speichern oder daraus, auf bestimmte Zielplattformen, eine mobile App erzeugen.
+\end{enumerate}
+
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Bilder/Merge_Integrated_based}
-	\caption{Funktion eines integrationsbasierten Mergeansatz}\label{graph_merge_integrated_based}
+	\includegraphics[width=0.8\textwidth]{Bilder/Merge_Integrated_based}
+	\caption{Drei Szenarien bei ICPMD}\label{graph_merge_integrated_based}
 \end{figure}
 
+\section{Übersicht der Ansätze}
+Tabelle \ref{table_all_approaches} fasst die vorigen Ansätze zur plattformübergreifenden Entwicklung in Kurzform zusammen, benennt die jeweiligen Vor- und Nachteile, sowie die Namen bekannter Lösungen.
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{0.8\textwidth}{!}{%
+		\begin{tabular}{|c|c|p{5cm}|p{5cm}|p{1cm}|}
+			\hline
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Ansatz}} & {\color[HTML]{FFFFFF} \textbf{Unteransatz}} & \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Pro}}}                                                                                                                                                                                                                                                 & \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Contra}}}                                                                                                                    & \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{\begin{tabular}[c]{@{}c@{}}Beispielhafte\\ Lösungsansätze\end{tabular}}}} \\ \hline
+			\textbf{Kompilierung}                  & Cross-Compiler                              & Wiederverwertung eines existierenden Quellcodes durch Cross-Kompilierung auf eine andere Plattform.Die resultierende Applikation ist native und besitzt somit die Vorteile einer nativen App.                                                                                                                                    & Die Zuordnungen zwischen zwei Sprachen ist sehr aufwendig, so dass hauptsächlich die gemeinsamen Eigenschaften berücksichtigt werden.                                                                  & \begin{tabular}[c]{@{}l@{}}MoSync\\ Corona\\ Neomades\\ XMLVM\end{tabular}                                                                              \\ \hline
+			\textbf{}                              & Trans-Compiler                              & Kann genutzt werden, um veraltete Applikationen und deren veralteter Code auf eine neuere Version derselben Sprache zu übersetzen. Wiederverwertung eines existierenden Quellcodes durch Trans-Kompilierung auf eine andere Plattform.Die resultierende Applikation ist native und besitzt somit die Vorteile einer nativen App. & Konzentriert sich ausschließlich auf die gemeinsamen APIs der Quell- und der Zielsprache. Benötigt regelmäßige Aktualisierungen, um die Änderungen der APIs in Quell- und Zielsprache zu unterstützen. & \begin{tabular}[c]{@{}l@{}}J2ObjC \\JUniversal\end{tabular}                                                                                                                                    \\ \hline
+			\textbf{Komponentenbasiert}            &                                             & Vereinfacht die Unterstützung neuer Plattformen durch definierte Schnittstellen bei implementierten Komponenten.                                                                                                                                                                                                                 & Konzentriert sich nur auf die Gemeinsamkeiten der unterstützten Plattformen.                                                                                                                           & Theoretisch                                                                                                                                         \\ \hline
+			\textbf{Interpretation}                & Webbasiert                                  & Leicht zu erlernen und zu benutzen, da es auf bekannten Web-Technologien aufbaut.                                                                                                                                                                                                                                                & Die Benutzerschnittstelle von webbasierten Apps besitzen nicht das gleiche Aussehen und Handhabung wie bei nativen Apps. Geringere Perfomance gegenüber nativen Apps.                                  & \begin{tabular}[c]{@{}l@{}} PhoneGap\\ Rhomobile\\xFace \end{tabular}                                           \\ \hline
+			\textbf{}                              & Virtuelle Maschine                          & Geringere Gesamtgröße und schnellerer Download der Apps, da alle benötigten Bibliotheken und Funktionen in der VM gespeichert sind.                                                                                                                                                                                              & Langsame Ausführung der Applikation auf der VM. Die VM muss erst aus einem Store geladen werden, was auf iOS nicht unterstützt wird.                                                                   & MobDSL                                                                                                                                              \\ \hline
+			\textbf{}                              & Laufzeit                                    & Der Quellcode muss nur einmal geschrieben werden.                                                                                                                                                                                                                                                                                & Die Perfomance beim Laden der App ist gering, da der Interpretierungsvorgang bei jeder einzelnen Ausführung stattfindet.                                                                               & \begin{tabular}[c]{@{}l@{}} Titanium\\ Xamarin \end{tabular}                                          \\ \hline
+			\textbf{Modellierung}                  & MD-UID                                      & Spart Entwicklungszeit durch Generierung des UI-Codes. Nützlich für Prototyping, durch schnelle UI-Entwicklung und dadurch frühe Evaluierung der Benutzerfreundlichkeit.                                                                                                                                                         & Muss sich bei den einzelnen Plattformen auf ähnliche Benutzerschnittstellen konzentrieren.                                                                                                             & XMobile                                                                                                                                             \\ \hline
+			\textbf{}                              & MDD                                         & Die Modellierungssprache ist effektiv, um Anforderungen zu definieren. Der Fokus liegt auf der Funktionalität und nicht an der technischen Implementierung.                                                                                                                                                                      & Kann existierenden, nativen Quellcode nicht verarbeiten.                                                                                                                                               & \begin{tabular}[c]{@{}l@{}}JSAF \\ MD2 \\ Jelly \\ AppliDE\end{tabular}                                                                             \\ \hline
+			\textbf{Cloud-Basiert}                 &                                             & Verarbeitungsprozesse werden in eine Cloud ausgelagert.                                                                                                                                                                                                                                                                          & Das Endgerät und die App benötigen eine schnelle, permanente Netzwerkverbindung.                                                                                                                       & Theoretisch                                                                                                                                         \\ \hline
+			\textbf{Vereinigung}                   &                                             & Vorteile aus den Stärken anderer Ansätze. Bietet dem Entwickler vielseitige Möglichkeiten.                                                                                                                                                                                                                                       & Benötigt hohen Entwicklungsaufwand.                                                                                                                                                                    & ICPMD                                                                                                                                               \\ \hline
+		\end{tabular}
+	}
+	\caption{Übersicht aller Ansätze}
+	\label{table_all_approaches}
+\end{table}
+
 \section{Entwicklung mobiler Applikationen ohne den Schwerpunkt Spieleentwicklung}
-%Verweis auf Bachelorarbeit: „Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App“
+In der Abschlussarbeit „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier nicht der Fokus auf Game-spezifischen Applikationen und Entwicklungswerkzeugen. Hier wird in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen eingegangen und deren Resultate klassifiziert. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Diese Arbeit setzt den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht von daher nicht weiter auf die genannten und vorangegangenen Entwicklungswerkzeuge ein.
 
 %TODO: Kapitel 5
 \chapter{Plattformübergreifende Frameworks zur Spieleentwicklung}
@@ -686,6 +733,13 @@ Dieser Ansatz versucht die besten Eigenschaften verschiedener Ansätze zusammenz
 El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M. :
 \glqq Taxonomy of Cross-Platform Mobile Applications Development Approaches\grqq, 
 \emph{Ain Shams Engineering Journal}, 2015
+
+\bibitem[Vehse, Benjamin(2014)]{cross_plattform_development_vehse} 
+Vehse, Benjamin:
+\glqq Plattformabhängige und –unabhängige
+Entwicklung mobiler Anwendungen am
+Beispiel von Geo-Wikipedia-App\grqq, 
+\emph{Bachelor-Thesis}, 2014
 
 \bibitem[XMLVM (2011)]{XMLVM_Toolchain}
 \emph{XMLVM - Overview: Toolchain},
