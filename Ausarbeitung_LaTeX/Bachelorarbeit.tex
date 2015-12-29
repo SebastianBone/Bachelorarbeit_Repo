@@ -176,7 +176,7 @@ Bei der Wahl der Hardware ist man auf die Produktpalette von Apple angewiesen, w
 
 \subsection{Windows Phone}
 Entwickler Microsoft stellt seit dem Jahr 2000 Betriebssysteme für mobile Geräte her. \citep{microsoft_mobile} 
-Seitdem hat sich die Namensgebung von Windows Mobile, über Windows Phone, bis zum aktuellsten Windows 10 Mobile vorgearbeitet. Um im allgemeinen Bezug nicht zwischen den Namen hin und her zu wechseln, wird in dieser Arbeit, wenn mobile Windows Systeme erwähnt werden, der Name Windows Phone benutzt.
+Seitdem hat sich die Namensgebung von Windows Mobile, über Windows Phone, bis zum aktuellsten Windows 10 Mobile vorgearbeitet. Um im allgemeinen Bezug nicht zwischen den Namen hin und her zu wechseln, wird in dieser Arbeit, wenn mobile Windows Systeme erwähnt werden, der Name Windows Phone (oder WP) benutzt.
 Die frühen Versionen von Windows Phone, also Windows Mobile und Windows Phone 7 stammen noch von dem Windows CE Kernel ab, wobei die aktuellen Versionen, Windows Phone 8 und Windows 10 Mobile, Derivate des Windows NT Kernels sind. Mit dem neuesten Ableger, Windows 10 Mobile, verspricht Microsoft eine homogene Kommunikations- und Anwendungsstruktur zwischen allen Geräten die mit diesem System betrieben werden. Dazu zählen nicht nur Smartphones und Tablets, sondern auch Notebooks, Desktop PCs und die Spielkonsole Xbox One. \citep{windows10_features}
 
 Microsoft verfolgt mit Windows Phone eine ähnlich geschlossene und proprietäre Struktur wie der Konkurrent Apple. Eigene Derivate des Systems sind also nicht offiziell möglich. Auch die Benutzer müssen für neue Anwendungen auf das Angebot des Windows Stores zurückgreifen. Jedoch will Microsoft Entwicklern die Möglichkeit bieten, zukünftige Anwendungen universell verfügbar zu machen, das diese auf allen Windows Systemen nutzbar sind. Microsoft arbeitet außerdem an einer Technik, die bestehende Android und iOS Anwendungen auf die Windows Plattform überführen kann. \citep{wp_with_android_ios}
@@ -203,33 +203,34 @@ Nachteile:
 %OPTIONAL!!!
 %subsection{Weitere Systeme}
 
-%TODO: Kapitel 3
 \chapter{Native Softwareentwicklung}
 Softwareentwicklung für ein bestimmtes System wird als nativ (lat.: angeboren, natürlich) bezeichnet. Hier sind Dateiformate, Programmiersprachen, Hardware, Entwicklungsumgebungen und Kompilierung genau an die Zielplattform angepasst. Nativer Code ist in der Lage alle individuellen Eigenschaften einer Zielplattform anzusprechen, ohne dabei eine eventuelle Portierbarkeit zu berücksichtigen.
 \citep{native_software}
 Welche Anforderungen iOS, Android und Windows Phone bezüglich nativer Entwicklung voraussetzen, soll in diesem Kapitel näher erläutert werden.
 
-\section{Systemvorraussetzungen}
+\section{Systemvoraussetzungen}
 Um Applikationen für eine bestimmte Zielplattform zu entwickeln, werden unter Umständen Voraussetzungen an das Betriebssystem des Entwicklers gestellt.
 
 \subsection{Android}
-Die Entwicklung von Android Applikationen ist an kein bestimmtes System gebunden. Somit lassen sich diese unter Windows, OS X und Linux Systemen entwickeln. 
-Windows Benutzer sollten mindestens Windows XP nutzen. Darüber hinaus können alle aktuelleren Versionen genutzt werden, wobei alle 32-Bit Editionen unterstützt werden und ab Windows 7 auch die mit 64-Bit.
+Die Entwicklung von Android Applikationen ist an kein bestimmtes System gebunden. Somit lassen sich diese unter Windows, OS X und Linux Systemen entwickeln. Dies wird unter anderem durch die Eigenschaften der Programmiersprache Java ermöglicht.
+Windows Benutzer sollten mindestens Windows XP nutzen. Darüber hinaus können alle aktuelleren Versionen genutzt, wobei alle 32-Bit Editionen unterstützt werden. Ab Windows 7 wird 64-Bit ebenfalls unterstützt.
 Mac Systeme werden ab OS X 10.5.8 von den offiziellen Entwicklungswerkzeugen unterstützt.
 Um auf einem Linux System zu entwickeln, kann man dies beispielsweise unter Ubuntu ab Version 8.04 tun. Bei 64-Bit Versionen ist es notwendig, dass diese fähig ist 32-Bit Anwendungen auszuführen. Da die Auswahl an Linux-Distributionen sehr umfangreich ist, wird an dieser Stelle auf diese nicht weiter eingegangen.
 \citep{android_sdk_requirements}
 
 \subsection{iOS}
-%TODO
+Für den reinen Schreibvorgang von iOS Anwendungen ist prinzipiell jedes System geeignet. Jedoch ist es offiziell nur auf einem Apple OS X System möglich, die geschriebene Software zu kompilieren und auf der Zielhardware zu testen. Für Entwickler die kein OS X System ihr Eigen nennen oder keinen Zugang zu solcher haben, besteht die Möglichkeit einen Cloudservice zu nutzen. \textit{MacinCloud} bietet eine cloudbasierte Vermietung von OS X Systemen, inklusive der benötigten Entwicklungssoftware. \citep{macincloud}
 
 \subsection{Windows Phone}
-%TODO
+Ähnlich wie bei iOS, wird für die Kompilierung von Windows Phone Applikationen ein passendes Windows System vorausgesetzt. Jedoch sind manche Voraussetzungen leider etwas undurchsichtig. Das bedeutet, dass für die Entwicklung einer Windows Phone 8 App mindestens ein Windows 8 Betriebssystem benötigt wird. Außerdem wird das SDK 8.0 nur von der 64-bit Version unterstützt. Weiter wird beispielsweise für die Nutzung des Simulators eine Windows 8 Pro Version und die Virtualisierungstechnologie Hyper-V benötigt. Das Windows 10 SDK erwartet minimal Windows 7. Der Simulator benötigt die gleichen Mindestanforderungen wie bei Windows 8. \citep{WP8_requirements, WP10_SDK, WP10_Emulator} 
 
 \section{SDKs und Versionen}
 Software Development Kits, kurz SDKs, liefern dem Entwickler die Werkzeuge, Anwendungen und bestenfalls eine aktuelle Dokumentation, um für eine bestimmte Zielplattform zu entwickeln. Auch sind sie notwendig, um geschriebenen Code zu interpretieren und kompilieren. Um die aktuellste Version eines mobilen Systems zu unterstützen, muss das SDK auf ebenso aktuellen Stand sein.
+\clearpage 
 
 \subsection{Android Versionen}
 Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben nach alphabetisch aufsteigend. (Abb.\ref{tab_android_vers})
+Das aktuelle SDK ist frei im Netz verfügbar. Dieses kann einzeln geladen werden oder direkt in Verbindung mit Android Studio.
 
 \begin{table}[htbp]
 	\centering
@@ -265,10 +266,12 @@ Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben
 	}
 	\caption{Android Versionen und ihr Erscheinungsdatum}\label{tab_android_vers}\citep{android_codenames,android_version_releases}
 \end{table}
+\clearpage
 
 \subsection{iOS Versionen}
 Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. Verbrauchern sind diese meist unbekannt, da diese überwiegend intern genutzt werden. (Abb.\ref{tab_ios_vers})
-
+Das SDK wird offiziell ausschließlich in Verbindung mit XCode bezogen.
+ 
 \begin{table}[htbp]
 	\centering
 	\resizebox{0.5\textwidth}{!}{%
@@ -307,9 +310,45 @@ Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. 
 \caption{iOS Versionen und ihr Erscheinungsdatum}\label{tab_ios_vers}\citep{ios_codenames}
 \end{table}
 
-
 \subsection{Windows Phone Versionen}
-%TODO
+Tabelle \ref{tab_WP_versions} berücksichtigt alle Versionen ab Windows Phone 7. Die Unterstützung seitens Microsoft wurde bereits eingestellt. Version 8 soll laut Angabe bis etwa 2017 weitergeführt werden, bis die Portierungen der Nutzer zu Windows 10 abgeschlossen sind.
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Codename}} & {\color[HTML]{FFFFFF} \textbf{Version}} & {\color[HTML]{FFFFFF} \textbf{Erscheinungsdatum}} \\ \hline
+			Windows Phone 7                          & 7.0.7004.0                              & 21. Oktober 2010                                  \\ \hline
+			PreNoDo                                  & 7.0.7008.0                              & 21. Februar 2011                                  \\ \hline
+			NoDo                                     & 7.0.7390.0                              & 22. März 2011                                     \\ \hline
+			& 7.0.7392.0                              & 3. Mai 2011                                       \\ \hline
+			& 7.0.7403.0                              & September 2011                                    \\ \hline
+			7.5 / Mango                              & 7.10.7720.68                            & 27. September 2011                                \\ \hline
+			& 7.10.7740.16                            & 17. November 2011                                 \\ \hline
+			& 7.10.8107.79                            & 4. Januar 2012                                    \\ \hline
+			& 7.10.8112.7                             & Juni 2012                                         \\ \hline
+			7.5 Refresh / Tango                      & 7.10.8773.98                            & 27. Juni 2012                                     \\ \hline
+			& 7.10.8779.8                             & 15. August 2012                                   \\ \hline
+			& 7.10.8783.12                            & 30. Januar 2013                                   \\ \hline
+			7.8                                      & 7.10.8858.136                           & 30. Januar 2013                                   \\ \hline
+			& 7.10.8860.142                           & 14. März 2013                                     \\ \hline
+			& 7.10.8862.144                           & 15. März 2013                                     \\ \hline
+			8.0 / Apollo                             & 8.0.9903.10                             & 29.Oktober 2012                                   \\ \hline
+			Portico                                  & 8.0.10211.204                           & 29. Januar 2013                                   \\ \hline
+			Apollo+                                  & 8.0.10327.77                            & 19. Juli 2013                                     \\ \hline
+			& 8.0.10512.142                           & 14. Oktober 2013                                  \\ \hline
+			Blue                                     & 8.10.12397.895                          & 16. Juli 2014                                     \\ \hline
+			& 8.10.14234.375                          & 5. Dezember 2014                                  \\ \hline
+			& 8.10.15148.160                          & 11. April 2015                                    \\ \hline
+			Windows 10                               & 10.0.10586.0                            & 20. November 2015                                 \\ \hline
+			& 10.0.10586.29                           & 8. Dezember 2015                                  \\ \hline
+		\end{tabular}
+	}
+	\caption{Windows Phone Versionen und ihr Erscheinungsdatum}
+	\label{tab_WP_versions}\citep{WP7_version_releases, WP8_version_releases, WP10_version_releases}
+\end{table}
 
 \section{Programmiersprachen}
 In der nativen Entwicklung werden für jede Zielplattform bestimmte Programmiersprachen unterstützt. 
@@ -319,13 +358,14 @@ Android Applikationen werden in Java entwickelt. Demnach ist es notwendig vorab 
 \citep{java_jdk}
 
 \subsection{iOS}
-%TODO
+Die primäre Programmiersprache für iOS und OS X ist derzeit die objektorientierte Erweiterung von C, Objective-C. Diese befindet sich aktuell in der Version 2.0. Objective-C wurde weiterhin von der Sprache Smalltalk beeinflusst und leitet zum Beispiel die Syntax dessen Objekteigenschaften ab. Trotzdem besteht weiterhin die Nähe zur C Syntax, in Bezug auf nicht-objektorientierter Operationen. \citep{objectiveC_about}
+
+
+Alternativ kann die relativ junge Sprache Swift eingesetzt werden. Diese ist ebenfalls objektorientiert und in der aktuellen Version 2.0. Im Dezember 2015 wurde der Quellcode als Open Source zur Verfügung gestellt. Swift soll Objective-C allerdings nicht ersetzen, sondern eine weitere Möglichkeit darstellen. Die beiden Sprachen sind miteinander kompatibel, so dass es möglich beide in demselben Projekt zu nutzen.
+\citep{swift_about}
 
 \subsection{Windows Phone}
-%TODO
-
-%OPTIONAL!!!
-%\subsection{Popularität der Programmiersprachen}
+Für die Benutzeroberfläche wird hauptsächlich die Sprache XAML (Extensible Application Markup Language) genutzt. Um die Logik zu erstellen, hat der Entwickler die Freiheit C\#, Visual Basic, JavaScript oder C++ nutzen.
 
 \section{Entwicklungsumgebungen}
 Für die Entwicklung werden jeweilig verschiedene IDEs (Integrated Development Environment) seitens der Betreiber unterstützt und empfohlen. Eine Besonderheit bei IDEs für mobile Systeme ist die Unterstützung eines Simulators. Dieser simuliert ein spezifiziertes Gerät auf virtuelle Weise, um Entwicklungen direkt testen zu können.
@@ -334,10 +374,15 @@ Für die Entwicklung werden jeweilig verschiedene IDEs (Integrated Development E
 Android empfiehlt das eigene Android Studio, welches die offizielle IDE für Android Entwicklung darstellt und zusätzlich das aktuelle SDK mitliefert. Android Studio basiert auf der IDE IntelliJ IDEA und ist frei verfügbar.\citep{android_studio} Alternativer Vorgänger ist die quelloffene IDE Eclipse.
 
 \subsection{iOS}
-%TODO
+Xcode ist die IDE von Apple, ohne die keinerlei Kompilierung von iOS Projekten möglich ist.
+Diese befindet sich derzeit in der stabilen Version 7 und liefert das benötigte SDK, so wie einen umfangreichen Simulator mit allen mobilen Apple Geräten. Xcode ist verpflichtend, wenn die geschriebene Anwendung auf einer realen Hardware getestet werden soll. Seit dem 3. Quartal 2015 ist dafür auch keine kostenpflichtige Entwicklerlizenz nötig, sondern fällt nur noch bei einem Release im App Store an. 
+\citep{t3n_xcode7}
+Eine alternative bietet JetBrains IDE Appcode, welches eine kompatible, aber kostenpflichtige Erweiterung zu Xcode ist.
+\citep{appcode}
+
 
 \subsection{Windows Phone}
-%TODO
+Microsoft setzt für die Kompilierung und Realisierung für WP Projekte eine Visual Studio IDE voraus, welche für Entwicklungen außerhalb eines Unternehmens kostenfrei ist.
 
 \section{Zusammengefasste Übersicht}
 Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzelnen Systeme bieten.
@@ -350,15 +395,13 @@ Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzel
 			& \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Virtuelle Maschine}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Programmiersprache}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{User Interface}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Memory Management}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{IDE}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Plattform}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Geräte}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{App Markt}} \\ \hline
 			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Android}}}       & Dalvik VM                                                                  & Java                                                                       & XML files                                                              & Garbage collector                                                         & Eclipse, Android Studio                                                     & Multi-platform                                                    & Heterogen                                                      & Google Play Store                                                 \\ \hline
 			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{iOS}}}           & -                                                                          & Objective-C, Swift                                                         & Cocoa Touch                                                            & Reference counting                                                        & XCode                                                       & Mac OS X                                                          & Homogen                                                        & Apple Apps Store                                                  \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Windows Phone}}} & CLR                                                                        & C\# and .Net                                                               & XAML files                                                             & Garbage collector                                                         & Visual Studio                                               & Windows                                                           & Homogen                                                        & Windows Phone Store                                               \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Windows Phone}}} & CLR                                                                        & C\#, C++, Visual Basic, JavaScript, .Net                                                               & XAML files                                                             & Garbage collector                                                         & Visual Studio                                               & Windows                                                           & Homogen                                                        & Windows Phone Store                                               \\ \hline
 		\end{tabular}
 	}
 	\caption{Unterschiede zwischen Android, iOS und Windows Phone}
 	\label{platform_differnces}
 \end{table}
 
-%OPTIONAL!!!
-%\section{Kompilierung}
 
 %OPTIONAL!!!
 %TODO: Kapitel 8
@@ -368,7 +411,6 @@ Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzel
 %\section{Anforderungen an den Quellcode}
 %\section{Kosten und Abgaben}
 
-%TODO: Kapitel 4
 \chapter{Plattformübergreifende Entwicklung}
 Die Entwicklung von Software-Produkten und Services, welche auf mehreren Systemen oder Laufzeitumgebungen funktioniert, wird als plattformübergreifende oder auch Cross-Plattform Entwicklung definiert. Um dies zu gewährleisten nutzen Entwickler unterschiedliche Methoden und Techniken, um verschiedene Systeme mit einer Projektstruktur zu erreichen.\citep{cross_plattform_explanation}
 
@@ -422,7 +464,6 @@ Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unt
 \medskip
 Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in eine andere High-Level Programmiersprache. Da viele Sprachen jedoch unterschiedliche Eigenschaften und Leistungsmerkmale besitzen, muss der generierte Code unter Umständen nachbearbeitet werden, wenn der Compiler diese bei der Übersetzung nicht unterstützt. Auch ist der Code durch die automatisierte Erzeugung in der Regel nur schwer lesbar. Es besteht auch eine Abhängigkeit zu regelmäßigen Updates, um die Änderungen der Quell- und Zielsysteme aktuell zu halten.
 
-%TODO
 \subsection{Komponentenbasiert}
 Die Komponente besteht aus einem Paket oder einem Modul, dessen Funktionen und Daten untereinander in Relation stehen. Jede Komponente besitzt eine Schnittstelle, dass die Servicedienste spezifiziert, welche von anderen Komponenten genutzt werden können. Die Kommunikation findet ausschließlich über die Schnittstellen statt, so dass eine Komponente keinerlei Informationen über den Aufbau einer anderen benötigt. 
 
@@ -649,6 +690,10 @@ In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mob
 \emph{Codenames, Tags, and Build Numbers in the history of Android},
 \url{https://source.android.com/source/build-numbers.html}, etzter Zugriff: 24.11.2015
 
+\bibitem[Apple Developer (2015)]{swift_about}
+\emph{Swift - Overview},
+\url{https://developer.apple.com/swift/}, letzter Zugriff: 28.12.2015
+
 \bibitem[Bernardo Zamora (2015)]{windows_store_trends_2015}
 \emph{Blogs.Windows - Windows Store Trends - September 2015},
 \url{https://blogs.windows.com/buildingapps/2015/10/12/windows-store-trends-september-2015/}, letzter Zugriff: 15.12.2015
@@ -674,6 +719,10 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \emph{Prognose zu den Marktanteilen der Betriebssysteme am Absatz vom Smartphones weltweit in den Jahren 2015 und 2019. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/182363/umfrage/prognostizierte-marktanteile-bei-smartphone-betriebssystemen/}, letzter Zugriff: 14.12.2015
 
+\bibitem[JetBrains (2015)]{appcode}
+\emph{AppCode},
+\url{https://www.jetbrains.com/objc/}, letzter Zugriff: 28.12.2015
+
 \bibitem[John Daintith(2004)]{native_software}
 \emph{A Dictionary of Computing - native software},
 \url{http://www.encyclopedia.com/doc/1O11-nativesoftware.html}, letzter Zugriff: 24.11.2015
@@ -682,6 +731,18 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \emph{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/198453/umfrage/marktanteile-der-smartphone-betriebssysteme-am-absatz-in-ausgewaehlten-laendern/}, letzter Zugriff: 14.12.2015
 
+\bibitem[Mac Developer Library (2014)]{objectiveC_about}
+\emph{About Objective-C},
+\url{https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html/}, letzter Zugriff: 28.12.2015
+
+\bibitem[MacinCloud (2015)]{macincloud}
+\emph{MacinCloud},
+\url{http://www.macincloud.com/}, letzter Zugriff: 28.12.2015
+
+\bibitem[Microsoft Developer (2015)]{WP10_SDK}
+\emph{Windows Software Development Kit (SDK) for Windows 10},
+\url{https://dev.windows.com/en-us/downloads/windows-10-sdk}, letzter Zugriff: 28.12.2015
+
 \bibitem[Microsoft(2014)]{microsoft_nokia}
 \emph{Microsoft - Microsoft und Nokia Geräte},
 \url{https://www.microsoft.com/de-de/nokia.aspx}, letzter Zugriff: 25.11.2015
@@ -689,6 +750,10 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \bibitem[Microsoft(2015)]{windows10_features}
 \emph{Microsoft - Windows 10 Features},
 \url{https://www.microsoft.com/de-de/windows/features}, letzter Zugriff: 25.11.2015
+
+\bibitem[MSDN (2015)]{WP10_Emulator}
+\emph{Microsoft-Emulator für Windows 10 Mobile},
+\url{https://msdn.microsoft.com/library/windows/apps/mt162269.aspx}, letzter Zugriff: 28.12.2015
 
 \bibitem[Open Handset Alliance - Alliance Members(2015)]{alliance_members}
 \emph{Members of the Open Handset Alliance},
@@ -722,6 +787,10 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \emph{Android SDK Requirements},
 \url{http://code.tutsplus.com/tutorials/android-sdk-requirements--mobile-20086}, letzter Zugriff: 24.11.2015
 
+\bibitem[t3n (2015)]{t3n_xcode7}
+\emph{Xcode 7: Apps auch ohne Entwickler-Account auf dem iPhone testen},
+\url{http://t3n.de/news/xcode-7-apps-ohne-615214/}, letzter Zugriff: 28.12.2015
+
 \bibitem[techopedia (2015)]{cross_plattform_explanation}
 \emph{Cross-Platform Development},
 \url{https://www.techopedia.com/definition/30026/cross-platform-development}, letzter Zugriff: 21.12.2015
@@ -741,9 +810,29 @@ Beispiel von Geo-Wikipedia-App\grqq,
 \emph{Übersicht von allen Android Versionen mit Veröffentlichungsdatum},
 \url{https://de.wikipedia.org/wiki/Liste_von_Android-Versionen}, letzter Zugriff: 24.11.2015
 
+\bibitem[Wikipedia - Windows 10 (2015)]{WP10_version_releases}
+\emph{Microsoft Windows 10 Mobile},
+\url{https://de.wikipedia.org/wiki/Microsoft_Windows_10_Mobile}, letzter Zugriff: 28.12.2015
+
+\bibitem[Wikipedia - Windows Phone 7 (2015)]{WP7_version_releases}
+\emph{Microsoft Windows Phone 7},
+\url{https://de.wikipedia.org/wiki/Microsoft_Windows_Phone_7}, letzter Zugriff: 28.12.2015
+
+\bibitem[Wikipedia - Windows Phone 8 (2015)]{WP8_version_releases}
+\emph{Microsoft Windows Phone 8},
+\url{https://de.wikipedia.org/wiki/Microsoft_Windows_Phone_8}, letzter Zugriff: 28.12.2015
+
 \bibitem[XMLVM (2011)]{XMLVM_Toolchain}
 \emph{XMLVM - Overview: Toolchain},
 \url{http://xmlvm.org/toolchain/}, letzter Zugriff: 25.12.2015
+
+\bibitem[YoYo Games (2013)]{WP8_requirements}
+\emph{Requirements for Windows Phone development},
+\url{http://help.yoyogames.com/entries/23355146-Requirements-for-Windows-Phone-development}, letzter Zugriff: 28.12.2015
+
+
+
+
 
 \end{thebibliography}
 %----------------------------- EIGENSTÄNDIGKEITSERKLÄRUNG-----------------
