@@ -89,7 +89,7 @@ Abbildung \ref{graph_mobile_systems_laender} gibt Aufschluss über die Verteilun
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Bilder/Marktanteile_nach_Laendern}
+	\includegraphics[width=1\textwidth]{Bilder/Marktanteile_nach_Laendern}
 	\caption{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015}\label{graph_mobile_systems_laender}\citep{marktanteile_betriebssysteme_laender}
 \end{figure}
 
@@ -109,7 +109,7 @@ Laut Windows wurden im September 2015 etwa 50\% der Applikationen mit Windows 10
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Bilder/Google_Play_Store_Kategorien}
+	\includegraphics[width=0.6\textwidth]{Bilder/Google_Play_Store_Kategorien}
 	\caption{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014}\label{graph_play_store_kategorien}\citep{play_store_categories}
 \end{figure}
 
@@ -234,7 +234,7 @@ Das aktuelle SDK ist frei im Netz verfügbar. Dieses kann einzeln geladen werden
 
 \begin{table}[htbp]
 	\centering
-	\resizebox{0.8\textwidth}{!}{%
+	\resizebox{1\textwidth}{!}{%
 		\begin{tabular}{|c|c|c|c|}
 			\hline
 			\rowcolor[HTML]{000000} 
@@ -274,7 +274,7 @@ Das SDK wird offiziell ausschließlich in Verbindung mit XCode bezogen.
  
 \begin{table}[htbp]
 	\centering
-	\resizebox{0.5\textwidth}{!}{%
+	\resizebox{0.6\textwidth}{!}{%
 		\begin{tabular}{|c|c|c|}
 			\hline
 			\rowcolor[HTML]{000000} 
@@ -315,7 +315,7 @@ Tabelle \ref{tab_WP_versions} berücksichtigt alle Versionen ab Windows Phone 7.
 
 \begin{table}[htbp]
 	\centering
-	\resizebox{0.5\textwidth}{!}{%
+	\resizebox{0.7\textwidth}{!}{%
 		\begin{tabular}{|c|c|c|}
 			\hline
 			\rowcolor[HTML]{000000} 
@@ -390,18 +390,22 @@ Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzel
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{c|c|c|c|c|c|c|c|c|}
-			\cline{2-9}
-			& \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Virtuelle Maschine}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Programmiersprache}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{User Interface}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Memory Management}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{IDE}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Plattform}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Geräte}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{App Markt}} \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Android}}}       & Dalvik VM                                                                  & Java                                                                       & XML files                                                              & Garbage collector                                                         & Eclipse, Android Studio                                                     & Multi-platform                                                    & Heterogen                                                      & Google Play Store                                                 \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{iOS}}}           & -                                                                          & Objective-C, Swift                                                         & Cocoa Touch                                                            & Reference counting                                                        & XCode                                                       & Mac OS X                                                          & Homogen                                                        & Apple Apps Store                                                  \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Windows Phone}}} & CLR                                                                        & C\#, C++, Visual Basic, JavaScript, .Net                                                               & XAML files                                                             & Garbage collector                                                         & Visual Studio                                               & Windows                                                           & Homogen                                                        & Windows Phone Store                                               \\ \hline
+		\begin{tabular}{p{5cm}|c|c|c|c|}
+			\cline{2-5}
+			& \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Virtuelle Maschine}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Programmiersprache}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{User Interface}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Memory Management}}  \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Android}}}       & Dalvik VM                                                                  & Java                                                                       & XML files                                                              & Garbage collector \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{iOS}}}           & -                                                                          & Objective-C, Swift                                                         & Cocoa Touch                                                            & Reference counting \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Windows Phone}}} & CLR                                                                        & C\#, C++, Visual Basic, JavaScript, .Net                                                               & XAML files                                                             & Garbage collector  \\ \hline
+			\cline{2-5}
+			&\cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{IDE}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Plattform}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Geräte}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{App Markt}} \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Android}}}       &  Eclipse, Android Studio                                                     & Multi-platform                                                    & Heterogen                                                      & Google Play Store                                                 \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{iOS}}}           &  XCode                                                       & Mac OS X                                                          & Homogen                                                        & Apple Apps Store                                                  \\ \hline
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Windows Phone}}} &  Visual Studio                                               & Windows                                                           & Homogen                                                        & Windows Phone Store                                               \\ \hline
 		\end{tabular}
 	}
 	\caption{Unterschiede zwischen Android, iOS und Windows Phone}
 	\label{platform_differnces}
 \end{table}
-
 
 %OPTIONAL!!!
 %TODO: Kapitel 8
@@ -416,7 +420,7 @@ Die Entwicklung von Software-Produkten und Services, welche auf mehreren Systeme
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Bilder/nativ_vs_cross}
+	\includegraphics[width=1\textwidth]{Bilder/nativ_vs_cross}
 	\caption{Traditionelle und plattformübergreifende Entwicklungsmodelle}\label{graph_nativ_vs_cross}
 \end{figure}
 
@@ -436,7 +440,7 @@ Die Entwicklung von plattformübergreifenden Anwendungen auf mobilen Systemen wi
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Bilder/Cross_Plattform_Ansaetze}
+	\includegraphics[width=0.8\textwidth]{Bilder/Cross_Plattform_Ansaetze}
 	\caption{Haupt- und Nebenansätze zur Entwicklung von mobilen plattformübergreifenden Anwendungen}\label{graph_cross_plattform_approaches}
 \end{figure}
 
@@ -457,7 +461,7 @@ Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unt
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Bilder/Compilation_Cross_XMLVM}
+	\includegraphics[width=0.7\textwidth]{Bilder/Compilation_Cross_XMLVM}
 	\caption{XMLVM Prozess mit Java oder .NET Quellcode}\label{graph_compilation_XMLVM}\citep{XMLVM_Toolchain}
 \end{figure}
 
@@ -484,7 +488,7 @@ Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Bilder/Interpretation_VM_Dalvik}
+	\includegraphics[width=0.6\textwidth]{Bilder/Interpretation_VM_Dalvik}
 	\caption{Ablauf des Dalvik VM Interpreter}\label{graph_interpreter_Dalvik}
 \end{figure}
 
@@ -493,7 +497,7 @@ Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.3\textwidth]{Bilder/Interpretation_Web_PhoneGap}
+	\includegraphics[width=0.5\textwidth]{Bilder/Interpretation_Web_PhoneGap}
 	\caption{Vereinfachter Ablauf des PhoneGap Interpreters von Adobe}\label{graph_interpreter_PhoneGap}
 \end{figure} 
 
@@ -502,7 +506,7 @@ Die \textbf{Laufzeit} ist eine Ausführungsumgebung und eine Schicht, welche die
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Bilder/Interpretation_Runtime_Titanium}
+	\includegraphics[width=0.7\textwidth]{Bilder/Interpretation_Runtime_Titanium}
 	\caption{Ablauf des Titanium Interpreters von Appcelerator}\label{graph_interpreter_Titanium}
 \end{figure}
 
@@ -527,13 +531,12 @@ In diesem Ansatz geschieht die Verarbeitung der Anwendung nicht lokal auf dem Ge
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Bilder/Aufgaben_Endgeraet}
+	\includegraphics[width=1\textwidth]{Bilder/Aufgaben_Endgeraet}
 	\caption{Aufgaben von Client-Anwendungen}\label{client_aufgaben}
 \end{figure}
 
 Da zur Zeit der Bearbeitung zu diesem Ansatz keine direkten Realisierungen gefunden worden, sondern überwiegend der theoretische Aufbau einer solchen Applikation, wird dieser Teil nicht weiter vertieft.
 
-%TODO
 \subsection{Vereinigung}
 Dieser Ansatz versucht die besten Eigenschaften verschiedener Ansätze zusammenzuführen, von den jeweiligen Vorteilen zu profitieren und Nachteile zu minimieren.
 
@@ -542,12 +545,14 @@ Ein \textbf{unbetitelter Lösungsansatz} vereinigt den komponentenbasierten Ansa
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Bilder/Merge_Component_based}
+	\includegraphics[width=0.9\textwidth]{Bilder/Merge_Component_based}
 	\caption{Funktion eines komponentenbasierten Mergeansatz}\label{graph_merge_component_based}
 \end{figure}
 
 \medskip
-\textbf{Integrated Cross-Platform Mobile Development (ICPMD)} ist eine weitere Lösung die auf dem Merge-Prinzip aufbaut und drei Verwendungsszenarios unterstützt. Diese Szenarios sind, wie in Abb. \ref{graph_merge_integrated_based} dargestellt, abhängig von dem gegebenen Input. 
+\textbf{Integrated Cross-Platform Mobile Development (ICPMD)} ist eine weitere Lösung die auf dem Merge-Prinzip aufbaut und drei Verwendungsszenarios unterstützt. Diese Szenarios sind, wie in Abb. \ref{graph_merge_integrated_based} dargestellt, abhängig von dem gegebenen Input.
+
+\medskip 
 Der Entwickler hat…
  
 \begin{enumerate}
@@ -560,7 +565,7 @@ Der Entwickler hat…
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Bilder/Merge_Integrated_based}
+	\includegraphics[width=1\textwidth]{Bilder/Merge_Integrated_based}
 	\caption{Drei Szenarien bei ICPMD}\label{graph_merge_integrated_based}
 \end{figure}
 
@@ -569,36 +574,36 @@ Tabelle \ref{table_all_approaches} fasst die vorigen Ansätze zur plattformüber
 
 \begin{table}[htbp]
 	\centering
-	\resizebox{0.8\textwidth}{!}{%
-		\begin{tabular}{|c|c|p{5cm}|p{5cm}|p{1cm}|}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|c|c|p{8cm}|p{6cm}|p{3,2cm}|}
 			\hline
 			\rowcolor[HTML]{000000} 
 			{\color[HTML]{FFFFFF} \textbf{Ansatz}} & {\color[HTML]{FFFFFF} \textbf{Unteransatz}} & \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Pro}}}                                                                                                                                                                                                                                                 & \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Contra}}}                                                                                                                    & \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{\begin{tabular}[c]{@{}c@{}}Beispielhafte\\ Lösungsansätze\end{tabular}}}} \\ \hline
-			\textbf{Kompilierung}                  & Cross-Compiler                              & Wiederverwertung eines existierenden Quellcodes durch Cross-Kompilierung auf eine andere Plattform.Die resultierende Applikation ist native und besitzt somit die Vorteile einer nativen App.                                                                                                                                    & Die Zuordnungen zwischen zwei Sprachen ist sehr aufwendig, so dass hauptsächlich die gemeinsamen Eigenschaften berücksichtigt werden.                                                                  & \begin{tabular}[c]{@{}l@{}}MoSync\\ Corona\\ Neomades\\ XMLVM\end{tabular}                                                                              \\ \hline
-			\textbf{}                              & Trans-Compiler                              & Kann genutzt werden, um veraltete Applikationen und deren veralteter Code auf eine neuere Version derselben Sprache zu übersetzen. Wiederverwertung eines existierenden Quellcodes durch Trans-Kompilierung auf eine andere Plattform.Die resultierende Applikation ist native und besitzt somit die Vorteile einer nativen App. & Konzentriert sich ausschließlich auf die gemeinsamen APIs der Quell- und der Zielsprache. Benötigt regelmäßige Aktualisierungen, um die Änderungen der APIs in Quell- und Zielsprache zu unterstützen. & \begin{tabular}[c]{@{}l@{}}J2ObjC \\JUniversal\end{tabular}                                                                                                                                    \\ \hline
-			\textbf{Komponentenbasiert}            &                                             & Vereinfacht die Unterstützung neuer Plattformen durch definierte Schnittstellen bei implementierten Komponenten.                                                                                                                                                                                                                 & Konzentriert sich nur auf die Gemeinsamkeiten der unterstützten Plattformen.                                                                                                                           & Theoretisch                                                                                                                                         \\ \hline
-			\textbf{Interpretation}                & Webbasiert                                  & Leicht zu erlernen und zu benutzen, da es auf bekannten Web-Technologien aufbaut.                                                                                                                                                                                                                                                & Die Benutzerschnittstelle von webbasierten Apps besitzen nicht das gleiche Aussehen und Handhabung wie bei nativen Apps. Geringere Perfomance gegenüber nativen Apps.                                  & \begin{tabular}[c]{@{}l@{}} PhoneGap\\ Rhomobile\\xFace \end{tabular}                                           \\ \hline
-			\textbf{}                              & Virtuelle Maschine                          & Geringere Gesamtgröße und schnellerer Download der Apps, da alle benötigten Bibliotheken und Funktionen in der VM gespeichert sind.                                                                                                                                                                                              & Langsame Ausführung der Applikation auf der VM. Die VM muss erst aus einem Store geladen werden, was auf iOS nicht unterstützt wird.                                                                   & MobDSL                                                                                                                                              \\ \hline
-			\textbf{}                              & Laufzeit                                    & Der Quellcode muss nur einmal geschrieben werden.                                                                                                                                                                                                                                                                                & Die Perfomance beim Laden der App ist gering, da der Interpretierungsvorgang bei jeder einzelnen Ausführung stattfindet.                                                                               & \begin{tabular}[c]{@{}l@{}} Titanium\\ Xamarin \end{tabular}                                          \\ \hline
-			\textbf{Modellierung}                  & MD-UID                                      & Spart Entwicklungszeit durch Generierung des UI-Codes. Nützlich für Prototyping, durch schnelle UI-Entwicklung und dadurch frühe Evaluierung der Benutzerfreundlichkeit.                                                                                                                                                         & Muss sich bei den einzelnen Plattformen auf ähnliche Benutzerschnittstellen konzentrieren.                                                                                                             & XMobile                                                                                                                                             \\ \hline
-			\textbf{}                              & MDD                                         & Die Modellierungssprache ist effektiv, um Anforderungen zu definieren. Der Fokus liegt auf der Funktionalität und nicht an der technischen Implementierung.                                                                                                                                                                      & Kann existierenden, nativen Quellcode nicht verarbeiten.                                                                                                                                               & \begin{tabular}[c]{@{}l@{}}JSAF \\ MD2 \\ Jelly \\ AppliDE\end{tabular}                                                                             \\ \hline
-			\textbf{Cloudbasiert}                 &                                             & Verarbeitungsprozesse werden in eine Cloud ausgelagert.                                                                                                                                                                                                                                                                          & Das Endgerät und die App benötigen eine schnelle, permanente Netzwerkverbindung.                                                                                                                       & Theoretisch                                                                                                                                         \\ \hline
-			\textbf{Vereinigung}                   &                                             & Vorteile aus den Stärken anderer Ansätze. Bietet dem Entwickler vielseitige Möglichkeiten.                                                                                                                                                                                                                                       & Benötigt hohen Entwicklungsaufwand.                                                                                                                                                                    & ICPMD                                                                                                                                               \\ \hline
+			\textbf{Kompilierung}                  & Cross-Compiler                              & Wiederverwertung eines existierenden Quellcodes durch Cross-Kompilierung auf eine andere Plattform.Die resultierende Applikation ist native und besitzt somit die Vorteile einer nativen App.                                                                                                                                    & Die Zuordnungen zwischen zwei Sprachen ist sehr aufwendig, so dass hauptsächlich die gemeinsamen Eigenschaften berücksichtigt werden.                                                                  & MoSync, Corona, Neomades, XMLVM                                                                            \\ \hline
+			\textbf{}                              & Trans-Compiler                              & Kann genutzt werden, um veraltete Applikationen und deren veralteter Code auf eine neuere Version derselben Sprache zu übersetzen. Wiederverwertung eines existierenden Quellcodes durch Trans-Kompilierung auf eine andere Plattform.Die resultierende Applikation ist native und besitzt somit die Vorteile einer nativen App. & Konzentriert sich ausschließlich auf die gemeinsamen APIs der Quell- und der Zielsprache. Benötigt regelmäßige Aktualisierungen, um die Änderungen der APIs in Quell- und Zielsprache zu unterstützen. & JUniversal                                                                                                                                    \\ \hline
+			\textbf{Komponentenbasiert}            &                                             & Vereinfacht die Unterstützung neuer Plattformen durch definierte Schnittstellen bei implementierten Komponenten.                                                                                                                                                                                                                 & Konzentriert sich nur auf die Gemeinsamkeiten der unterstützten Plattformen.                                                                                                                           & Theoretisch                                                                                                                                        \\ \hline
+			\textbf{Interpretation}                & Webbasiert                                  & Leicht zu erlernen und zu benutzen, da es auf bekannten Web-Technologien aufbaut.                                                                                                                                                                                                                                                & Die Benutzerschnittstelle von webbasierten Apps besitzen nicht das gleiche Aussehen und Handhabung wie bei nativen Apps. Geringere Perfomance gegenüber nativen Apps.                                  & PhoneGap, Rhomobile, xFace                                            \\ \hline
+			\textbf{}                              & Virtuelle Maschine                          & Geringere Gesamtgröße und schnellerer Download der Apps, da alle benötigten Bibliotheken und Funktionen in der VM gespeichert sind.                                                                                                                                                                                              & Langsame Ausführung der Applikation auf der VM. Die VM muss erst aus einem Store geladen werden, was auf iOS nicht unterstützt wird.                                                                   & MobDSL                                                                                                                                               \\ \hline
+			\textbf{}                              & Laufzeit                                    & Der Quellcode muss nur einmal geschrieben werden.                                                                                                                                                                                                                                                                                & Die Perfomance beim Laden der App ist gering, da der Interpretierungsvorgang bei jeder einzelnen Ausführung stattfindet.                                                                               & Titanium, Xamarin                                        \\ \hline
+			\textbf{Modellierung}                  & MD-UID                                      & Spart Entwicklungszeit durch Generierung des UI-Codes. Nützlich für Prototyping, durch schnelle UI-Entwicklung und dadurch frühe Evaluierung der Benutzerfreundlichkeit.                                                                                                                                                         & Muss sich bei den einzelnen Plattformen auf ähnliche Benutzerschnittstellen konzentrieren.                                                                                                             &  XMobile                                                                                                                                            \\ \hline
+			\textbf{}                              & MDD                                         & Die Modellierungssprache ist effektiv, um Anforderungen zu definieren. Der Fokus liegt auf der Funktionalität und nicht an der technischen Implementierung.                                                                                                                                                                      & Kann existierenden, nativen Quellcode nicht verarbeiten.                                                                                                                                               & JSAF, MD2, Jelly, AppliDE                                                                             \\ \hline
+			\textbf{Cloudbasiert}                 &                                             & Verarbeitungsprozesse werden in eine Cloud ausgelagert.                                                                                                                                                                                                                                                                          & Das Endgerät und die App benötigen eine schnelle, permanente Netzwerkverbindung.                                                                                                                       &  Theoretisch                                                                                                                                         \\ \hline
+			\textbf{Vereinigung}                   &                                             & Vorteile aus den Stärken anderer Ansätze. Bietet dem Entwickler vielseitige Möglichkeiten.                                                                                                                                                                                                                                       & Benötigt hohen Entwicklungsaufwand.                                                                                                                                                                    &  ICPMD                                                                                                                                             \\ \hline
 		\end{tabular}
 	}
 	\caption{Übersicht aller Ansätze}
 	\label{table_all_approaches}
 \end{table}
 
-\section{Entwicklung mobiler Applikationen ohne den Schwerpunkt Spieleentwicklung}
+\section{Plattformübergreifende Entwicklung mobiler Applikationen ohne den Schwerpunkt Spieleentwicklung}
 In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier nicht der Fokus auf Game-spezifischen Applikationen und Entwicklungswerkzeugen. Hier wird in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen eingegangen und deren Resultate klassifiziert. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Diese Arbeit setzt den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht von daher nicht weiter auf die genannten und vorangegangenen Entwicklungswerkzeuge ein.
 
 %TODO: Kapitel 5
 \chapter{Plattformübergreifende Frameworks zur Spieleentwicklung}
 \section{Gamespezifische Frameworks und Engines}
-\subsection{Cocos2D}
+\subsection{Cocos2D-X}
 \subsection{Libgdx}
-\subsection{Unity}
+\subsection{Unity3D}
 \subsection{Weitere Frameworks}
 \section{Entwicklungsumgebungen}
 \subsection{Unterstützte IDEs}
@@ -608,6 +613,39 @@ In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mob
 \chapter{Gegenüberstellung der Frameworks}
 %Features und Einschränkungen
 \section{Zielplattformen}
+Die Menge an Zielplattformen unterscheidet sich in den Bereichen Mobil, Destop und Web nur geringfügig. In Tabelle \ref{zielplattformen_frameworks} wird deutlich, dass sich die Menge an unterstützten Plattformen in diesen Kategorien, bei Cocos2D-x und Unity3D kaum unterscheidet. Das Blackberry OS wurde von beiden, hauptsächlich mangels Nachfrage, aus dem Programm genommen. Einzig libGDX stellt noch die Möglichkeit, Spiele hierfür zu entwickeln. Dafür befinden sich in dem Katalog von libGDX die meisten Lücken, wovon die gravierendste, aber derzeit noch verzeihbare, das Fehlen von Windows Phone und Universal Windows ist. Dennoch bieten alle drei Frameworks die Möglichkeit, gleichzeitige Entwicklung bei iOS und Android, als die wichtigsten mobilen Plattformen zuzulassen. 
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{0.8\textwidth}{!}{%
+		\begin{tabular}{cccc}
+			\rowcolor[HTML]{6200C9} 
+			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D-X}} & {\color[HTML]{FFFFFF} \textbf{LibGDX}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\
+			\cellcolor[HTML]{CB0000}{\color[HTML]{FFFFFF} \textit{Mobil}}           &                                         &                                        &                                         \\
+			\cellcolor[HTML]{FFCCC9}iOS                                             & {\color[HTML]{680100} X}                & {\color[HTML]{680100} X}               & {\color[HTML]{680100} X}                \\
+			\cellcolor[HTML]{FFCCC9}Android                                         & {\color[HTML]{680100} X}                & {\color[HTML]{680100} X}               & {\color[HTML]{680100} X}                \\
+			\cellcolor[HTML]{FFCCC9}Windows Phone 8                                 & {\color[HTML]{680100} X}                & {\color[HTML]{680100} }                & {\color[HTML]{680100} X}                \\
+			\cellcolor[HTML]{FFCCC9}Tizen                                           & {\color[HTML]{680100} X}                & {\color[HTML]{680100} }                & {\color[HTML]{680100} X}                \\
+			\cellcolor[HTML]{FFCCC9}Blackberry                                      & {\color[HTML]{680100} }                 & {\color[HTML]{680100} X}               & {\color[HTML]{680100} }                 \\
+			& {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
+			\cellcolor[HTML]{009901}{\color[HTML]{FFFFFF} \textit{Desktop}}         & {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
+			\cellcolor[HTML]{9AFF99}Mac                                             & {\color[HTML]{036400} X}                & {\color[HTML]{036400} X}               & {\color[HTML]{036400} X}                \\
+			\cellcolor[HTML]{9AFF99}Windows                                         & {\color[HTML]{036400} X}                & {\color[HTML]{036400} X}               & {\color[HTML]{036400} X}                \\
+			\cellcolor[HTML]{9AFF99}Universal Windows Platform                      & {\color[HTML]{036400} X}                & {\color[HTML]{036400} }                & {\color[HTML]{036400} X}                \\
+			\cellcolor[HTML]{9AFF99}Linux / Steam OS                                & {\color[HTML]{036400} X}                & {\color[HTML]{036400} X}               & {\color[HTML]{036400} X}                \\
+			& {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
+			\cellcolor[HTML]{3531FF}{\color[HTML]{FFFFFF} \textit{Web}}             & {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
+			\cellcolor[HTML]{BBDAFF}Web GL                                          & {\color[HTML]{00009B} X}                & {\color[HTML]{00009B} X}               & {\color[HTML]{00009B} X}                \\
+			\cellcolor[HTML]{BBDAFF}Web Player                                      & {\color[HTML]{00009B} }                 & {\color[HTML]{00009B} }                & {\color[HTML]{00009B} X}                \\
+			\cellcolor[HTML]{BBDAFF}Java Applet                                     & {\color[HTML]{00009B} }                 & {\color[HTML]{00009B} X}               & {\color[HTML]{00009B} }                 \\
+			& {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Gesamt}}             & {\cellcolor[HTML]{BEBEBE} 9}                 & {\cellcolor[HTML]{BEBEBE} 8}                & {\cellcolor[HTML]{BEBEBE} 10}                 \\
+		\end{tabular}
+	}
+	\caption{Unterstützte Zielplattformen der Frameworks}
+	\label{zielplattformen_frameworks}\citep{unity_public_relations,cocos2d_main_features,libGDX_main_features}
+\end{table}
+
 %\section{Skalierbarkeit der Menge der Plattformen} % ???
 \section{Programmiersprachen}
 \section{Unterstützung von 2D und 3D}
@@ -664,7 +702,7 @@ In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mob
 
 %TODO
 \chapter{Analyse messbarer Metriken}
-%Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen)
+%Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen), FPS
 
 \chapter{Vergleich der Messprotokolle}
 
@@ -698,6 +736,10 @@ In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mob
 \emph{Blogs.Windows - Windows Store Trends - September 2015},
 \url{https://blogs.windows.com/buildingapps/2015/10/12/windows-store-trends-september-2015/}, letzter Zugriff: 15.12.2015
 
+\bibitem[Cocos2D-X(2015)]{cocos2d_main_features}
+\emph{Cocos2D-X - Developers Manual},
+\url{http://www.cocos2d-x.org/wiki/Cocos2d-x}, letzter Zugriff: 29.12.2015
+
 \bibitem[Distimo (2014)]{play_store_categories}
 \emph{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/321703/umfrage/beliebteste-app-kategorien-im-google-play-store-weltweit/}, letzter Zugriff: 14.12.2015
@@ -730,6 +772,10 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \bibitem[Kantar (2015)]{marktanteile_betriebssysteme_laender}
 \emph{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/198453/umfrage/marktanteile-der-smartphone-betriebssysteme-am-absatz-in-ausgewaehlten-laendern/}, letzter Zugriff: 14.12.2015
+
+\bibitem[libGDX(2015)]{libGDX_main_features}
+\emph{libGDX - Goals and Features},
+\url{https://libgdx.badlogicgames.com/features.html}, letzter Zugriff: 29.12.2015
 
 \bibitem[Mac Developer Library (2014)]{objectiveC_about}
 \emph{About Objective-C},
@@ -799,6 +845,10 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \emph{iOS Firmwares},
 \url{https://www.theiphonewiki.com/wiki/Firmware}, letzter Zugriff: 24.11.2015
 
+\bibitem[Unity3D(2015)]{unity_public_relations}
+\emph{Unity3D - Public Relations},
+\url{https://unity3d.com/public-relations}, letzter Zugriff: 29.12.2015
+
 \bibitem[Vehse, Benjamin(2014)]{cross_plattform_development_vehse} 
 Vehse, Benjamin:
 \glqq Plattformabhängige und –unabhängige
@@ -810,23 +860,23 @@ Beispiel von Geo-Wikipedia-App\grqq,
 \emph{Übersicht von allen Android Versionen mit Veröffentlichungsdatum},
 \url{https://de.wikipedia.org/wiki/Liste_von_Android-Versionen}, letzter Zugriff: 24.11.2015
 
-\bibitem[Wikipedia - Windows 10 (2015)]{WP10_version_releases}
+\bibitem[Wikipedia - Windows 10(2015)]{WP10_version_releases}
 \emph{Microsoft Windows 10 Mobile},
 \url{https://de.wikipedia.org/wiki/Microsoft_Windows_10_Mobile}, letzter Zugriff: 28.12.2015
 
-\bibitem[Wikipedia - Windows Phone 7 (2015)]{WP7_version_releases}
+\bibitem[Wikipedia - Windows Phone 7(2015)]{WP7_version_releases}
 \emph{Microsoft Windows Phone 7},
 \url{https://de.wikipedia.org/wiki/Microsoft_Windows_Phone_7}, letzter Zugriff: 28.12.2015
 
-\bibitem[Wikipedia - Windows Phone 8 (2015)]{WP8_version_releases}
+\bibitem[Wikipedia - Windows Phone 8(2015)]{WP8_version_releases}
 \emph{Microsoft Windows Phone 8},
 \url{https://de.wikipedia.org/wiki/Microsoft_Windows_Phone_8}, letzter Zugriff: 28.12.2015
 
-\bibitem[XMLVM (2011)]{XMLVM_Toolchain}
+\bibitem[XMLVM(2011)]{XMLVM_Toolchain}
 \emph{XMLVM - Overview: Toolchain},
 \url{http://xmlvm.org/toolchain/}, letzter Zugriff: 25.12.2015
 
-\bibitem[YoYo Games (2013)]{WP8_requirements}
+\bibitem[YoYo Games(2013)]{WP8_requirements}
 \emph{Requirements for Windows Phone development},
 \url{http://help.yoyogames.com/entries/23355146-Requirements-for-Windows-Phone-development}, letzter Zugriff: 28.12.2015
 
