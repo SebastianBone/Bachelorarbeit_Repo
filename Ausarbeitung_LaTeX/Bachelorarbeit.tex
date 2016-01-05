@@ -612,6 +612,8 @@ In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mob
 %TODO: Kapitel 6
 \chapter{Gegenüberstellung der Frameworks}
 %Features und Einschränkungen
+
+
 \section{Zielplattformen}
 Die Menge an Zielplattformen unterscheidet sich in den Bereichen Mobil, Destop und Web nur geringfügig. In Tabelle \ref{zielplattformen_frameworks} wird deutlich, dass sich die Menge an unterstützten Plattformen in diesen Kategorien, bei Cocos2D-x und Unity3D kaum unterscheidet. Das Blackberry OS wurde von beiden, hauptsächlich mangels Nachfrage, aus dem Programm genommen. Einzig libGDX stellt noch die Möglichkeit, Spiele hierfür zu entwickeln. Dafür befinden sich in dem Katalog von libGDX die meisten Lücken, wovon die gravierendste, aber derzeit noch verzeihbare, das Fehlen von Windows Phone und Universal Windows ist. Dennoch bieten alle drei Frameworks die Möglichkeit, gleichzeitige Entwicklung bei iOS und Android, als die wichtigsten mobilen Plattformen zuzulassen. 
 
@@ -646,18 +648,15 @@ Die Menge an Zielplattformen unterscheidet sich in den Bereichen Mobil, Destop u
 	\label{zielplattformen_frameworks}\citep{unity_public_relations,cocos2d_main_features,libGDX_main_features}
 \end{table}
 
-%\section{Skalierbarkeit der Menge der Plattformen} % ???
 \section{Programmiersprachen}
 \textbf{libGDX} nutzt einzig und allein Java für die Entwicklung, was für reine Android Projekte ein großer Vorteil ist. Denn dadurch müsste man bei der Kompilierung kaum Kompromisse eingehen.
 %TODO: Mehr Informationen zu Java!
 
 \bigskip
-Mit \textbf{Coco2D-X} hat man die Wahl zwischen C++, Lua und JavaScript, welche auf allen unterstützten Plattformen funktionieren. Einzige Einschränkung liegt bei JavaScript, da diese sich bei Cocos2D-X nicht mit Windows Phone verknüpfen lässt. 
-%QUELLE: http://www.cocos2d-x.org/wiki/Cocos2d-x
+Mit \textbf{Coco2D-X} hat man die Wahl zwischen C++, Lua und JavaScript, welche auf allen unterstützten Plattformen funktionieren. Einzige Einschränkung liegt bei JavaScript, da diese sich bei Cocos2D-X nicht mit Windows Phone verknüpfen lässt. \citep{cocos2d_x_features}
 
 \medskip
-Lua ist eine schnelle, von der Syntax simpel gehaltene Skriptsprache, mit objektorientierten Eigenschaften. Die geschriebenen Skripte werden durch einen Interpreter in Bytecode übersetzt und ist kompatibel mit der Sprache C. Lua befindet sich derzeit in Version 5.3 und wird häufig in der Spieleentwicklung eingesetzt. 
-%QUELLE: http://www.lua.org/about.html
+Lua ist eine schnelle, von der Syntax simpel gehaltene Skriptsprache, mit objektorientierten Eigenschaften. Die geschriebenen Skripte werden durch einen Interpreter in Bytecode übersetzt und ist kompatibel mit der Sprache C. Lua befindet sich derzeit in Version 5.3 und wird häufig in der Spieleentwicklung eingesetzt. \citep{lua_about}
 
 \medskip
 Mit der Unterstützung von C++, welches direkt von C abgeleitet ist, hat man die Möglichkeit äußerst perfomante und portable Software zu schreiben. Voraussetzung ist dabei ein sicherer Umgang, da C++ im Vergleich mit anderen High-Level Sprachen, sich weniger um Logikfehler kümmert und entsprechend auch keine Warnungen ausgibt.
@@ -667,23 +666,20 @@ Für Entwickler die beispielsweise Erfahrungen im Webbereich besitzen, bietet di
 %TODO: Mehr Informationen zu JavaScript!
 
 \bigskip
-In \textbf{Unity3D} finden die Sprachen C\#, UnityScript und Boo Verwendung. Alle für Unity3D nutzbaren Sprachen entspringen Microsofts .NET Framework. Das bedeutet auch, dass es möglich ist weitere .NET Sprachen zu benutzen, wenn diese ihre Skripte in das DLL (Dynamically Linked Library) Format kompilieren können. Diese DLL Dateien können dann dem Unity Projekt hinzugefügt und verwendet werden.
-%QUELLE: http://docs.unity3d.com/Manual/UsingDLL.html
+In \textbf{Unity3D} finden die Sprachen C\#, UnityScript und Boo Verwendung. Alle für Unity3D nutzbaren Sprachen entspringen Microsofts .NET Framework. Das bedeutet auch, dass es möglich ist weitere .NET Sprachen zu benutzen, wenn diese ihre Skripte in das DLL (Dynamically Linked Library) Format kompilieren können. Diese DLL Dateien können dann dem Unity Projekt hinzugefügt und verwendet werden. \citep{unity_managed_plugins}
 
 \medskip
-Boo ist eine von Python beeinflusste Sprache für .NET und Mono, welche ohne Klammern und Semikolons auskommt. Die Typisierung ist generell statisch, kann aber trotzdem dynamische \textit{Duck-Typing} Eigenschaften nutzen. Der Name Duck-Typing entsprang dem sogenannten \textit{Ententest} zur Typisierung, welcher wiederum auf einem Gedicht von James Whitcomb Riley zurückzuführen ist.
+Boo ist eine von Python beeinflusste Sprache für .NET und Mono, welche ohne Klammern und Semikolons auskommt. Die Typisierung ist generell statisch, kann aber trotzdem dynamische \textit{Duck-Typing} Eigenschaften nutzen. \citep{boo_about} Der Name Duck-Typing entsprang dem sogenannten \textit{Ententest} zur Typisierung, welcher wiederum auf einem Gedicht von James Whitcomb Riley zurückzuführen ist.
 
 \medskip
-“\emph{When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.}” %TODO: Quelle Zitat
+“\emph{When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.}” \citep{ducktest}
 \medskip
 
-Beim Duck-Typing werden Objekte nicht durch ihre Klasse typisiert, sondern durch die vorhandenen Attribute und Methoden. Daher findet die Typisierung erst zur Laufzeit durch den Interpreter statt.
-%QUELLE: http://boo-language.github.io/
+Beim Duck-Typing werden Objekte nicht durch ihre Klasse typisiert, sondern durch die vorhandenen Attribute und Methoden. Daher findet die Typisierung erst zur Laufzeit durch den Interpreter statt. 
 
 \medskip
 Oft wird UnityScript in der Unity Community, aber auch von dem Unternehmen selbst, fälschlicherweise mit JavaScript gleichgesetzt, als wären die beiden Sprachen äquivalent. Auch wenn syntaktische Ähnlichkeiten bestehen, gibt es große semantische Unterschiede.
-UnityScript kann, wie die meisten objektorientierten Programmiersprachen, Klassen definieren und daraus Objekte erstellen. JavaScript hingegen besitzt zwar ebenfalls objektorientierte Eigenschaften, wobei diese aber sogenannte \textit{Prototypes} verwendet. Dies sind Objekte die zuerst von einer Funktion definiert werden und danach mit dem Schlüsselwort \textit{new} instanziiert werden. Nach der Instanziierung ist es möglich, das Objekt um zusätzliche Eigenschaften zu erweitern. Des Weiteren kann UnityScript im Gegensatz zu JavaScript, Klassen, Objekte, Funktionen und Variablen mit Zugriffsmodifikatoren/Sichtbarkeiten versehen. UnityScript wurde speziell für die Unity3D Engine konzipiert und ist proprietär, was es schwierig macht, genaue Spezifikationen zu finden.
-%QUELLE: http://wiki.unity3d.com/index.php/UnityScript_versus_JavaScript
+UnityScript kann, wie die meisten objektorientierten Programmiersprachen, Klassen definieren und daraus Objekte erstellen. JavaScript hingegen besitzt zwar ebenfalls objektorientierte Eigenschaften, wobei diese aber sogenannte \textit{Prototypes} verwendet. Dies sind Objekte die zuerst von einer Funktion definiert werden und danach mit dem Schlüsselwort \textit{new} instanziiert werden. Nach der Instanziierung ist es möglich, das Objekt um zusätzliche Eigenschaften zu erweitern. Des Weiteren kann UnityScript im Gegensatz zu JavaScript, Klassen, Objekte, Funktionen und Variablen mit Zugriffsmodifikatoren/Sichtbarkeiten versehen. UnityScript wurde speziell für die Unity3D Engine konzipiert und ist proprietär, was es schwierig macht, genaue Spezifikationen zu finden. \citep{unity_unityscript_vs_javascript}
 
 \medskip
 %TODO: C#
@@ -703,19 +699,18 @@ Eine andere Möglichkeit in das Spielgeschehen einzugreifen, bieten die gerätes
 Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varianten sind durchaus möglich, aber derzeit sind keine weiteren populären Ableger bekannt. Die Community konzentriert sich demnach hauptsächlich auf die Weiterentwicklung der Hauptversion oder auf eigene Erweiterungen in Form von Plugins.
 \medskip
 
-\textbf{Cocos2D-X} ist eine von mehreren Abzweigungen aus der Cocos2D Familie. Stamm der Entwicklung bildet das mit Python entwickelte Cocos2D, welches selbige Sprache auch für die Entwicklung daraus resultierender Desktopanwendungen benutzt. Der erste daraus abgeleitete Ableger Cocos2D-iPhone oder auch bekannt als Cocos2D-ObjC, erlaubt die Implementierung auf mobile Apple Geräte. Diese können mit den plattformüblichen nativen Sprachen Objective-C und Swift konstruiert werden. Aus dieser Version entsprangen direkt wiederum viele weitere Varianten für gezielte Sprachen und Anwendungen, als auch das in dieser Arbeit behandelte Cocos2D-X für die Unterstützung multipler Plattformen. Die Cocos2D Frameworks iPhone, X, HTML5 und dem Editor SpriteBuilder sind kooperierende Projekte und folgen demselben Leitplan. Daher haben sie ein koordiniertes Updateverhalten.
-%QUELLE: http://www.cocos2d-x.org/wiki/Relationships_in_Cocos2d_Family
+\textbf{Cocos2D-X} ist eine von mehreren Abzweigungen aus der Cocos2D Familie. Stamm der Entwicklung bildet das mit Python entwickelte Cocos2D, welches selbige Sprache auch für die Entwicklung daraus resultierender Desktopanwendungen benutzt. Der erste daraus abgeleitete Ableger Cocos2D-iPhone oder auch bekannt als Cocos2D-ObjC, erlaubt die Implementierung auf mobile Apple Geräte. Diese können mit den plattformüblichen nativen Sprachen Objective-C und Swift konstruiert werden. Aus dieser Version entsprangen direkt wiederum viele weitere Varianten für gezielte Sprachen und Anwendungen, als auch das in dieser Arbeit behandelte Cocos2D-X für die Unterstützung multipler Plattformen. Die Cocos2D Frameworks iPhone, X, HTML5 und dem Editor SpriteBuilder sind kooperierende Projekte und folgen demselben Leitplan. Daher haben sie ein koordiniertes Updateverhalten. \citep{cocos2d_relationships}
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{Bilder/Cocos2d_Relationships}
-	\caption{Ableitungen und Varianten von Cocos2D}\label{graph_Cocos2d_Relationships}
+	\caption{Ableitungen und Varianten von Cocos2D}\label{graph_Cocos2d_Relationships}\citep{cocos2d_relationships}
 \end{figure}
 
 \medskip
-\textbf{Unity3D} bietet zwei verschiedene Hauptprodukte an, die Personal und die Professional Edition. Bei der Personal Edition handelt es sich um eine frei verfügbare Version, die für jeden zugängig ist. Diese kann für Privatanwender, zu Bildungszwecken und sogar für die kommerzielle Entwicklung benutzt werden. Die kostenfreie Version der Engine verfügt auch über alle essentiellen Funktionen. Sobald die allgemeinen Einnahmen einer Person oder eines Unternehmens mehr als 100.000 US-Dollar aus dem Vorjahr betragen, besteht die Verpflichtung auf die Professional Edition zu wechseln. In dieser bekommt man dann auch die Option auf zusätzliche Funktionen, wie Analyse Tools und die Möglichkeit Projekte in einer speziellen Cloud zu veröffentlichen. In Tabelle \ref{Unity_Produkte} werden die Möglichkeiten beider Editionen gegenübergestellt. Das Kostenmodell beginnt derzeit mit einem Abo von 75 US-Dollar pro Monat oder einer Einmalzahlung von 1.500 US-Dollar. Die mit der Einmalzahlung erworbene Dauerlizenz gilt allerdings nur für die aktuelle Version und deren Updates. Das bedeutet bei dem Erwerb von Unity Pro 5 hat man nicht automatisch die Nutzungsrechte für die darauf folgende Version 6. Diese müssten dann in Form eines kostenpflichtigen Upgrades erfolgen. Weitere optionale Erweiterungen können mit den iOS Pro und Android Pro Add-Ons erworben werden, die weitere Funktionen zur Personalisierung ermöglichen. Zusätzliche kostenpflichtige Pakete sind die professionelle Unterstützung bei Projekten oder der Zugang zum Quellcode der Engine.
-%QUELLE: http://unity3d.com/get-unity#enterprise
+\textbf{Unity3D} bietet zwei verschiedene Hauptprodukte an, die Personal und die Professional Edition. Bei der Personal Edition handelt es sich um eine frei verfügbare Version, die für jeden zugängig ist. Diese kann für Privatanwender, zu Bildungszwecken und sogar für die kommerzielle Entwicklung benutzt werden. Die kostenfreie Version der Engine verfügt auch über alle essentiellen Funktionen. Sobald die allgemeinen Einnahmen einer Person oder eines Unternehmens mehr als 100.000 US-Dollar aus dem Vorjahr betragen, besteht die Verpflichtung auf die Professional Edition zu wechseln. In dieser bekommt man dann auch die Option auf zusätzliche Funktionen, wie Analyse Tools und die Möglichkeit Projekte in einer speziellen Cloud zu veröffentlichen. In Tabelle \ref{Unity_Produkte} werden die Möglichkeiten beider Editionen gegenübergestellt. Das Kostenmodell beginnt derzeit mit einem Abo von 75 US-Dollar pro Monat oder einer Einmalzahlung von 1.500 US-Dollar. Die mit der Einmalzahlung erworbene Dauerlizenz gilt allerdings nur für die aktuelle Version und deren Updates. Das bedeutet bei dem Erwerb von Unity Pro 5 hat man nicht automatisch die Nutzungsrechte für die darauf folgende Version 6. Diese müssten dann in Form eines kostenpflichtigen Upgrades erfolgen. Weitere optionale Erweiterungen können mit den iOS Pro und Android Pro Add-Ons erworben werden, die weitere Funktionen zur Personalisierung ermöglichen. Zusätzliche kostenpflichtige Pakete sind die professionelle Unterstützung bei Projekten oder der Zugang zum Quellcode der Engine. \citep{unity_products}
 
-\begin{table}[]
+\begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{c|c|}
@@ -738,7 +733,7 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 		\end{tabular}
 	}
 	\caption{Gegenüberstellung von Personal und Professional Edition}
-	\label{Unity_Produkte}
+	\label{Unity_Produkte}\citep{unity_products}
 \end{table}
 
 \section{Zusätzlich benötigte Software}
@@ -825,9 +820,21 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 \emph{Blogs.Windows - Windows Store Trends - September 2015},
 \url{https://blogs.windows.com/buildingapps/2015/10/12/windows-store-trends-september-2015/}, letzter Zugriff: 15.12.2015
 
-\bibitem[Cocos2D-X(2015)]{cocos2d_main_features}
+\bibitem[Boo(2015)]{boo_about}
+\emph{Boo - A scarily powerful language for .NET},
+\url{http://boo-language.github.io/}, letzter Zugriff: 05.01.2016
+
+\bibitem[Cocos2D-X(2015)a]{cocos2d_main_features}
 \emph{Cocos2D-X - Developers Manual},
 \url{http://www.cocos2d-x.org/wiki/Cocos2d-x}, letzter Zugriff: 29.12.2015
+
+\bibitem[Cocos2D-X(2015)b]{cocos2d_x_features}
+\emph{Cocos2D-X - About},
+\url{http://www.cocos2d-x.org/wiki/Cocos2d-x}, letzter Zugriff: 05.01.2016
+
+\bibitem[Cocos2D-X(2015)c]{cocos2d_relationships}
+\emph{Cocos2D-X - Relationships in Cocos2D Family},
+\url{http://www.cocos2d-x.org/wiki/Relationships_in_Cocos2d_Family}, letzter Zugriff: 05.01.2016
 
 \bibitem[Distimo (2014)]{play_store_categories}
 \emph{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014. In Statista - Das Statistik-Portal.},
@@ -850,6 +857,10 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \emph{Prognose zu den Marktanteilen der Betriebssysteme am Absatz vom Smartphones weltweit in den Jahren 2015 und 2019. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/182363/umfrage/prognostizierte-marktanteile-bei-smartphone-betriebssystemen/}, letzter Zugriff: 14.12.2015
 
+\bibitem[James Whitcomb Riley(1849–1916)]{ducktest}
+\emph{Ententest - Begriffsentstehung},
+\url{https://de.wikipedia.org/wiki/Ententest}, letzter Zugriff: 05.01.2016
+
 \bibitem[JetBrains (2015)]{appcode}
 \emph{AppCode},
 \url{https://www.jetbrains.com/objc/}, letzter Zugriff: 28.12.2015
@@ -865,6 +876,10 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \bibitem[libGDX(2015)]{libGDX_main_features}
 \emph{libGDX - Goals and Features},
 \url{https://libgdx.badlogicgames.com/features.html}, letzter Zugriff: 29.12.2015
+
+\bibitem[Lua(2015)]{lua_about}
+\emph{Lua - About},
+\url{http://www.lua.org/about.html}, letzter Zugriff: 05.01.2016
 
 \bibitem[Mac Developer Library (2014)]{objectiveC_about}
 \emph{About Objective-C},
@@ -934,9 +949,21 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \emph{iOS Firmwares},
 \url{https://www.theiphonewiki.com/wiki/Firmware}, letzter Zugriff: 24.11.2015
 
-\bibitem[Unity3D(2015)]{unity_public_relations}
+\bibitem[Unify Community Wiki(2014)]{unity_unityscript_vs_javascript}
+\emph{Unify Community Wiki - UnityScript versus JavaScript},
+\url{http://wiki.unity3d.com/index.php/UnityScript_versus_JavaScript}, letzter Zugriff: 05.01.2016
+
+\bibitem[Unity3D(2015)a]{unity_public_relations}
 \emph{Unity3D - Public Relations},
 \url{https://unity3d.com/public-relations}, letzter Zugriff: 29.12.2015
+
+\bibitem[Unity3D(2015)b]{unity_managed_plugins}
+\emph{Unity3D Documentation - Managed Plugins},
+\url{http://docs.unity3d.com/Manual/UsingDLL.html}, letzter Zugriff: 05.01.2016
+
+\bibitem[Unity3D(2015)c]{unity_products}
+\emph{Unity3D - Get Unity},
+\url{http://unity3d.com/get-unity}, letzter Zugriff: 05.01.2016
 
 \bibitem[Vehse, Benjamin(2014)]{cross_plattform_development_vehse} 
 Vehse, Benjamin:
@@ -968,9 +995,6 @@ Beispiel von Geo-Wikipedia-App\grqq,
 \bibitem[YoYo Games(2013)]{WP8_requirements}
 \emph{Requirements for Windows Phone development},
 \url{http://help.yoyogames.com/entries/23355146-Requirements-for-Windows-Phone-development}, letzter Zugriff: 28.12.2015
-
-
-
 
 
 \end{thebibliography}
