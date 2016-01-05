@@ -682,17 +682,65 @@ Beim Duck-Typing werden Objekte nicht durch ihre Klasse typisiert, sondern durch
 
 \medskip
 Oft wird UnityScript in der Unity Community, aber auch von dem Unternehmen selbst, fälschlicherweise mit JavaScript gleichgesetzt, als wären die beiden Sprachen äquivalent. Auch wenn syntaktische Ähnlichkeiten bestehen, gibt es große semantische Unterschiede.
-UnityScript kann, wie die meisten objektorientierten Programmiersprachen, Klassen definieren und daraus Objekte erstellen. JavaScript hingegen besitzt zwar ebenfalls objektorientierte Eigenschaften, wobei diese aber sogenannte \textit{Prototypes} verwendet. Dies sind Objekte die zuerst von einer Funktion definiert werden und danach mit dem Schlüsselwort \textit{new} instanziiert werden. Nach der Instanziierung ist es möglich, das Objekt um zusätzliche Eigenschaften zu erweitern. Des Weiteren kann UnityScript im Gegensatz zu JavaScript, Klassen, Objekte, Funktionen und Variablen mit Zugriffsmodifikatoren / Sichtbarkeiten versehen. UnityScript wurde speziell für die Unity3D Engine konzipiert und ist proprietär, was es schwierig macht, genaue Spezifikationen zu finden.
+UnityScript kann, wie die meisten objektorientierten Programmiersprachen, Klassen definieren und daraus Objekte erstellen. JavaScript hingegen besitzt zwar ebenfalls objektorientierte Eigenschaften, wobei diese aber sogenannte \textit{Prototypes} verwendet. Dies sind Objekte die zuerst von einer Funktion definiert werden und danach mit dem Schlüsselwort \textit{new} instanziiert werden. Nach der Instanziierung ist es möglich, das Objekt um zusätzliche Eigenschaften zu erweitern. Des Weiteren kann UnityScript im Gegensatz zu JavaScript, Klassen, Objekte, Funktionen und Variablen mit Zugriffsmodifikatoren/Sichtbarkeiten versehen. UnityScript wurde speziell für die Unity3D Engine konzipiert und ist proprietär, was es schwierig macht, genaue Spezifikationen zu finden.
 %QUELLE: http://wiki.unity3d.com/index.php/UnityScript_versus_JavaScript
 
 \medskip
 %TODO: C#
 
 
-\section{Unterstützung von 2D und 3D}
-\section{Zugriff auf Hardware}%Accelerometer etc
-\section{Free- und Pro- Versionen}
-\section{Einfluss auf Einstellungen}
+\section{Native Gerätefunktionen}
+Smartphones und Tablets besitzen in der Regel kaum oder gar keine Hardwarebuttons, die für Anwendungen neu belegbar sind. Spiele die für solche mobilen Systeme entworfen worden, greifen daher auf eine oder zwei der beiden populärsten Steuerungsmechanismen zurück.
+
+\medskip
+Überwiegende Praxis ist es, den vorhandenen Touchscreen für Eingaben und Interaktionen zu nutzen. Dies kann über bekannte Gesten geschehen oder über die Virtualisierung von Aktionsflächen, wie zum Beispiel Buttons und Regler.
+Eine andere Möglichkeit in das Spielgeschehen einzugreifen, bieten die geräteseitigen Hardwaresensoren. Ein Anwendungsbeispiel für den Gyroskop Sensor, wäre bei Rennspielen die Simulierung eines Lenkrades, bei dem durch die Neigung des Gerätes gesteuert wird. Weiterhin gehören Accelerometer und GPS zu den üblichen Sensoren, als auch eine Kamera zu den Standardbauteilen.
+
+\medskip
+\textbf{Unity3D} liefert für alle gängigen Sensoren und Bauteile Schnittstellen mit, um diese mit Funktionen zu hinterlegen. Hingegen können \textbf{libGDX} und \textbf{Cocos2D-X} bisher nur den Accelerometer ansteuern, wenn dieser vorhanden ist. Gyroskop, Kamera und GPS Lokalisierung werden derzeit nicht unterstützt. Dadurch dass die beiden Frameworks quelloffen sind, ist eine eigene Implementation dennoch theoretisch trotzdem möglich. Eine offizielle Erweiterung ist demnach auch abhängig von dem Streben der Entwickler-Community.
+
+\section{Produktvarianten}
+Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varianten sind durchaus möglich, aber derzeit sind keine weiteren populären Ableger bekannt. Die Community konzentriert sich demnach hauptsächlich auf die Weiterentwicklung der Hauptversion oder auf eigene Erweiterungen in Form von Plugins.
+\medskip
+
+\textbf{Cocos2D-X} ist eine von mehreren Abzweigungen aus der Cocos2D Familie. Stamm der Entwicklung bildet das mit Python entwickelte Cocos2D, welches selbige Sprache auch für die Entwicklung daraus resultierender Desktopanwendungen benutzt. Der erste daraus abgeleitete Ableger Cocos2D-iPhone oder auch bekannt als Cocos2D-ObjC, erlaubt die Implementierung auf mobile Apple Geräte. Diese können mit den plattformüblichen nativen Sprachen Objective-C und Swift konstruiert werden. Aus dieser Version entsprangen direkt wiederum viele weitere Varianten für gezielte Sprachen und Anwendungen, als auch das in dieser Arbeit behandelte Cocos2D-X für die Unterstützung multipler Plattformen. Die Cocos2D Frameworks iPhone, X, HTML5 und dem Editor SpriteBuilder sind kooperierende Projekte und folgen demselben Leitplan. Daher haben sie ein koordiniertes Updateverhalten.
+%QUELLE: http://www.cocos2d-x.org/wiki/Relationships_in_Cocos2d_Family
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Bilder/Cocos2d_Relationships}
+	\caption{Ableitungen und Varianten von Cocos2D}\label{graph_Cocos2d_Relationships}
+\end{figure}
+
+\medskip
+\textbf{Unity3D} bietet zwei verschiedene Hauptprodukte an, die Personal und die Professional Edition. Bei der Personal Edition handelt es sich um eine frei verfügbare Version, die für jeden zugängig ist. Diese kann für Privatanwender, zu Bildungszwecken und sogar für die kommerzielle Entwicklung benutzt werden. Die kostenfreie Version der Engine verfügt auch über alle essentiellen Funktionen. Sobald die allgemeinen Einnahmen einer Person oder eines Unternehmens mehr als 100.000 US-Dollar aus dem Vorjahr betragen, besteht die Verpflichtung auf die Professional Edition zu wechseln. In dieser bekommt man dann auch die Option auf zusätzliche Funktionen, wie Analyse Tools und die Möglichkeit Projekte in einer speziellen Cloud zu veröffentlichen. In Tabelle \ref{Unity_Produkte} werden die Möglichkeiten beider Editionen gegenübergestellt. Das Kostenmodell beginnt derzeit mit einem Abo von 75 US-Dollar pro Monat oder einer Einmalzahlung von 1.500 US-Dollar. Die mit der Einmalzahlung erworbene Dauerlizenz gilt allerdings nur für die aktuelle Version und deren Updates. Das bedeutet bei dem Erwerb von Unity Pro 5 hat man nicht automatisch die Nutzungsrechte für die darauf folgende Version 6. Diese müssten dann in Form eines kostenpflichtigen Upgrades erfolgen. Weitere optionale Erweiterungen können mit den iOS Pro und Android Pro Add-Ons erworben werden, die weitere Funktionen zur Personalisierung ermöglichen. Zusätzliche kostenpflichtige Pakete sind die professionelle Unterstützung bei Projekten oder der Zugang zum Quellcode der Engine.
+%QUELLE: http://unity3d.com/get-unity#enterprise
+
+\begin{table}[]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{c|c|}
+			\hline
+			\rowcolor[HTML]{000000} 
+			\multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Personal Edition}}} & {\color[HTML]{FFFFFF} \textbf{Professional Edition}}                                                                                   \\ \hline
+			\multicolumn{1}{|c|}{Game Engine inklusive aller Funktionen}                                   & Game Engine inklusive aller Funktionen                                                                                                 \\ \hline
+			\multicolumn{1}{|c|}{Unterstützung aller Plattformen (Unity Splash Screen)}                    & \begin{tabular}[c]{@{}c@{}}Unterstützung aller Plattformen \\ (ohne Zusatzlizenz Unity Splash Screen bei iOS und Android)\end{tabular} \\ \hline
+			\multicolumn{1}{|c|}{Lizenzfreiheit}                                                           & Lizenzfreiheit                                                                                                                         \\ \hline
+			& Unity Cloud Building                                                                                                                   \\ \cline{2-2} 
+			& Team Lizenz                                                                                                                            \\ \cline{2-2} 
+			& Game Performance Analyse                                                                                                               \\ \cline{2-2} 
+			& Keine Einkommensbeschränkung                                                                                                           \\ \cline{2-2} 
+			& Personalisierbarer Splash Screen                                                                                                       \\ \cline{2-2} 
+			& Unity Analytics zur Analyse des Spielerverhaltens                                                                                      \\ \cline{2-2} 
+			& Priorisierte Behandlung bei eingereichten Bugs                                                                                         \\ \cline{2-2} 
+			& Zugang zu Beta-Versionen                                                                                                               \\ \cline{2-2} 
+			& Unterstützung für zukunftige Plattformen                                                                                               \\ \cline{2-2} 
+			& Vergünstigungen im Asset Store                                                                                                         \\ \cline{2-2} 
+		\end{tabular}
+	}
+	\caption{Gegenüberstellung von Personal und Professional Edition}
+	\label{Unity_Produkte}
+\end{table}
+
 \section{Zusätzlich benötigte Software}
 \section{Aktualität - Versionen - Community}
 \section{Zukunftsaussichten}
