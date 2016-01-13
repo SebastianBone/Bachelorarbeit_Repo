@@ -132,7 +132,7 @@ Anhand der gewonnenen Erkenntnisse aus Kapitel \ref{subsec:Marktanteile_mobile_S
 \subsection{Android}
 Android ist ein Open Source Betriebssystem und gleichzeitig eine Software-Plattform, welches stark im mobilen Bereich vertreten ist und auf dem Linux-Kernel basiert. Zu finden ist diese auf Smartphones, Tablet-Computern, Netbooks und auch auf Smart-TV Geräten. \citep{android_overview} Entwickelt wird Android von der Open Handset Alliance (OHA), welche von Google gegründet wurde. Die OHA wurde im November 2007 gegründet und ist ein Konsortium von mehr als 80 Unternehmen aus den Bereichen Mobilfunknetz, Geräteherstellung, Halbleiterindustrie, Marketing und Software. \citep{alliance_members} Der Grund für die Entwicklung von Android war und ist es, einen offenen Standard für mobile Geräte zu schaffen. \citep{alliance_overview}
 
-Durch seine Offenheit ermöglicht Android Entwicklern große Freiheit bei der Programmierung von Applikationen. Eigene Entwicklungen können auch mit Anwendungen von Google, wie zum Beispiel Google Maps, verknüpft werden.
+Durch sein offenes System ermöglicht Android Entwicklern große Freiheit bei der Programmierung von Applikationen. Eigene Entwicklungen können auch mit Anwendungen von Google, wie zum Beispiel Google Maps, verknüpft werden.
 
 Auch der Hardwarebereich bietet ein breites Spektrum an Geräten mit kostengünstigen, bis hochpreisigen Angeboten, sowohl mit einfacher bis qualitativ hochwertiger, technischer Ausstattung. Benutzer haben die Möglichkeit, ihre Geräte weitestgehend frei zu gestalten und einzustellen. Für die Installation von neuen Applikationen sind diese auch nicht an einen einzigen Store gebunden und können Apps auch aus verschiedensten Quellen beziehen.
 \\
@@ -354,7 +354,7 @@ Tabelle \ref{tab_WP_versions} berücksichtigt alle Versionen ab Windows Phone 7.
 In der nativen Entwicklung werden für jede Zielplattform bestimmte Programmiersprachen unterstützt. 
 
 \subsection{Android}
-Android Applikationen werden in Java entwickelt. Demnach ist es notwendig vorab eine aktuelle Java Version (JDK) zu installieren. Diese wird von dem Unternehmen Oracle, mit der aktuellen Version 8 Update 66, vertrieben.
+Android Applikationen werden in Java entwickelt. Demnach ist es notwendig, zusätzlich eine aktuelle Java Version (JDK) zu installieren. Diese wird von dem Unternehmen Oracle, mit der aktuellen Version 8  vertrieben. In Kapitel \ref{subsec:libGDX} wird nochmal näher auf diese Programmiersprache eingegangen. 
 \citep{java_jdk}
 
 \subsection{iOS}
@@ -473,7 +473,6 @@ Die Komponente besteht aus einem Paket oder einem Modul, dessen Funktionen und D
 
 \medskip
 Ein beispielhafter Lösungsansatz ist der \textbf{Component-Based Mobile Web Application of Cross-Plattform}. Dieser komponentenbasierte Ansatz versucht die Entwicklung mobiler Web-Apps dahingehend zu vereinfachen, dass durch das Konzept von Softwarekomponenten, die Kernfunktionalitäten modular aufgeteilt werden. Diese Module beinhalten Speichermanagement, Netzwerkkommunikation, Grafik, Dateisystem und die Systemdienstkomponenten. Dadurch erhalten die Komponenten eine Wiederverwertbarkeit und vereinfacht die Migration auf andere Plattformen. Jede Plattform kann dieselben Schnittstellen nutzen, benötigt jedoch eine eigene innere Implementierung für die Unterstützung. 
-
 
 \subsection{Interpretierung}
 Bei der Interpretierung übersetzt ein Interpreter (Dolmetscher) den Quellcode in ausführbare Anweisungen. Dies geschieht in Echtzeit mit Hilfe einer dedizierten Maschine. Hierbei existieren drei Unteransätze:
@@ -596,10 +595,11 @@ Tabelle \ref{table_all_approaches} fasst die vorigen Ansätze zur plattformüber
 \end{table}
 
 \section{Plattformübergreifende Entwicklung mobiler Applikationen ohne den Schwerpunkt Spieleentwicklung}
-In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier nicht der Fokus auf Game-spezifischen Applikationen und Entwicklungswerkzeugen. Hier wird in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen eingegangen und deren Resultate klassifiziert. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Diese Arbeit setzt den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht von daher nicht weiter auf die genannten und vorangegangenen Entwicklungswerkzeuge ein.
+Plattformübergreifende Entwicklung für mobile Plattformen ist nicht nur für die Spieleentwicklung interessant.
+In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier nicht der Fokus auf Game-spezifischen Applikationen und Entwicklungswerkzeugen. Hier wird in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen eingegangen und deren Resultate klassifiziert. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Im Gegensatz zu der Arbeit von Benjamin Vehse, setzt diese Thesis den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht von daher nicht weiter auf die genannten und vorangegangenen Entwicklungswerkzeuge ein.
 
 %TODO: Kapitel 5
-\chapter{Plattformübergreifende Frameworks zur Spieleentwicklung}
+\chapter{Plattformübergreifende Spieleentwicklung}
 \section{Gamespezifische Frameworks und Engines}
 \subsection{Cocos2D-X}
 \subsection{Libgdx}
@@ -649,23 +649,31 @@ Die Menge an Zielplattformen unterscheidet sich in den Bereichen Mobil, Destop u
 \end{table}
 
 \section{Programmiersprachen}
-\textbf{libGDX} nutzt einzig und allein Java für die Entwicklung, was für reine Android Projekte ein großer Vorteil ist. Denn dadurch müsste man bei der Kompilierung kaum Kompromisse eingehen.
-%TODO: Mehr Informationen zu Java!
+Die gewählten Spieleframeworks unterscheiden sich bei den verfügbaren Programmiersprachen komplett untereinander. Das verschafft Entwicklern mit unterschiedlichen Kenntnissen, einen leichteren Einstieg in die Spieleentwicklung, durch die Wahl einer vertrauten Sprache. Da manche Frameworks auch mehr als eine Sprache unterstützen, werden diese zugunsten der Übersichtlichkeit in eigenen Unterkapiteln behandelt.
 
-\bigskip
+\subsection{libGDX}
+\label{subsec:libGDX}
+\textbf{libGDX} nutzt einzig und allein Java für die Entwicklung, was für reine Android Spiele ein großer Vorteil ist. Denn dadurch werden bei der Kompilierung kaum Kompromisse eingegangen.
+Java ist eine weitverbreitete, objektorientierte Programmiersprache, die erstmalig 1995 von dem Unternehmen Sun Microsystem vorgestellt wurde. 2010 übernahm das Unternehmen Oracle Sun Microsystem und die Weiterentwicklung von Java. Es entstanden verschiedene spezialisierte Technologielösungen. Die bekanntesten und meistgenutzten stellen dabei Java SE (Standard Edition) und Java EE (Enterprise Edition) dar. Java SE beinhaltet die komplette Standardbibliothek, wobei Java EE um Bibliotheken für die Entwicklung von Server-, Netzwerk- und Webanwendungen erweitert wurde. Das derzeit aktuelle JDK 8 soll 2016 auf Version 9 aufsteigen. \citep{java_9}
+Die Sprache gilt als plattformübergreifend, da Programme in einer virtuelle Maschine ausgeführt werden, der JVM(Java Virtual Machine). Diese führt den bei der Kompilierung erstellten Bytecode aus und prüft das Programm auf Laufzeitfehler. 
+Die Syntax lehnt sich an C++ und C. Die Typisierung ist statisch und gilt allgemein als sicher im Speicherbereich. \citep{java_kompakt}
+
+\subsection{Cocos2D-X}
 Mit \textbf{Coco2D-X} hat man die Wahl zwischen C++, Lua und JavaScript, welche auf allen unterstützten Plattformen funktionieren. Einzige Einschränkung liegt bei JavaScript, da diese sich bei Cocos2D-X nicht mit Windows Phone verknüpfen lässt. \citep{cocos2d_x_features}
 
 \medskip
 Lua ist eine schnelle, von der Syntax simpel gehaltene Skriptsprache, mit objektorientierten Eigenschaften. Die geschriebenen Skripte werden durch einen Interpreter in Bytecode übersetzt und ist kompatibel mit der Sprache C. Lua befindet sich derzeit in Version 5.3 und wird häufig in der Spieleentwicklung eingesetzt. \citep{lua_about}
 
 \medskip
-Mit der Unterstützung von C++, welches direkt von C abgeleitet ist, hat man die Möglichkeit äußerst perfomante und portable Software zu schreiben. Voraussetzung ist dabei ein sicherer Umgang, da C++ im Vergleich mit anderen High-Level Sprachen, sich weniger um Logikfehler kümmert und entsprechend auch keine Warnungen ausgibt.
+%TODO: C++
+Mit der Unterstützung von C++, welches direkt von C abgeleitet ist, hat man die Möglichkeit äußerst performante und portable Software zu schreiben. Voraussetzung ist dabei ein sicherer Umgang, da C++ im Vergleich mit anderen High-Level Sprachen, sich weniger um Logikfehler kümmert und entsprechend auch keine Warnungen ausgibt. Die aktuelle Version ist C++14.
 
 \medskip
 Für Entwickler die beispielsweise Erfahrungen im Webbereich besitzen, bietet die Verwendung von JavaScript einen weiteren Einstieg in Cocos2D-X.
-%TODO: Mehr Informationen zu JavaScript!
+JavaScript ist eine Skriptsprache die es seit 1995 gibt und für dynamisches HTML in Webbrowsern entwickelt wurde. Trotz der Namensähnlichkeit zu Java, unterscheiden sich die beiden Sprachen grundlegend voneinander. JavaScript wird in der Regel genutzt um Client-seitige Logik innerhalb von HTML Dokumenten zu ermöglichen. Mit der Programmiersprache Java hingegen, können eigenständige Anwendungen aufgebaut werden. Die Sprache folgt Spezifikationen der privaten Normungsorganisation ECMA (European Computer Manufacturers Association), die Standardisierungen von Informationstechnologien entwickelt, die Richtigkeit deren Verwendung fördert und eine frei zugängliche Veröffentlichung dazu liefert. Der standardisierte Kern von JavaScript, wird als ECMAScript (ECMA 262) bezeichnet und beschreibt eine dynamische Typisierung, mit objektorientierten, aber klassenlosen Eigenschaften. Objekte basieren auf sogenannten Prototypen, die als Funktionen beschrieben werden. Nach der Instanziierung ist es möglich, das Objekt um zusätzliche Eigenschaften zu erweitern. Skripte können imperativ, aber auch funktional aufgebaut werden. Geschriebene Skripte werden durch einen Interpreter übersetzt. Basierend auf JavaScript, entstanden viele Bibliotheken und Frameworks, um beispielsweise serverseitige Netzwerkanwendungen zu betreiben (Node.js) oder Entwurfsmuster aus der Softwareentwicklung zu nutzen (Angular.js).
+ECMAScript befindet sich seit 2015 in Version 6. \citep{learning_javascript}
 
-\bigskip
+\subsection{Unity3D}
 In \textbf{Unity3D} finden die Sprachen C\#, UnityScript und Boo Verwendung. Alle für Unity3D nutzbaren Sprachen entspringen Microsofts .NET Framework. Das bedeutet auch, dass es möglich ist weitere .NET Sprachen zu benutzen, wenn diese ihre Skripte in das DLL (Dynamically Linked Library) Format kompilieren können. Diese DLL Dateien können dann dem Unity Projekt hinzugefügt und verwendet werden. \citep{unity_managed_plugins}
 
 \medskip
@@ -675,15 +683,19 @@ Boo ist eine von Python beeinflusste Sprache für .NET und Mono, welche ohne Kla
 “\emph{When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.}” \citep{ducktest}
 \medskip
 
-Beim Duck-Typing werden Objekte nicht durch ihre Klasse typisiert, sondern durch die vorhandenen Attribute und Methoden. Daher findet die Typisierung erst zur Laufzeit durch den Interpreter statt. 
+Beim Duck-Typing werden Objekte nicht durch ihre Klasse typisiert, sondern durch die vorhandenen Attribute und Methoden. Daher findet die Typisierung erst zur Laufzeit durch den Interpreter statt. Aufgrund des seltenen Gebrauchs, wird Boo seit Unity 5.0 in der Dokumentation nicht mehr unterstützt.
 
 \medskip
 Oft wird UnityScript in der Unity Community, aber auch von dem Unternehmen selbst, fälschlicherweise mit JavaScript gleichgesetzt, als wären die beiden Sprachen äquivalent. Auch wenn syntaktische Ähnlichkeiten bestehen, gibt es große semantische Unterschiede.
-UnityScript kann, wie die meisten objektorientierten Programmiersprachen, Klassen definieren und daraus Objekte erstellen. JavaScript hingegen besitzt zwar ebenfalls objektorientierte Eigenschaften, wobei diese aber sogenannte \textit{Prototypes} verwendet. Dies sind Objekte die zuerst von einer Funktion definiert werden und danach mit dem Schlüsselwort \textit{new} instanziiert werden. Nach der Instanziierung ist es möglich, das Objekt um zusätzliche Eigenschaften zu erweitern. Des Weiteren kann UnityScript im Gegensatz zu JavaScript, Klassen, Objekte, Funktionen und Variablen mit Zugriffsmodifikatoren/Sichtbarkeiten versehen. UnityScript wurde speziell für die Unity3D Engine konzipiert und ist proprietär, was es schwierig macht, genaue Spezifikationen zu finden. \citep{unity_unityscript_vs_javascript}
+UnityScript kann, wie die meisten objektorientierten Programmiersprachen, Klassen definieren und daraus Objekte erstellen. JavaScript hingegen besitzt zwar ebenfalls objektorientierte Eigenschaften, wobei diese anstatt Klassen aber sogenannte Prototypes verwendet. Des Weiteren kann UnityScript im Gegensatz zu JavaScript, Klassen, Objekte, Funktionen und Variablen mit Zugriffsmodifikatoren/Sichtbarkeiten versehen. UnityScript wurde speziell für die Unity3D Engine konzipiert und ist proprietär, was es schwierig macht, genaue Spezifikationen zu finden. \citep{unity_unityscript_vs_javascript}
 
 \medskip
-%TODO: C#
+C\# oder auch Visual C\# ist eine von Microsoft entwickelte Programmiersprache, die durch ECMA-334 standardisiert ist und sich aktuell in Version 6.0 befindet. Die Standardisierung bezieht sich allerdings nur auf die Sprache selbst und nicht auf Programme die in Verbindung mit dem .NET Framework realisiert worden. Alternativ zu .NET bietet Mono ein Open Source Framework inklusive Compiler für C\# an. Die Syntax der objektorientierten Sprache weißt große Ähnlichkeiten mit Java auf und wird oft mit dieser verglichen. Die Typisierung ist grundsätzlich statisch, wobei optional auch dynamische Typen genutzt werden können. \citep{csharp_in_depth}
+Laut Statistik, sind etwa 80\% der Unity Projekte in C\# geschrieben. \citep{unity_languages}
 
+
+%TODO: GameCenter / InAPP Purchase / Multiplayer
+\section{Game Services}
 
 \section{Native Gerätefunktionen}
 Smartphones und Tablets besitzen in der Regel kaum oder gar keine Hardwarebuttons, die für Anwendungen neu belegbar sind. Spiele die für solche mobilen Systeme entworfen worden, greifen daher auf eine oder zwei der beiden populärsten Steuerungsmechanismen zurück.
@@ -691,7 +703,7 @@ Smartphones und Tablets besitzen in der Regel kaum oder gar keine Hardwarebutton
 \medskip
 Überwiegende Praxis ist es, den vorhandenen Touchscreen für Eingaben und Interaktionen zu nutzen. Dies kann über bekannte Gesten geschehen oder über die Virtualisierung von Aktionsflächen, wie zum Beispiel Buttons und Regler.
 Eine andere Möglichkeit in das Spielgeschehen einzugreifen, bieten die geräteseitigen Hardwaresensoren. Ein Anwendungsbeispiel für den Gyroskop Sensor, wäre bei Rennspielen die Simulierung eines Lenkrades, bei dem durch die Neigung des Gerätes gesteuert wird. Weiterhin gehören Accelerometer und GPS zu den üblichen Sensoren, als auch eine Kamera zu den Standardbauteilen.
-
+%TODO: Korrekturen für Sensoren! %Ausführlicher(Alle Sensoren) und Unterstützung prüfen!
 \medskip
 \textbf{Unity3D} liefert für alle gängigen Sensoren und Bauteile Schnittstellen mit, um diese mit Funktionen zu hinterlegen. Hingegen können \textbf{libGDX} und \textbf{Cocos2D-X} bisher nur den Accelerometer ansteuern, wenn dieser vorhanden ist. Gyroskop, Kamera und GPS Lokalisierung werden derzeit nicht unterstützt. Dadurch dass die beiden Frameworks quelloffen sind, ist eine eigene Implementation dennoch theoretisch trotzdem möglich. Eine offizielle Erweiterung ist demnach auch abhängig von dem Streben der Entwickler-Community.
 
@@ -736,7 +748,6 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 	\label{Unity_Produkte}\citep{unity_products}
 \end{table}
 
-\section{Zusätzlich benötigte Software}
 \section{Aktualität - Versionen - Community}
 \section{Zukunftsaussichten}
 
@@ -824,6 +835,10 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 \emph{Boo - A scarily powerful language for .NET},
 \url{http://boo-language.github.io/}, letzter Zugriff: 05.01.2016
 
+\bibitem[Brown(2015)]{learning_javascript}
+Brown, Ethan (Hrsg.): 
+\emph{Learning Javascript}, O'Reilly 2015
+
 \bibitem[Cocos2D-X(2015)a]{cocos2d_main_features}
 \emph{Cocos2D-X - Developers Manual},
 \url{http://www.cocos2d-x.org/wiki/Cocos2d-x}, letzter Zugriff: 29.12.2015
@@ -852,6 +867,11 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \bibitem[Golem(2015)]{wp_with_android_ios}
 \emph{Microsoft demonstriert Android- und iOS-Apps unter Windows},
 \url{http://www.golem.de/news/windows-10-microsoft-demonstriert-android-und-ios-apps-unter-windows-1504-113812.html}, letzter Zugriff: 25.11.2015
+
+\bibitem[Hölzl \& Raed \& Wirsing(2013)]{java_kompakt}
+Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.): 
+\emph{Java kompakt Eine Einführung in die Software-Entwicklung
+	mit Java}, Springer 2013
 
 \bibitem[IDC (2015)]{marktanteile_betriebssysteme}
 \emph{Prognose zu den Marktanteilen der Betriebssysteme am Absatz vom Smartphones weltweit in den Jahren 2015 und 2019. In Statista - Das Statistik-Portal.},
@@ -929,6 +949,14 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \emph{Reddit - Pros and cons of Windows phone, and why should I buy one instead of an android or a iPhone?},
 \url{https://www.reddit.com/r/windowsphone/comments/3h21lf/pros_and_cons_of_windows_phone_and_why_should_i/}, letzter Zugriff: 25.11.2015
 
+\bibitem[Schmidt, Julia(2015)]{java_9}
+\emph{heise Developer - Java 9: Pläne für Release im Herbst 2016},
+\url{http://www.heise.de/developer/meldung/Java-9-Plaene-fuer-Release-im-Herbst-2016-2635526.html}, letzter Zugriff: 06.01.2016
+
+\bibitem[Skeet(2014)]{csharp_in_depth}
+Skeet, Jon (Hrsg.): 
+\emph{C\# in Depth}, Manning 2014
+
 \bibitem[Statista (2015)]{apps_in_stores}
 \emph{Anzahl der angebotenen Apps in den Top App-Stores im Mai 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/208599/umfrage/anzahl-der-apps-in-den-top-app-stores/}, letzter Zugriff: 14.12.2015
@@ -964,6 +992,10 @@ El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman
 \bibitem[Unity3D(2015)c]{unity_products}
 \emph{Unity3D - Get Unity},
 \url{http://unity3d.com/get-unity}, letzter Zugriff: 05.01.2016
+
+\bibitem[Unity3D(2014)d]{unity_languages}
+\emph{Unity3D - Documentation, Unity scripting languages and you},
+\url{http://blogs.unity3d.com/2014/09/03/documentation-unity-scripting-languages-and-you/}, letzter Zugriff: 05.01.2016
 
 \bibitem[Vehse, Benjamin(2014)]{cross_plattform_development_vehse} 
 Vehse, Benjamin:
