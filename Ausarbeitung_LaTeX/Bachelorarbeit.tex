@@ -63,6 +63,7 @@
 \chapter{Einleitung}
 
 \section{Motivation}
+%TODO: Definition mobile App und Definition eines Spiels
 \section{Gliederung}
 
 %Kapitel 2
@@ -384,6 +385,45 @@ Eine alternative bietet JetBrains IDE Appcode, welches eine kompatible, aber kos
 \subsection{Windows Phone}
 Microsoft setzt für die Kompilierung und Realisierung für WP Projekte eine Visual Studio IDE voraus, welche für Entwicklungen außerhalb eines Unternehmens kostenfrei ist.
 
+
+\section{Native Spieleentwicklung}
+Bei der nativen Entwicklung, basieren die mobilen Applikationen auf den jeweiligen SDKs. Mobile Spiele können auf nativem Wege realisiert werden. Die Verwendung der mitgelieferten Grafik- und Animationsfunktionen für die Visualisierung und selbstdefinierte Logik durch eigenen Code, können schon ausreichen, um einfache 2D Spiele zu kreieren. Auch mit der freien Grafikbibliothek OpenGL, könnten Spielinhalte in 2D oder sogar 3D dargestellt werden. Allerdings ist OpenGL nicht für Windows Phone verfügbar, denn hier wird das hauseigene Pendant, DirectX verwendet. Um die Spieleentwicklung leichter zu machen, können spezialisierte Frameworks und Editoren genutzt werden, die eigens für die Entwicklung von Spielen konzipiert wurden und auf die gewünschte Plattform abgestimmt sind. In den folgenden Unterkapiteln werden beispielhafte Werkzeuge für die jeweiligen Plattformen aufgelistet. Bei der Recherche nach spezialisierten Frameworks, war ein gewisser Trend zu verzeichnen. Die Gesamtmenge an Projekten ist groß, wovon aber der Großteil nicht mehr weiterentwickelt wird und die Zahl derer die sich behaupten konnten ist verhältnismäßig gering.
+ 
+\subsection{Android}
+Für Android existieren einige Frameworks, wovon jedoch viele nicht immer auf dem neuesten Stand sind. Das ist häufig damit verbunden, dass diese aus privatem Interesse entstanden sind und ein unkommerzielles, kostenloses Vertriebsmodell betreiben. Daher sind regelmäßige Aktualisierungen oft nicht gewährleistet und manche Arbeiten wurden auch ganz eingestellt.
+
+\medskip
+\textbf{AndEngine}\\
+Eine Game Engine die auf OpenGL basiert und für 2D Spiele ausgelegt ist.
+Die Letzte Aktualisierung erfolgte im Dezember 2013.
+
+\medskip
+\textbf{Cocos2D-Android}\\
+Eine Implementierung von Cocos2D für Android. Die Weiterentwicklung wurde allerdings eingestellt und die letzte Änderung erfolgte im Januar 2010.
+
+\medskip
+\textbf{jPCT-AE}\\
+Eine 3D Engine die auf jPCT für Desktopanwendungen mit Java basiert und für Android portiert wurde. Die Grafik wird von OpenGL 1.x und 2.0 unterstützt. Das Projekt wird aktuell auch weiterentwickelt und ist frei verfügbar.
+
+\subsection{iOS}
+Auch für iOS bestehen diverse Frameworks. Die Suche nach einer aktuellen Entwicklungsunterstützung gestaltet sich hier ein wenig einfacher, wobei man aber genau wie bei Android auch auf aufgegebene Projekte stößt. Ein großer Vorteil besteht aber durch SpriteKit, da dies ein Produkt von Apple selbst ist und eine gewisse Sicherheit bei zukünftiger Unterstützung gewährleistet.
+
+\medskip
+\textbf{SpriteKit}\\
+Eigenentwicklung von Apple für 2D Spiele auf iOS und OS X. Es kann Objective-C oder Swift genutzt werden.
+
+\medskip
+\textbf{Cocos2D-iPhone}\\
+Abkömmling von Cocos2D für iOS mit den Implementierungen für Objective-C und zukünftig auch Swift. Dies ist einer der Hauptzweige von Cocos2D der stetig aktualisiert wird.
+
+\medskip
+\textbf{Sparrow}\\
+Eine aktuelle Open Source Game Engine für iOS Spiele, die ausschließlich Objective-C unterstützt.
+
+\subsection{Windows Phone}
+Frameworks die einzig und allein für Windows Phone Spiele ausgelegt sind, waren nicht direkt ausfindig zu machen. Microsoft selbst rät zu dem eigenen XNA Framework, womit auch die meisten Entertainment Plattformen von Microsoft bedient werden können. Hauptsächlich werden hier Cross Plattform Tools genutzt, da die Verbreitung von entsprechender Hardware noch relativ gering ausfällt. Auch durch das neue Windows 10 und der Wunsch zu universellen Anwendungslösungen, besteht derzeit ein noch nicht abgeschlossener Änderungsprozess. Dadurch werden spezialisierte Lösungen für eine Windows Gerätekategorie zukünftig vermutlich eher uninteressant.
+
+
 \section{Zusammengefasste Übersicht}
 Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzelnen Systeme bieten.
 
@@ -598,8 +638,10 @@ Tabelle \ref{table_all_approaches} fasst die vorigen Ansätze zur plattformüber
 Plattformübergreifende Entwicklung für mobile Plattformen ist nicht nur für die Spieleentwicklung interessant.
 In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier nicht der Fokus auf Game-spezifischen Applikationen und Entwicklungswerkzeugen. Hier wird in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen eingegangen und deren Resultate klassifiziert. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Im Gegensatz zu der Arbeit von Benjamin Vehse, setzt diese Thesis den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht von daher nicht weiter auf die genannten und vorangegangenen Entwicklungswerkzeuge ein.
 
+
 %TODO: Kapitel 5
 \chapter{Plattformübergreifende Spieleentwicklung}
+\section{Anforderungen an die Entwicklungstools}
 \section{Gamespezifische Frameworks und Engines}
 \subsection{Cocos2D-X}
 \subsection{Libgdx}
@@ -694,18 +736,20 @@ C\# oder auch Visual C\# ist eine von Microsoft entwickelte Programmiersprache, 
 Laut Statistik, sind etwa 80\% der Unity Projekte in C\# geschrieben. \citep{unity_languages}
 
 
-%TODO: GameCenter / InAPP Purchase / Multiplayer
-\section{Game Services}
-
-\section{Native Gerätefunktionen}
+\section{Native Gerätefunktionen und Schnittstellen}
 Smartphones und Tablets besitzen in der Regel kaum oder gar keine Hardwarebuttons, die für Anwendungen neu belegbar sind. Spiele die für solche mobilen Systeme entworfen worden, greifen daher auf eine oder zwei der beiden populärsten Steuerungsmechanismen zurück.
 
 \medskip
 Überwiegende Praxis ist es, den vorhandenen Touchscreen für Eingaben und Interaktionen zu nutzen. Dies kann über bekannte Gesten geschehen oder über die Virtualisierung von Aktionsflächen, wie zum Beispiel Buttons und Regler.
 Eine andere Möglichkeit in das Spielgeschehen einzugreifen, bieten die geräteseitigen Hardwaresensoren. Ein Anwendungsbeispiel für den Gyroskop Sensor, wäre bei Rennspielen die Simulierung eines Lenkrades, bei dem durch die Neigung des Gerätes gesteuert wird. Weiterhin gehören Accelerometer und GPS zu den üblichen Sensoren, als auch eine Kamera zu den Standardbauteilen.
 %TODO: Korrekturen für Sensoren! %Ausführlicher(Alle Sensoren) und Unterstützung prüfen!
+%BILD Main APIS
+
 \medskip
 \textbf{Unity3D} liefert für alle gängigen Sensoren und Bauteile Schnittstellen mit, um diese mit Funktionen zu hinterlegen. Hingegen können \textbf{libGDX} und \textbf{Cocos2D-X} bisher nur den Accelerometer ansteuern, wenn dieser vorhanden ist. Gyroskop, Kamera und GPS Lokalisierung werden derzeit nicht unterstützt. Dadurch dass die beiden Frameworks quelloffen sind, ist eine eigene Implementation dennoch theoretisch trotzdem möglich. Eine offizielle Erweiterung ist demnach auch abhängig von dem Streben der Entwickler-Community.
+
+%TODO: GameCenter / InAPP Purchase / Multiplayer
+\section{Game Services}
 
 \section{Produktvarianten}
 Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varianten sind durchaus möglich, aber derzeit sind keine weiteren populären Ableger bekannt. Die Community konzentriert sich demnach hauptsächlich auf die Weiterentwicklung der Hauptversion oder auf eigene Erweiterungen in Form von Plugins.
