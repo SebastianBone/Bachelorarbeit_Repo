@@ -448,7 +448,6 @@ Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzel
 \end{table}
 
 %OPTIONAL!!!
-%TODO: Kapitel 8
 %\chapter{Stores für mobile Spiele}
 %\section{Allgemeine Bedingungen für Entwickler}
 %\section{Maximale App-Größe}
@@ -643,8 +642,8 @@ In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mob
 \chapter{Plattformübergreifende Spieleentwicklung}
 \section{Anforderungen an die Entwicklungstools}
 \section{Gamespezifische Frameworks und Engines}
+\subsection{libGDX}
 \subsection{Cocos2D-X}
-\subsection{Libgdx}
 \subsection{Unity3D}
 \subsection{Weitere Frameworks}
 \section{Entwicklungsumgebungen}
@@ -740,13 +739,35 @@ Laut Statistik, sind etwa 80\% der Unity Projekte in C\# geschrieben. \citep{uni
 Smartphones und Tablets besitzen in der Regel kaum oder gar keine Hardwarebuttons, die für Anwendungen neu belegbar sind. Spiele die für solche mobilen Systeme entworfen worden, greifen daher auf eine oder zwei der beiden populärsten Steuerungsmechanismen zurück.
 
 \medskip
-Überwiegende Praxis ist es, den vorhandenen Touchscreen für Eingaben und Interaktionen zu nutzen. Dies kann über bekannte Gesten geschehen oder über die Virtualisierung von Aktionsflächen, wie zum Beispiel Buttons und Regler.
-Eine andere Möglichkeit in das Spielgeschehen einzugreifen, bieten die geräteseitigen Hardwaresensoren. Ein Anwendungsbeispiel für den Gyroskop Sensor, wäre bei Rennspielen die Simulierung eines Lenkrades, bei dem durch die Neigung des Gerätes gesteuert wird. Weiterhin gehören Accelerometer und GPS zu den üblichen Sensoren, als auch eine Kamera zu den Standardbauteilen.
-%TODO: Korrekturen für Sensoren! %Ausführlicher(Alle Sensoren) und Unterstützung prüfen!
-%BILD Main APIS
+Überwiegende Praxis ist es, den vorhandenen Touchscreen für Eingaben und Interaktionen zu nutzen. Dies kann über bekannte Gesten geschehen oder über die Virtualisierung von Aktionsflächen, wie zum Beispiel Buttons und Regler. Alle drei Frameworks verfügen über Möglichkeiten, verschiedene Touchgesten zu unterscheiden.
+Eine andere Möglichkeit in das Spielgeschehen einzugreifen, bieten die geräteseitigen Hardwaresensoren. Ein Anwendungsbeispiel für den Gyroskop Sensor, wäre bei Rennspielen die Simulierung eines Lenkrades, bei dem durch die Neigung des Gerätes gesteuert wird. Weiterhin gehören Accelerometer, GPS und sowohl eine Kamera zu den üblichen Gerätefunktionen.
 
 \medskip
-\textbf{Unity3D} liefert für alle gängigen Sensoren und Bauteile Schnittstellen mit, um diese mit Funktionen zu hinterlegen. Hingegen können \textbf{libGDX} und \textbf{Cocos2D-X} bisher nur den Accelerometer ansteuern, wenn dieser vorhanden ist. Gyroskop, Kamera und GPS Lokalisierung werden derzeit nicht unterstützt. Dadurch dass die beiden Frameworks quelloffen sind, ist eine eigene Implementation dennoch theoretisch trotzdem möglich. Eine offizielle Erweiterung ist demnach auch abhängig von dem Streben der Entwickler-Community.
+\textbf{Unity3D} liefert für fast alle gängigen Gerätefunktionen entsprechende Schnittstellen, um diese zu nutzen oder mit Funktionen zu hinterlegen. Bei \textbf{libGDX} kann man auf die meisten Sensorentypen zugreifen, muss aber auf Kamera und GPS verzichten.
+Hingegen kann \textbf{Cocos2D-X} bisher nur den Accelerometer ansteuern, wenn dieser vorhanden ist. Gyroskop, Kamera, GPS Lokalisierung und weiteres werden derzeit nicht unterstützt. Dadurch dass die beiden Frameworks quelloffen sind, ist bei Bedarf eine eigene Implementation theoretisch dennoch möglich. Eine offizielle Erweiterung ist demnach auch abhängig von dem Streben der Entwickler-Community. 
+In Tabelle \ref{tab_schnittstellen} werden die häufigsten Gerätefunktionen und die Unterstützung durch eine Schnittstelle, der einzelnen Frameworks gelistet. 
+Der Vollständigkeit halber ist zu dem Punkt Netzwerkverbindung zu sagen, dass keines der drei Frameworks ein WLAN Modul oder mobiles Internet ein- und ausschalten kann. Aus Gründen der Sicherheit, kann dies nur der Nutzer selbst. Es kann lediglich getestet werden, ob eine aktive Verbindung existiert. Für die Prüfung einer Bluetooth Verbindung, gibt es derzeit für keines eine offizielle Schnittstelle. Wenn ein Projekt die Anforderung einer bestimmten Schnittstelle besitzt, die aber in dem gewählten Framework nicht vorhanden ist, hat man dennoch die Möglichkeit diese plattformabhängig zu implementieren.
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{
+				>{\columncolor[HTML]{C0C0C0}}c ccc}
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Schnittstelle}} & \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{libGDX}} & \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Cocos2D-X}} & \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Unity3D}} \\
+			Touchgesten                                                         & X                                                              & X                                                                 & X                                                               \\
+			Netzwerkverbindung                                                    & X                                                               & X                                                                   & X                                                               \\
+			Accelerometer                                                         & X                                                              & X                                                                 & X                                                               \\
+			Gyroskop                                                              & X                                                              &                                                                   & X                                                               \\
+			Vibration                                                             & X                                                              &                                                                   & X                                                              \\
+			Kompass                                                               & X                                                              &                                                                   & X                                                               \\
+			Kamera                                                                &                                                                &                                                                   & X                                                               \\
+			Geoposition                                                           &                                                                &                                                                   & X                                                               \\
+			Bluetooth                                                             &                                                                &                                                                   &                                                                 \\
+		\end{tabular}
+	}
+	\caption{Verfügbare Schnittstellen zu den Gerätefunktionen}
+	\label{tab_schnittstellen}\citep{libGDX_docs,cocos2d_docs,unity_docs}
+\end{table}
 
 %TODO: GameCenter / InAPP Purchase / Multiplayer
 \section{Game Services}
@@ -792,21 +813,17 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 	\label{Unity_Produkte}\citep{unity_products}
 \end{table}
 
-\section{Aktualität - Versionen - Community}
-\section{Zukunftsaussichten}
+%TODO: Vergleichstabelle
+\section{Kosten-Nutzen Vergleich}
+%Vergleichstabelle zu den Variationen der Projektanforderungen im Zusammenhang mit den Möglichkeiten und Kosten der Frameworks
 
 %OPTIONAL!!!
-%TODO: Kapitel 7
 %\chapter{Analyse der Marktanteile}
 %\section{Menge an Firmen und Entwicklern}
 %\section{Menge an Games}
 
-%TODO: Kapitel 9
-\chapter{Kosten-Nutzen Vergleich}
-%Vergleichstabelle zu den Variationen der Projektanforderungen im Zusammenhang mit den Möglichkeiten und Kosten der Frameworks
 
 %OPTIONAL!!!
-%TODO: Kapitel 10
 %\chapter{Grundgerüst und Aufbau eines Cross-Plattform Projekts}
 %\section{Geteilter Content}
 %\section{Plattformabhängiger Content}
@@ -814,26 +831,16 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 %\section{Grundaufbau bei Frameworks}
 
 %OPTIONAL!!!
-%TODO: Kapitel 11
 %\chapter{Game-typische Design Patterns und Architekturen}
 %\section{Architekturen}
 %\section{Patterns}
 %\section{Verweis auf Bachelorarbeit: „Use of Design Patterns for mobile game Development“}
 
-%OPTIONAL!!!
-%TODO: Kapitel 12
-%\chapter{Nutzen von Architekturen}
-%\section{Pro}
-%\subsection{Skalierbarkeit}
-%\subsection{Lesbarkeit}
-%\subsection{Wiederverwertbarkeit}
-%\section{Contra}
-%\subsection{KISS - Keep it simple stupid}
 
 %TODO: Kapitel 13
 \chapter{Konzeption und Implementierung einer Test-Applikation}
-\section{Ideen}
 \section{Anforderungen}
+\section{Ideen}
 \section{Verwendete Frameworks und Engines}
 \section{Verwendete APIs und SDKs}
 \section{Assets und deren Verwendung}
@@ -843,8 +850,10 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 \chapter{Analyse messbarer Metriken}
 %Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen), FPS
 
+%TODO
 \chapter{Vergleich der Messprotokolle}
 
+%TODO
 \chapter{Fazit}
 
 
@@ -856,7 +865,6 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 
 %------------------------------ LITERATURVERZEICHNIS----------------------
 %TODO:Alphabetisch sortieren!
-%BIBTEX!?
 \begin{thebibliography}{}
 
 \bibitem[Android Develop Tools(2015)]{android_studio}
@@ -867,11 +875,11 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 \emph{Codenames, Tags, and Build Numbers in the history of Android},
 \url{https://source.android.com/source/build-numbers.html}, etzter Zugriff: 24.11.2015
 
-\bibitem[Apple Developer (2015)]{swift_about}
+\bibitem[Apple Developer(2015)]{swift_about}
 \emph{Swift - Overview},
 \url{https://developer.apple.com/swift/}, letzter Zugriff: 28.12.2015
 
-\bibitem[Bernardo Zamora (2015)]{windows_store_trends_2015}
+\bibitem[Bernardo Zamora(2015)]{windows_store_trends_2015}
 \emph{Blogs.Windows - Windows Store Trends - September 2015},
 \url{https://blogs.windows.com/buildingapps/2015/10/12/windows-store-trends-september-2015/}, letzter Zugriff: 15.12.2015
 
@@ -895,7 +903,11 @@ Brown, Ethan (Hrsg.):
 \emph{Cocos2D-X - Relationships in Cocos2D Family},
 \url{http://www.cocos2d-x.org/wiki/Relationships_in_Cocos2d_Family}, letzter Zugriff: 05.01.2016
 
-\bibitem[Distimo (2014)]{play_store_categories}
+\bibitem[Cocos2D-X(2015)d]{cocos2d_docs}
+\emph{Cocos2D-X - Dokumentation},
+\url{http://www.cocos2d-x.org/reference/native-cpp/V3.9/index.html}, letzter Zugriff: 10.01.2016
+
+\bibitem[Distimo(2014)]{play_store_categories}
 \emph{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/321703/umfrage/beliebteste-app-kategorien-im-google-play-store-weltweit/}, letzter Zugriff: 14.12.2015
 
@@ -917,7 +929,7 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \emph{Java kompakt Eine Einführung in die Software-Entwicklung
 	mit Java}, Springer 2013
 
-\bibitem[IDC (2015)]{marktanteile_betriebssysteme}
+\bibitem[IDC(2015)]{marktanteile_betriebssysteme}
 \emph{Prognose zu den Marktanteilen der Betriebssysteme am Absatz vom Smartphones weltweit in den Jahren 2015 und 2019. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/182363/umfrage/prognostizierte-marktanteile-bei-smartphone-betriebssystemen/}, letzter Zugriff: 14.12.2015
 
@@ -925,7 +937,7 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \emph{Ententest - Begriffsentstehung},
 \url{https://de.wikipedia.org/wiki/Ententest}, letzter Zugriff: 05.01.2016
 
-\bibitem[JetBrains (2015)]{appcode}
+\bibitem[JetBrains(2015)]{appcode}
 \emph{AppCode},
 \url{https://www.jetbrains.com/objc/}, letzter Zugriff: 28.12.2015
 
@@ -933,27 +945,31 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \emph{A Dictionary of Computing - native software},
 \url{http://www.encyclopedia.com/doc/1O11-nativesoftware.html}, letzter Zugriff: 24.11.2015
 
-\bibitem[Kantar (2015)]{marktanteile_betriebssysteme_laender}
+\bibitem[Kantar(2015)]{marktanteile_betriebssysteme_laender}
 \emph{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/198453/umfrage/marktanteile-der-smartphone-betriebssysteme-am-absatz-in-ausgewaehlten-laendern/}, letzter Zugriff: 14.12.2015
 
-\bibitem[libGDX(2015)]{libGDX_main_features}
+\bibitem[libGDX(2013)a]{libGDX_main_features}
 \emph{libGDX - Goals and Features},
 \url{https://libgdx.badlogicgames.com/features.html}, letzter Zugriff: 29.12.2015
+
+\bibitem[libGDX(2013)b]{libGDX_docs}
+\emph{libGDX API},
+\url{https://libgdx.badlogicgames.com/nightlies/docs/api/}, letzter Zugriff: 10.01.2016
 
 \bibitem[Lua(2015)]{lua_about}
 \emph{Lua - About},
 \url{http://www.lua.org/about.html}, letzter Zugriff: 05.01.2016
 
-\bibitem[Mac Developer Library (2014)]{objectiveC_about}
+\bibitem[Mac Developer Library(2014)]{objectiveC_about}
 \emph{About Objective-C},
 \url{https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html/}, letzter Zugriff: 28.12.2015
 
-\bibitem[MacinCloud (2015)]{macincloud}
+\bibitem[MacinCloud(2015)]{macincloud}
 \emph{MacinCloud},
 \url{http://www.macincloud.com/}, letzter Zugriff: 28.12.2015
 
-\bibitem[Microsoft Developer (2015)]{WP10_SDK}
+\bibitem[Microsoft Developer(2015)]{WP10_SDK}
 \emph{Windows Software Development Kit (SDK) for Windows 10},
 \url{https://dev.windows.com/en-us/downloads/windows-10-sdk}, letzter Zugriff: 28.12.2015
 
@@ -965,7 +981,7 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \emph{Microsoft - Windows 10 Features},
 \url{https://www.microsoft.com/de-de/windows/features}, letzter Zugriff: 25.11.2015
 
-\bibitem[MSDN (2015)]{WP10_Emulator}
+\bibitem[MSDN(2015)]{WP10_Emulator}
 \emph{Microsoft-Emulator für Windows 10 Mobile},
 \url{https://msdn.microsoft.com/library/windows/apps/mt162269.aspx}, letzter Zugriff: 28.12.2015
 
@@ -985,7 +1001,7 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \emph{Java SE Development Kit 8 Downloads},
 \url{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}, letzter Zugriff: 24.11.2015
 
-\bibitem[PocketGamer.biz (2015)]{app_store_categories}
+\bibitem[PocketGamer.biz(2015)]{app_store_categories}
 \emph{Ranking der Top-20-Kategorien im App Store im Dezember 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/166976/umfrage/beliebteste-kategorien-im-app-store/}, letzter Zugriff: 15.12.2015
 
@@ -993,7 +1009,7 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \emph{Reddit - Pros and cons of Windows phone, and why should I buy one instead of an android or a iPhone?},
 \url{https://www.reddit.com/r/windowsphone/comments/3h21lf/pros_and_cons_of_windows_phone_and_why_should_i/}, letzter Zugriff: 25.11.2015
 
-\bibitem[Schmidt, Julia(2015)]{java_9}
+\bibitem[Schmidt(2015)]{java_9}
 \emph{heise Developer - Java 9: Pläne für Release im Herbst 2016},
 \url{http://www.heise.de/developer/meldung/Java-9-Plaene-fuer-Release-im-Herbst-2016-2635526.html}, letzter Zugriff: 06.01.2016
 
@@ -1001,7 +1017,7 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 Skeet, Jon (Hrsg.): 
 \emph{C\# in Depth}, Manning 2014
 
-\bibitem[Statista (2015)]{apps_in_stores}
+\bibitem[Statista(2015)]{apps_in_stores}
 \emph{Anzahl der angebotenen Apps in den Top App-Stores im Mai 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/208599/umfrage/anzahl-der-apps-in-den-top-app-stores/}, letzter Zugriff: 14.12.2015
 
@@ -1009,11 +1025,11 @@ Skeet, Jon (Hrsg.):
 \emph{Android SDK Requirements},
 \url{http://code.tutsplus.com/tutorials/android-sdk-requirements--mobile-20086}, letzter Zugriff: 24.11.2015
 
-\bibitem[t3n (2015)]{t3n_xcode7}
+\bibitem[t3n(2015)]{t3n_xcode7}
 \emph{Xcode 7: Apps auch ohne Entwickler-Account auf dem iPhone testen},
 \url{http://t3n.de/news/xcode-7-apps-ohne-615214/}, letzter Zugriff: 28.12.2015
 
-\bibitem[techopedia (2015)]{cross_plattform_explanation}
+\bibitem[techopedia(2015)]{cross_plattform_explanation}
 \emph{Cross-Platform Development},
 \url{https://www.techopedia.com/definition/30026/cross-platform-development}, letzter Zugriff: 21.12.2015
 
@@ -1024,6 +1040,10 @@ Skeet, Jon (Hrsg.):
 \bibitem[Unify Community Wiki(2014)]{unity_unityscript_vs_javascript}
 \emph{Unify Community Wiki - UnityScript versus JavaScript},
 \url{http://wiki.unity3d.com/index.php/UnityScript_versus_JavaScript}, letzter Zugriff: 05.01.2016
+
+\bibitem[Unity3D(2014)d]{unity_languages}
+\emph{Unity3D - Documentation, Unity scripting languages and you},
+\url{http://blogs.unity3d.com/2014/09/03/documentation-unity-scripting-languages-and-you/}, letzter Zugriff: 05.01.2016
 
 \bibitem[Unity3D(2015)a]{unity_public_relations}
 \emph{Unity3D - Public Relations},
@@ -1037,11 +1057,11 @@ Skeet, Jon (Hrsg.):
 \emph{Unity3D - Get Unity},
 \url{http://unity3d.com/get-unity}, letzter Zugriff: 05.01.2016
 
-\bibitem[Unity3D(2014)d]{unity_languages}
-\emph{Unity3D - Documentation, Unity scripting languages and you},
-\url{http://blogs.unity3d.com/2014/09/03/documentation-unity-scripting-languages-and-you/}, letzter Zugriff: 05.01.2016
+\bibitem[Unity3D(2015)e]{unity_docs}
+\emph{Unity3D - Scripting API},
+\url{http://docs.unity3d.com/ScriptReference/index.html}, letzter Zugriff: 10.01.2016
 
-\bibitem[Vehse, Benjamin(2014)]{cross_plattform_development_vehse} 
+\bibitem[Vehse(2014)]{cross_plattform_development_vehse} 
 Vehse, Benjamin:
 \glqq Plattformabhängige und –unabhängige
 Entwicklung mobiler Anwendungen am
