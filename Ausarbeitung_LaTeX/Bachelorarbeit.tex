@@ -640,7 +640,7 @@ In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mob
 
 %TODO: Kapitel 5
 \chapter{Plattformübergreifende Spieleentwicklung}
-\section{Anforderungen an die Entwicklungstools}
+\section{Anforderungen für vergleichbare Entwicklungstools}
 \section{Gamespezifische Frameworks und Engines}
 \subsection{libGDX}
 \subsection{Cocos2D-X}
@@ -769,8 +769,37 @@ Der Vollständigkeit halber ist zu dem Punkt Netzwerkverbindung zu sagen, dass k
 	\label{tab_schnittstellen}\citep{libGDX_docs,cocos2d_docs,unity_docs}
 \end{table}
 
-%TODO: GameCenter / InAPP Purchase / Multiplayer
+
 \section{Game Services}
+Um die Motivation und die Wiederspielbarkeit zu erhöhen, sowie neue Inhalte zur Verfügung zu stellen, können verschiedene Funktionalitäten eingebunden werden. 
+Ein Erfolgssystem basiert auf dem Belohnungsprinzip und kann den Benutzer auf unterschiedliche Weise in seinem Spielverhalten motivieren. Durch definierte Herausforderungen werden verschiedene Aufgaben gestellt, wobei dem Spieler durch das Erreichen dieser, ein visuelles Feedback gegeben werden kann. Das kann beispielsweise in Form von Medaillen, Erhöhung des Spielerlevels oder einer Prozessleiste auftreten. Kompetitive Elemente können mit Bestenlisten erzielt werden, in denen bestimmte Metriken von den Spielern sortiert aufgelistet werden können. Ranglisten über die höchste Punktzahl oder die längste Spielzeit geben Anreiz sich mit anderen zu messen. 
+In rundenbasierten und Echtzeit Mehrspielermodi treten zwei oder mehr Spieler gegeneinander an, um in einem Wettbewerb den besten Spieler zu ermitteln. Eine andere beliebte Variante sind Modi, in denen die Teilnehmer kooperieren, um Spielziele gemeinsam zu erreichen oder einfach unterhaltsame Erfahrungen zu schaffen.
+Um verbesserungswürdige Schwachstellen in der Anwendung zu ermitteln und das Verhalten von Spielern zu messen, werden Analysesysteme verwendet. Diese ermöglichen Einblicke auf Aktivitäten und Fortschritte der Spieler und Informationen zu getätigten Käufen. Auch wie häufig ein Benutzer die Anwendung gebraucht kann gemessen werden. Diese Statistiken verhelfen zu einem besseren Verständnis der eigenen Anwendung.
+Für den Erwerb von zusätzlichen, applikationsinternen Inhalten und die Abwicklung von Zahlungen sind Shop Systeme notwendig. Dies wird bei plattformübergreifenden Applikationen durch die Implementierung einer Bibliothek ermöglicht, die zu den gewünschten Zielplattformen und deren Stores, passende Schnittstellen bereitstellt. 
+In Tabelle \ref{tab_game_services} werden APIs aufgelistet, die populäre Game Services in den Frameworks unterstützen. Die Tabelle zeigt ausschließlich APIs, die plattformübergreifende Eigenschaften aufweisen und auf den beiden wichtigen, mobilen Zielplattformen iOS und Android funktionieren.
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{cccc}
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Game Service}}                                                               & {\color[HTML]{FFFFFF} \textbf{libGDX}}                                            & {\color[HTML]{FFFFFF} \textbf{Cocos2D-X}}                                         & {\color[HTML]{FFFFFF} \textbf{Unity3D}}                                           \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} \textbf{Erfolge}}                                                                    & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             \\
+			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{Bestenlisten}}                                       & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} \textbf{Multiplayer}}                                                                & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42 \\ NextPeer\end{tabular} & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42 \\ NextPeer\end{tabular} & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42 \\ NextPeer\end{tabular} \\
+			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{Spielstand sichern}}                                 & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} \textbf{Analyse}}                                                                    & App42                                                                             & App42                                                                             & \begin{tabular}[c]{@{}c@{}}Unity Analytics \\ App42 \\ Soomla\end{tabular}        \\
+			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{Shop System}}                                        & gdx-pay                                                                           & SDKBOX-IAP                                                                        & Soomla                                                                            \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Soziale Netzwerke \\ Freundesliste\end{tabular}}} & \begin{tabular}[c]{@{}c@{}}App42 \\ NextPeer\end{tabular}                         & \begin{tabular}[c]{@{}c@{}}App42 \\ NextPeer\end{tabular}                         & \begin{tabular}[c]{@{}c@{}}Social API \\ App42 \\ NextPeer \\ Soomla\end{tabular}
+		\end{tabular}
+	}
+	\caption{Game Services und plattformübergreifende Schnittstellen}
+	\label{tab_game_services}
+\end{table}
 
 \section{Produktvarianten}
 Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varianten sind durchaus möglich, aber derzeit sind keine weiteren populären Ableger bekannt. Die Community konzentriert sich demnach hauptsächlich auf die Weiterentwicklung der Hauptversion oder auf eigene Erweiterungen in Form von Plugins.
@@ -813,8 +842,8 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 	\label{Unity_Produkte}\citep{unity_products}
 \end{table}
 
-%TODO: Vergleichstabelle
-\section{Kosten-Nutzen Vergleich}
+%OPTIONAL: Vergleichstabelle
+%\section{Kosten-Nutzen Vergleich}
 %Vergleichstabelle zu den Variationen der Projektanforderungen im Zusammenhang mit den Möglichkeiten und Kosten der Frameworks
 
 %OPTIONAL!!!
@@ -847,11 +876,13 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 %\section{User Stories}
 
 %TODO
-\chapter{Analyse messbarer Metriken}
+\chapter{Analyse der Test-Applikation}
+\section{Metriken}
+\section{Messprotokoll}
 %Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen), FPS
 
 %TODO
-\chapter{Vergleich der Messprotokolle}
+\chapter{Vergleich zur Benutzbarkeit}
 
 %TODO
 \chapter{Fazit}
