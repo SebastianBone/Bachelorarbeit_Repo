@@ -45,7 +45,7 @@
 %----------------------------INHALT---------------------------------------
 
 %---------------------------ABSTRACT------------------------------------
-
+\onehalfspacing
 \thispagestyle{empty}
 \selectlanguage{english}
 \section*{\centering\abstractname}
@@ -114,7 +114,7 @@ Laut Windows wurden im September 2015 etwa 50\% der Applikationen mit Windows 10
 	\caption{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014}\label{graph_play_store_kategorien}\citep{play_store_categories}
 \end{figure}
 
-Auch im Google Play Store werden Spiele Apps am häufigsten heruntergeladen und nehmen etwa 41\% des Downloadvolumens ein.(Abb.\ref{graph_play_store_kategorien})
+Auch im Google Play Store werden Spiele Apps am häufigsten heruntergeladen und nehmen etwa 41\% des Downloadvolumens ein.(Abb. \ref{graph_play_store_kategorien})
 
 \begin{figure}[htbp]
 	\centering
@@ -122,8 +122,8 @@ Auch im Google Play Store werden Spiele Apps am häufigsten heruntergeladen und 
 	\caption{Ranking der Top-Kategorien im App Store im Dezember 2015}\label{graph_app_store_kategorien}\citep{app_store_categories}
 \end{figure}
 
-Die beliebtesten Kategorien des Apple App Store werden ebenfalls deutlich von den Spielen angeführt. Auch wenn der Abstand zur zweithäufigsten Kategorie geringer ist als bei den anderen Stores, macht der Spielebereich trotzdem etwa ein viertel aller Downloads aus.(Abb.\ref{graph_app_store_kategorien})
-\medskip
+Die beliebtesten Kategorien des Apple App Store werden ebenfalls deutlich von den Spielen angeführt. Auch wenn der Abstand zur zweithäufigsten Kategorie geringer ist als bei den anderen Stores, macht der Spielebereich trotzdem etwa ein viertel aller Downloads aus.(Abb. \ref{graph_app_store_kategorien})
+\bigskip
 
 Auch wenn jeder Store seine Applikationen auf eigene Weise kategorisiert, ist dennoch klar zu erkennen das Spiele bei jedem Anbieter das höchste Downloadvolumen ausmachen und sich stetig wachsender Beliebtheit erfreuen. Die Nachfrage nach mobilen Spielen ist demnach plattformübergreifend und berechtigt die Evaluierung von entsprechender Entwicklungssoftware.
 
@@ -230,7 +230,7 @@ Software Development Kits, kurz SDKs, liefern dem Entwickler die Werkzeuge, Anwe
 \clearpage 
 
 \subsection{Android Versionen}
-Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben nach alphabetisch aufsteigend. (Abb.\ref{tab_android_vers})
+Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben nach alphabetisch aufsteigend. (Abb. \ref{tab_android_vers})
 Das aktuelle SDK ist frei im Netz verfügbar. Dieses kann einzeln geladen werden oder direkt in Verbindung mit Android Studio.
 
 \begin{table}[htbp]
@@ -270,7 +270,7 @@ Das aktuelle SDK ist frei im Netz verfügbar. Dieses kann einzeln geladen werden
 \clearpage
 
 \subsection{iOS Versionen}
-Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. Verbrauchern sind diese meist unbekannt, da diese überwiegend intern genutzt werden. (Abb.\ref{tab_ios_vers})
+Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. Verbrauchern sind diese meist unbekannt, da diese überwiegend intern genutzt werden. (Abb. \ref{tab_ios_vers})
 Das SDK wird offiziell ausschließlich in Verbindung mit XCode bezogen.
  
 \begin{table}[htbp]
@@ -392,31 +392,31 @@ Bei der nativen Entwicklung, basieren die mobilen Applikationen auf den jeweilig
 \subsection{Android}
 Für Android existieren einige Frameworks, wovon jedoch viele nicht immer auf dem neuesten Stand sind. Das ist häufig damit verbunden, dass diese aus privatem Interesse entstanden sind und ein unkommerzielles, kostenloses Vertriebsmodell betreiben. Daher sind regelmäßige Aktualisierungen oft nicht gewährleistet und manche Arbeiten wurden auch ganz eingestellt.
 
-\medskip
+\bigskip
 \textbf{AndEngine}\\
 Eine Game Engine die auf OpenGL basiert und für 2D Spiele ausgelegt ist.
 Die Letzte Aktualisierung erfolgte im Dezember 2013.
 
-\medskip
+\bigskip
 \textbf{Cocos2D-Android}\\
 Eine Implementierung von Cocos2D für Android. Die Weiterentwicklung wurde allerdings eingestellt und die letzte Änderung erfolgte im Januar 2010.
 
-\medskip
+\bigskip
 \textbf{jPCT-AE}\\
 Eine 3D Engine die auf jPCT für Desktopanwendungen mit Java basiert und für Android portiert wurde. Die Grafik wird von OpenGL 1.x und 2.0 unterstützt. Das Projekt wird aktuell auch weiterentwickelt und ist frei verfügbar.
 
 \subsection{iOS}
 Auch für iOS bestehen diverse Frameworks. Die Suche nach einer aktuellen Entwicklungsunterstützung gestaltet sich hier ein wenig einfacher, wobei man aber genau wie bei Android auch auf aufgegebene Projekte stößt. Ein großer Vorteil besteht aber durch SpriteKit, da dies ein Produkt von Apple selbst ist und eine gewisse Sicherheit bei zukünftiger Unterstützung gewährleistet.
 
-\medskip
+\bigskip
 \textbf{SpriteKit}\\
 Eigenentwicklung von Apple für 2D Spiele auf iOS und OS X. Es kann Objective-C oder Swift genutzt werden.
 
-\medskip
+\bigskip
 \textbf{Cocos2D-iPhone}\\
 Abkömmling von Cocos2D für iOS mit den Implementierungen für Objective-C und zukünftig auch Swift. Dies ist einer der Hauptzweige von Cocos2D der stetig aktualisiert wird.
 
-\medskip
+\bigskip
 \textbf{Sparrow}\\
 Eine aktuelle Open Source Game Engine für iOS Spiele, die ausschließlich Objective-C unterstützt.
 
@@ -427,20 +427,26 @@ Frameworks die einzig und allein für Windows Phone Spiele ausgelegt sind, waren
 \section{Zusammengefasste Übersicht}
 Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzelnen Systeme bieten.
 
+
+
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{p{5cm}|c|c|c|c|}
-			\cline{2-5}
-			& \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Virtuelle Maschine}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Programmiersprache}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{User Interface}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Memory Management}}  \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Android}}}       & Dalvik VM                                                                  & Java                                                                       & XML files                                                              & Garbage collector \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{iOS}}}           & -                                                                          & Objective-C, Swift                                                         & Cocoa Touch                                                            & Reference counting \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Windows Phone}}} & CLR                                                                        & C\#, C++, Visual Basic, JavaScript, .Net                                                               & XAML files                                                             & Garbage collector  \\ \hline
-			\cline{2-5}
-			&\cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{IDE}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Plattform}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{Geräte}} & \cellcolor[HTML]{036400}{\color[HTML]{FFFFFF} \textbf{App Markt}} \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Android}}}       &  Eclipse, Android Studio                                                     & Multi-platform                                                    & Heterogen                                                      & Google Play Store                                                 \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{iOS}}}           &  XCode                                                       & Mac OS X                                                          & Homogen                                                        & Apple Apps Store                                                  \\ \hline
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{00009B}{\color[HTML]{FFFFFF} \textbf{Windows Phone}}} &  Visual Studio                                               & Windows                                                           & Homogen                                                        & Windows Phone Store                                               \\ \hline
+		\begin{tabular}{cccc}
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Eigenschaft}}         & {\color[HTML]{FFFFFF} \textbf{Android}} & {\color[HTML]{FFFFFF} \textbf{iOS}} & {\color[HTML]{FFFFFF} \textbf{Windows Phone}}     \\
+			\cellcolor[HTML]{FFFFFF}\textbf{Virtuelle Maschine} & Dalvik VM                      & -                          & CLR                                      \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Programmiersprache}                         & Java                           & Objective-C, Swift         & C\#, C++, Visual Basic, JavaScript, .NET \\
+			\cellcolor[HTML]{FFFFFF}\textbf{User Interface}     & XML                            & Cocoa Touch                & XAML                                     \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Speicher Management}                          & Garbage collector              & Reference counting         & Garbage collector                        \\
+			\cellcolor[HTML]{FFFFFF}\textbf{IDE}                & Eclipse, Android Studio        & Xcode                      & Visual Studio                            \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Entwicklungsplattform}                      & Multi-Plattform                & Mac OS X                   & Windows                                  \\
+			\cellcolor[HTML]{FFFFFF}\textbf{Geräte}             & Heterogen                      & Homogen                    & Homogen                                  \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{App Markt}                                  & Google Play Store              & Apple App Store            & Windows Phone Store                     
 		\end{tabular}
 	}
 	\caption{Unterschiede zwischen Android, iOS und Windows Phone}
@@ -474,8 +480,8 @@ Trotz mancher momentanen Grenzen bietet die plattformübergreifende Entwicklung 
 \section{Funktionsweise und Realisierungsansätze}
 Zu den grundlegenden Strategien gehört, dass ein Projekt oder Programm in verschiedene spezifische Betriebssystemversionen kompiliert wird. Weitere Methoden beinhalten die Verwendung von Teilbäumen in der Projektstruktur, um die Anwendung bestmöglich an die Eigenheiten der entsprechenden Zielplattform anzupassen. Ein anderer Ansatz ist die Abstraktion des Codes auf unterschiedlichen Ebenen, um sich mehreren Softwareumgebungen anzunähern. Softwareprojekte die diese Verfahren anwenden, kann man als plattformunabhängig, genauer gesagt plattformübergreifend bezeichnen, da sie die unterstützten Systeme gleich wertet und keines bevorzugt.\citep{cross_plattform_explanation}
 
-\medskip
-Die Entwicklung von plattformübergreifenden Anwendungen auf mobilen Systemen wird in sechs verschiedene Ansätze kategorisiert. (Abb.\ref{graph_cross_plattform_approaches})
+\bigskip
+Die Entwicklung von plattformübergreifenden Anwendungen auf mobilen Systemen wird in sechs verschiedene Ansätze kategorisiert. (Abb. \ref{graph_cross_plattform_approaches})
 
 \begin{figure}[htbp]
 	\centering
@@ -495,8 +501,8 @@ Kompilierung(Compilation) ist ein Ansatz mit zwei Unterkategorien:
 
 Der Compiler ist ein Programm, welches den Quellcode einer High-Level Programmiersprache in einen Low-Level Code übersetzt wird. Dieser Low-Level Code ist ein Binärcode in Maschinensprache, der von dem Prozessor verstanden wird. Dieser Konvertierungsprozess wird als Kompilierung bezeichnet.
 
-\medskip
-Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unterschiedlich zu dem System ist, auf dem der kompilierte Code läuft. Die Zielsysteme können Betriebssysteme, Prozessoren oder eine Kombination aus beiden sein. Abb. \ref{graph_compilation_XMLVM} stellt eine von XMLVM gebotene Lösung zu Cross-Compiling dar. Dies nutzt XML für die Frontend Darstellung und für die Verarbeitung des Bytecodes eine virtuelle Maschine(VM).
+\bigskip
+Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unterschiedlich zu dem System ist, auf dem der kompilierte Code läuft. Die Zielsysteme können Betriebssysteme, Prozessoren oder eine Kombination aus beiden sein. Abbildung \ref{graph_compilation_XMLVM} stellt eine von XMLVM gebotene Lösung zu Cross-Compiling dar. Dies nutzt XML für die Frontend Darstellung und für die Verarbeitung des Bytecodes eine virtuelle Maschine(VM).
 
 \begin{figure}[htbp]
 	\centering
@@ -504,13 +510,13 @@ Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unt
 	\caption{XMLVM Prozess mit Java oder .NET Quellcode}\label{graph_compilation_XMLVM}\citep{XMLVM_Toolchain}
 \end{figure}
 
-\medskip
+\bigskip
 Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in eine andere High-Level Programmiersprache. Da viele Sprachen jedoch unterschiedliche Eigenschaften und Leistungsmerkmale besitzen, muss der generierte Code unter Umständen nachbearbeitet werden, wenn der Compiler diese bei der Übersetzung nicht unterstützt. Auch ist der Code durch die automatisierte Erzeugung in der Regel nur schwer lesbar. Es besteht auch eine Abhängigkeit zu regelmäßigen Updates, um die Änderungen der Quell- und Zielsysteme aktuell zu halten.
 
 \subsection{Komponentenbasiert}
 Die Komponente besteht aus einem Paket oder einem Modul, dessen Funktionen und Daten untereinander in Relation stehen. Jede Komponente besitzt eine Schnittstelle, dass die Servicedienste spezifiziert, welche von anderen Komponenten genutzt werden können. Die Kommunikation findet ausschließlich über die Schnittstellen statt, so dass eine Komponente keinerlei Informationen über den Aufbau einer anderen benötigt. 
 
-\medskip
+\bigskip
 Ein beispielhafter Lösungsansatz ist der \textbf{Component-Based Mobile Web Application of Cross-Plattform}. Dieser komponentenbasierte Ansatz versucht die Entwicklung mobiler Web-Apps dahingehend zu vereinfachen, dass durch das Konzept von Softwarekomponenten, die Kernfunktionalitäten modular aufgeteilt werden. Diese Module beinhalten Speichermanagement, Netzwerkkommunikation, Grafik, Dateisystem und die Systemdienstkomponenten. Dadurch erhalten die Komponenten eine Wiederverwertbarkeit und vereinfacht die Migration auf andere Plattformen. Jede Plattform kann dieselben Schnittstellen nutzen, benötigt jedoch eine eigene innere Implementierung für die Unterstützung. 
 
 \subsection{Interpretierung}
@@ -522,7 +528,7 @@ Bei der Interpretierung übersetzt ein Interpreter (Dolmetscher) den Quellcode i
 	\item Laufzeit Interpretation (Runtime Interpretation)
 \end{itemize}
 
-Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). Diese verfügt über eine eigene komplette Hardwarearchitektur wie einer CPU, Stack, Register und ein korrespondierendes Befehlssystem. Die Grundidee hierbei ist es die mobile App mit einer plattformübergreifenden Sprache zu entwickeln, die auf der dedizierten, virtuellen Maschine läuft und auf entsprechenden Plattformen installiert ist. In Abb. \ref{graph_interpreter_Dalvik} wird der Interpretierungsablauf der von Android bekannten Dalvik VM dargestellt.
+Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). Diese verfügt über eine eigene komplette Hardwarearchitektur wie einer CPU, Stack, Register und ein korrespondierendes Befehlssystem. Die Grundidee hierbei ist es die mobile App mit einer plattformübergreifenden Sprache zu entwickeln, die auf der dedizierten, virtuellen Maschine läuft und auf entsprechenden Plattformen installiert ist. In Abbildung \ref{graph_interpreter_Dalvik} wird der Interpretierungsablauf der von Android bekannten Dalvik VM dargestellt.
 
 \begin{figure}[htbp]
 	\centering
@@ -530,8 +536,8 @@ Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). 
 	\caption{Ablauf des Dalvik VM Interpreter}\label{graph_interpreter_Dalvik}
 \end{figure}
 
-\medskip
-\textbf{Webbasierte} Tools verwenden Technologien wie HTML(5), Javascript und CSS, die auf verschiedenen Plattformen ausführbar sind. Der Zugriff auf Hardwarekomponenten wie Kamera und Sensoren erfolgt durch Wrapper. Wrapper sind Adapter oder Schnittstellen, um auf die nativen APIs zugreifen zu können. Abb. \ref{graph_interpreter_PhoneGap} zeigt die Kommunikation und Interpretierung des Webbasierten Interpreters PhoneGap von Adobe.
+\bigskip
+\textbf{Webbasierte} Tools verwenden Technologien wie HTML(5), Javascript und CSS, die auf verschiedenen Plattformen ausführbar sind. Der Zugriff auf Hardwarekomponenten wie Kamera und Sensoren erfolgt durch Wrapper. Wrapper sind Adapter oder Schnittstellen, um auf die nativen APIs zugreifen zu können. Abbildung \ref{graph_interpreter_PhoneGap} zeigt die Kommunikation und Interpretierung des Webbasierten Interpreters PhoneGap von Adobe.
 
 \begin{figure}[htbp]
 	\centering
@@ -539,8 +545,8 @@ Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). 
 	\caption{Vereinfachter Ablauf des PhoneGap Interpreters von Adobe}\label{graph_interpreter_PhoneGap}
 \end{figure} 
 
-\medskip
-Die \textbf{Laufzeit} ist eine Ausführungsumgebung und eine Schicht, welche die mobile App auf der nativen Plattform lauffähig macht. Bei diesem Ansatz wird der Quellcode in Bytecode umgewandelt und dann zur Laufzeit von einer virtuellen Maschine ausgeführt. In Abb. \ref{graph_interpreter_Titanium} wird die Verarbeitung von Appcelerators Titanium-Interpreters dargestellt.
+\bigskip
+Die \textbf{Laufzeit} ist eine Ausführungsumgebung und eine Schicht, welche die mobile App auf der nativen Plattform lauffähig macht. Bei diesem Ansatz wird der Quellcode in Bytecode umgewandelt und dann zur Laufzeit von einer virtuellen Maschine ausgeführt. In Abbildung \ref{graph_interpreter_Titanium} wird die Verarbeitung von Appcelerators Titanium-Interpreters dargestellt.
 
 \begin{figure}[htbp]
 	\centering
@@ -551,7 +557,7 @@ Die \textbf{Laufzeit} ist eine Ausführungsumgebung und eine Schicht, welche die
 \subsection{Modellierung}
 Bei der Modellierung verwenden Entwickler abstrakte Modelle, um die Funktionen und / oder die Benutzeroberfläche der Anwendungen zu beschreiben. Diese Modelle werden für jede Zielplattform in entsprechenden Quellcode transformiert. Hierbei gibt es die Ansätze des Model-Based User Interface Development (MB-UID) und des Model-Driven Development (MDD).
 
-\medskip
+\bigskip
 \textbf{MB-UID} wird genutzt, um die Benutzeroberfläche durch die formale Beschreibung von Aufgaben, Daten und Benutzern einer App automatisch zu generieren. Hierbei wird zwischen der Benutzeroberfläche und der App-Logik unterschieden.
 Für die Generierung existieren zwei Strategien.
 
@@ -561,11 +567,11 @@ Für die Generierung existieren zwei Strategien.
 	\item Die Generierung während der Entwicklungszeit, also vor Ausführung der Anwendung. Hier kann der Entwickler das generierte Interface überprüfen und zu jeder Plattform spezifische Funktionalitäten hinzufügen. Dabei kann die Funktion zur Verbindungsart festgelegt werden, also ob eine dauerhafte Verbindung bestehen soll oder zu einem selbst bestimmten Zeitpunkt synchronisiert werden soll.
 \end{itemize}
 
-\medskip
+\bigskip
 Das Hauptkonzept von \textbf{MDD} ist die Generierung von plattformspezifischen Versionen, basierend auf dem plattformunabhängigen, abstrakten Modell. Das Modell wird zum Beispiel durch Domain-Specific Language (DSL) beschrieben.
 
 \subsection{Cloudbasiert}
-In diesem Ansatz geschieht die Verarbeitung der Anwendung nicht lokal auf dem Gerät, sondern auf einem Cloudserver. Dabei werden einige Cloudeigenschaften verwendet, wie Flexibilität, Virtualisierung, Sicherheit und dynamisches Management. Die Clientanwendung ist dabei weitest möglich reduziert, da diese nur Basisprozesse benötigt. Dies wird Thin-Client genannt, da wie in Abb. \ref{client_aufgaben} nur Ein- und Ausgabe verarbeitet werden müssen. Cloudbasierte Anwendungen sollen dadurch besonders energieeffizient sein.
+In diesem Ansatz geschieht die Verarbeitung der Anwendung nicht lokal auf dem Gerät, sondern auf einem Cloudserver. Dabei werden einige Cloudeigenschaften verwendet, wie Flexibilität, Virtualisierung, Sicherheit und dynamisches Management. Die Clientanwendung ist dabei weitest möglich reduziert, da diese nur Basisprozesse benötigt. Dies wird Thin-Client genannt, da wie in Abbildung \ref{client_aufgaben} nur Ein- und Ausgabe verarbeitet werden müssen. Cloudbasierte Anwendungen sollen dadurch besonders energieeffizient sein.
 
 \begin{figure}[htbp]
 	\centering
@@ -578,7 +584,7 @@ Da zur Zeit der Bearbeitung zu diesem Ansatz keine direkten Realisierungen gefun
 \subsection{Vereinigung}
 Dieser Ansatz versucht die besten Eigenschaften verschiedener Ansätze zusammenzuführen, von den jeweiligen Vorteilen zu profitieren und Nachteile zu minimieren.
 
-\medskip
+\bigskip
 Ein \textbf{unbetitelter Lösungsansatz} vereinigt den komponentenbasierten Ansatz mit dem Cross Compiler und einer darauf angepassten Universalsprache. Um die nativen Hardwarefunktionen wie Kamera und GPS, sowie native Softwareeigenschaften wie Buttons und andere Interaktionsfelder anzusprechen, wird eine Sammlung an Komponenten erstellt. Implementierungen dieser Komponenten können durch gemeinsame Schnittstellen für jede Zielplattform erfolgen. Dieses Framework soll dem Entwickler ermöglichen, Applikationen zu entwickeln, die auf nativen Code und der Universalsprache basieren. Diese Sprache wird der App als zusätzliche Kommunikationsschicht und Schnittstelle hinzugefügt, um die Komponenten und deren Methoden anzusprechen.(Abb. \ref{graph_merge_component_based}) Der Entwickler implementiert nur eine minimale Struktur der App auf nativer Basis, welche die Benutzerschnittstelle und Navigation beinhaltet. An welcher Stelle und auf welche Weise die Komponenten integriert werden, wird durch die Universalsprache definiert. Das Framework regelt die Codeintegrierung innerhalb des nativen Codes. Bei diesem Lösungsansatz ist es erforderlich die Benutzerschnittstelle für jede Plattform manuell zu definieren. Dabei liegt der funktionale Fokus auf allgemeingültigen Funktionen, ohne Berücksichtigung der plattformspezifischen.
 
 \begin{figure}[htbp]
@@ -587,10 +593,10 @@ Ein \textbf{unbetitelter Lösungsansatz} vereinigt den komponentenbasierten Ansa
 	\caption{Funktion eines komponentenbasierten Mergeansatz}\label{graph_merge_component_based}
 \end{figure}
 
-\medskip
-\textbf{Integrated Cross-Platform Mobile Development (ICPMD)} ist eine weitere Lösung die auf dem Merge-Prinzip aufbaut und drei Verwendungsszenarios unterstützt. Diese Szenarios sind, wie in Abb. \ref{graph_merge_integrated_based} dargestellt, abhängig von dem gegebenen Input.
+\bigskip
+\textbf{Integrated Cross-Platform Mobile Development (ICPMD)} ist eine weitere Lösung die auf dem Merge-Prinzip aufbaut und drei Verwendungsszenarios unterstützt. Diese Szenarios sind, wie in Abbildung \ref{graph_merge_integrated_based} dargestellt, abhängig von dem gegebenen Input.
 
-\medskip 
+\bigskip 
 Der Entwickler hat…
  
 \begin{enumerate}
@@ -651,7 +657,7 @@ In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mob
 \subsection{Systembedingte Einschränkungen}
 
 %TODO: Kapitel 6
-\chapter{Gegenüberstellung der Frameworks}
+\chapter{Analyse der Frameworks}
 %Features und Einschränkungen
 
 
@@ -662,25 +668,25 @@ Die Menge an Zielplattformen unterscheidet sich in den Bereichen Mobil, Destop u
 	\centering
 	\resizebox{0.8\textwidth}{!}{%
 		\begin{tabular}{cccc}
-			\rowcolor[HTML]{6200C9} 
+			\rowcolor[HTML]{000000} 
 			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D-X}} & {\color[HTML]{FFFFFF} \textbf{LibGDX}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\
-			\cellcolor[HTML]{CB0000}{\color[HTML]{FFFFFF} \textit{Mobil}}           &                                         &                                        &                                         \\
-			\cellcolor[HTML]{FFCCC9}iOS                                             & {\color[HTML]{680100} X}                & {\color[HTML]{680100} X}               & {\color[HTML]{680100} X}                \\
-			\cellcolor[HTML]{FFCCC9}Android                                         & {\color[HTML]{680100} X}                & {\color[HTML]{680100} X}               & {\color[HTML]{680100} X}                \\
-			\cellcolor[HTML]{FFCCC9}Windows Phone 8                                 & {\color[HTML]{680100} X}                & {\color[HTML]{680100} }                & {\color[HTML]{680100} X}                \\
-			\cellcolor[HTML]{FFCCC9}Tizen                                           & {\color[HTML]{680100} X}                & {\color[HTML]{680100} }                & {\color[HTML]{680100} X}                \\
-			\cellcolor[HTML]{FFCCC9}Blackberry                                      & {\color[HTML]{680100} }                 & {\color[HTML]{680100} X}               & {\color[HTML]{680100} }                 \\
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Mobil}           &                                         &                                        &                                         \\
+			\cellcolor[HTML]{C0C0C0}iOS                                             & {\color[HTML]{000000} X}                & {\color[HTML]{000000} X}               & {\color[HTML]{000000} X}                \\
+			\cellcolor[HTML]{C0C0C0}Android                                         & {\color[HTML]{000000} X}                & {\color[HTML]{000000} X}               & {\color[HTML]{000000} X}                \\
+			\cellcolor[HTML]{C0C0C0}Windows Phone 8                                 & {\color[HTML]{000000} X}                & {\color[HTML]{000000} }                & {\color[HTML]{000000} X}                \\
+			\cellcolor[HTML]{C0C0C0}Tizen                                           & {\color[HTML]{000000} X}                & {\color[HTML]{000000} }                & {\color[HTML]{000000} X}                \\
+			\cellcolor[HTML]{C0C0C0}Blackberry                                      & {\color[HTML]{000000} }                 & {\color[HTML]{000000} X}               & {\color[HTML]{000000} }                 \\
 			& {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
-			\cellcolor[HTML]{009901}{\color[HTML]{FFFFFF} \textit{Desktop}}         & {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
-			\cellcolor[HTML]{9AFF99}Mac                                             & {\color[HTML]{036400} X}                & {\color[HTML]{036400} X}               & {\color[HTML]{036400} X}                \\
-			\cellcolor[HTML]{9AFF99}Windows                                         & {\color[HTML]{036400} X}                & {\color[HTML]{036400} X}               & {\color[HTML]{036400} X}                \\
-			\cellcolor[HTML]{9AFF99}Universal Windows Platform                      & {\color[HTML]{036400} X}                & {\color[HTML]{036400} }                & {\color[HTML]{036400} X}                \\
-			\cellcolor[HTML]{9AFF99}Linux / Steam OS                                & {\color[HTML]{036400} X}                & {\color[HTML]{036400} X}               & {\color[HTML]{036400} X}                \\
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Desktop}         & {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
+			\cellcolor[HTML]{C0C0C0}Mac                                             & {\color[HTML]{000000} X}                & {\color[HTML]{000000} X}               & {\color[HTML]{000000} X}                \\
+			\cellcolor[HTML]{C0C0C0}Windows                                         & {\color[HTML]{000000} X}                & {\color[HTML]{000000} X}               & {\color[HTML]{000000} X}                \\
+			\cellcolor[HTML]{C0C0C0}Universal Windows Platform                      & {\color[HTML]{000000} X}                & {\color[HTML]{000000} }                & {\color[HTML]{000000} X}                \\
+			\cellcolor[HTML]{C0C0C0}Linux / Steam OS                                & {\color[HTML]{000000} X}                & {\color[HTML]{000000} X}               & {\color[HTML]{000000} X}                \\
 			& {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
-			\cellcolor[HTML]{3531FF}{\color[HTML]{FFFFFF} \textit{Web}}             & {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
-			\cellcolor[HTML]{BBDAFF}Web GL                                          & {\color[HTML]{00009B} X}                & {\color[HTML]{00009B} X}               & {\color[HTML]{00009B} X}                \\
-			\cellcolor[HTML]{BBDAFF}Web Player                                      & {\color[HTML]{00009B} }                 & {\color[HTML]{00009B} }                & {\color[HTML]{00009B} X}                \\
-			\cellcolor[HTML]{BBDAFF}Java Applet                                     & {\color[HTML]{00009B} }                 & {\color[HTML]{00009B} X}               & {\color[HTML]{00009B} }                 \\
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} Web}             & {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
+			\cellcolor[HTML]{C0C0C0}Web GL                                          & {\color[HTML]{000000} X}                & {\color[HTML]{000000} X}               & {\color[HTML]{000000} X}                \\
+			\cellcolor[HTML]{C0C0C0}Web Player                                      & {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} X}                \\
+			\cellcolor[HTML]{C0C0C0}Java Applet                                     & {\color[HTML]{000000} }                 & {\color[HTML]{000000} X}               & {\color[HTML]{000000} }                 \\
 			& {\color[HTML]{000000} }                 & {\color[HTML]{000000} }                & {\color[HTML]{000000} }                 \\
 			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Gesamt}}             & {\cellcolor[HTML]{BEBEBE} 9}                 & {\cellcolor[HTML]{BEBEBE} 8}                & {\cellcolor[HTML]{BEBEBE} 10}                 \\
 		\end{tabular}
@@ -702,14 +708,14 @@ Die Syntax lehnt sich an C++ und C. Die Typisierung ist statisch und gilt allgem
 \subsection{Cocos2D-X}
 Mit \textbf{Coco2D-X} hat man die Wahl zwischen C++, Lua und JavaScript, welche auf allen unterstützten Plattformen funktionieren. Einzige Einschränkung liegt bei JavaScript, da diese sich bei Cocos2D-X nicht mit Windows Phone verknüpfen lässt. \citep{cocos2d_x_features}
 
-\medskip
+\bigskip
 Lua ist eine schnelle, von der Syntax simpel gehaltene Skriptsprache, mit objektorientierten Eigenschaften. Die geschriebenen Skripte werden durch einen Interpreter in Bytecode übersetzt und ist kompatibel mit der Sprache C. Lua befindet sich derzeit in Version 5.3 und wird häufig in der Spieleentwicklung eingesetzt. \citep{lua_about}
 
-\medskip
+\bigskip
 %TODO: C++
 Mit der Unterstützung von C++, welches direkt von C abgeleitet ist, hat man die Möglichkeit äußerst performante und portable Software zu schreiben. Voraussetzung ist dabei ein sicherer Umgang, da C++ im Vergleich mit anderen High-Level Sprachen, sich weniger um Logikfehler kümmert und entsprechend auch keine Warnungen ausgibt. Die aktuelle Version ist C++14.
 
-\medskip
+\bigskip
 Für Entwickler die beispielsweise Erfahrungen im Webbereich besitzen, bietet die Verwendung von JavaScript einen weiteren Einstieg in Cocos2D-X.
 JavaScript ist eine Skriptsprache die es seit 1995 gibt und für dynamisches HTML in Webbrowsern entwickelt wurde. Trotz der Namensähnlichkeit zu Java, unterscheiden sich die beiden Sprachen grundlegend voneinander. JavaScript wird in der Regel genutzt um Client-seitige Logik innerhalb von HTML Dokumenten zu ermöglichen. Mit der Programmiersprache Java hingegen, können eigenständige Anwendungen aufgebaut werden. Die Sprache folgt Spezifikationen der privaten Normungsorganisation ECMA (European Computer Manufacturers Association), die Standardisierungen von Informationstechnologien entwickelt, die Richtigkeit deren Verwendung fördert und eine frei zugängliche Veröffentlichung dazu liefert. Der standardisierte Kern von JavaScript, wird als ECMAScript (ECMA 262) bezeichnet und beschreibt eine dynamische Typisierung, mit objektorientierten, aber klassenlosen Eigenschaften. Objekte basieren auf sogenannten Prototypen, die als Funktionen beschrieben werden. Nach der Instanziierung ist es möglich, das Objekt um zusätzliche Eigenschaften zu erweitern. Skripte können imperativ, aber auch funktional aufgebaut werden. Geschriebene Skripte werden durch einen Interpreter übersetzt. Basierend auf JavaScript, entstanden viele Bibliotheken und Frameworks, um beispielsweise serverseitige Netzwerkanwendungen zu betreiben (Node.js) oder Entwurfsmuster aus der Softwareentwicklung zu nutzen (Angular.js).
 ECMAScript befindet sich seit 2015 in Version 6. \citep{learning_javascript}
@@ -717,20 +723,20 @@ ECMAScript befindet sich seit 2015 in Version 6. \citep{learning_javascript}
 \subsection{Unity3D}
 In \textbf{Unity3D} finden die Sprachen C\#, UnityScript und Boo Verwendung. Alle für Unity3D nutzbaren Sprachen entspringen Microsofts .NET Framework. Das bedeutet auch, dass es möglich ist weitere .NET Sprachen zu benutzen, wenn diese ihre Skripte in das DLL (Dynamically Linked Library) Format kompilieren können. Diese DLL Dateien können dann dem Unity Projekt hinzugefügt und verwendet werden. \citep{unity_managed_plugins}
 
-\medskip
+\bigskip
 Boo ist eine von Python beeinflusste Sprache für .NET und Mono, welche ohne Klammern und Semikolons auskommt. Die Typisierung ist generell statisch, kann aber trotzdem dynamische \textit{Duck-Typing} Eigenschaften nutzen. \citep{boo_about} Der Name Duck-Typing entsprang dem sogenannten \textit{Ententest} zur Typisierung, welcher wiederum auf einem Gedicht von James Whitcomb Riley zurückzuführen ist.
 
-\medskip
+\bigskip
 “\emph{When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.}” \citep{ducktest}
-\medskip
 
+\bigskip
 Beim Duck-Typing werden Objekte nicht durch ihre Klasse typisiert, sondern durch die vorhandenen Attribute und Methoden. Daher findet die Typisierung erst zur Laufzeit durch den Interpreter statt. Aufgrund des seltenen Gebrauchs, wird Boo seit Unity 5.0 in der Dokumentation nicht mehr unterstützt.
 
-\medskip
+\bigskip
 Oft wird UnityScript in der Unity Community, aber auch von dem Unternehmen selbst, fälschlicherweise mit JavaScript gleichgesetzt, als wären die beiden Sprachen äquivalent. Auch wenn syntaktische Ähnlichkeiten bestehen, gibt es große semantische Unterschiede.
 UnityScript kann, wie die meisten objektorientierten Programmiersprachen, Klassen definieren und daraus Objekte erstellen. JavaScript hingegen besitzt zwar ebenfalls objektorientierte Eigenschaften, wobei diese anstatt Klassen aber sogenannte Prototypes verwendet. Des Weiteren kann UnityScript im Gegensatz zu JavaScript, Klassen, Objekte, Funktionen und Variablen mit Zugriffsmodifikatoren/Sichtbarkeiten versehen. UnityScript wurde speziell für die Unity3D Engine konzipiert und ist proprietär, was es schwierig macht, genaue Spezifikationen zu finden. \citep{unity_unityscript_vs_javascript}
 
-\medskip
+\bigskip
 C\# oder auch Visual C\# ist eine von Microsoft entwickelte Programmiersprache, die durch ECMA-334 standardisiert ist und sich aktuell in Version 6.0 befindet. Die Standardisierung bezieht sich allerdings nur auf die Sprache selbst und nicht auf Programme die in Verbindung mit dem .NET Framework realisiert worden. Alternativ zu .NET bietet Mono ein Open Source Framework inklusive Compiler für C\# an. Die Syntax der objektorientierten Sprache weißt große Ähnlichkeiten mit Java auf und wird oft mit dieser verglichen. Die Typisierung ist grundsätzlich statisch, wobei optional auch dynamische Typen genutzt werden können. \citep{csharp_in_depth}
 Laut Statistik, sind etwa 80\% der Unity Projekte in C\# geschrieben. \citep{unity_languages}
 
@@ -738,11 +744,11 @@ Laut Statistik, sind etwa 80\% der Unity Projekte in C\# geschrieben. \citep{uni
 \section{Native Gerätefunktionen und Schnittstellen}
 Smartphones und Tablets besitzen in der Regel kaum oder gar keine Hardwarebuttons, die für Anwendungen neu belegbar sind. Spiele die für solche mobilen Systeme entworfen worden, greifen daher auf eine oder zwei der beiden populärsten Steuerungsmechanismen zurück.
 
-\medskip
+\bigskip
 Überwiegende Praxis ist es, den vorhandenen Touchscreen für Eingaben und Interaktionen zu nutzen. Dies kann über bekannte Gesten geschehen oder über die Virtualisierung von Aktionsflächen, wie zum Beispiel Buttons und Regler. Alle drei Frameworks verfügen über Möglichkeiten, verschiedene Touchgesten zu unterscheiden.
 Eine andere Möglichkeit in das Spielgeschehen einzugreifen, bieten die geräteseitigen Hardwaresensoren. Ein Anwendungsbeispiel für den Gyroskop Sensor, wäre bei Rennspielen die Simulierung eines Lenkrades, bei dem durch die Neigung des Gerätes gesteuert wird. Weiterhin gehören Accelerometer, GPS und sowohl eine Kamera zu den üblichen Gerätefunktionen.
 
-\medskip
+\bigskip
 \textbf{Unity3D} liefert für fast alle gängigen Gerätefunktionen entsprechende Schnittstellen, um diese zu nutzen oder mit Funktionen zu hinterlegen. Bei \textbf{libGDX} kann man auf die meisten Sensorentypen zugreifen, muss aber auf Kamera und GPS verzichten.
 Hingegen kann \textbf{Cocos2D-X} bisher nur den Accelerometer ansteuern, wenn dieser vorhanden ist. Gyroskop, Kamera, GPS Lokalisierung und weiteres werden derzeit nicht unterstützt. Dadurch dass die beiden Frameworks quelloffen sind, ist bei Bedarf eine eigene Implementation theoretisch dennoch möglich. Eine offizielle Erweiterung ist demnach auch abhängig von dem Streben der Entwickler-Community. 
 In Tabelle \ref{tab_schnittstellen} werden die häufigsten Gerätefunktionen und die Unterstützung durch eine Schnittstelle, der einzelnen Frameworks gelistet. 
@@ -803,8 +809,8 @@ In Tabelle \ref{tab_game_services} werden APIs aufgelistet, die populäre Game S
 
 \section{Produktvarianten}
 Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varianten sind durchaus möglich, aber derzeit sind keine weiteren populären Ableger bekannt. Die Community konzentriert sich demnach hauptsächlich auf die Weiterentwicklung der Hauptversion oder auf eigene Erweiterungen in Form von Plugins.
-\medskip
 
+\bigskip
 \textbf{Cocos2D-X} ist eine von mehreren Abzweigungen aus der Cocos2D Familie. Stamm der Entwicklung bildet das mit Python entwickelte Cocos2D, welches selbige Sprache auch für die Entwicklung daraus resultierender Desktopanwendungen benutzt. Der erste daraus abgeleitete Ableger Cocos2D-iPhone oder auch bekannt als Cocos2D-ObjC, erlaubt die Implementierung auf mobile Apple Geräte. Diese können mit den plattformüblichen nativen Sprachen Objective-C und Swift konstruiert werden. Aus dieser Version entsprangen direkt wiederum viele weitere Varianten für gezielte Sprachen und Anwendungen, als auch das in dieser Arbeit behandelte Cocos2D-X für die Unterstützung multipler Plattformen. Die Cocos2D Frameworks iPhone, X, HTML5 und dem Editor SpriteBuilder sind kooperierende Projekte und folgen demselben Leitplan. Daher haben sie ein koordiniertes Updateverhalten. \citep{cocos2d_relationships}
 
 \begin{figure}[htbp]
@@ -813,8 +819,8 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 	\caption{Ableitungen und Varianten von Cocos2D}\label{graph_Cocos2d_Relationships}\citep{cocos2d_relationships}
 \end{figure}
 
-\medskip
-\textbf{Unity3D} bietet zwei verschiedene Hauptprodukte an, die Personal und die Professional Edition. Bei der Personal Edition handelt es sich um eine frei verfügbare Version, die für jeden zugängig ist. Diese kann für Privatanwender, zu Bildungszwecken und sogar für die kommerzielle Entwicklung benutzt werden. Die kostenfreie Version der Engine verfügt auch über alle essentiellen Funktionen. Sobald die allgemeinen Einnahmen einer Person oder eines Unternehmens mehr als 100.000 US-Dollar aus dem Vorjahr betragen, besteht die Verpflichtung auf die Professional Edition zu wechseln. In dieser bekommt man dann auch die Option auf zusätzliche Funktionen, wie Analyse Tools und die Möglichkeit Projekte in einer speziellen Cloud zu veröffentlichen. In Tabelle \ref{Unity_Produkte} werden die Möglichkeiten beider Editionen gegenübergestellt. Das Kostenmodell beginnt derzeit mit einem Abo von 75 US-Dollar pro Monat oder einer Einmalzahlung von 1.500 US-Dollar. Die mit der Einmalzahlung erworbene Dauerlizenz gilt allerdings nur für die aktuelle Version und deren Updates. Das bedeutet bei dem Erwerb von Unity Pro 5 hat man nicht automatisch die Nutzungsrechte für die darauf folgende Version 6. Diese müssten dann in Form eines kostenpflichtigen Upgrades erfolgen. Weitere optionale Erweiterungen können mit den iOS Pro und Android Pro Add-Ons erworben werden, die weitere Funktionen zur Personalisierung ermöglichen. Zusätzliche kostenpflichtige Pakete sind die professionelle Unterstützung bei Projekten oder der Zugang zum Quellcode der Engine. \citep{unity_products}
+\bigskip
+\textbf{Unity3D} bietet zwei verschiedene Hauptprodukte an, die Personal und die Professional Edition. Bei der Personal Edition handelt es sich um eine frei verfügbare Version, die für jeden zugängig ist. Diese kann für Privatanwender, zu Bildungszwecken und sogar für die kommerzielle Entwicklung benutzt werden. Die kostenfreie Version der Engine verfügt auch über alle essentiellen Funktionen. Sobald die allgemeinen Einnahmen einer Person oder eines Unternehmens mehr als 100.000 US-Dollar aus dem Vorjahr betragen, besteht die Verpflichtung auf die Professional Edition zu wechseln. In dieser bekommt man dann auch die Option auf zusätzliche Funktionen, wie Analyse Tools und die Möglichkeit Projekte in einer speziellen Cloud zu veröffentlichen. In Tabelle \ref{Unity_Produkte} werden die Möglichkeiten beider Editionen gegenübergestellt. Das Kostenmodell beginnt derzeit mit einem Abonnement von 75 US-Dollar pro Monat oder einer Einmalzahlung von 1.500 US-Dollar. Die mit der Einmalzahlung erworbene Dauerlizenz gilt allerdings nur für die aktuelle Version und deren Updates. Das bedeutet bei dem Erwerb von Unity Pro 5 hat man nicht automatisch die Nutzungsrechte für die darauf folgende Version 6. Diese müssten dann in Form eines kostenpflichtigen Upgrades erfolgen. Weitere optionale Erweiterungen können mit den iOS Pro und Android Pro Add-Ons erworben werden, die weitere Funktionen zur Personalisierung ermöglichen. Zusätzliche kostenpflichtige Pakete sind die professionelle Unterstützung bei Projekten oder der Zugang zum Quellcode der Engine. \citep{unity_products}
 
 \begin{table}[htbp]
 	\centering
@@ -867,12 +873,14 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 
 
 %TODO: Kapitel 13
-\chapter{Konzeption und Implementierung einer Test-Applikation}
-\section{Anforderungen}
-\section{Ideen}
-\section{Verwendete Frameworks und Engines}
-\section{Verwendete APIs und SDKs}
-\section{Assets und deren Verwendung}
+\chapter{Konzeption und Implementierung einer Beispiel-Applikation}
+Um die Möglichkeiten der gewählten Entwicklungstools tiefgehender analysieren zu können, sollten die theoretischen Informationen um praktische Erkenntnisse ergänzt werden. Demnach wird als Teil dieser Arbeit ein Beispiel-Spiel konzipiert, mit den jeweiligen Tools umgesetzt und daraus Applikationen für verschiedene Plattformen erzeugt. Die Anwendung soll dann Anhand von vereinbarten Metriken bemessen und analysiert werden. Die gewonnenen Resultate werden daraufhin in Zusammenhang mit den theoretischen Informationen komplementiert und die Entwicklungstools als Ganzes verglichen. 
+
+\section{Definition von Anforderungen}
+\section{Spielidee}
+\section{Verwendete Produkte}
+%Frameworks und Engines, APIs und SDKs
+\section{Eingesetzte Komponenten}
 %\section{User Stories}
 
 %TODO
