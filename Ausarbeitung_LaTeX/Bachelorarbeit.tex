@@ -877,7 +877,77 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 Um die Möglichkeiten der gewählten Entwicklungstools tiefgehender analysieren zu können, sollten die theoretischen Informationen um praktische Erkenntnisse ergänzt werden. Demnach wird als Teil dieser Arbeit ein Beispiel-Spiel konzipiert, mit den jeweiligen Tools umgesetzt und daraus Applikationen für verschiedene Plattformen erzeugt. Die Anwendung soll dann Anhand von vereinbarten Metriken bemessen und analysiert werden. Die gewonnenen Resultate werden daraufhin in Zusammenhang mit den theoretischen Informationen komplementiert und die Entwicklungstools als Ganzes verglichen. 
 
 \section{Definition von Anforderungen}
+Applikationen aus den Kategorien Business, Unterhaltung und die meisten weiteren ohne den Fokus auf Spiele, greifen in der Regel auf plattformspezifische Benutzeroberflächen zurück. Native Apps besitzen jeweils technische und optische Konventionen. Cross-Plattform Apps versuchen diese möglichst genau zu generieren und einzuhalten, um dem Benutzer ein natives Look-and-Feel zu bieten. 
+Meist folgen Spiele diesen Regeln nicht, da sie in Abhängigkeit des Spielprinzips auf unterschiedliche Eingabeelemente und UIs zurückgreifen. 
+Das Spiel als solches ist ein komplexes Phänomen, mit dem sich bereits Philosophen, Psychologen, Philanthropen und Forscher aus anderen Fachgebieten auseinandergesetzt haben. Ein Teilbereich der Spielwissenschaft, genannt Ludologie (Die Lehre über das Spiel), befasst sich unter anderem mit der Erforschung des digitalen Spielens. Die Forschungsinhalte befassen sich unter anderem mit Fragestellungen aus den Bereichen:
+
+\begin{itemize}
+	\item Geschichte des digitalen Spielens
+	\item Elemente des digitalen Spiels
+	\item Begrifflichkeit zur Klassifizierung von Spielen und Genres
+	\item Regeln und Spielmechanik
+	\item u.v.m.
+\end{itemize}
+
+%QUELLE: https://de.wikipedia.org/wiki/Ludologie
+
+Wie definiert man aber nun den Inhalt und den Umfang eines Computerspiels?
+Um sich in den konkurrierenden Theorien zu verlieren, wird hierfür beispielhaft die Gebrauchsdefinitionen von Salen und Zimmerman herangezogen:
+
+\bigskip
+\emph{„A game is a system in which players engage in an artificial conflict, defined by rules, that results in a quantifiable outcome.”}
+%TODO: QUELLE: [Salen & Zimmerman 2004, S. 80] 
+\bigskip
+
+Aus dieser Definition lassen sich einige wesentliche Konzepte entnehmen.
+
+\bigskip
+\textbf{Spieler}\\
+Ein Spiel ist etwas, das ein oder mehrere Spieler aktiv spielen. Die Spieler interagieren mit dem System und Methoden des Spiels.
+
+\bigskip
+\textbf{Konflikt}\\
+Der Konflikt bezeichnet den Wettkampfcharakter jedes Spiels. Dieser kann verschiedene Formen annehmen, wie kompetitive Elemente oder der Konflikt gegen das Spielsystem. 
+
+\bigskip
+\textbf{Regeln}\\
+Die Regeln liefern die Struktur des Spiels, in dem sie festlegen was der Spieler machen kann und was nicht.
+
+\bigskip
+\textbf{Quantifizierbares Ziel}\\
+Das Ergebnis eines Spiels ist entweder das der Spieler gewonnen oder verloren hat, oder eine Form eines Erfolgsfaktors erhält. Dieser Erfolgsfaktor kann sich beispielsweise durch ein höheres Level oder eine Art Punktzahl bemerkbar machen. 
+
+%QUELLE: Rules of Play: Game Design Fundamentals
+
+\bigskip
+Anhand dieser Definitionen werden die Anforderungen für die Beispielapplikation konkretisiert:
+
+\begin{itemize}
+	\item Es soll eine Spielfigur geben, auf die der Spieler Einfluss nehmen kann.
+	\item Die Spielfigur soll auf Hindernisse treffen, welche die Aktionen des Spielers beeinflussen können.
+	\item Der Spieler gewinnt, wenn er ein definiertes Ziel erreicht oder das Spiel nicht beendet wird.
+	\item Der Spieler verliert, wenn er eine definierte Anzahl an Fehlversuchen erreicht hat, das Spiel abbricht oder andere Aktionen ausführt, die gegensätzlich zum gewinnen des Spiels stehen.
+	\item Der Spieler soll einen Erfolgsfaktor erhalten, um seine Spielweise zu messen.
+\end{itemize}
+
+Darüber hinaus werden weitere allgemeine Anforderungen gestellt, die häufig in Spielen enthalten sind:
+
+\begin{itemize}
+	\item Das Spiel soll einen visuellen Charakter haben und Grafiken oder 3D Objekte verwenden.
+	\item In dem Spiel sollen Animationen vorkommen, wie zum Beispiel Bewegungen. 
+	\item Das Spiel soll über Audioelemente verfügen, wie Musik oder Soundeffekte.
+\end{itemize}
+
+Die Applikation soll zudem möglichst simpel gehalten werden, um sie Anhand der einfachsten und elementaren Eigenschaften zu bemessen.
+
+%TODO: Verwendung von Quotes?
 \section{Spielidee}
+Ein mobiles Spiel das mitunter seiner Einfachheit, in kürzester Zeit großen Erfolg erlangte, ist das Spiel „Flappy Bird“. In diesem Spiel steuert der Spieler durch Antippen des Touchscreens die Flughöhe eines Vogels, um ihn vor dem Aufprall auf den Boden zu bewahren und durch entgegenkommende Hindernisse zu manövrieren. Hierbei handelt es sich um eine Art „Endlos-Spiel“, das sich dadurch auszeichnet, dass der Spieler solange spielt, bis er verliert. Verlieren kann man, indem die Spielfigur mit einem anderen Objekt kollidiert. Es verfügt über eine Punktzahl, die sich erhöht, wenn der Vogel erfolgreich die Hindernisse passiert hat.
+
+\bigskip
+In der Anlehnung zu Flappy Bird, entstanden zahlreiche Spiele die große Ähnlichkeit aufweisen. Auch wird dieses Spielprinzip häufig als Vorlage verwendet, um beispielhaft den Einstieg in die Spielentwicklung mit einer bestimmten Engine oder einem Framework zu erlernen. Da alle vorher genannten Anforderungen in dieses Spielprinzip hineinpassen, wurde ein Spiel konzipiert, das sich an dieser Vorlage orientiert. Das Spiel trägt den Titel: \textbf{Happy Bird}. 
+%TODO: Spielfluss beschreiben!
+
 \section{Verwendete Produkte}
 %Frameworks und Engines, APIs und SDKs
 \section{Eingesetzte Komponenten}
