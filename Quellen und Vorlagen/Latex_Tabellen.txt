@@ -1,0 +1,83 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ccc}
+                                                                                                                         & \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Betriebssystem}} & \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Version}}                  \\
+\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Betriebssysteme}}                                                  &                                                                        &                                                                                  \\
+\textbf{Mac OS X}                                                                                                        & Mac OS X                                                               &                                                                                  \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Windows}                                                                                                         & Windows                                                                & \begin{tabular}[c]{@{}c@{}}Windows 8.1\\  Standard Edition\\ 64-Bit\end{tabular} \\
+\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{\begin{tabular}[c]{@{}c@{}}Game-\\ Framework/Engine\end{tabular}}} &                                                                        &                                                                                  \\
+\textbf{libGDX}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Cocos2D-X}                                                                                                       & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+\textbf{Unity3D}                                                                                                         & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            & 5.3.2f1                                                                          \\
+\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Programmiersprache}}                                               &                                                                        &                                                                                  \\
+\textbf{Java}                                                                                                            & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{C++}                                                                                                             & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+\textbf{C\#}                                                                                                             & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Objective-C}                                                                                                     & Mac OS X                                                               &                                                                                  \\
+\textbf{Python}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Entwicklungsumgebung}}                                             &                                                                        &                                                                                  \\
+\textbf{Xcode}                                                                                                           & Mac OS X                                                               &                                                                                  \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Android Studio}                                                                                                  & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+\textbf{Visual Studio}                                                                                                   & Windows                                                                &                                                                                  \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Monodevelop}                                                                                                     & \begin{tabular}[c]{@{}c@{}}Windows, \\ Mac OS X\end{tabular}           &                                                                                  \\
+\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Sonstiges}}                                                        &                                                                        &                                                                                  \\
+\textbf{Android SDK}                                                                                                     & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Android NDK}                                                                                                     & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+\textbf{Android ANT}                                                                                                     & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Mono}                                                                                                            & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+\textbf{RoboVM}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                 
+\end{tabular}
+}
+\caption{My caption}
+\label{my-label}
+\end{table}
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ccccc}
+\rowcolor[HTML]{000000} 
+{\color[HTML]{FFFFFF} Dateiname}   & {\color[HTML]{FFFFFF} Dateityp} & {\color[HTML]{FFFFFF} Objekttyp}     & {\color[HTML]{FFFFFF} Verwendung}       & {\color[HTML]{FFFFFF} Dateigröße} \\
+{\color[HTML]{000000} Red\_Bird}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Spritesheet}   & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} bird}        & {\color[HTML]{000000} PLIST}    & {\color[HTML]{000000} Property List} & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+{\color[HTML]{000000} sprite\_1}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} sprite\_2}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+{\color[HTML]{000000} sprite\_3}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} sprite\_4}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+{\color[HTML]{000000} Sky}         & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hintergrund}      & {\color[HTML]{000000} }           \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} Ground}      & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hindernis}        & {\color[HTML]{000000} }           \\
+{\color[HTML]{000000} Pipe}        & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hindernis}        & {\color[HTML]{000000} }           \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} StartButton} & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Button}           & {\color[HTML]{000000} }           \\
+{\color[HTML]{000000} Marker Felt} & {\color[HTML]{000000} TTF}      & {\color[HTML]{000000} Font}          & {\color[HTML]{000000} Schrift}          & {\color[HTML]{000000} }           \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} Arial}       & {\color[HTML]{000000} TTF}      & {\color[HTML]{000000} Font}          & {\color[HTML]{000000} Schrift}          & {\color[HTML]{000000} }           \\
+{\color[HTML]{000000} BGMusic}     & {\color[HTML]{000000} MP3}      & {\color[HTML]{000000} Audio}         & {\color[HTML]{000000} Hintergrundmusik} & {\color[HTML]{000000} }          
+\end{tabular}
+}
+\caption{My caption}
+\label{my-label}
+\end{table}

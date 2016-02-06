@@ -807,6 +807,8 @@ In Tabelle \ref{tab_game_services} werden APIs aufgelistet, die populäre Game S
 	\label{tab_game_services}
 \end{table}
 
+%TODO: Einzelne Game Services kurz beschreiben
+
 \section{Produktvarianten}
 Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varianten sind durchaus möglich, aber derzeit sind keine weiteren populären Ableger bekannt. Die Community konzentriert sich demnach hauptsächlich auf die Weiterentwicklung der Hauptversion oder auf eigene Erweiterungen in Form von Plugins.
 
@@ -877,6 +879,7 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 Um die Möglichkeiten der gewählten Entwicklungstools tiefgehender analysieren zu können, sollten die theoretischen Informationen um praktische Erkenntnisse ergänzt werden. Demnach wird als Teil dieser Arbeit ein Beispiel-Spiel konzipiert, mit den jeweiligen Tools umgesetzt und daraus Applikationen für verschiedene Plattformen erzeugt. Die Anwendung soll dann Anhand von vereinbarten Metriken bemessen und analysiert werden. Die gewonnenen Resultate werden daraufhin in Zusammenhang mit den theoretischen Informationen komplementiert und die Entwicklungstools als Ganzes verglichen. 
 
 \section{Definition von Anforderungen}
+\label{sec:definition_anforderungen}
 Applikationen aus den Kategorien Business, Unterhaltung und die meisten weiteren ohne den Fokus auf Spiele, greifen in der Regel auf plattformspezifische Benutzeroberflächen zurück. Native Apps besitzen jeweils technische und optische Konventionen. Cross-Plattform Apps versuchen diese möglichst genau zu generieren und einzuhalten, um dem Benutzer ein natives Look-and-Feel zu bieten. 
 Meist folgen Spiele diesen Regeln nicht, da sie in Abhängigkeit des Spielprinzips auf unterschiedliche Eingabeelemente und UIs zurückgreifen. 
 Das Spiel als solches ist ein komplexes Phänomen, mit dem sich bereits Philosophen, Psychologen, Philanthropen und Forscher aus anderen Fachgebieten auseinandergesetzt haben. Ein Teilbereich der Spielwissenschaft, genannt Ludologie (Die Lehre über das Spiel), befasst sich unter anderem mit der Erforschung des digitalen Spielens. Die Forschungsinhalte befassen sich unter anderem mit Fragestellungen aus den Bereichen:
@@ -933,29 +936,136 @@ Anhand dieser Definitionen werden die Anforderungen für die Beispielapplikation
 Darüber hinaus werden weitere allgemeine Anforderungen gestellt, die häufig in Spielen enthalten sind:
 
 \begin{itemize}
-	\item Das Spiel soll einen visuellen Charakter haben und Grafiken oder 3D Objekte verwenden.
-	\item In dem Spiel sollen Animationen vorkommen, wie zum Beispiel Bewegungen. 
+	\item Das Spiel soll einen visuellen Charakter haben und Grafiken verwenden.
+	\item In dem Spiel sollen Animationen vorkommen, wie Bewegungen. 
 	\item Das Spiel soll über Audioelemente verfügen, wie Musik oder Soundeffekte.
+	\item Es sollen mehrere Spielszenen verwendet werden.
+	\item Ein Spielobjekt soll in allen Szenen verfügbar sein und seinen Status beibehalten.
 \end{itemize}
 
 Die Applikation soll zudem möglichst simpel gehalten werden, um sie Anhand der einfachsten und elementaren Eigenschaften zu bemessen.
 
-%TODO: Verwendung von Quotes?
+
 \section{Spielidee}
-Ein mobiles Spiel das mitunter seiner Einfachheit, in kürzester Zeit großen Erfolg erlangte, ist das Spiel „Flappy Bird“. In diesem Spiel steuert der Spieler durch Antippen des Touchscreens die Flughöhe eines Vogels, um ihn vor dem Aufprall auf den Boden zu bewahren und durch entgegenkommende Hindernisse zu manövrieren. Hierbei handelt es sich um eine Art „Endlos-Spiel“, das sich dadurch auszeichnet, dass der Spieler solange spielt, bis er verliert. Verlieren kann man, indem die Spielfigur mit einem anderen Objekt kollidiert. Es verfügt über eine Punktzahl, die sich erhöht, wenn der Vogel erfolgreich die Hindernisse passiert hat.
+Ein mobiles Spiel das mitunter durch seine Einfachheit, in kürzester Zeit großen Erfolg erlangte, ist das Spiel Flappy Bird.
+%QUELLE: https://de.wikipedia.org/wiki/Flappy_Bird
+In diesem Spiel steuert der Spieler durch Antippen des Touchscreens die Flughöhe eines Vogels, um ihn vor dem Aufprall auf den Boden zu bewahren und durch entgegenkommende Hindernisse zu manövrieren. Hierbei handelt es sich um eine Art Endlos-Spiel, das sich dadurch auszeichnet, dass der Spieler solange spielt, bis er verliert. Verlieren kann man, indem die Spielfigur mit einem anderen Objekt kollidiert. Es verfügt zudem über eine Punktzahl, die sich erhöht, wenn der Vogel erfolgreich die Hindernisse passiert hat.
 
 \bigskip
-In der Anlehnung zu Flappy Bird, entstanden zahlreiche Spiele die große Ähnlichkeit aufweisen. Auch wird dieses Spielprinzip häufig als Vorlage verwendet, um beispielhaft den Einstieg in die Spielentwicklung mit einer bestimmten Engine oder einem Framework zu erlernen. Da alle vorher genannten Anforderungen in dieses Spielprinzip hineinpassen, wurde ein Spiel konzipiert, das sich an dieser Vorlage orientiert. Das Spiel trägt den Titel: \textbf{Happy Bird}. 
-%TODO: Spielfluss beschreiben!
+In der Anlehnung zu Flappy Bird entstanden zahlreiche Spiele die große Ähnlichkeit aufweisen. Auch wird dieses Spielprinzip häufig als Vorlage verwendet, um beispielhaft den Einstieg in die Spielentwicklung mit einer bestimmten Engine oder einem Framework zu erlernen. Da alle vorher genannten Anforderungen in dieses Spielprinzip hineinpassen, wurde für diese Arbeit ein Spiel konzipiert, das sich an dieser Vorlage orientiert. Das Spiel trägt den Titel: \textbf{Happy Bird}. 
 
-\section{Verwendete Produkte}
-%Frameworks und Engines, APIs und SDKs
+\section{Spielfluss}
+Das Spielprinzip und der Spielfluss bei Happy Bird sind denkbar einfach. Das Spiel wurde zudem auf den Portrait-Modus (Hochformat) festgelegt und es wird durchgängig eine Anzeige mit der aktuellen Framerate dargestellt.
+
+
+\begin{enumerate}
+	\item Das Spiel wird über das App Icon gestartet.
+	\item Direkt nach dem Start wird ein Logo des jeweiligen Frameworks oder Engine angezeigt.
+	\item Daraufhin gelangt man in ein Hauptmenü, das den Titel des Spiels, Hintergrundgrafiken und einen Startbutton anzeigt. Die Hintergrundmusik wird abgespielt.
+	\item Bei betätigen des Startbuttons wird in die Spielszene gewechselt.
+	\item Die Spielszene beginnt mit den Hintergrundgrafiken und einem Vogel als Spielfigur.
+	\item Der Vogel verliert an Höhe, wenn der Spieler nichts tut und steigt bei antippen des Touchscreens an.
+	\item In einem festgelegten Intervall kommen der Figur nun Hindernisse in Form von grünen Röhren entgegen. Diese besitzen eine Lücke in der Mitte, durch die der Vogel hindurchmanövriert werden muss. Die Position der Lücke befindet sich in einer zufälligen, vertikalen Stelle innerhalb der Sichtbarkeit.
+	\item Wenn der Vogel erfolgreich das Hindernis passiert hat, erhält man einen Punkt, der oben links im Spiel zu der Gesamtpunktzahl hinzugefügt und dargestellt wird.
+	\item Das Spiel endet und gilt als verloren, wenn der Vogel mit einem der entgegenkommenden Hindernisse oder dem Boden kollidiert.
+	\item Der obere Rand der Spielszene wird durch eine unsichtbare Wand blockiert, die nicht passiert werden kann.
+	\item Bei verlorenem Spiel, wird in das Game Over Menü gewechselt, das wie das Hauptmenü aufgebaut ist. Dies zeigt den Game Over Status an und gibt die Möglichkeit, über den Startbutton ein neues Spiel zu starten.
+\end{enumerate}
+
+%TODO: Screenshots! Spielszenen / alle Frameworks / verschiedene Geräte
+
+
+Die in Kapitel \ref{sec:definition_anforderungen} definierten Anforderungen, wurden somit alle umgesetzt. Die Spielfigur wird durch einen Spritesheet animiert und ist durch einen Touchscreen-Input steuerbar. Es werden Hindernisse erzeugt, die bei Kollision das Spielende hervorrufen. Der Spieler hat die Möglichkeit Punkte zu erhalten.
+Die Hintergrundmusik wird in allen drei Spielszenen gespielt. Sie startet bei Wechsel der Szene nicht von vorne, behält einen globalen Status bei und wird in einer Endlosschleife gespielt. Auf weitere diverse, für eine Testapplikation unnötige Benutzerannehmlichkeiten wurde verzichtet.
+
+\section{Verwendete Werkzeuge}
+In diesem Kapitel werden die genutzten Softwarewerkzeuge in Tabell \ref{genutzte_software} aufgelistet, die bei der Entwicklung der Testapplikation eingesetzt wurden.
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{0.8\textwidth}{!}{%
+		\begin{tabular}{ccc}
+			& \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Betriebssystem}} & \cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Version}}                  \\
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Betriebssysteme}}                                                  &                                                                        &                                                                                  \\
+			\textbf{Mac OS X}                                                                                                        & Mac OS X                                                               &                                                                                  \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Windows}                                                                                                         & Windows                                                                & \begin{tabular}[c]{@{}c@{}}Windows 8.1\\  Standard Edition\\ 64-Bit\end{tabular} \\
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{\begin{tabular}[c]{@{}c@{}}Game-\\ Framework/Engine\end{tabular}}} &                                                                        &                                                                                  \\
+			\textbf{libGDX}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Cocos2D-X}                                                                                                       & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+			\textbf{Unity3D}                                                                                                         & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            & 5.3.2f1                                                                          \\
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Programmiersprache}}                                               &                                                                        &                                                                                  \\
+			\textbf{Java}                                                                                                            & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{C++}                                                                                                             & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+			\textbf{C\#}                                                                                                             & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Objective-C}                                                                                                     & Mac OS X                                                               &                                                                                  \\
+			\textbf{Python}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Entwicklungsumgebung}}                                             &                                                                        &                                                                                  \\
+			\textbf{Xcode}                                                                                                           & Mac OS X                                                               &                                                                                  \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Android Studio}                                                                                                  & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+			\textbf{Visual Studio}                                                                                                   & Windows                                                                &                                                                                  \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Monodevelop}                                                                                                     & \begin{tabular}[c]{@{}c@{}}Windows, \\ Mac OS X\end{tabular}           &                                                                                  \\
+			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Sonstiges}}                                                        &                                                                        &                                                                                  \\
+			\textbf{Android SDK}                                                                                                     & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Android NDK}                                                                                                     & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+			\textbf{Android ANT}                                                                                                     & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Mono}                                                                                                            & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                  \\
+			\textbf{RoboVM}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Mac OS X, \\ Windows\end{tabular}           &                                                                                 
+		\end{tabular}
+	}
+	\caption{Eingesetzte Software auf den jeweiligen Betriebssystemen und Versionen}\label{genutzte_software}
+\end{table}
+	
+%\caption{Eingesetzte Software auf den jeweiligen Betriebssystemen und Versionen}\label{genutzte_software}
+
 \section{Eingesetzte Komponenten}
-%\section{User Stories}
+%TODO: Text
+%TODO: Musik Interpret
+%TODO: Verwendung in Spieleframework 
+%TODO: (Unity zusätzliche Prefabs)
+%TODO: Gesamte Assetgröße je Framework
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{ccccc}
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} Dateiname}   & {\color[HTML]{FFFFFF} Dateityp} & {\color[HTML]{FFFFFF} Objekttyp}     & {\color[HTML]{FFFFFF} Verwendung}       & {\color[HTML]{FFFFFF} Dateigröße} \\
+			{\color[HTML]{000000} Red\_Bird}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Spritesheet}   & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} bird}        & {\color[HTML]{000000} PLIST}    & {\color[HTML]{000000} Property List} & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} sprite\_1}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} sprite\_2}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} sprite\_3}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} sprite\_4}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} Sky}         & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hintergrund}      & {\color[HTML]{000000} }           \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} Ground}      & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hindernis}        & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} Pipe}        & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hindernis}        & {\color[HTML]{000000} }           \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} StartButton} & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Button}           & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} Marker Felt} & {\color[HTML]{000000} TTF}      & {\color[HTML]{000000} Font}          & {\color[HTML]{000000} Schrift}          & {\color[HTML]{000000} }           \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} Arial}       & {\color[HTML]{000000} TTF}      & {\color[HTML]{000000} Font}          & {\color[HTML]{000000} Schrift}          & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} BGMusic}     & {\color[HTML]{000000} MP3}      & {\color[HTML]{000000} Audio}         & {\color[HTML]{000000} Hintergrundmusik} & {\color[HTML]{000000} }          
+		\end{tabular}
+	}
+	\caption{Liste von eingesetzten Spielelementen und deren Eigenschaften}
+	\label{spiel_komponenten}
+\end{table}
 
 %TODO
 \chapter{Analyse der Test-Applikation}
 \section{Metriken}
+\section{Testgeräte}
 \section{Messprotokoll}
 %Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen), FPS
 
