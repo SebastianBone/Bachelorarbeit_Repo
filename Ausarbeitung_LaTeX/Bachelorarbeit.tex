@@ -827,23 +827,28 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{c|c|}
-			\hline
+		\begin{tabular}{cc}
 			\rowcolor[HTML]{000000} 
-			\multicolumn{1}{|c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Personal Edition}}} & {\color[HTML]{FFFFFF} \textbf{Professional Edition}}                                                                                   \\ \hline
-			\multicolumn{1}{|c|}{Game Engine inklusive aller Funktionen}                                   & Game Engine inklusive aller Funktionen                                                                                                 \\ \hline
-			\multicolumn{1}{|c|}{Unterstützung aller Plattformen (Unity Splash Screen)}                    & \begin{tabular}[c]{@{}c@{}}Unterstützung aller Plattformen \\ (ohne Zusatzlizenz Unity Splash Screen bei iOS und Android)\end{tabular} \\ \hline
-			\multicolumn{1}{|c|}{Lizenzfreiheit}                                                           & Lizenzfreiheit                                                                                                                         \\ \hline
-			& Unity Cloud Building                                                                                                                   \\ \cline{2-2} 
-			& Team Lizenz                                                                                                                            \\ \cline{2-2} 
-			& Game Performance Analyse                                                                                                               \\ \cline{2-2} 
-			& Keine Einkommensbeschränkung                                                                                                           \\ \cline{2-2} 
-			& Personalisierbarer Splash Screen                                                                                                       \\ \cline{2-2} 
-			& Unity Analytics zur Analyse des Spielerverhaltens                                                                                      \\ \cline{2-2} 
-			& Priorisierte Behandlung bei eingereichten Bugs                                                                                         \\ \cline{2-2} 
-			& Zugang zu Beta-Versionen                                                                                                               \\ \cline{2-2} 
-			& Unterstützung für zukunftige Plattformen                                                                                               \\ \cline{2-2} 
-			& Vergünstigungen im Asset Store                                                                                                         \\ \cline{2-2} 
+			{\color[HTML]{FFFFFF} \textbf{Edition}} & {\color[HTML]{FFFFFF} \textbf{Feature}}                                                                                               \\
+			Professional / Personal                 & Game Engine inklusive aller Funktionen                                                                                                \\
+			\rowcolor[HTML]{C0C0C0} 
+			Professional / Personal                 & \begin{tabular}[c]{@{}c@{}}Unterstützung aller Plattformen\\ (ohne Zusatzlizenz Unity Splash Screen bei iOS und Android)\end{tabular} \\
+			Professional / Personal                 & Lizenzfreiheit                                                                                                                        \\
+			\rowcolor[HTML]{C0C0C0} 
+			Professional                            & Unity Cloud Building                                                                                                                  \\
+			Professional                            & Team Lizenz                                                                                                                           \\
+			\rowcolor[HTML]{C0C0C0} 
+			Professional                            & Game Performance Analyse                                                                                                              \\
+			Professional                            & Keine Einkommensbeschränkung                                                                                                          \\
+			\rowcolor[HTML]{C0C0C0} 
+			Professional                            & Personalisierbarer Splash Screen                                                                                                      \\
+			Professional                            & Unity Analytics zur Analyse des Spielerverhaltens                                                                                     \\
+			\rowcolor[HTML]{C0C0C0} 
+			Professional                            & Priorisierte Behandlung bei eingereichten Bugs                                                                                        \\
+			Professional                            & Zugang zu Beta-Versionen                                                                                                              \\
+			\rowcolor[HTML]{C0C0C0} 
+			Professional                            & Unterstützung für zukunftige Plattformen                                                                                              \\
+			Professional                            & Vergünstigungen im Asset Store                                                                                                       
 		\end{tabular}
 	}
 	\caption{Gegenüberstellung von Personal und Professional Edition}
@@ -882,7 +887,7 @@ Um die Möglichkeiten der gewählten Entwicklungstools tiefgehender analysieren 
 \label{sec:definition_anforderungen}
 Applikationen aus den Kategorien Business, Unterhaltung und die meisten weiteren ohne den Fokus auf Spiele, greifen in der Regel auf plattformspezifische Benutzeroberflächen zurück. Native Apps besitzen jeweils technische und optische Konventionen. Cross-Plattform Apps versuchen diese möglichst genau zu generieren und einzuhalten, um dem Benutzer ein natives Look-and-Feel zu bieten. 
 Meist folgen Spiele diesen Regeln nicht, da sie in Abhängigkeit des Spielprinzips auf unterschiedliche Eingabeelemente und UIs zurückgreifen. 
-Das Spiel als solches ist ein komplexes Phänomen, mit dem sich bereits Philosophen, Psychologen, Philanthropen und Forscher aus anderen Fachgebieten auseinandergesetzt haben. Ein Teilbereich der Spielwissenschaft, genannt Ludologie (Die Lehre über das Spiel), befasst sich unter anderem mit der Erforschung des digitalen Spielens. Die Forschungsinhalte befassen sich unter anderem mit Fragestellungen aus den Bereichen:
+Das Spiel als solches ist ein komplexes Phänomen, mit dem sich bereits Philosophen, Psychologen, Philanthropen und Forscher aus anderen Fachgebieten auseinandergesetzt haben. Ein Teilbereich der Spielwissenschaft, genannt Ludologie (Die Lehre über das Spiel), befasst sich unter anderem mit der Erforschung des digitalen Spielens. \citep{ludologie} Die Forschungsinhalte befassen sich unter anderem mit Fragestellungen aus den Bereichen:
 
 \begin{itemize}
 	\item Geschichte des digitalen Spielens
@@ -892,14 +897,12 @@ Das Spiel als solches ist ein komplexes Phänomen, mit dem sich bereits Philosop
 	\item u.v.m.
 \end{itemize}
 
-%QUELLE: https://de.wikipedia.org/wiki/Ludologie
 
 Wie definiert man aber nun den Inhalt und den Umfang eines Computerspiels?
 Um sich in den konkurrierenden Theorien zu verlieren, wird hierfür beispielhaft die Gebrauchsdefinitionen von Salen und Zimmerman herangezogen:
 
 \bigskip
-\emph{„A game is a system in which players engage in an artificial conflict, defined by rules, that results in a quantifiable outcome.”}
-%TODO: QUELLE: [Salen & Zimmerman 2004, S. 80] 
+\emph{„A game is a system in which players engage in an artificial conflict, defined by rules, that results in a quantifiable outcome.”} \citep[80]{salen_zimmerman}
 \bigskip
 
 Aus dieser Definition lassen sich einige wesentliche Konzepte entnehmen.
@@ -919,8 +922,7 @@ Die Regeln liefern die Struktur des Spiels, in dem sie festlegen was der Spieler
 \bigskip
 \textbf{Quantifizierbares Ziel}\\
 Das Ergebnis eines Spiels ist entweder das der Spieler gewonnen oder verloren hat, oder eine Form eines Erfolgsfaktors erhält. Dieser Erfolgsfaktor kann sich beispielsweise durch ein höheres Level oder eine Art Punktzahl bemerkbar machen. 
-
-%QUELLE: Rules of Play: Game Design Fundamentals
+\citep[80]{salen_zimmerman}
 
 \bigskip
 Anhand dieser Definitionen werden die Anforderungen für die Beispielapplikation konkretisiert:
@@ -947,8 +949,7 @@ Die Applikation soll zudem möglichst simpel gehalten werden, um sie Anhand der 
 
 
 \section{Spielidee}
-Ein mobiles Spiel das mitunter durch seine Einfachheit, in kürzester Zeit großen Erfolg erlangte, ist das Spiel Flappy Bird.
-%QUELLE: https://de.wikipedia.org/wiki/Flappy_Bird
+Ein mobiles Spiel das mitunter durch seine Einfachheit, in kürzester Zeit großen Erfolg erlangte, ist das Spiel Flappy Bird. \citep{flappy_bird}
 In diesem Spiel steuert der Spieler durch Antippen des Touchscreens die Flughöhe eines Vogels, um ihn vor dem Aufprall auf den Boden zu bewahren und durch entgegenkommende Hindernisse zu manövrieren. Hierbei handelt es sich um eine Art Endlos-Spiel, das sich dadurch auszeichnet, dass der Spieler solange spielt, bis er verliert. Verlieren kann man, indem die Spielfigur mit einem anderen Objekt kollidiert. Es verfügt zudem über eine Punktzahl, die sich erhöht, wenn der Vogel erfolgreich die Hindernisse passiert hat.
 
 \bigskip
@@ -975,8 +976,10 @@ Das Spielprinzip und der Spielfluss bei Happy Bird sind denkbar einfach. Das Spi
 %TODO: Screenshots! Spielszenen / alle Frameworks / verschiedene Geräte
 
 
-Die in Kapitel \ref{sec:definition_anforderungen} definierten Anforderungen, wurden somit alle umgesetzt. Die Spielfigur wird durch einen Spritesheet animiert und ist durch einen Touchscreen-Input steuerbar. Es werden Hindernisse erzeugt, die bei Kollision das Spielende hervorrufen. Der Spieler hat die Möglichkeit Punkte zu erhalten.
-Die Hintergrundmusik wird in allen drei Spielszenen gespielt. Sie startet bei Wechsel der Szene nicht von vorne, behält einen globalen Status bei und wird in einer Endlosschleife gespielt. Auf weitere diverse, für eine Testapplikation unnötige Benutzerannehmlichkeiten wurde verzichtet.
+Die in Kapitel \ref{sec:definition_anforderungen} definierten Anforderungen, werden somit alle umgesetzt. Die Spielfigur wird durch einen Spritesheet animiert und ist durch Touchscreen-Input steuerbar. Es werden Hindernisse erzeugt, die bei Kollision das Spielende hervorrufen. Der Spieler hat die Möglichkeit Punkte zu erhalten.
+Die Hintergrundmusik wird in allen drei Spielszenen gespielt. Sie startet bei Wechsel der Szene nicht von vorne, behält einen globalen Status bei und wird in einer Endlosschleife gespielt. Das Spiel wird komplett in 2D gehalten. Auf weitere diverse, für eine Testapplikation unnötige Benutzerannehmlichkeiten wurde verzichtet. Für die Versionierung der Projekte wird Git verwendet.
+
+%TODO: Code Unterschiede?
 
 \section{Verwendete Werkzeuge}
 In diesem Kapitel werden die genutzten Softwarewerkzeuge in Tabell \ref{genutzte_software} aufgelistet, die bei der Entwicklung der Testapplikation eingesetzt wurden.
@@ -993,7 +996,7 @@ In diesem Kapitel werden die genutzten Softwarewerkzeuge in Tabell \ref{genutzte
 			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{\begin{tabular}[c]{@{}c@{}}Game-\\ Framework/Engine\end{tabular}}} &                                                                        &                                                                                  \\
 			\textbf{libGDX}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
 			\rowcolor[HTML]{C0C0C0} 
-			\textbf{Cocos2D-X}                                                                                                       & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
+			\textbf{Cocos2D-X}                                                                                                       & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &     3.9                                                                             \\
 			\textbf{Unity3D}                                                                                                         & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            & 5.3.2f1                                                                          \\
 			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Programmiersprache}}                                               &                                                                        &                                                                                  \\
 			\textbf{Java}                                                                                                            & \begin{tabular}[c]{@{}c@{}}Mac OS X,\\ Windows\end{tabular}            &                                                                                  \\
@@ -1022,40 +1025,48 @@ In diesem Kapitel werden die genutzten Softwarewerkzeuge in Tabell \ref{genutzte
 	}
 	\caption{Eingesetzte Software auf den jeweiligen Betriebssystemen und Versionen}\label{genutzte_software}
 \end{table}
-	
-%\caption{Eingesetzte Software auf den jeweiligen Betriebssystemen und Versionen}\label{genutzte_software}
 
 \section{Eingesetzte Komponenten}
 %TODO: Text
-%TODO: Musik Interpret
-%TODO: Verwendung in Spieleframework 
-%TODO: (Unity zusätzliche Prefabs)
-%TODO: Gesamte Assetgröße je Framework
+Bei den eingesetzten und benötigten Komponenten existieren geringe Unterschiede. Um eine Sprite-Animation in Cocos2D und libGDX zu ermöglichen, empfehlen die Frameworks die Nutzung von Spritesheets in Kombination mit einer Property List-Datei (.plist). Bei einem Spritesheet handelt es sich um eine Sammlung von Grafiken in einer Datei. Diese Grafiken können allein oder in einer zusammenhängenden Abfolge stehen. Diese werden dann der Größe entsprechend ausgeschnitten.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{bilder/Red_Bird}
+	\caption{Spritesheet für die Animation der Spielfigur in Happy Bird}\label{spritesheet}
+\end{figure}
+
+Durch Zuhilfenahme der Property List (Liste von Eigenschaften), die in Zusammenhang mit dem Spritesheet erstellt werden kann, können Informationen über die einzelnen Sprites ausgelesen werden. Diese geben Auskunft über Namen, Größe, Offset, Skalierung und Rotation der einzelnen Grafiken auf dem Spritesheet und sind auf Basis von XML-Dateien gespeichert oder binär kodiert. Innerhalb der Anwendung können die einzelnen Grafiken dann in einer einstellbaren Geschwindigkeit und Dauer nacheinander angezeigt werden. Diese Art von Animation ähnelt einem Daumenkino.
+In Unity3D können ebenfalls Spritesheets genutzt werden, jedoch werden die Property Lists für die Teilung und den Informationshintergrund nicht benötigt. Komfortable Möglichkeiten bieten die sogenannten Prefabs. Ein Prefab kann spezifisch definierte Informationen und Eigenschaften über ein oder mehrere Gameobjekte tragen und diese in einem Objekt abrufbereit verfügbar machen. In Happy Bird werden die Pipe-Hindernisse beispielsweise als Prefab definiert, mit dem Inhalt der Grafiken, der Positionen und der Kollisionsboxen.
+Für die Erstellung der Grafiken und Animationen wurde der freie Online-Spriteeditor Piskel verwendet. \citep{piskel}
+Die genutzte Hintergrundmusik in Happy Bird, stammt von dem amerikanischen Komponisten und Musikproduzenten Kevin MacLeod. Das Musikstück mit dem Titel \emph{"Monkeys Spinning Monkeys"} ist unter der Creative Commons lizensiert und frei verfügbar. \citep{macLeod}
+In Tabelle \ref{spiel_komponenten} werden die Hauptkomponenten und ihre Eigenschaften, sowie einige Framework-abhängige Dateien aufgelistet.
+
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{ccccc}
 			\rowcolor[HTML]{000000} 
-			{\color[HTML]{FFFFFF} Dateiname}   & {\color[HTML]{FFFFFF} Dateityp} & {\color[HTML]{FFFFFF} Objekttyp}     & {\color[HTML]{FFFFFF} Verwendung}       & {\color[HTML]{FFFFFF} Dateigröße} \\
-			{\color[HTML]{000000} Red\_Bird}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Spritesheet}   & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+			{\color[HTML]{FFFFFF} Dateiname}   & {\color[HTML]{FFFFFF} Dateityp} & {\color[HTML]{FFFFFF} Objekttyp}     & {\color[HTML]{FFFFFF} Verwendung}       & {\color[HTML]{FFFFFF} Dateigröße (KB)} \\
+			{\color[HTML]{000000} Red\_Bird}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Spritesheet}   & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000}1,54}           \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} bird}        & {\color[HTML]{000000} PLIST}    & {\color[HTML]{000000} Property List} & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
-			{\color[HTML]{000000} sprite\_1}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} bird}        & {\color[HTML]{000000} PLIST}    & {\color[HTML]{000000} Property List} & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000}2,94}           \\
+			{\color[HTML]{000000} sprite\_1}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000}0,44}           \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} sprite\_2}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
-			{\color[HTML]{000000} sprite\_3}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} sprite\_2}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000}0,4}           \\
+			{\color[HTML]{000000} sprite\_3}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000}0,39}           \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} sprite\_4}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000} }           \\
-			{\color[HTML]{000000} Sky}         & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hintergrund}      & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} sprite\_4}   & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Spielfigur}       & {\color[HTML]{000000}0,4}           \\
+			{\color[HTML]{000000} Sky}         & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hintergrund}      & {\color[HTML]{000000}11,8}           \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} Ground}      & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hindernis}        & {\color[HTML]{000000} }           \\
-			{\color[HTML]{000000} Pipe}        & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hindernis}        & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} Ground}      & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hindernis}        & {\color[HTML]{000000}3,05}           \\
+			{\color[HTML]{000000} Pipe}        & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Hindernis}        & {\color[HTML]{000000}1,99}           \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} StartButton} & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Button}           & {\color[HTML]{000000} }           \\
-			{\color[HTML]{000000} Marker Felt} & {\color[HTML]{000000} TTF}      & {\color[HTML]{000000} Font}          & {\color[HTML]{000000} Schrift}          & {\color[HTML]{000000} }           \\
+			{\color[HTML]{000000} StartButton} & {\color[HTML]{000000} PNG}      & {\color[HTML]{000000} Sprite}        & {\color[HTML]{000000} Button}           & {\color[HTML]{000000}6,98}           \\
+			{\color[HTML]{000000} Marker Felt} & {\color[HTML]{000000} TTF}      & {\color[HTML]{000000} Font}          & {\color[HTML]{000000} Schrift}          & {\color[HTML]{000000}26}           \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} Arial}       & {\color[HTML]{000000} TTF}      & {\color[HTML]{000000} Font}          & {\color[HTML]{000000} Schrift}          & {\color[HTML]{000000} }           \\
-			{\color[HTML]{000000} BGMusic}     & {\color[HTML]{000000} MP3}      & {\color[HTML]{000000} Audio}         & {\color[HTML]{000000} Hintergrundmusik} & {\color[HTML]{000000} }          
+			{\color[HTML]{000000} Arial}       & {\color[HTML]{000000} TTF}      & {\color[HTML]{000000} Font}          & {\color[HTML]{000000} Schrift}          & {\color[HTML]{000000}761}           \\
+			{\color[HTML]{000000} BGMusic}     & {\color[HTML]{000000} MP3}      & {\color[HTML]{000000} Audio}         & {\color[HTML]{000000} Hintergrundmusik} & {\color[HTML]{000000}4770}          
 		\end{tabular}
 	}
 	\caption{Liste von eingesetzten Spielelementen und deren Eigenschaften}
@@ -1063,10 +1074,69 @@ In diesem Kapitel werden die genutzten Softwarewerkzeuge in Tabell \ref{genutzte
 \end{table}
 
 %TODO
-\chapter{Analyse der Test-Applikation}
+\chapter{Analyse der Test-Applikationen}
 \section{Metriken}
+
 \section{Testgeräte}
+
 \section{Messprotokoll}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{ccccc}
+			\rowcolor[HTML]{000000} 
+			\multicolumn{5}{c}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Happy Bird - iOS}}}                                                                                                                                                                                 \\
+			\rowcolor[HTML]{000000} 
+			\multicolumn{5}{l}{\cellcolor[HTML]{000000}{\color[HTML]{000000} }}                                                                                                                                                                                                              \\
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Metrik}}                                                                      & {\color[HTML]{FFFFFF} \textbf{Wert}}  & {\color[HTML]{FFFFFF} \textbf{libGDX}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ eines leeren Projekts\end{tabular}}} & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ des Spiels\end{tabular}}}            & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Größe der Ressourcen}}                                                         & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Benötigter Arbeitsspeicher}}                                                   & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent / Minute} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+		\end{tabular}
+	}
+	\caption{Messprotokoll des Spiels auf iOS}\label{protokoll_ios}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{ccccc}
+			\rowcolor[HTML]{000000} 
+			\multicolumn{5}{c}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Happy Bird - Android}}}                                                                                                                                                                                 \\
+			\rowcolor[HTML]{000000} 
+			\multicolumn{5}{l}{\cellcolor[HTML]{000000}{\color[HTML]{000000} }}                                                                                                                                                                                                              \\
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Metrik}}                                                                      & {\color[HTML]{FFFFFF} \textbf{Wert}}  & {\color[HTML]{FFFFFF} \textbf{libGDX}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ eines leeren Projekts\end{tabular}}} & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ des Spiels\end{tabular}}}            & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Größe der Ressourcen}}                                                         & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Benötigter Arbeitsspeicher}}                                                   & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent / Minute} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+		\end{tabular}
+	}
+	\caption{Messprotokoll des Spiels auf Android}\label{protokoll_android}
+\end{table}
+%\caption{Messprotokoll des Spiels auf Android}\label{protokoll_android}
 %Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen), FPS
 
 %TODO
@@ -1164,6 +1234,11 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \emph{A Dictionary of Computing - native software},
 \url{http://www.encyclopedia.com/doc/1O11-nativesoftware.html}, letzter Zugriff: 24.11.2015
 
+\bibitem[Junge(2015)]{ludologie}
+Junge, Prof. Dr. Jens:
+\emph{Zur Begriffsklärung von Ludologie und Spielwissenschaft},
+\url{http://www.ludologie.de/neues-spiel/detailansicht/news/detail/News/zur-begriffsklaerung-von-ludologie-und-spielwissenschaft/}, letzter Zugriff: 28.01.2016
+
 \bibitem[Kantar(2015)]{marktanteile_betriebssysteme_laender}
 \emph{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/198453/umfrage/marktanteile-der-smartphone-betriebssysteme-am-absatz-in-ausgewaehlten-laendern/}, letzter Zugriff: 14.12.2015
@@ -1187,6 +1262,13 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \bibitem[MacinCloud(2015)]{macincloud}
 \emph{MacinCloud},
 \url{http://www.macincloud.com/}, letzter Zugriff: 28.12.2015
+
+\bibitem[MacLeod(2014)]{macLeod}
+MacLeod, Kevin:
+\emph{Monkeys Spinning Monkeys},
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/
+\url{http://incompetech.com/music/royalty-free}, letzter Zugriff: 28.01.2016
 
 \bibitem[Microsoft Developer(2015)]{WP10_SDK}
 \emph{Windows Software Development Kit (SDK) for Windows 10},
@@ -1220,6 +1302,10 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \emph{Java SE Development Kit 8 Downloads},
 \url{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}, letzter Zugriff: 24.11.2015
 
+\bibitem[Piskel(2015)]{piskel}
+\emph{Piskel - Pixel Art and Animated Sprites},
+\url{http://www.piskelapp.com/}, letzter Zugriff: 28.01.2016
+
 \bibitem[PocketGamer.biz(2015)]{app_store_categories}
 \emph{Ranking der Top-20-Kategorien im App Store im Dezember 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/166976/umfrage/beliebteste-kategorien-im-app-store/}, letzter Zugriff: 15.12.2015
@@ -1227,6 +1313,11 @@ Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.):
 \bibitem[Reddit(2015)]{wp_pros_cons}
 \emph{Reddit - Pros and cons of Windows phone, and why should I buy one instead of an android or a iPhone?},
 \url{https://www.reddit.com/r/windowsphone/comments/3h21lf/pros_and_cons_of_windows_phone_and_why_should_i/}, letzter Zugriff: 25.11.2015
+
+\bibitem[Salen \& Zimmerman(2004)]{salen_zimmerman}
+Salen, Katie \& Zimmerman, Eric: 
+\glqq Unit 1: Core Concepts: Defining Games\grqq, 
+(Hrsg.): \emph{Rules of Play: Game Design Fundamentals}, The MIT Press 2004
 
 \bibitem[Schmidt(2015)]{java_9}
 \emph{heise Developer - Java 9: Pläne für Release im Herbst 2016},
@@ -1286,6 +1377,10 @@ Vehse, Benjamin:
 Entwicklung mobiler Anwendungen am
 Beispiel von Geo-Wikipedia-App\grqq, 
 \emph{Bachelor-Thesis}, 2014
+
+\bibitem[Wikipedia - Flappy Bird(2015)]{flappy_bird}
+\emph{Flappy Bird},
+\url{https://de.wikipedia.org/wiki/Flappy_Bird}, letzter Zugriff: 28.01.2016
 
 \bibitem[Wikipedia - Liste von Android-Versionen(2015)]{android_version_releases}
 \emph{Übersicht von allen Android Versionen mit Veröffentlichungsdatum},
