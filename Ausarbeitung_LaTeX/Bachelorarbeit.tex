@@ -782,7 +782,7 @@ Ein Erfolgssystem basiert auf dem Belohnungsprinzip und kann den Benutzer auf un
 In rundenbasierten und Echtzeit Mehrspielermodi treten zwei oder mehr Spieler gegeneinander an, um in einem Wettbewerb den besten Spieler zu ermitteln. Eine andere beliebte Variante sind Modi, in denen die Teilnehmer kooperieren, um Spielziele gemeinsam zu erreichen oder einfach unterhaltsame Erfahrungen zu schaffen.
 Um verbesserungswürdige Schwachstellen in der Anwendung zu ermitteln und das Verhalten von Spielern zu messen, werden Analysesysteme verwendet. Diese ermöglichen Einblicke auf Aktivitäten und Fortschritte der Spieler und Informationen zu getätigten Käufen. Auch wie häufig ein Benutzer die Anwendung gebraucht kann gemessen werden. Diese Statistiken verhelfen zu einem besseren Verständnis der eigenen Anwendung.
 Für den Erwerb von zusätzlichen, applikationsinternen Inhalten und die Abwicklung von Zahlungen sind Shop Systeme notwendig. Dies wird bei plattformübergreifenden Applikationen durch die Implementierung einer Bibliothek ermöglicht, die zu den gewünschten Zielplattformen und deren Stores, passende Schnittstellen bereitstellt. 
-In Tabelle \ref{tab_game_services} werden APIs aufgelistet, die populäre Game Services in den Frameworks unterstützen. Die Tabelle zeigt ausschließlich APIs, die plattformübergreifende Eigenschaften aufweisen und auf den beiden wichtigen, mobilen Zielplattformen iOS und Android funktionieren.
+In Tabelle \ref{tab_game_services} werden APIs aufgelistet, die populäre Game Services in den Frameworks unterstützen. Die Tabelle zeigt ausschließlich APIs, die plattformübergreifende Eigenschaften aufweisen und auf den beiden wichtigsten, mobilen Zielplattformen iOS und Android funktionieren.
 
 \begin{table}[htbp]
 	\centering
@@ -791,23 +791,34 @@ In Tabelle \ref{tab_game_services} werden APIs aufgelistet, die populäre Game S
 			\rowcolor[HTML]{000000} 
 			{\color[HTML]{FFFFFF} \textbf{Game Service}}                                                               & {\color[HTML]{FFFFFF} \textbf{libGDX}}                                            & {\color[HTML]{FFFFFF} \textbf{Cocos2D-X}}                                         & {\color[HTML]{FFFFFF} \textbf{Unity3D}}                                           \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} \textbf{Erfolge}}                                                                    & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             \\
-			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{Bestenlisten}}                                       & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             \\
+			{\color[HTML]{000000} \textbf{Erfolge}}                                                                    & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42\end{tabular}             \\
+			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{Bestenlisten}}                                       & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Play Services \\ App42\end{tabular}             \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} \textbf{Multiplayer}}                                                                & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42 \\ NextPeer\end{tabular} & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42 \\ NextPeer\end{tabular} & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42 \\ NextPeer\end{tabular} \\
-			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{Spielstand sichern}}                                 & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Google Play Services \\ App42\end{tabular}             \\
+			{\color[HTML]{000000} \textbf{Multiplayer}}                                                                & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42 \\ Nextpeer\end{tabular} & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42 \\ Nextpeer\end{tabular} & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42 \\ Nextpeer\end{tabular} \\
+			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{Spielstand sichern}}                                 & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42\end{tabular}             & \begin{tabular}[c]{@{}c@{}}Play Game Services \\ App42\end{tabular}             \\
 			\rowcolor[HTML]{C0C0C0} 
 			{\color[HTML]{000000} \textbf{Analyse}}                                                                    & App42                                                                             & App42                                                                             & \begin{tabular}[c]{@{}c@{}}Unity Analytics \\ App42 \\ Soomla\end{tabular}        \\
 			\cellcolor[HTML]{FFFFFF}{\color[HTML]{000000} \textbf{Shop System}}                                        & gdx-pay                                                                           & SDKBOX-IAP                                                                        & Soomla                                                                            \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Soziale Netzwerke \\ Freundesliste\end{tabular}}} & \begin{tabular}[c]{@{}c@{}}App42 \\ NextPeer\end{tabular}                         & \begin{tabular}[c]{@{}c@{}}App42 \\ NextPeer\end{tabular}                         & \begin{tabular}[c]{@{}c@{}}Social API \\ App42 \\ NextPeer \\ Soomla\end{tabular}
+			{\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Soziale Netzwerke \\ Freundesliste\end{tabular}}} & \begin{tabular}[c]{@{}c@{}}App42 \\ Nextpeer\end{tabular}                         & \begin{tabular}[c]{@{}c@{}}App42 \\ Nextpeer\end{tabular}                         & \begin{tabular}[c]{@{}c@{}}Social API \\ App42 \\ Nextpeer \\ Soomla\end{tabular}
 		\end{tabular}
 	}
 	\caption{Game Services und plattformübergreifende Schnittstellen}
 	\label{tab_game_services}
 \end{table}
 
-%TODO: Einzelne Game Services kurz beschreiben
+\bigskip
+\textbf{Play Game Services} \\
+Das Framework von Google bietet zahlreiche Services für den mobilen Gaming-Bereich. Es werden die meisten in der Tabelle genannten Services für die plattformübergreifende Entwicklung unterstützt. Die Voraussetzung für den Spieler, um diese Features nutzen zu können, ist ein Account in dem Netzwerk Google+. Play Game Services bietet auch Services zur Analyse des Spielerverhaltens, jedoch sind die Angaben von Google und den Spieleentwicklungstools bezüglich der Unterstützung nicht eindeutig. Die Cloud Dienste von Google sind ohne Kosten implementierbar. \citep{play_game_services}
+
+\bigskip
+\textbf{App42} \\
+App42 von ShepHertz Technologies bietet ein umfangreiches Angebot an Cloud Diensten, welches für Indie-Entwickler größtenteils kostenfrei zur Verfügung steht. Es gibt Schnittstellen für eine Vielzahl an Plattformen und Frameworks, sowohl im nativen, als auch im plattformübergreifenden Bereich. Die wichtigsten Game Services werden alle unterstützt. \citep{app42}
+
+\bigskip
+\textbf{NextPeer} \\
+NextPeer bietet für die drei Game Frameworks APIs für die Unterstützung von Multiplayer Spielen und Anbindungen an soziale Netzwerke. Für die Nutzung steht ebenfalls eine kostenfreie Variante zur Auswahl. \citep{nextpeer}
+
 
 \section{Produktvarianten}
 Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varianten sind durchaus möglich, aber derzeit sind keine weiteren populären Ableger bekannt. Die Community konzentriert sich demnach hauptsächlich auf die Weiterentwicklung der Hauptversion oder auf eigene Erweiterungen in Form von Plugins.
@@ -1076,7 +1087,7 @@ In Tabelle \ref{spiel_komponenten} werden die Hauptkomponenten und ihre Eigensch
 
 %TODO
 \chapter{Analyse der Test-Applikationen}
-%TODO: Warum Windows Phone nicht getestet wird
+
 %TODO: Auf Analyse der Frameworks eingehen
 \section{Definition von Metriken}
 Die erstellten Applikationen sollen näher analysiert werden. Um dies möglichst objektiv und repräsentativ durchzuführen, müssen vergleichbare Metriken definiert werden.
@@ -1217,6 +1228,8 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 	}
 	\caption{Messprotokoll des Spiels auf iOS}\label{protokoll_ios}
 \end{table}
+
+
 %\caption{Messprotokoll des Spiels auf Android}\label{protokoll_android}
 %Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen), FPS
 
@@ -1244,6 +1257,10 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 \bibitem[Android Source - Codenames, Tags, and Build Numbers(2015)]{android_codenames}
 \emph{Codenames, Tags, and Build Numbers in the history of Android},
 \url{https://source.android.com/source/build-numbers.html}, etzter Zugriff: 24.11.2015
+
+\bibitem[App42(2016)]{app42}
+\emph{App42 Cloud API},
+\url{http://api.shephertz.com/}, letzter Zugriff: 01.02.2016
 
 \bibitem[Apple Developer(2015)]{swift_about}
 \emph{Swift - Overview},
@@ -1367,6 +1384,10 @@ http://creativecommons.org/licenses/by/3.0/
 \emph{Microsoft-Emulator für Windows 10 Mobile},
 \url{https://msdn.microsoft.com/library/windows/apps/mt162269.aspx}, letzter Zugriff: 28.12.2015
 
+\bibitem[Nextpeer(2016)]{nextpeer}
+\emph{Nextpeer},
+\url{https://www.nextpeer.com/}, letzter Zugriff: 01.02.2016
+
 \bibitem[Open Handset Alliance - Alliance Members(2015)]{alliance_members}
 \emph{Members of the Open Handset Alliance},
 \url{http://www.openhandsetalliance.com/oha_members.html}, letzter Zugriff: 24.11.2015
@@ -1386,6 +1407,10 @@ http://creativecommons.org/licenses/by/3.0/
 \bibitem[Piskel(2015)]{piskel}
 \emph{Piskel - Pixel Art and Animated Sprites},
 \url{http://www.piskelapp.com/}, letzter Zugriff: 28.01.2016
+
+\bibitem[Play Game Services(2015)]{play_game_services}
+\emph{Play Games Services},
+\url{https://developers.google.com/games/services/}, letzter Zugriff: 01.02.2016
 
 \bibitem[PocketGamer.biz(2015)]{app_store_categories}
 \emph{Ranking der Top-20-Kategorien im App Store im Dezember 2015. In Statista - Das Statistik-Portal.},
