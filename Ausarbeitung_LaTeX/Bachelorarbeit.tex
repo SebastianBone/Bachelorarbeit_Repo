@@ -1027,6 +1027,7 @@ In diesem Kapitel werden die genutzten Softwarewerkzeuge in Tabell \ref{genutzte
 \end{table}
 
 \section{Eingesetzte Komponenten}
+\label{sec:eingesetze_komponenten}
 %TODO: Text
 Bei den eingesetzten und benötigten Komponenten existieren geringe Unterschiede. Um eine Sprite-Animation in Cocos2D und libGDX zu ermöglichen, empfehlen die Frameworks die Nutzung von Spritesheets in Kombination mit einer Property List-Datei (.plist). Bei einem Spritesheet handelt es sich um eine Sammlung von Grafiken in einer Datei. Diese Grafiken können allein oder in einer zusammenhängenden Abfolge stehen. Diese werden dann der Größe entsprechend ausgeschnitten.
 
@@ -1075,41 +1076,95 @@ In Tabelle \ref{spiel_komponenten} werden die Hauptkomponenten und ihre Eigensch
 
 %TODO
 \chapter{Analyse der Test-Applikationen}
-\section{Metriken}
+%TODO: Warum Windows Phone nicht getestet wird
+%TODO: Auf Analyse der Frameworks eingehen
+\section{Definition von Metriken}
+Die erstellten Applikationen sollen näher analysiert werden. Um dies möglichst objektiv und repräsentativ durchzuführen, müssen vergleichbare Metriken definiert werden.
+Gleichfalls muss für jede Metrik der Ablauf der Messung, sowie der Ausgangszustand der Testgeräte normiert werden.
 
-\section{Testgeräte}
+\bigskip
+\textbf{Gesamtgröße einer Basisapplikation} \\
+Mit Basisapplikation ist die Anwendung gemeint, die bei Anlegung eines neuen Projekts erzeugt wird. Dies ist in der Regel eine App mit einer Szene / View und wird oft als \emph{Hello World} deklariert. Dies soll eine Vorstellung über die Grundgröße einer minimalen Applikation geben und die Gesamtgröße des Spiels verständlicher darstellen. Für die Messung wird jeweils ein neues Projekt angelegt, daraus Applikationen erzeugt und die Dateigröße auf dem Testgerät dokumentiert. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
 
-\section{Messprotokoll}
+\bigskip
+\textbf{Gesamtgröße des Spiels} \\
+Hiermit ist die Größe der Applikation insgesamt gemeint. Hier werden alle genutzten Ressourcen, Bibliotheken und sonstige Dateien eingerechnet. Für die Messung werden die Dateigrößen der erzeugten Applikationen auf den Testgeräten dokumentiert. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
+%TODO: And actually it's pretty easy to see what's taking all the space, rename the .apk to .zip and unzip it!On iOS rename the .ipa to .zip and unzip it. Then do Show Package Contents on the resulting expanded archive file.
 
-% Please add the following required packages to your document preamble:
-% \usepackage{graphicx}
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[]
+%TODO: Verhältnismäßiger Größenunterschied im Vergleich zur Basisapp in Prozent
+
+\bigskip
+\textbf{Größe der Ressourcen} \\
+Die Ressourcen für das Spiel sind die in Kapitel \ref{sec:eingesetze_komponenten} deklarierten Komponenten. Hierzu zählen einerseits die Komponenten, die als Schnittmenge in allen Projekten vorkommen, sowie diejenigen die für ein jeweiliges Framework und Engine zusätzlich benötigt oder erzeugt wurden. Für die Messung wird die Größe des Ressourcenordners innerhalb des jeweiligen Projekts dokumentiert. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
+
+\bigskip
+\textbf{Benötigter Arbeitsspeicher} \\
+Der genutzte Arbeitsspeicher, den das Spiel belegt soll ebenfalls dokumentiert werden. Dies kann auf den Testgeräten allerdings nur schwerlich in Echtzeit geschehen, da hierfür die Applikation verlassen werden muss und die Werte aus den Systemeinstellungen abgelesen werden, während die App nur im Hintergrund aktiv ist. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
+
+\bigskip
+\textbf{Ladegeschwindigkeit bei Neustart} \\
+Die Ladegeschwindigkeit ist die Zeit zwischen der Betätigung des Starticons und der Bereitschaft der Menüszene. Die Dauer der Anzeige des Splashscreens wurde gemäß der Grundeinstellungen der Projekte übernommen und bildet die Zeit ab, in der die benötigten Dateien geladen werden. Hierfür wird vorausgesetzt, dass die Applikation nicht im Hintergrund aktiv ist. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
+
+\bigskip
+\textbf{Frames pro Sekunde} \\
+Die Framerate wurde in das Spiel sichtbar in allen Szenen implementiert und innerhalb eines Zeitraums von 15 Minuten beobachtet. Hierbei wird der Durchschnittswert angegeben und eventuelle, auffällige Schwankungen zu bestimmten Zeitpunkten dokumentiert. Ein hoher und zugleich stabiler Wert gilt als positiv, ein niedriger oder stark schwankender als negativ.
+
+\bigskip
+\textbf{Akkuverbrauch} \\
+Der Akkuverbrauch wird über einen Zeitraum von 15 Minuten gemessen. Ausgangswert ist ein frisch geladenes Testgerät mit 100\% Ladezustand. Das Spiel wird über den Messzeitraum durchgehend genutzt. Dokumentiert wird anschließend der prozentuale Akkuverbrauch. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
+
+\bigskip
+\textbf{Geschriebene Zeilen Code} \\
+Die Menge der Codezeilen ist nur bedingt eine vergleichbare Metrik, da diese in Abhängigkeit des Programmierstils und der Erfahrung des Entwicklers, der Programmiersprache, der Architektur, des Einsatzes von Kommentaren und der Verwendung von leeren Zeilen abhängt stark beeinflusst wird. Jedoch soll hierdurch ein grober Eindruck über den benötigten Code vermittelt und dokumentiert werden. Für die Zählung werden Kommentare und leere Zeilen ignoriert. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
+
+
+\section{Testgeräte und Voreinstellungen}
+Die Applikationen werden auf Smartphones mit Android und iOS System getestet. Auf eine Analyse des Spiels auf einem Windows Phone wird aus mehreren Gründen verzichtet. libGDX unterstützt die mobilen Windows Systeme derzeit nicht, die aktuellen Betriebssysteme sind nicht kompatibel zueinander, Windows Phone 8 wird nach und nach von Windows 10 abgelöst, weiterhin ist der Marktanteil laut der Analyse relativ gering und von daher vernachlässigbar. Die relevanten Daten der genutzten Testgeräte sind in Tabelle \ref{testgeraete} aufgelistet. Um die zu dokumentierenden Messungen möglichst unverfälscht aufnehmen zu können, werden die Geräte vor der Durchführung der Messung einheitlich konfiguriert. Dies ist notwendig, um Daten wie Akkuverbrauch, Arbeitsspeicher oder Framerate möglichst wenig zu beeinflussen und die Ergebnisse reproduzierbarer zu machen.
+
+\begin{itemize}
+	\item Alle Verbindungsoptionen (WLAN, mobiler Datenverkehr, Bluetooth, GPS, …etc.) werden deaktiviert.
+	\item Die Bildschirmhelligkeit wird auf 50\% gestellt.
+	\item Die Lautstärke für Medien und Anwendungen wird auf 50\% gestellt und alle anderen deaktiviert.
+	\item Alle weiteren Anwendungen und Prozesse werden weitestgehend beendet.
+	\item Das Gerät wird in den Flug-Modus gesetzt, um die Verbindung zu einem Provider zu unterbinden.
+	\item Das Spiel wird auf dem internen Speicher installiert.
+\end{itemize}
+
+%TODO: Betriebssystem!
+\begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{ccccc}
+		\begin{tabular}{ccc}
 			\rowcolor[HTML]{000000} 
-			\multicolumn{5}{c}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Happy Bird - iOS}}}                                                                                                                                                                                 \\
-			\rowcolor[HTML]{000000} 
-			\multicolumn{5}{l}{\cellcolor[HTML]{000000}{\color[HTML]{000000} }}                                                                                                                                                                                                              \\
-			\rowcolor[HTML]{000000} 
-			{\color[HTML]{FFFFFF} \textbf{Metrik}}                                                                      & {\color[HTML]{FFFFFF} \textbf{Wert}}  & {\color[HTML]{FFFFFF} \textbf{libGDX}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\ \hline
-			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ eines leeren Projekts\end{tabular}}} & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ des Spiels\end{tabular}}}            & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Größe der Ressourcen}}                                                         & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Benötigter Arbeitsspeicher}}                                                   & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent / Minute} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			{\color[HTML]{FFFFFF} \textbf{Technische Daten}}       & {\color[HTML]{FFFFFF} \textbf{Android}}                                                          & {\color[HTML]{FFFFFF} \textbf{iOS}}                                                             \\
+			{\color[HTML]{000000} \textbf{Hersteller}}             & {\color[HTML]{000000} Samsung}                                                                   & {\color[HTML]{000000} Apple}                                                                    \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} \textbf{Modell}}                 & {\color[HTML]{000000} Galaxy S5+}                                                                & {\color[HTML]{000000} iPhone 4}                                                                 \\
+			{\color[HTML]{000000} \textbf{Artikelname}}            & {\color[HTML]{000000} G901F}                                                                     & {\color[HTML]{000000} }                                                                         \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} \textbf{Betriebssystem}}         & {\color[HTML]{000000} Android 5.0.2 }                                                                          & {\color[HTML]{000000} }                                                                         \\
+			{\color[HTML]{000000} \textbf{System-on-a-Chip (SoC)}} & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Qualcomm Snapdragon 805\\ APQ8084\end{tabular}} & {\color[HTML]{000000} Apple A4}                                                                 \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} \textbf{Prozessor}}              & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Krait 450\\ 2500 MHz\\ 4 Kerne\end{tabular}}    & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}ARM Cortex A8\\ 800 MHz\\ 1 Kern\end{tabular}} \\
+			{\color[HTML]{000000} \textbf{Grafikprozessor}}        & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Qualcomm Adreno 420\\ 600 MHz\end{tabular}}     & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}PowerVR SGX 535\\ 200 MHz\end{tabular}}        \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} \textbf{Arbeitsspeicher}}        & {\color[HTML]{000000} 2 GB}                                                                      & {\color[HTML]{000000} 512 MB}                                                                   \\
+			{\color[HTML]{000000} \textbf{Displaygröße}}           & {\color[HTML]{000000} 5,1 Zoll}                                                                  & {\color[HTML]{000000} 3,5 Zoll}                                                                 \\
+			\rowcolor[HTML]{C0C0C0} 
+			{\color[HTML]{000000} \textbf{Auflösung}}              & {\color[HTML]{000000} 1080 x 1920 Pixel}                                                         & {\color[HTML]{000000} 640 x 960 Pixel}                                                          \\
+			{\color[HTML]{000000} \textbf{Akku}}                   & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}2800 mAh\\ Li-Ion\end{tabular}}                 & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}1420 mAh \\ Li-Ion\end{tabular}}              
 		\end{tabular}
 	}
-	\caption{Messprotokoll des Spiels auf iOS}\label{protokoll_ios}
+	\caption{Datenblatt der Android und iOS Testgeräte}
+	\label{testgeraete}
 \end{table}
+
+Bei den eigesetzten Smartphones handelt es sich um gebrauchte Geräte, was bedeutet, dass manche Leistungsmerkmale zu gleichen Modellen abweichen können. Da es bei Smartphones mit Android und iOS eine sehr große Vielfalt an verschiedensten Geräten, Versionen und Ausstattungen gibt, kann die fehlerfreie Funktion des Spiels nur theoretisch garantiert werden. Um die Darstellung in den unterschiedlichen Auflösungen zu testen, wurden zusätzlich die Simulatoren von Xcode und Android Studio zu Hilfe gezogen.
+
+\section{Messprotokoll}
+In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Metriken, an den angegebenen Testgeräten aufgelistet. In Tabelle \ref{protokoll_android} sind die Ergebnisse der Android Version und in \ref{protokoll_ios} die der iOS Version zu sehen.
+
+%TODO: Kleines Nachwort zu den Ergebnissen. 
 
 \begin{table}[htbp]
 	\centering
@@ -1135,6 +1190,32 @@ In Tabelle \ref{spiel_komponenten} werden die Hauptkomponenten und ihre Eigensch
 		\end{tabular}
 	}
 	\caption{Messprotokoll des Spiels auf Android}\label{protokoll_android}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{ccccc}
+			\rowcolor[HTML]{000000} 
+			\multicolumn{5}{c}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Happy Bird - iOS}}}                                                                                                                                                                                 \\
+			\rowcolor[HTML]{000000} 
+			\multicolumn{5}{l}{\cellcolor[HTML]{000000}{\color[HTML]{000000} }}                                                                                                                                                                                                              \\
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Metrik}}                                                                      & {\color[HTML]{FFFFFF} \textbf{Wert}}  & {\color[HTML]{FFFFFF} \textbf{libGDX}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ eines leeren Projekts\end{tabular}}} & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ des Spiels\end{tabular}}}            & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Größe der Ressourcen}}                                                         & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Benötigter Arbeitsspeicher}}                                                   & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent / Minute} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Geschriebene Zeilen Code}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+		\end{tabular}
+	}
+	\caption{Messprotokoll des Spiels auf iOS}\label{protokoll_ios}
 \end{table}
 %\caption{Messprotokoll des Spiels auf Android}\label{protokoll_android}
 %Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen), FPS

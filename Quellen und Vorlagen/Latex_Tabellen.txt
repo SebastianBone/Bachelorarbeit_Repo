@@ -112,3 +112,36 @@
 \caption{My caption}
 \label{my-label}
 \end{table}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ccc}
+\rowcolor[HTML]{000000} 
+{\color[HTML]{FFFFFF} \textbf{Technische Daten}}       & {\color[HTML]{FFFFFF} \textbf{Android}}                                                          & {\color[HTML]{FFFFFF} \textbf{iOS}}                                                             \\
+{\color[HTML]{000000} \textbf{Hersteller}}             & {\color[HTML]{000000} Samsung}                                                                   & {\color[HTML]{000000} Apple}                                                                    \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} \textbf{Modell}}                 & {\color[HTML]{000000} Galaxy S5+}                                                                & {\color[HTML]{000000} iPhone 4}                                                                 \\
+{\color[HTML]{000000} \textbf{Artikelname}}            & {\color[HTML]{000000} G901F}                                                                     & {\color[HTML]{000000} }                                                                         \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} \textbf{Betriebssystem}}         & {\color[HTML]{000000} }                                                                          & {\color[HTML]{000000} }                                                                         \\
+{\color[HTML]{000000} \textbf{System-on-a-Chip (SoC)}} & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Qualcomm Snapdragon 805\\ APQ8084\end{tabular}} & {\color[HTML]{000000} Apple A4}                                                                 \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} \textbf{Prozessor}}              & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Krait 450\\ 2500 MHz\\ 4 Kerne\end{tabular}}    & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}ARM Cortex A8\\ 800 MHz\\ 1 Kern\end{tabular}} \\
+{\color[HTML]{000000} \textbf{Grafikprozessor}}        & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Qualcomm Adreno 420\\ 600 MHz\end{tabular}}     & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}PowerVR SGX 535\\ 200 MHz\end{tabular}}        \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} \textbf{Arbeitsspeicher}}        & {\color[HTML]{000000} 2 GB}                                                                      & {\color[HTML]{000000} 512 MB}                                                                   \\
+{\color[HTML]{000000} \textbf{Displaygröße}}           & {\color[HTML]{000000} 5,1 Zoll}                                                                  & {\color[HTML]{000000} 3,5 Zoll}                                                                 \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} \textbf{Auflösung}}              & {\color[HTML]{000000} 1080 x 1920 Pixel}                                                         & {\color[HTML]{000000} 640 x 960 Pixel}                                                          \\
+{\color[HTML]{000000} \textbf{Akku}}                   & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}2800 mAh\\ Li-Ion\end{tabular}}                 & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}1420 mAh \\ Li-Ion\end{tabular}}              
+\end{tabular}
+}
+\caption{My caption}
+\label{my-label}
+\end{table}
