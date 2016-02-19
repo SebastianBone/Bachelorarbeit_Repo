@@ -145,3 +145,33 @@
 \caption{My caption}
 \label{my-label}
 \end{table}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccc}
+\rowcolor[HTML]{000000} 
+{\color[HTML]{FFFFFF} \textbf{IDE}}            & {\color[HTML]{FFFFFF} \textbf{Betriebssystem}} & {\color[HTML]{FFFFFF} \textbf{Programmiersprache}} & {\color[HTML]{FFFFFF} \textbf{libGDX}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D-X}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\
+{\color[HTML]{000000} \textbf{Eclipse}}        & {\color[HTML]{000000} Windows / OS X}          & {\color[HTML]{000000} Java}                        & {\color[HTML]{000000} X}               & {\color[HTML]{000000} }                   & {\color[HTML]{000000} }                 \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} \textbf{IDEA}}           & {\color[HTML]{000000} Windows / OS X}          & {\color[HTML]{000000} Java}                        & {\color[HTML]{000000} X}               & {\color[HTML]{000000} }                   & {\color[HTML]{000000} }                 \\
+{\color[HTML]{000000} \textbf{Android Studio}} & {\color[HTML]{000000} Windows / OS X}          & {\color[HTML]{000000} Java}                        & {\color[HTML]{000000} X}               & {\color[HTML]{000000} }                   & {\color[HTML]{000000} }                 \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} \textbf{NetBeans}}       & {\color[HTML]{000000} Windows / OS X}          & {\color[HTML]{000000} Java}                        & {\color[HTML]{000000} X}               & {\color[HTML]{000000} }                   & {\color[HTML]{000000} }                 \\
+{\color[HTML]{000000} \textbf{RoboVM Studio}}  & {\color[HTML]{000000} Windows / OS X}          & {\color[HTML]{000000} Java}                        & {\color[HTML]{000000} X}               & {\color[HTML]{000000} }                   & {\color[HTML]{000000} }                 \\
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{000000} \textbf{Xcode}}          & {\color[HTML]{000000} OS X}                    & {\color[HTML]{000000} C++}                         & {\color[HTML]{000000} }                & {\color[HTML]{000000} X}                  & {\color[HTML]{000000} }                 \\
+{\color[HTML]{000000} \textbf{Cocos Code}}     & {\color[HTML]{000000} Windows / OS X}          & {\color[HTML]{000000} JavaScript / Lua}            & {\color[HTML]{000000} }                & {\color[HTML]{000000} X}                  & {\color[HTML]{000000} }                 \\
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Visual Studio}                         & Windows                                        & C\# / C++                                          &                                        & X                                         & X                                       \\
+\textbf{MonoDevelop}                           & Windows / OS X                                 & C\# / UnityScript                                  &                                        &                                           & X                                      
+\end{tabular}
+}
+\caption{My caption}
+\label{my-label}
+\end{table}
