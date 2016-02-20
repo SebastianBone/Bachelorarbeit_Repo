@@ -684,7 +684,22 @@ In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mob
 
 %TODO: Kapitel 5
 \chapter{Plattformübergreifende Spieleentwicklung}
-\section{Anforderungen für vergleichbare Entwicklungstools}
+
+\section{Definition von Anforderungen für vergleichbare Entwicklungstools}
+Das Angebot an Tools für die plattformübergreifende Spieleentwicklung ist vielfältig und es bestehen Unterschiede in der Funktionalität und den Möglichkeiten. Da ein Vergleich aller angebotenen Produkte den Umfang dieser Arbeit drastisch überschreiten würde, werden zuerst grundlegende Anforderungen definiert.
+ 
+\bigskip
+Das Framework soll folgende Anforderungen erfüllen:
+\begin{itemize}
+	\item Mobile Geräte gehören zu den Zielplattformen, wobei mindestens Android und iOS enthalten sein müssen.
+	\item Sowohl 2D, als auch 3D Spiele können entwickelt werden.
+	\item Es steht mindestens eine objektorientierte, statisch typisierte Programmiersprache zur Wahl.
+	\item Es handelt sich um ein aktuelles Framework, mit regelmäßigen Updates und einer aktiven Entwicklergemeinschaft.
+	\item Ein kostenfrei und kommerziell nutzbarer Produkttyp steht zur Auswahl.
+\end{itemize}
+
+Trotz der geforderten Übereinstimmungen ist es wünschenswert, dass für die Codebasis nicht dieselben Programmiersprachen genutzt werden, um den Vergleich abwechslungsreicher und kontrastvoller zu gestalten. Android und iOS sind derzeit die beiden entscheidenden mobilen Plattformen und sollen als Testsysteme für die Beispielapplikation genutzt werden. Zudem ist es wichtig, dass die Entwicklungswerkzeuge den aktuellen Stand der Zielsysteme unterstützen und sich regelmäßig weiterentwickeln. Dazu gehört eine dem Zustand entsprechende Dokumentation, als auch eine lebendige Community. Dies soll für die nähere Zukunft eine gewisse Sicherheit der weiteren Existenz gewährleisten. Statisch typisierte Programmiersprachen bieten bei qualifiziertem Umgang oft bessere Performanceleistungen, im Vergleich zu dynamischen Skriptsprachen. Durch diese Anforderung wird partiell vorausgesetzt, dass der plattformübergreifende Ansatz durch Kompilierung umgesetzt wird. Daraus folgt, dass Frameworks ausgeschlossen werden, die hybride Applikationen erzeugen. Dies sind Apps die auf webbasierten Techniken, wie HTML, CSS und JavaScript basieren. Für Smartphones ist es heutzutage technisch keine besondere Eigenschaft mehr, 3D Spiele zu unterstützen. Die Konzeption der Beispielapplikation soll sich deshalb die Wahl zwischen 2D und 3D vorbehalten können. Ein kostenfreier Bezug sichert eine größere Entwicklercommunity und die Möglichkeit, sich barrierefrei und ohne Zeitdruck mit einem Werkzeug zu arbeiten. Anhand dieser Anforderungen werden passende Werkzeuge ausgewählt.
+
 \section{Gamespezifische Frameworks und Engines}
 \subsection{libGDX}
 \subsection{Cocos2D-X}
@@ -1164,7 +1179,7 @@ Während des Entwicklungsprozesses bestätigte sich ein weiterer wichtiger Fakto
 Für libGDX finden sich viele Beispiele zu verschiedenen Bereichen innerhalb des offiziellen Wiki, die funktional sind und zudem mit Texten zur Erklärung hinterlegt sind. Auch die Suche nach individuelleren Lösungen wird befriedigend gesättigt. Die Entwicklungsgeschwindigkeit ist für jemanden ohne Vorerfahrung von daher durchaus annehmbar.
 
 \bigskip
-In diesem Punkt enttäuschte Cocos2D leider mehr als zuvor angenommen. Die offizielle Dokumentation schwächelt an vielen grundlegenden Stellen bezüglich der Aktualität. Dies muss nicht unbedingt tragisch sein, jedoch sind manche Einträge zu Standardlösungen nicht mehr ganz aktuell und lassen sich nicht mehr wie beschrieben anwenden. Das gleiche gilt für allgemeine Suchanfragen für Lösungen im Internet. Es ist als Anfänger von daher nicht trivial, für manche scheinbar einfache Problemstellungen herauszufinden, was die beste, empfohlene Vorgehensweise sein soll.
+In diesem Punkt enttäuschte Cocos2D-X leider mehr als zuvor angenommen. Die offizielle Dokumentation schwächelte zur Zeit der Entwicklung an vielen grundlegenden Stellen bezüglich der Aktualität. Dies muss nicht unbedingt tragisch sein, jedoch sind manche Einträge zu Standardlösungen nicht mehr ganz aktuell und lassen sich nicht mehr wie beschrieben anwenden. Das gleiche gilt für allgemeine Suchanfragen für Lösungen im Internet. Es ist als Anfänger von daher nicht trivial, für manche scheinbar einfache Problemstellungen herauszufinden, was die beste, empfohlene Vorgehensweise sein soll.
 
 \bigskip
 Im Gegensatz dazu, macht Unity3D es einem leichter. Einen Neuling mag dieser umfangreiche Editor zunächst mehr fordern, hingegen werden für jede Erfahrungsstufe Hilfestellungen geboten. Die Vielfalt an Unterstützung ist immens, fast immer mit praktischen Beispielen vertieft und gut sortiert. Wenn es passiert, dass überholte Methoden verwendet werden, hilft einem die unterstützte IDE oder die Dokumentation sofort weiter. Ein weiterer Vorteil und Zeitersparnis ist das direkte testen des Spiels innerhalb des Unity Editors. Das Testspiel konnte somit ohne Hindernisse umgesetzt werden.
