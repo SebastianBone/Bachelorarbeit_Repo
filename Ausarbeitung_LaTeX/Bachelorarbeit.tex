@@ -682,7 +682,6 @@ Plattformübergreifende Entwicklung für mobile Plattformen ist nicht nur für d
 In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier nicht der Fokus auf Game-spezifischen Applikationen und Entwicklungswerkzeugen. Hier wird in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen eingegangen und deren Resultate klassifiziert. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Im Gegensatz zu der Arbeit von Benjamin Vehse, setzt diese Thesis den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht von daher nicht weiter auf die genannten und vorangegangenen Entwicklungswerkzeuge ein.
 
 
-%TODO: Kapitel 5
 \chapter{Plattformübergreifende Spieleentwicklung}
 
 \section{Definition von Anforderungen für vergleichbare Entwicklungstools}
@@ -701,14 +700,39 @@ Das Framework soll folgende Anforderungen erfüllen:
 Trotz der geforderten Übereinstimmungen ist es wünschenswert, dass für die Codebasis nicht dieselben Programmiersprachen genutzt werden, um den Vergleich abwechslungsreicher und kontrastvoller zu gestalten. Android und iOS sind derzeit die beiden entscheidenden mobilen Plattformen und sollen als Testsysteme für die Beispielapplikation genutzt werden. Zudem ist es wichtig, dass die Entwicklungswerkzeuge den aktuellen Stand der Zielsysteme unterstützen und sich regelmäßig weiterentwickeln. Dazu gehört eine dem Zustand entsprechende Dokumentation, als auch eine lebendige Community. Dies soll für die nähere Zukunft eine gewisse Sicherheit der weiteren Existenz gewährleisten. Statisch typisierte Programmiersprachen bieten bei qualifiziertem Umgang oft bessere Performanceleistungen, im Vergleich zu dynamischen Skriptsprachen. Durch diese Anforderung wird partiell vorausgesetzt, dass der plattformübergreifende Ansatz durch Kompilierung umgesetzt wird. Daraus folgt, dass Frameworks ausgeschlossen werden, die hybride Applikationen erzeugen. Dies sind Apps die auf webbasierten Techniken, wie HTML, CSS und JavaScript basieren. Für Smartphones ist es heutzutage technisch keine besondere Eigenschaft mehr, 3D Spiele zu unterstützen. Die Konzeption der Beispielapplikation soll sich deshalb die Wahl zwischen 2D und 3D vorbehalten können. Ein kostenfreier Bezug sichert eine größere Entwicklercommunity und die Möglichkeit, sich barrierefrei und ohne Zeitdruck mit einem Werkzeug zu arbeiten. Anhand dieser Anforderungen werden passende Werkzeuge ausgewählt.
 
 \section{Gamespezifische Frameworks und Engines}
+Aufgrund der zuvor gestellten Anforderungen, wurde die Auswahl der Vergleichswerkzeuge stark reduziert. Die Wahl fiel auf die beiden Frameworks libGDX und Cocos2D-X und die Engine Unity3D, welche zu den populärsten Tools in der Spieleentwicklung zählen. Diese werden in den folgenden Unterkapiteln vorgestellt und darauf in Kapitel \ref{chapter:Analyse_der_Frameworks} anhand der theoretischen Angaben und Möglichkeiten analysiert.
+
 \subsection{libGDX}
+Das auf Java basierende Entwicklungsframework libGDX ist unter Apache 2.0 lizensiert und Open Source. libGDX bringt eine Menge an grundlegenden Bibliotheken für 2D und 3D Spiele mit. Dabei wird aber nicht jede Eventualität abgedeckt, was aber auch gar nicht gewollt ist. Für spezielle Fälle sollen bei Bedarf dem Projekt entsprechend spezialisierte Module hinzugefügt werden. Dies kann bei der Erstellung eines neuen Projekts oder nachträglich geschehen. Dies soll garantieren, dass nur die Funktionalität integriert ist, die auch wirklich benötigt wird. Dafür arbeitet libGDX stark mit anderen quelloffenen Frameworks und Bibliotheken zusammen. Durch die Programmiersprache Java, ist die Erstellung von Android Anwendungen problemlos möglich. Für die Generierung von iOS Apps werden die Fähigkeiten des Kompilierer RoboVM verwendet. \citep{libGDX_main_features}
+
+
 \subsection{Cocos2D-X}
+Cocos2D-X ist ein Open Source Framework, unter MIT lizensiert. Auch hier bestehen zahlreiche Schnittstellen und Kooperationen mit externen Anbietern, wovon einige bereits schon in die Bibliothek integriert wurden. Entwickler haben für die Codebasis die Wahl zwischen C++, Lua und JavaScript. Cocos2D-X ist der plattformübergreifende Ableger der vielseitigen Cocos Reihe. Trotz der Namensgebung können 3D Anwendungen erstellt werden. Das Programm Cocos Studio unterstützt bei der Gestaltung von Spielszenen, wobei die grafische Oberfläche mit Texturen, Sprites und Menüobjekten angeordnet und daraufhin für die IDE exportiert werden kann, um die Spiellogik zu implementieren. Projekte können aus der Kommandozeile oder einer eigenen Desktopanwendung namens Cocos heraus erstellt werden. Cocos2D-X findet laut eigenen Angaben auch unter größeren Spieleentwicklern Anklang und wird häufig in ostasiatischen Ländern wie China, Japan und Südkorea verwendet. \citep{cocos2d_main_features}
+
+
 \subsection{Unity3D}
+Unity3D ist derzeit die international führende Game-Engine. Das System ist proprietär, besitzt aber eine riesige Menge an Schnittstellen für die Nutzung von Objekten externer Anwendungen. Auch wird hier die größte Anzahl an aktuellen Zielplattformen unterstützt. Unity3D findet Verwendung bei Entwicklern verschiedenster Bereiche, wie Hobby, Indie und sogar bei professionellen Studios. In dem Editor der Engine können Spieleelemente direkt in der Szene hinzugefügt, transformiert, mit Komponenten erweitert und direkt getestet werden. Spiellogik kann durch C\# Klassen, UnityScript oder Boo Skripte in einer IDE umgesetzt werden. Diese können auch einem Gameobjekt als Komponente hinzugefügt werden. Werte von globalen Variablen oder Objekte sind im Editor direkt veränderbar. Zudem ist es möglich, Objekte innerhalb eines Tests zur Laufzeit anzupassen. Mit sogenannten Prefabs hat man die Möglichkeit, Kompositionen von Spielobjekten zur Wieder- und Mehrfachverwendung zu speichern. Der zugehörige Assetstore stellt einen vielfältigen Marktplatz dar, der verschiedenste Spielinhalte oder komplette Projekte anbietet. \citep{unity_public_relations}
+
+
 \subsection{Weitere Frameworks}
-%Eigenheiten, Cross Plattform Ansatz, RoboVM
+Weitere Werkzeuge zur Spieleentwicklung, die den Anforderungen entsprechen, aber nicht für den Vergleich weiter analysiert werden konnten, sollen an dieser Stelle kurz erwähnt werden.
+
+\bigskip
+\textbf{MonoGame}\\
+Eine Open Source Implementierung von Microsofts XNA Framework, das eine Vielzahl an Zielplattformen aus verschiedenen Bereichen unterstützt. Als Programmiersprache wird C\# genutzt. \citep{monogame}
+
+\bigskip
+\textbf{AppGameKit}\\
+Eine Lösung zur Spielentwicklung die zwar offiziell nicht kostenfrei, aber für kleines Geld erhältlich ist. Es kann C++ oder eine eigens kreierte Skriptsprache namens BASIC genutzt werden. \citep{appgamekit}
+
+\bigskip
+\textbf{Lumberyard}\\
+Dies ist eine kostenlose, Open Source Spiele-Engine von Amazon, die zur Zeit der Bearbeitung als Betaversion veröffentlicht wurde und basiert auf der CryEngine. \citep{lumberyard}
+
 
 %TODO: Kapitel 6
 \chapter{Analyse der Frameworks}
+\label{chapter:Analyse_der_Frameworks}
 %Features und Einschränkungen
 
 \section{Zielplattformen}
@@ -1362,6 +1386,10 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 \emph{App42 Cloud API},
 \url{http://api.shephertz.com/}, letzter Zugriff: 01.02.2016
 
+\bibitem[AppGameKit(2015)]{appgamekit}
+\emph{AppGameKit - Platforms \& Features},
+\url{http://www.appgamekit.com/platforms-and-features.php}, letzter Zugriff: 18.02.2016
+
 \bibitem[Apple Developer(2015)a]{swift_about}
 \emph{Swift - Overview},
 \url{https://developer.apple.com/swift/}, letzter Zugriff: 28.12.2015
@@ -1457,6 +1485,10 @@ Junge, Prof. Dr. Jens:
 \emph{Lua - About},
 \url{http://www.lua.org/about.html}, letzter Zugriff: 05.01.2016
 
+\bibitem[Lumberyard(2016)]{lumberyard}
+\emph{Lumberyard Beta - Details},
+\url{https://aws.amazon.com/de/lumberyard/details/}, letzter Zugriff: 18.02.2016
+
 \bibitem[Mac Developer Library(2014)]{objectiveC_about}
 \emph{About Objective-C},
 \url{https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html/}, letzter Zugriff: 28.12.2015
@@ -1483,6 +1515,10 @@ http://creativecommons.org/licenses/by/3.0/
 \bibitem[Microsoft(2015)]{windows10_features}
 \emph{Microsoft - Windows 10 Features},
 \url{https://www.microsoft.com/de-de/windows/features}, letzter Zugriff: 25.11.2015
+
+\bibitem[MonoGame(2016)]{monogame}
+\emph{MonoGame - About},
+\url{http://www.monogame.net/about/}, letzter Zugriff: 18.02.2016
 
 \bibitem[MSDN(2015)]{WP10_Emulator}
 \emph{Microsoft-Emulator für Windows 10 Mobile},
@@ -1627,6 +1663,7 @@ Beispiel von Geo-Wikipedia-App\grqq,
 \bibitem[YoYo Games(2013)]{WP8_requirements}
 \emph{Requirements for Windows Phone development},
 \url{http://help.yoyogames.com/entries/23355146-Requirements-for-Windows-Phone-development}, letzter Zugriff: 28.12.2015
+
 
 \end{thebibliography}
 %----------------------------- EIGENSTÄNDIGKEITSERKLÄRUNG-----------------
