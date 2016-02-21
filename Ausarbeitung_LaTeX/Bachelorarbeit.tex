@@ -26,7 +26,7 @@
 
 \newcommand{\erstpruef}{Prof. Dr. Edmund Weitz}
 \newcommand{\zweitpruef}{Prof. Dr. Andreas Plaß}
-
+%TODO: ABGABEDATUM eintragen!
 \date{vorläufige Fassung vom \today}   % Vorab-Version 
 %\date{\sffamily Hamburg, DD. MM. YYYY}  % Abgabedatum!
 
@@ -49,28 +49,22 @@
 \thispagestyle{empty}
 \selectlanguage{english}
 \section*{\centering\abstractname}
-The market for mobile devices such as smartphones and tablets, regularly improves their technological standards and experience continuous growth for years. 
-Due to high usability, mobile devices enjoy great popularity among all kind of consumers. Through the broad quantity of users with high-performance mobile computers, digital games are earning greater popularity than ever. The category Games dominates the amount of downloads of the application stores in all leading systems. In order to meet the demands of users with different systems in an economical way, developers require efficient tools for game development.
-
-\bigskip
-These special frameworks and engines for cross-platform game development are reviewed due to their specifications at first step and next through the implementation of an example application applied in practice. By theoretical and practical gained knowledge and the conclusive comparison, it can be evaluated that the choice of the right development tool still largely depends on the requirements. However can Unity3D clearly dominate in most disciplines his competitors and stand out as an all-rounder in game development.
+The market of mobile devices such as smartphones and tablets regularly improves its technological standards and experiences a continuous growth for years. Due to high usability, mobile devices enjoy great popularity among all kind of consumers. Through the broad quantity of users with high-performance mobile computers, digital games are earning greater popularity than ever. The category Games dominates the amount of downloads of the application stores in all leading systems. In order to meet the demands of users with different systems in an economical way, developers require efficient tools for game development. At first, these special frameworks and engines for cross-platform game development are reviewed by their specifications, followed by the implementation of an example application. The theoretical and practical gained knowledge and the conclusive comparison reveal, that the choice of the right development tool still largely depends on the requirements. Nevertheless, Unity3D still clearly dominates its competitors in most disciplines and stands out as an all-rounder in game development. 
 
 
 \selectlanguage{ngerman}
 \section*{\centering\abstractname}
 Der Markt für mobile Geräte, wie Smartphones und Tablets, erfährt seit Jahren kontinuierliches Wachstum und übertrifft regelmäßig seine technologischen Standards. Durch die hohe Benutzerfreundlichkeit erfreuen sich mobile Geräte großer Beliebtheit innerhalb aller Verbraucherschichten. Aufgrund der breiten Masse an Nutzern der performanten Alleskönner, gewinnen auch digitale Spiele immer größere Popularität. Die Kategorie Spiele dominiert die Downloadzahlen der Stores für Applikationen in allen führenden Systemen. Um die Nachfrage für Nutzer unterschiedlicher Systeme auf ökonomische Weise decken zu können, bedarf es entwicklerseitig effizienter Werkzeuge zur Spieleentwicklung.
-
-\bigskip
-Diese besonderen Frameworks und Engines für die plattformübergreifende Spieleentwicklung, werden zunächst aufgrund ihrer Spezifikation begutachtet und daraufhin durch die Implementierung einer Beispielapplikation praktisch angewandt. Durch die gewonnenen theoretischen und praktischen Erkenntnisse und den abschließenden Vergleich, kann evaluiert werden, dass die Wahl des passenden Entwicklungstools primär in Abhängigkeit der gestellten Anforderung steht. Jedoch kann Unity3D in den meisten Disziplinen seine Konkurrenz klar dominieren und sich nahezu als Alleskönner der Spieleentwicklung hervorheben.
+Diese besonderen Frameworks und Engines für die plattformübergreifende Spieleentwicklung werden zunächst aufgrund ihrer Spezifikation begutachtet und daraufhin durch die Implementierung einer Beispielapplikation praktisch angewandt. Durch die gewonnenen theoretischen und praktischen Erkenntnisse und den abschließenden Vergleich, kann evaluiert werden, dass die Wahl des passenden Entwicklungstools primär in Abhängigkeit der gestellten Anforderung steht. Jedoch kann Unity3D in den meisten Disziplinen seine Konkurrenz klar dominieren und sich nahezu als Alleskönner der Spieleentwicklung hervorheben.
 
 
 %----------------------------TEXT-----------------------------------------------
 
-%TODO: Kapitel 1
 \chapter{Einleitung}
 
 \section{Motivation}
 %TODO: Definition mobile App und Definition eines Spiels
+%TODO: Quellen innerhalb eines Satzes und NICHT danach! 
 \section{Gliederung}
 Die Thesis \emph{„Analyse und Evaluierung von plattformübergreifenden Spiel-Engines und Frameworks, anhand der Implementierung einer mobilen Beispielapplikation“} ist in zehn Kapitel unterteilt, die das Thema systematisch aufbauen und analysieren.
 
@@ -78,7 +72,7 @@ Die Thesis \emph{„Analyse und Evaluierung von plattformübergreifenden Spiel-E
 Im ersten Kapitel wird die Motivation für diese Arbeit begründet, sowie die Gliederung für die Vorgehensweise beschrieben.
 
 \bigskip
-Das zweite Kapitel analysiert die aktuelle Marktsituation des mobilen Sektors, um die meist genutzten Systeme zu ermitteln. Daraufhin werden durch Statistiken ermittelt, wie das Verhältnis der Downloads an mobilen Spielen gegenüber anderen Kategorien aussieht. Weiterhin werden die Spezifikationen der mobilen Betriebssysteme betrachtet und verglichen. 
+Das zweite Kapitel analysiert die aktuelle Marktsituation des mobilen Sektors, um die meist genutzten Systeme zu ermitteln. Daraufhin wird durch Statistiken ermittelt, wie das Verhältnis der Downloads an mobilen Spielen gegenüber anderen Kategorien aussieht. Weiterhin werden die Spezifikationen der mobilen Betriebssysteme betrachtet und verglichen. 
 
 \bigskip
 Das dritte Kapitel befasst sich mit der nativen Softwareentwicklung von Android, iOS und Windows Phone. Dabei werden die Voraussetzungen, Notwendigkeiten und Möglichkeiten dargelegt.
@@ -93,10 +87,10 @@ Im fünften Kapitel werden plattformübergreifende Werkzeuge zur Spieleentwicklu
 Das sechste Kapitel analysiert die spezifischen Eigenschaften der Spieleframeworks. Dies zeigt die erreichbaren Zielplattformen, die nutzbaren Programmiersprachen, Entwicklungsumgebungen, sowie die Schnittstellen für native Gerätefunktionen und Game Services. Als letztes werden eventuelle Produktvarianten aufgelistet.
 
 \bigskip
-Die Konzeption und darauf folgende Implementierung der Beispiel-Applikation ist Thema des siebten Kapitels. Dafür werden zuerst Anforderungen an ein beispielhaftes, mobiles Spiel definiert. Danach wird die gewählte Spielidee und der Spielfluss erklärt. Weiterhin werden die verwendeten Betriebssysteme, Werkzeuge und Versionen aufgelistet. Danach werden die eingesetzten Game Elemente und ihre Verwendung erklärt.
+Die Konzeption und darauf folgende Implementierung der Beispielapplikation ist Thema des siebten Kapitels. Dafür werden zuerst Anforderungen an ein beispielhaftes, mobiles Spiel definiert. Danach wird die gewählte Spielidee und der Spielfluss erklärt. Weiterhin werden die verwendeten Betriebssysteme, Werkzeuge und Versionen aufgelistet. Danach werden die eingesetzten Game Elemente und ihre Verwendung erklärt.
 
 \bigskip
-Im achten Kapitel werden die erzeugten Applikationen analysiert. Dafür werden als erstes messbare Metriken definiert, um die Anwendungen zu vergleichbar zu machen. Danach werden die genutzten Testgeräte und die vorgenommenen Grundeinstellungen aufgezeigt. Die Messprotokolle mit den dokumentierten Ergebnissen werden im letzten Teil aufgelistet.
+Im achten Kapitel werden die erzeugten Applikationen analysiert. Dafür werden als erstes messbare Metriken definiert, um die Anwendungen vergleichbar zu machen. Danach werden die genutzten Testgeräte und die vorgenommenen Grundeinstellungen aufgezeigt. Die Messprotokolle mit den dokumentierten Ergebnissen werden im letzten Teil aufgelistet.
 
 \bigskip
 Das neunte Kapitel befasst sich mit dem Vergleich der gewonnenen Erkenntnisse aus den Analysen und der Messresultate. Dafür werden verschiedene Szenarien vorgestellt, die Ausgangssituationen zeigen und zu Entscheidungen für ein zweckmäßiges Entwicklungstool führen.
@@ -106,11 +100,10 @@ Das finale Kapitel gibt ein abschließendes Fazit zu der gesamten Arbeit ab.
 
 %Kapitel 2
 \chapter{Mobile Systeme}
-%TODO Einleitung Kapitel
 
 \section{Marktanalyse zur Gewichtung der mobilen Systeme und der Applikationen}
 Welche mobilen Systeme derzeit am meisten gefragt und verbreitet sind, soll in diesem Abschnitt analysiert werden. Dieses Wissen ist nötig, um vor dem Entwicklungsprozess die erfolgreichsten und erfolgversprechendsten Plattformen auszuwählen und miteinzubeziehen.
-Weiterhin soll geklärt werden wie viele Applikationen diese Plattformen in ihren Stores bereitstehen und wie die Kategorien gewichtet sind.
+Weiterhin soll geklärt werden wie viele Applikationen diese Plattformen in ihren Stores bereitstellen und wie die Kategorien gewichtet sind.
 
 \subsection{Marktanteile der mobilen Betriebssysteme}
 \label{subsec:Marktanteile_mobile_Systeme}
@@ -119,61 +112,61 @@ Eine Statistik über die Marktanteile der mobilen Betriebssysteme bei Smartphone
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Bilder/Marktanteile_Betriebssysteme}
-	\caption{Prognose zu den Marktanteilen der Betriebssysteme am Absatz vom Smartphones weltweit in den Jahren 2015 und 2019}\label{graph_mobile_systems}\citep{marktanteile_betriebssysteme}
+	\caption{Prognose zu den Marktanteilen der Betriebssysteme am weltweiten Absatz von Smartphones, in den Jahren 2015 und 2019}\label{graph_mobile_systems}\citep{marktanteile_betriebssysteme}
 \end{figure}
 
-Die Grafik verdeutlicht, dass aktuell Geräte mit Android Systemen den Markt eindeutig dominieren. Darauf folgen Geräte mit iOS und Windows Phone. Laut Prognose wird sich auch in den nächsten Jahren an dieser Hierarchie nichts ändern. Schlussfolgernd sind diese drei Systeme die relevantesten auf dem globalen Markt.
-
-Abbildung \ref{graph_mobile_systems_laender} gibt Aufschluss über die Verteilung der Systeme nach ausgewählten Ländern. Die Daten beziehen sich auf die Verkäufe von August bis Oktober 2015, welche von Kantar im Dezember 2015 veröffentlicht wurden. Bei der Internationalisierung von Applikationen ist es von Vorteil zu wissen, wie stark die Gewichtung der Systeme in den einzelnen Ländern ist.
+Die Grafik verdeutlicht, dass Geräte mit Android Systemen den Markt eindeutig dominieren, direkt gefolgt von iOS und Windows Phone. Laut Prognose wird sich auch in den nächsten Jahren an dieser Hierarchie nichts ändern.
+Abbildung \ref{graph_mobile_systems_laender} gibt weiteren Aufschluss über die Verteilung der Systeme nach ausgewählten Ländern. Die Daten beziehen sich auf die Verkäufe von August bis Oktober 2015, welche von Kantar im Dezember 2015 veröffentlicht wurden. 
+Man kann anhand der Daten also leicht schlussfolgern, dass Android, iOS und Windows Phone derzeit die drei relevantesten Systeme auf dem mobilen Markt sind.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{Bilder/Marktanteile_nach_Laendern}
-	\caption{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015}\label{graph_mobile_systems_laender}\citep{marktanteile_betriebssysteme_laender}
+	\caption{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern, von August bis Oktober 2015}\label{graph_mobile_systems_laender}\citep{marktanteile_betriebssysteme_laender}
 \end{figure}
 
 \subsection{Verfügbare Applikationen und Kategorien der Stores}
 Die Menge an verfügbaren Apps in den jeweiligen Stores ist unterschiedlich groß.
-Eine Analyse über die aktiven Applikationen in den einzelnen Stores und die Gewichtung der Kategorien, soll einen Überblick verschaffen was die jeweiligen Plattformen aktuell zu bieten haben.
-In Abbildung \ref{graph_apps_in_stores} wird die Menge an verfügbaren Apps im Mai 2015 dargestellt. Um eine bessere Übersicht zu gewährleisten, wurden die Werte gerundet. Der Amazon Appstore bietet wie der Google Play Store nur Android Apps an. Da es in diesen beiden Stores zum Teil zu Überschneidungen beim Angebot von Anwendungen kommt, werden diese Werte separat betrachtet und nicht summiert.
+Eine Analyse über die aktiven Applikationen in den einzelnen Stores und die Gewichtung der Kategorien, soll einen Überblick verschaffen, was die jeweiligen Plattformen aktuell zu bieten haben.
+In Abbildung \ref{graph_apps_in_stores} wird die Gesamtquantität an Apps für Mai 2015 dargestellt. Um eine bessere Übersicht zu gewährleisten, wurden die Werte gerundet. Zu erwähnen ist, dass der Amazon Appstore genau wie der Google Play Store, nur Android Apps anbietet. Da es in diesen beiden Stores zu Überschneidungen des Angebots von Anwendungen kommt, werden diese Werte separat betrachtet und nicht summiert.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Bilder/Anzahl_der_Apps}
+	\includegraphics[width=1\textwidth]{Bilder/Anzahl_der_Apps}
 	\caption{Anzahl der angebotenen Apps in den Top App-Stores im Mai 2015}\label{graph_apps_in_stores}\citep{apps_in_stores}
 \end{figure}
 
-Der Wert für den Windows Phone Store ist der Quelle nach von September 2014 und schließt damit noch nicht die Windows 10 Universal Apps mit ein. Diese kamen erst Mitte 2015 dazu und werden in einem getrenntem Windows Store hardwareübergreifend angeboten. Im September 2015 waren rund 80\% der Downloads aus dem Windows Phone Store von Geräten mit der Version 8.1, etwa 15\% von 8.0 Benutzern und etwa 5\% von der aussterbendem Version 7.8.
-Laut Windows wurden im September 2015 etwa 50\% der Applikationen mit Windows 10 aus dem neuen Windows Store heruntergeladen. Diese Statistik gibt jedoch wenig Aufschluss wie groß dabei der Anteil an mobilen Systemen ist. Jedoch dominiert die Kategorie "Games" bei Windows 10 Apps mit fast 45\% die Downloadzahlen.\citep{windows_store_trends_2015}
+Der angegebene Wert für den Windows Phone Store ist laut der Quelle von September 2014 und schließt damit noch nicht die Windows 10 Universal Apps mit ein. Diese erschienen erst Mitte 2015 und werden in einem separatem Windows Store angeboten, die für jedwede Windows 10 Hardware verfügbar sein sollen. Im September 2015 waren rund 80\% der Downloads aus dem Windows Phone Store von Geräten mit der Version 8.1, etwa 15\% von 8.0 Benutzern und etwa 5\% von der alternden Version 7.8.
+Laut Microsoft wurden im September 2015 etwa 50\% der Applikationen mit Windows 10 aus dem neuen Windows Store heruntergeladen. Diese Statistik gibt jedoch wenig Aufschluss wie groß dabei der Anteil an mobilen Systemen ist. Jedoch dominiert die Kategorie Games bei Windows 10 Apps die Downloadzahlen mit fast 45\%.\citep{windows_store_trends_2015}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.6\textwidth]{Bilder/Google_Play_Store_Kategorien}
-	\caption{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014}\label{graph_play_store_kategorien}\citep{play_store_categories}
+	\includegraphics[width=0.8\textwidth]{Bilder/Google_Play_Store_Kategorien}
+	\caption{Aufteilung der weltweit am häufigsten heruntergeladenen Kategorien im Google Play Store, im Februar 2014 (Werte in Prozent)}\label{graph_play_store_kategorien}\citep{play_store_categories}
 \end{figure}
 
-Auch im Google Play Store werden Spiele Apps am häufigsten heruntergeladen und nehmen etwa 41\% des Downloadvolumens ein.(Abb. \ref{graph_play_store_kategorien})
+Auch im Google Play Store werden Spiele Apps am häufigsten heruntergeladen und nehmen etwa 41\% des Downloadvolumens ein(vgl. Abb. \ref{graph_play_store_kategorien}).
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Bilder/Top_Kategorien_App_Store}
-	\caption{Ranking der Top-Kategorien im App Store im Dezember 2015}\label{graph_app_store_kategorien}\citep{app_store_categories}
+	\includegraphics[width=1\textwidth]{Bilder/Top_Kategorien_App_Store}
+	\caption{Downloadzahlen der Top-Kategorien des Apple App Stores, für Dezember 2015 (Werte in Prozent)}\label{graph_app_store_kategorien}\citep{app_store_categories}
 \end{figure}
 
-Die beliebtesten Kategorien des Apple App Store werden ebenfalls deutlich von den Spielen angeführt. Auch wenn der Abstand zur zweithäufigsten Kategorie geringer ist als bei den anderen Stores, macht der Spielebereich trotzdem etwa ein viertel aller Downloads aus.(Abb. \ref{graph_app_store_kategorien})
+Die beliebtesten Kategorien des Apple App Store werden ebenfalls deutlich von den Spielen angeführt. Auch wenn der Abstand zur zweithäufigsten Kategorie geringer ist als bei den anderen Stores, macht der Spielebereich trotzdem etwa ein viertel aller Downloads aus (vgl. Abb. \ref{graph_app_store_kategorien}).
+
 \bigskip
-
-Auch wenn jeder Store seine Applikationen auf eigene Weise kategorisiert, ist dennoch klar zu erkennen das Spiele bei jedem Anbieter das höchste Downloadvolumen ausmachen und sich stetig wachsender Beliebtheit erfreuen. Die Nachfrage nach mobilen Spielen ist demnach plattformübergreifend und berechtigt die Evaluierung von entsprechender Entwicklungssoftware.
+Obwohl jeder digitale Marktplatz seine Applikationen auf eigene Weise kategorisiert, ist dennoch klar zu erkennen, dass Spiele bei jedem Anbieter das höchste Downloadvolumen ausmachen und sich stetig wachsender Beliebtheit erfreuen. Die Nachfrage nach mobilen Spielen ist demnach plattformübergreifend und berechtigt die Evaluierung von entsprechender Entwicklungssoftware.
 
 \section{Betrachtung der mobilen Systeme}
-Anhand der gewonnenen Erkenntnisse aus Kapitel \ref{subsec:Marktanteile_mobile_Systeme}, spielen derzeit die mobilen Systeme von Android, iOS und Windows Phone die größte Rolle auf dem Markt und bei den Benutzern. Folglich werden weitere Systeme nicht weiter betrachtet und der Fokus auf diese drei Systeme gerichtet.
+Anhand der gewonnenen Erkenntnisse aus Kapitel \ref{subsec:Marktanteile_mobile_Systeme}, spielen derzeit die mobilen Systeme von Android, iOS und Windows Phone die größte Rolle bei Verbrauchern. Folglich müssen zu diesem Zeitpunkt weitere Systeme nicht weiter berücksichtigt werden, so dass der Fokus auf diese drei Systeme gerichtet wird.
 
 \subsection{Android}
-Android ist ein Open Source Betriebssystem und gleichzeitig eine Software-Plattform, welches stark im mobilen Bereich vertreten ist und auf dem Linux-Kernel basiert. Zu finden ist diese auf Smartphones, Tablet-Computern, Netbooks und auch auf Smart-TV Geräten. \citep{android_overview} Entwickelt wird Android von der Open Handset Alliance (OHA), welche von Google gegründet wurde. Die OHA wurde im November 2007 gegründet und ist ein Konsortium von mehr als 80 Unternehmen aus den Bereichen Mobilfunknetz, Geräteherstellung, Halbleiterindustrie, Marketing und Software. \citep{alliance_members} Der Grund für die Entwicklung von Android war und ist es, einen offenen Standard für mobile Geräte zu schaffen. \citep{alliance_overview}
+Android ist ein Open Source Betriebssystem und gleichzeitig eine Software-Plattform, welches stark im mobilen Bereich vertreten ist und auf dem Linux-Kernel basiert. Zu finden ist es auf Smartphones, Tablets, Netbooks und auf Smart-TV Geräten. \citep{android_overview} Entwickelt wird Android von der Open Handset Alliance (OHA), welche im November 2007 von Google gegründet wurde. Die OHA ist ein Konsortium von mehr als 80 Unternehmen aus den Bereichen Mobilfunknetz, Geräteherstellung, Halbleiterindustrie, Marketing und Software. \citep{alliance_members} Der Grund für die Entwicklung von Android war und ist es, einen offenen Standard für mobile Geräte zu schaffen. \citep{alliance_overview}
 
-Durch sein offenes System ermöglicht Android Entwicklern große Freiheit bei der Programmierung von Applikationen. Eigene Entwicklungen können auch mit Anwendungen von Google, wie zum Beispiel Google Maps, verknüpft werden.
+Dadurch gewährt Android den Entwicklern große Freiheit bei der Programmierung von Systemeigenschaften und Applikationen. Schnittstellen zu anderen Anwendungen und den Services von Google, wie zum Beispiel Google Maps, können somit problemlos genutzt und mit der eigenen App verknüpft werden.
 
-Auch der Hardwarebereich bietet ein breites Spektrum an Geräten mit kostengünstigen, bis hochpreisigen Angeboten, sowohl mit einfacher bis qualitativ hochwertiger, technischer Ausstattung. Benutzer haben die Möglichkeit, ihre Geräte weitestgehend frei zu gestalten und einzustellen. Für die Installation von neuen Applikationen sind diese auch nicht an einen einzigen Store gebunden und können Apps auch aus verschiedensten Quellen beziehen.
+Auch der Hardwarebereich bietet ein breites Spektrum an Geräten, dessen Angebot von kostengünstig bis hochpreisig reicht, sowohl jede Qualitätsstufe bei der technischen Ausstattung abdeckt. Benutzer haben die Möglichkeit, ihre Geräte weitestgehend frei zu gestalten und zu personalisieren. Für die Beschaffung und Installation von neuen Applikationen sind diese auch nicht an einen offiziellen Store gebunden, sondern können diese aus verschiedensten Quellen beziehen.
 \\
 
 Vorteile:
@@ -191,10 +184,10 @@ Nachteile:
 \end{itemize}
 
 \subsection{iOS}
-iOS ist das mobile Betriebssystem des Unternehmen Apple. Dieses ist ein Derivat von Mac OS X, welches selbst auf Unix basiert. Es wird ausschließlich von Apple entwickelt und ist somit nur auf den eigenen Geräten iPhone, iPad und iPod touch zu finden. Mit der Entwicklung wurde unter externer und interner Geheimhaltung 2005 begonnen und das Resultat der Öffentlichkeit zum ersten Mal Anfang 2007 vorgestellt. Bis zur Version 4.0 wurde iOS mit dem Namen iPhoneOS betitelt. Das Konzept und Design ist schwerpunktmäßig auf hohe Benutzerfreundlichkeit und Funktionalität ausgelegt. 
+iOS ist das mobile Betriebssystem des Unternehmens Apple und ist ein Derivat von Mac OS X, welches wiederum auf Unix basiert. Es wird ausschließlich von Apple entwickelt und ist somit nur auf den eigenen Geräten iPhone, iPad und iPod touch zu finden. Mit der Entwicklung wurde unter externer und interner Geheimhaltung 2005 begonnen und das Resultat der Öffentlichkeit zum ersten Mal Anfang 2007 vorgestellt. Bis zur Version 4.0, wurde iOS mit dem Namen iPhoneOS betitelt. Das Konzept und Design ist schwerpunktmäßig auf hohe Benutzerfreundlichkeit und Funktionalität ausgelegt. 
 
-Durch die geschlossene Struktur des Systems sind eigene Derivate nicht möglich. Benutzer sind für den offiziellen Bezug von Applikationen auf Apples App Store angewiesen.
-Bei der Wahl der Hardware ist man auf die Produktpalette von Apple angewiesen, welche jährlich eine neue Generation veröffentlicht. Die Personalisierung der Geräte ist nur bedingt möglich, da Anbieter von Drittsoftware keinen Zugriff auf das System haben und Anwendungen nur offiziell über den eigenen App Store bezogen werde können. Dies bietet jedoch den Vorteil einer Qualitätssicherung durch Apple, da Applikationen vor der Veröffentlichung einer Prüfung unterzogen werden.
+Durch die proprietäre Struktur des Systems sind eigene Derivate nicht möglich. Benutzer sind für Bezug von Applikationen auf den offiziellen App Store angewiesen.
+Ebenso ist man bei der Hardwarewahl an die Produktpalette von Apple gebunden, welche jährlich eine neue Generation veröffentlicht. Die Personalisierung der Geräte ist dabei nur bedingt möglich, da Anbieter von Drittsoftware keinen Zugriff auf das System haben. Apple bietet jedoch den Vorteil einer Qualitätssicherung, da Applikationen vor der Veröffentlichung einer recht strengen Prüfung unterzogen werden.
 \\
 
 \textbf{Vorteile:}
@@ -214,13 +207,13 @@ Bei der Wahl der Hardware ist man auf die Produktpalette von Apple angewiesen, w
 \end{itemize}
 
 \subsection{Windows Phone}
-Entwickler Microsoft stellt seit dem Jahr 2000 Betriebssysteme für mobile Geräte her. \citep{microsoft_mobile} 
+Microsoft stellt seit dem Jahr 2000 Betriebssysteme für mobile Geräte her. \citep{microsoft_mobile} 
 Seitdem hat sich die Namensgebung von Windows Mobile, über Windows Phone, bis zum aktuellsten Windows 10 Mobile vorgearbeitet. Um im allgemeinen Bezug nicht zwischen den Namen hin und her zu wechseln, wird in dieser Arbeit, wenn mobile Windows Systeme erwähnt werden, der Name Windows Phone (oder WP) benutzt.
 Die frühen Versionen von Windows Phone, also Windows Mobile und Windows Phone 7 stammen noch von dem Windows CE Kernel ab, wobei die aktuellen Versionen, Windows Phone 8 und Windows 10 Mobile, Derivate des Windows NT Kernels sind. Mit dem neuesten Ableger, Windows 10 Mobile, verspricht Microsoft eine homogene Kommunikations- und Anwendungsstruktur zwischen allen Geräten die mit diesem System betrieben werden. Dazu zählen nicht nur Smartphones und Tablets, sondern auch Notebooks, Desktop PCs und die Spielkonsole Xbox One. \citep{windows10_features}
 
-Microsoft verfolgt mit Windows Phone eine ähnlich geschlossene und proprietäre Struktur wie der Konkurrent Apple. Eigene Derivate des Systems sind also nicht offiziell möglich. Auch die Benutzer müssen für neue Anwendungen auf das Angebot des Windows Stores zurückgreifen. Jedoch will Microsoft Entwicklern die Möglichkeit bieten, zukünftige Anwendungen universell verfügbar zu machen, das diese auf allen Windows Systemen nutzbar sind. Microsoft arbeitet außerdem an einer Technik, die bestehende Android und iOS Anwendungen auf die Windows Plattform überführen kann. \citep{wp_with_android_ios}
+Microsoft verfolgt mit Windows Phone eine ähnliche proprietäre Struktur wie der Konkurrent Apple. Eigene Derivate des Systems sind also offiziell nicht möglich. für neue Anwendungen müssen die Benutzer auf das Angebot des Windows Stores zurückgreifen. Jedoch will Microsoft Entwicklern die Möglichkeit bieten, zukünftige Anwendungen universell verfügbar zu machen, so dass diese auf allen Windows Systemen nutzbar sind. Microsoft arbeitet außerdem an einer Technik, die bestehende Projekte von Android und iOS Anwendungen auf die Windows Plattform überführen kann. \citep{wp_with_android_ios}
 
-Die aktuellen Windows Phone Versionen sind durch eine Allianz von Windows und Nokia, hauptsächlich auf mobilen Geräten von Nokia zu finden.\citep{microsoft_nokia}
+Die aktuellen Windows Phone Versionen sind durch eine Allianz von Windows und Nokia, hauptsächlich auf mobilen Geräten von Nokia zu finden. \citep{microsoft_nokia}
 Aber auch andere Hersteller bieten Geräte mit Windows Phone, jedoch bisher in einem überschaubaren Umfang.
 \\
 
@@ -239,37 +232,36 @@ Nachteile:
 \end{itemize}
 \citep{wp_pros_cons}
 
-%OPTIONAL!!!
-%subsection{Weitere Systeme}
 
 \chapter{Native Softwareentwicklung}
-Softwareentwicklung für ein bestimmtes System wird als nativ (lat.: angeboren, natürlich) bezeichnet. Hier sind Dateiformate, Programmiersprachen, Hardware, Entwicklungsumgebungen und Kompilierung genau an die Zielplattform angepasst. Nativer Code ist in der Lage alle individuellen Eigenschaften einer Zielplattform anzusprechen, ohne dabei eine eventuelle Portierbarkeit zu berücksichtigen.
-\citep{native_software}
-Welche Anforderungen iOS, Android und Windows Phone bezüglich nativer Entwicklung voraussetzen, soll in diesem Kapitel näher erläutert werden.
 
 \section{Systemvoraussetzungen}
-Um Applikationen für eine bestimmte Zielplattform zu entwickeln, werden unter Umständen Voraussetzungen an das Betriebssystem des Entwicklers gestellt.
+Entwicklung von Software für ein einzelnes, bestimmtes System wird als nativ (lat.: angeboren, natürlich) bezeichnet. Hier sind Dateiformate, Programmiersprachen, Hardware, Entwicklungsumgebungen und Kompilierung den Anforderungen entsprechend angepasst. Alle individuellen Eigenschaften einer Zielplattform werden unterstützt, ohne das dabei eine eventuelle Portierbarkeit berücksichtigt wird.
+\citep{native_software} Die Entwicklung von Applikationen für eine bestimmte Zielplattform, stellt in der Regel gewisse Mindestvoraussetzungen an das Betriebssystem des Entwicklers.
+
 
 \subsection{Android}
-Die Entwicklung von Android Applikationen ist an kein bestimmtes System gebunden. Somit lassen sich diese unter Windows, OS X und Linux Systemen entwickeln. Dies wird unter anderem durch die Eigenschaften der Programmiersprache Java ermöglicht.
-Windows Benutzer sollten mindestens Windows XP nutzen. Darüber hinaus können alle aktuelleren Versionen genutzt, wobei alle 32-Bit Editionen unterstützt werden. Ab Windows 7 wird 64-Bit ebenfalls unterstützt.
+Die Entwicklung von Android Applikationen ist an kein bestimmtes System gebunden und lassen sich somit unter Windows, OS X und Linux entwickeln. Dies wird unter anderem durch die Eigenschaften der Programmiersprache Java und deren virtueller Maschine ermöglicht.
+Windows Systeme sollten mindestens Windows XP oder aktuellere Versionen nutzen. Wobei alle 32-Bit Editionen unterstützt werden und ab Windows 7 auch 64-Bit.
 Mac Systeme werden ab OS X 10.5.8 von den offiziellen Entwicklungswerkzeugen unterstützt.
-Um auf einem Linux System zu entwickeln, kann man dies beispielsweise unter Ubuntu ab Version 8.04 tun. Bei 64-Bit Versionen ist es notwendig, dass diese fähig ist 32-Bit Anwendungen auszuführen. Da die Auswahl an Linux-Distributionen sehr umfangreich ist, wird an dieser Stelle auf diese nicht weiter eingegangen.
+Um auf einem Linux System zu entwickeln, kann man dies beispielsweise unter Ubuntu ab Version 8.04 tun. Bei 64-Bit Versionen ist es notwendig, dass diese fähig sind 32-Bit Anwendungen auszuführen. Da die Auswahl an Linux-Distributionen sehr umfangreich und komplex ist, wird in dieser Arbeit auf Linux nicht weiter eingegangen.
 \citep{android_sdk_requirements}
 
+
 \subsection{iOS}
-Für den reinen Schreibvorgang von iOS Anwendungen ist prinzipiell jedes System geeignet. Jedoch ist es offiziell nur auf einem Apple OS X System möglich, die geschriebene Software zu kompilieren und auf der Zielhardware zu testen. Für Entwickler die kein OS X System ihr Eigen nennen oder keinen Zugang zu solcher haben, besteht die Möglichkeit einen Cloudservice zu nutzen. \textit{MacinCloud} bietet eine cloudbasierte Vermietung von OS X Systemen, inklusive der benötigten Entwicklungssoftware. \citep{macincloud}
+Für den reinen Programmiervorgang von iOS Anwendungen ist prinzipiell jedes System geeignet. Jedoch ist es offiziell nur auf einem Apple OS X System möglich, die geschriebene Software zu kompilieren und auf ein iOS Gerät aufzuspielen. Für Entwickler die kein OS X System ihr Eigen nennen oder keinen Zugang zu solchem haben, besteht die Möglichkeit einen Cloudservice zu nutzen. MacinCloud bietet eine cloudbasierte Vermietung von OS X Systemen, inklusive der benötigten Entwicklungssoftware. \citep{macincloud}
+
 
 \subsection{Windows Phone}
-Ähnlich wie bei iOS, wird für die Kompilierung von Windows Phone Applikationen ein passendes Windows System vorausgesetzt. Jedoch sind manche Voraussetzungen leider etwas undurchsichtig. Das bedeutet, dass für die Entwicklung einer Windows Phone 8 App mindestens ein Windows 8 Betriebssystem benötigt wird. Außerdem wird das SDK 8.0 nur von der 64-bit Version unterstützt. Weiter wird beispielsweise für die Nutzung des Simulators eine Windows 8 Pro Version und die Virtualisierungstechnologie Hyper-V benötigt. Das Windows 10 SDK erwartet minimal Windows 7. Der Simulator benötigt die gleichen Mindestanforderungen wie bei Windows 8. \citep{WP8_requirements, WP10_SDK, WP10_Emulator} 
+Ähnlich wie bei iOS, wird für die Kompilierung von Windows Phone Applikationen ein Windows Betriebssystem vorausgesetzt. Für die Entwicklung einer Windows Phone 8 App wird mindestens ein Windows 8 Betriebssystem benötigt. Das SDK 8.0 wird aber nur von der 64-bit Version unterstützt. Weiter wird beispielsweise für die Nutzung des Simulators eine Windows 8 Pro Version und die Virtualisierungstechnologie Hyper-V benötigt. Das Windows 10 SDK erwartet minimal Windows 7. Der Simulator benötigt die gleichen Mindestanforderungen wie bei Windows 8. \citep{WP8_requirements, WP10_SDK, WP10_Emulator} 
+
 
 \section{SDKs und Versionen}
-Software Development Kits, kurz SDKs, liefern dem Entwickler die Werkzeuge, Anwendungen und bestenfalls eine aktuelle Dokumentation, um für eine bestimmte Zielplattform zu entwickeln. Auch sind sie notwendig, um geschriebenen Code zu interpretieren und kompilieren. Um die aktuellste Version eines mobilen Systems zu unterstützen, muss das SDK auf ebenso aktuellen Stand sein.
-\clearpage 
+Software Development Kits, kurz SDKs, liefern dem Entwickler die Softwarebibliotheken, Anwendungen und bestenfalls eine aktuelle Dokumentation, um für eine bestimmte Zielplattform entwickeln zu können. Auch sind sie notwendig, um den geschriebenen Code je nach Art zu interpretieren oder zu kompilieren. Um die aktuellste Version eines mobilen Systems zu unterstützen, muss das SDK auf ebenso aktuellen Stand sein.
 
 \subsection{Android Versionen}
-Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben nach alphabetisch aufsteigend. (Abb. \ref{tab_android_vers})
-Das aktuelle SDK ist frei im Netz verfügbar. Dieses kann einzeln geladen werden oder direkt in Verbindung mit Android Studio.
+Android Versionen sind nach süßen Leckereien benannt und dem Anfangsbuchstaben nach alphabetisch aufsteigend, wie in Tabelle \ref{tab_android_vers} zu sehen ist.
+Das aktuelle SDK kann direkt in Verbindung mit Android Studio oder auch einzeln bezogen werden.
 
 \begin{table}[htbp]
 	\centering
@@ -279,7 +271,7 @@ Das aktuelle SDK ist frei im Netz verfügbar. Dieses kann einzeln geladen werden
 			\rowcolor[HTML]{000000} 
 			{\color[HTML]{FFFFFF} \textbf{Codename}} & {\color[HTML]{FFFFFF} \textbf{Version}} & {\color[HTML]{FFFFFF} \textbf{API Level}} & {\color[HTML]{FFFFFF} \textbf{Erscheinungsdatum}} \\ \hline
 			Marshmallow                              & 6                                       & 23                                        & 5. Oktober 2015                                   \\ \hline
-			Lollipop                                 & 5.1.x                                   & 22                                        & 9. März 2015                                      \\ \hline
+			Lollipop                                 & 5.1                                   & 22                                        & 9. März 2015                                      \\ \hline
 			Lollipop                                 & 5.0.x                                   & 21                                        & 3. November 2014 - 19. Dezember 2014              \\ \hline
 			Wear                                     & 4.4W                                    & 20                                        & Juni 2014                                         \\ \hline
 			KitKat                                   & 4.4.x                                   & 19                                        & 31. Oktober 2013 - 19. Juni 2014                  \\ \hline
@@ -288,13 +280,13 @@ Das aktuelle SDK ist frei im Netz verfügbar. Dieses kann einzeln geladen werden
 			Jelly Bean                               & 4.1.x                                   & 16                                        & 27. Juni 2012 - 10. Oktober 2012                  \\ \hline
 			Ice Cream Sandwich                       & 4.0.3 - 4.0.4                           & 15, NDK 8                                 & 16. Dezember 2011 - 4. Februar 2012               \\ \hline
 			Ice Cream Sandwich                       & 4.0 - 4.0.2                             & 14, NDK 7                                 & 19. Oktober 2011 - 15. Dezember 2011              \\ \hline
-			Honeycomb                                & 3.2.x                                   & 13                                        & 16. Juli 2011                                     \\ \hline
+			Honeycomb                                & 3.2                                   & 13                                        & 16. Juli 2011                                     \\ \hline
 			Honeycomb                                & 3.1                                     & 12, NDK 6                                 & 10. Mai 2011                                      \\ \hline
 			Honeycomb                                & 3                                       & 11                                        & 23. Februar 2011                                  \\ \hline
 			Gingerbread                              & 2.3.3 - 2.3.7                           & 10                                        & 23. Februar 2011 - 20. September 2011             \\ \hline
 			Gingerbread                              & 2.3 - 2.3.2                             & 9, NDK 5                                  & 6. Dezember 2010 - Januar 2011                    \\ \hline
 			Froyo                                    & 2.2 - 2.2.2                             & 8, NDK 4                                  & 20. Mai 2010 - Januar 2011                        \\ \hline
-			Eclair                                   & 2,1                                     & 7, NDK 3                                  & 12. Dezember 2010                                 \\ \hline
+			Eclair                                   & 2.1                                     & 7, NDK 3                                  & 12. Dezember 2010                                 \\ \hline
 			Eclair                                   & 2.0.1                                   & 6                                         & 3. Dezember 2009                                  \\ \hline
 			Eclair                                   & 2                                       & 5                                         & 26. Oktober 2009                                  \\ \hline
 			Donut                                    & 1.6                                     & 4, NDK 2                                  & 15. September 2009                                \\ \hline
@@ -308,7 +300,7 @@ Das aktuelle SDK ist frei im Netz verfügbar. Dieses kann einzeln geladen werden
 \clearpage
 
 \subsection{iOS Versionen}
-Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. Verbrauchern sind diese meist unbekannt, da diese überwiegend intern genutzt werden. (Abb. \ref{tab_ios_vers})
+Apple nutzt für seine Produkte Codenamen, die keinem bestimmten Muster folgen. Verbrauchern sind diese meist unbekannt, da sie überwiegend intern genutzt werden. In Tabelle \ref{tab_ios_vers} sind die derzeitigen Versionen aufgelistet.
 Das SDK wird offiziell ausschließlich in Verbindung mit XCode bezogen.
  
 \begin{table}[htbp]
@@ -393,29 +385,28 @@ Tabelle \ref{tab_WP_versions} berücksichtigt alle Versionen ab Windows Phone 7.
 In der nativen Entwicklung werden für jede Zielplattform bestimmte Programmiersprachen unterstützt. 
 
 \subsection{Android}
-Android Applikationen werden in Java entwickelt. Demnach ist es notwendig, zusätzlich eine aktuelle Java Version (JDK) zu installieren. Diese wird von dem Unternehmen Oracle, mit der aktuellen Version 8  vertrieben. In Kapitel \ref{subsec:libGDX} wird nochmal näher auf diese Programmiersprache eingegangen. 
+Android Applikationen werden grundsätzlich in Java entwickelt. Demnach ist es notwendig, zusätzlich eine aktuelle Java Version (JDK) zu installieren. Diese wird von dem Unternehmen Oracle in der aktuellen Version 8  vertrieben. In Kapitel \ref{subsec:libGDX} wird noch etwas detaillierter auf Java eingegangen. 
 \citep{java_jdk}
 
 \subsection{iOS}
-Die primäre Programmiersprache für iOS und OS X ist derzeit die objektorientierte Erweiterung von C, Objective-C. Diese befindet sich aktuell in der Version 2.0. Objective-C wurde weiterhin von der Sprache Smalltalk beeinflusst und leitet zum Beispiel die Syntax dessen Objekteigenschaften ab. Trotzdem besteht weiterhin die Nähe zur C Syntax, in Bezug auf nicht-objektorientierter Operationen. \citep{objectiveC_about}
+Die derzeitige, primäre Programmiersprache für iOS und OS X ist die objektorientierte Objective-C, die eine Erweiterung von C ist und Einflüsse von Smalltalk aufweist. Von Smalltalk werden beispielsweise die Syntax dessen Objekteigenschaften abgeleitet. Trotzdem besteht bei nicht-objektorientierten Operationen weiterhin die Nähe zur C Syntax. Objective-C befindet sich aktuell in der Version 2.0. \citep{objectiveC_about}
 
-
-Alternativ kann die relativ junge Sprache Swift eingesetzt werden. Diese ist ebenfalls objektorientiert und in der aktuellen Version 2.0. Im Dezember 2015 wurde der Quellcode als Open Source zur Verfügung gestellt. Swift soll Objective-C allerdings nicht ersetzen, sondern eine weitere Möglichkeit darstellen. Die beiden Sprachen sind miteinander kompatibel, so dass es möglich beide in demselben Projekt zu nutzen.
+Alternativ kann die relativ junge Sprache Swift verwendet werden. Diese ist ebenfalls objektorientiert und in der aktuellen Version 2.0. Im Dezember 2015 wurde der Quellcode Open Source zur Verfügung gestellt. Swift soll Objective-C allerdings nicht ersetzen, sondern eine zusätzliche Möglichkeit darstellen. Die beiden Sprachen sind miteinander kompatibel, so dass es möglich ist beide innerhalb eines Projekts zu nutzen.
 \citep{swift_about}
 
 \subsection{Windows Phone}
-Für die Benutzeroberfläche wird hauptsächlich die Sprache XAML (Extensible Application Markup Language) genutzt. Um die Logik zu erstellen, hat der Entwickler die Freiheit C\#, Visual Basic, JavaScript oder C++ nutzen.
+Für die Programmierung der Logik, hat man als Entwickler die Freiheit C\#, Visual Basic, JavaScript oder C++ zu nutzen. Um die Benutzeroberflächen zu gestalten, wird hauptsächlich die Sprache XAML (Extensible Application Markup Language) eingesetzt. 
+
 
 \section{Entwicklungsumgebungen}
-Für die Entwicklung werden jeweilig verschiedene IDEs (Integrated Development Environment) seitens der Betreiber unterstützt und empfohlen. Eine Besonderheit bei IDEs für mobile Systeme ist die Unterstützung eines Simulators. Dieser simuliert ein spezifiziertes Gerät auf virtuelle Weise, um Entwicklungen direkt testen zu können.
+Für die Entwicklung werden seitens der Betreiber jeweils verschiedene IDEs (Integrated Development Environment)  unterstützt und empfohlen. Eine Besonderheit bei IDEs für mobile Systeme ist die Unterstützung eines Simulators. Dieser virtualisiert ein spezifiziertes Gerät, um die Anwendung direkt testen zu können.
 
 \subsection{Android}
-Android empfiehlt das eigene Android Studio, welches die offizielle IDE für Android Entwicklung darstellt und zusätzlich das aktuelle SDK mitliefert. Android Studio basiert auf der IDE IntelliJ IDEA und ist frei verfügbar.\citep{android_studio} Alternativer Vorgänger ist die quelloffene IDE Eclipse.
+Android empfiehlt die eigene, offizielle IDE Android Studio. Diese ist kostenfrei erhältlich und basiert auf der IDE von JetBrains namens IntelliJ IDEA. \citep{android_studio} Als alternative gilt der Open Source Vorgänger Eclipse.
 
 \subsection{iOS}
-Xcode ist die IDE von Apple, ohne die keinerlei Kompilierung von iOS Projekten möglich ist.
-Diese befindet sich derzeit in der stabilen Version 7 und liefert das benötigte SDK, so wie einen umfangreichen Simulator mit allen mobilen Apple Geräten. Xcode ist verpflichtend, wenn die geschriebene Anwendung auf einer realen Hardware getestet werden soll. Seit dem 3. Quartal 2015 ist dafür auch keine kostenpflichtige Entwicklerlizenz nötig, sondern fällt nur noch bei einem Release im App Store an. 
-\citep{t3n_xcode7}
+Xcode ist die IDE von Apple, ohne die eine Kompilierung von iOS Projekten nicht möglich ist.
+Diese befindet sich derzeit in der stabilen Version 7 und liefert das benötigte SDK, so wie einen umfangreichen Simulator der alle mobilen Apple Geräte virtualisieren kann. Xcode ist ebenfalls verpflichtend, wenn die kompilierte Anwendung auf ein Mobilgerät installiert und getestet werden soll. Seit dem 3. Quartal 2015 ist dafür auch keine kostenpflichtige Entwicklerlizenz mehr nötig, sondern nur noch bei einer Veröffentlichung im App Store. \citep{t3n_xcode7}
 Eine alternative bietet JetBrains IDE Appcode, welches eine kompatible, aber kostenpflichtige Erweiterung zu Xcode ist.
 \citep{appcode}
 
@@ -425,8 +416,9 @@ Microsoft setzt für die Kompilierung und Realisierung für WP Projekte eine Vis
 
 
 \section{Native Spieleentwicklung}
-Bei der nativen Entwicklung, basieren die mobilen Applikationen auf den jeweiligen SDKs. Mobile Spiele können auf nativem Wege realisiert werden. Die Verwendung der mitgelieferten Grafik- und Animationsfunktionen für die Visualisierung und selbstdefinierte Logik durch eigenen Code, können schon ausreichen, um einfache 2D Spiele zu kreieren. Auch mit der freien Grafikbibliothek OpenGL, könnten Spielinhalte in 2D oder sogar 3D dargestellt werden. Allerdings ist OpenGL nicht für Windows Phone verfügbar, denn hier wird das hauseigene Pendant, DirectX verwendet. Um die Spieleentwicklung leichter zu machen, können spezialisierte Frameworks und Editoren genutzt werden, die eigens für die Entwicklung von Spielen konzipiert wurden und auf die gewünschte Plattform abgestimmt sind. In den folgenden Unterkapiteln werden beispielhafte Werkzeuge für die jeweiligen Plattformen aufgelistet. Bei der Recherche nach spezialisierten Frameworks, war ein gewisser Trend zu verzeichnen. Die Gesamtmenge an Projekten ist groß, wovon aber der Großteil nicht mehr weiterentwickelt wird und die Zahl derer die sich behaupten konnten ist verhältnismäßig gering.
+Bei der nativen Entwicklung, basieren die mobilen Applikationen auf den jeweiligen SDKs. Auch mobile Spiele können auf nativem Wege realisiert werden. Die Verwendung der mitgelieferten Grafikfunktionen für die Visualisierung und selbst definierte Spielweltlogik, können schon eine Basis für einfache 2D Spiele verkörpern. Durch die freie Grafikbibliothek OpenGL können Spielinhalte in 2D oder sogar 3D dargestellt werden. Allerdings ist OpenGL nicht für Windows Phone verfügbar, denn hier wird das eigene Pendant DirectX verwendet. Um die Spieleentwicklung zu erleichtern, können spezialisierte Frameworks und Engines genutzt werden, die eigens für die Entwicklung von Spielen konzipiert wurden und auf die gewünschte Plattform abgestimmt sind. In den folgenden Unterkapiteln werden beispielhafte Werkzeuge für die jeweiligen Plattformen aufgelistet.
  
+%MARKER: Rechtschreib-Korrektur
 \subsection{Android}
 Für Android existieren einige Frameworks, wovon jedoch viele nicht immer auf dem neuesten Stand sind. Das ist häufig damit verbunden, dass diese aus privatem Interesse entstanden sind und ein unkommerzielles, kostenloses Vertriebsmodell betreiben. Daher sind regelmäßige Aktualisierungen oft nicht gewährleistet und manche Arbeiten wurden auch ganz eingestellt.
 
@@ -1003,7 +995,7 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 
 
 %TODO: Kapitel 13
-\chapter{Konzeption und Implementierung einer Beispiel-Applikation}
+\chapter{Konzeption und Implementierung einer Beispielapplikation}
 Um die Möglichkeiten der gewählten Entwicklungstools tiefgehender analysieren zu können, sollten die theoretischen Informationen um praktische Erkenntnisse ergänzt werden. Demnach wird als Teil dieser Arbeit ein Beispiel-Spiel konzipiert, mit den jeweiligen Tools umgesetzt und daraus Applikationen für verschiedene Plattformen erzeugt. Die Anwendung soll dann Anhand von vereinbarten Metriken bemessen und analysiert werden. Die gewonnenen Resultate werden daraufhin in Zusammenhang mit den theoretischen Informationen komplementiert und die Entwicklungstools als Ganzes verglichen. 
 
 \section{Definition von Anforderungen}
@@ -1214,8 +1206,7 @@ Im Gegensatz dazu, macht Unity3D es einem leichter. Einen Neuling mag dieser umf
 
 %TODO: Auf Analyse der Frameworks eingehen
 \section{Definition von Metriken}
-Die erstellten Applikationen sollen näher analysiert werden. Um dies möglichst objektiv und repräsentativ durchzuführen, müssen vergleichbare Metriken definiert werden.
-Gleichfalls muss für jede Metrik der Ablauf der Messung, sowie der Ausgangszustand der Testgeräte normiert werden.
+Die erstellten Applikationen sollen näher analysiert werden. Um dies möglichst objektiv und repräsentativ durchzuführen, müssen vergleichbare Metriken definiert werden. Diese Metriken werden anschließend für das Messprotokoll in Kapitel \ref{sec:messprotokol} verwendet. Gleichfalls muss für jede Metrik der Ablauf der Messung, sowie der Ausgangszustand der Testgeräte normiert werden.
 
 \bigskip
 \textbf{Gesamtgröße einer Basisapplikation} \\
@@ -1249,12 +1240,16 @@ Die Framerate wurde in das Spiel sichtbar in allen Szenen implementiert und inne
 Der Akkuverbrauch wird über einen Zeitraum von 15 Minuten gemessen. Ausgangswert ist ein frisch geladenes Testgerät mit 100\% Ladezustand. Das Spiel wird über den Messzeitraum durchgehend genutzt. Dokumentiert wird anschließend der prozentuale Akkuverbrauch. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
 
 \bigskip
-\textbf{Geschriebene Zeilen Code} \\
-Die Menge der Codezeilen ist nur bedingt eine vergleichbare Metrik, da diese in Abhängigkeit des Programmierstils und der Erfahrung des Entwicklers, der Programmiersprache, der Architektur, des Einsatzes von Kommentaren und der Verwendung von leeren Zeilen abhängt stark beeinflusst wird. Jedoch soll hierdurch ein grober Eindruck über den benötigten Code vermittelt und dokumentiert werden. Für die Zählung werden Kommentare und leere Zeilen ignoriert. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
+\textbf{Mindestanforderung des Systems} \\
+Dies gibt die minimalen Anforderungen der mobilen Betriebssystemversion an. Die Unterstützung von älteren Versionen wird hierbei als vorteilhaft beurteilt, weil dadurch eine größere Zielgruppe erreicht werden kann.
+
+\bigskip
+\textbf{Codezeilen} \\
+Die Menge der Codezeilen ist nur bedingt eine vergleichbare Metrik, da diese in Abhängigkeit des Programmierstils und der Erfahrung des Entwicklers, der Programmiersprache, der Architektur, des Einsatzes von Kommentaren und der Verwendung von leeren Zeilen abhängt.  Jedoch soll hierdurch ein grober Eindruck über den benötigten Code vermittelt und dokumentiert werden. Für die Zählung werden Kommentare und leere Zeilen ignoriert. Ein niedriger Wert gilt als positiv, ein hoher als negativ.
 
 
 \section{Testgeräte und Voreinstellungen}
-Die Applikationen werden auf Smartphones mit Android und iOS System getestet. Auf eine Analyse des Spiels auf einem Windows Phone wird aus mehreren Gründen verzichtet. libGDX unterstützt die mobilen Windows Systeme derzeit nicht, die aktuellen Betriebssysteme sind nicht kompatibel zueinander, Windows Phone 8 wird nach und nach von Windows 10 abgelöst, weiterhin ist der Marktanteil laut der Analyse relativ gering und von daher vernachlässigbar. Die relevanten Daten der genutzten Testgeräte sind in Tabelle \ref{testgeraete} aufgelistet. Um die zu dokumentierenden Messungen möglichst unverfälscht aufnehmen zu können, werden die Geräte vor der Durchführung der Messung einheitlich konfiguriert. Dies ist notwendig, um Daten wie Akkuverbrauch, Arbeitsspeicher oder Framerate möglichst wenig zu beeinflussen und die Ergebnisse reproduzierbarer zu machen.
+Die Applikationen werden auf Smartphones mit Android und iOS System getestet. Auf eine Analyse des Spiels auf einem Windows Phone wird aus mehreren Gründen verzichtet. libGDX unterstützt die mobilen Windows Systeme derzeit nicht, die aktuellen Betriebssysteme sind nicht kompatibel zueinander, Windows Phone 8 wird nach und nach von Windows 10 abgelöst, weiterhin ist der Marktanteil laut der Analyse relativ gering und von daher vernachlässigbar. Die relevanten Daten der genutzten Testgeräte sind in Tabelle \ref{testgeraete} aufgelistet. Falls zur Reproduktion ein anderes Testgerät verwendet werden soll, kann in der Tabellen \ref{tab_android_vers} für Android und Tabelle  \ref{tab_ios_vers} für iOS die Version des Betriebssystem für die Mindestanforderung verglichen werden. Um die zu dokumentierenden Messungen möglichst unverfälscht aufnehmen zu können, werden die Geräte vor der Durchführung der Messung einheitlich konfiguriert. Dies ist notwendig, um Daten wie Akkuverbrauch, Arbeitsspeicher oder Framerate möglichst wenig zu beeinflussen und die Ergebnisse reproduzierbarer zu machen. 
 
 \begin{itemize}
 	\item Alle Verbindungsoptionen (WLAN, mobiler Datenverkehr, Bluetooth, GPS, …etc.) werden deaktiviert.
@@ -1297,6 +1292,7 @@ Die Applikationen werden auf Smartphones mit Android und iOS System getestet. Au
 Bei den eigesetzten Smartphones handelt es sich um gebrauchte Geräte, was bedeutet, dass manche Leistungsmerkmale zu gleichen Modellen abweichen können. Da es bei Smartphones mit Android und iOS eine sehr große Vielfalt an verschiedensten Geräten, Versionen und Ausstattungen gibt, kann die fehlerfreie Funktion des Spiels nur theoretisch garantiert werden. Um die Darstellung in den unterschiedlichen Auflösungen zu testen, wurden zusätzlich die Simulatoren von Xcode und Android Studio zu Hilfe gezogen.
 
 \section{Messprotokoll}
+\label{sec:messprotokol}
 In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Metriken, an den angegebenen Testgeräten aufgelistet. In Tabelle \ref{protokoll_android} sind die Ergebnisse der Android Version und in \ref{protokoll_ios} die der iOS Version zu sehen.
 
 %TODO: Kleines Nachwort zu den Ergebnissen. 
@@ -1318,8 +1314,8 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent / Minute} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Mindestanforderung des Systems}}                                                                             & \multicolumn{1}{c|}{Versionsnummer}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Codezeilen}}                                                                             & \multicolumn{1}{c|}{Zeilen}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 		\end{tabular}
@@ -1344,8 +1340,8 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent / Minute} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Geschriebene Zeilen Code}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Mindestanforderung des Systems}}                                                                             & \multicolumn{1}{c|}{Versionsnummer}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Codezeilen}}                                                                             & \multicolumn{1}{c|}{Zeilen}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
 		\end{tabular}
@@ -1375,293 +1371,294 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 \begin{thebibliography}{}
 
 \bibitem[Android Develop Tools(2015)]{android_studio}
-\emph{Android Studio Overview},
+[Android Develop Tools(2015)] Android Develop Tools(2015): \emph{Android Studio Overview},
 \url{http://developer.android.com/tools/studio/index.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Android Source - Codenames, Tags, and Build Numbers(2015)]{android_codenames}
+[Android Source - Codenames, Tags, and Build Numbers(2015)] Android Source - Codenames, Tags, and Build Numbers(2015):
 \emph{Codenames, Tags, and Build Numbers in the history of Android},
-\url{https://source.android.com/source/build-numbers.html}, etzter Zugriff: 24.11.2015
+\url{https://source.android.com/source/build-numbers.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[App42(2016)]{app42}
-\emph{App42 Cloud API},
+[App42(2016)] App42(2016): \emph{App42 Cloud API},
 \url{http://api.shephertz.com/}, letzter Zugriff: 01.02.2016
 
 \bibitem[AppGameKit(2015)]{appgamekit}
-\emph{AppGameKit - Platforms \& Features},
+[AppGameKit(2015)] AppGameKit(2015): \emph{AppGameKit - Platforms \& Features},
 \url{http://www.appgamekit.com/platforms-and-features.php}, letzter Zugriff: 18.02.2016
 
 \bibitem[Apple Developer(2015)a]{swift_about}
-\emph{Swift - Overview},
+[Apple Developer(2015)a] Apple Developer(2015)a: \emph{Swift - Overview},
 \url{https://developer.apple.com/swift/}, letzter Zugriff: 28.12.2015
 
 \bibitem[Apple Developer(2016)b]{apple_developer_program}
-\emph{How the Program Works},
+[Apple Developer(2016)b] Apple Developer(2016)b: \emph{How the Program Works},
 \url{https://developer.apple.com/programs/how-it-works/}, letzter Zugriff: 15.02.2016
 
 \bibitem[Bernardo Zamora(2015)]{windows_store_trends_2015}
-\emph{Blogs.Windows - Windows Store Trends - September 2015},
+[Bernardo Zamora(2015)] Bernardo Zamora(2015): \emph{Blogs.Windows - Windows Store Trends - September 2015},
 \url{https://blogs.windows.com/buildingapps/2015/10/12/windows-store-trends-september-2015/}, letzter Zugriff: 15.12.2015
 
 \bibitem[Boo(2015)]{boo_about}
-\emph{Boo - A scarily powerful language for .NET},
+[Boo(2015)] Boo(2015): \emph{Boo - A scarily powerful language for .NET},
 \url{http://boo-language.github.io/}, letzter Zugriff: 05.01.2016
 
 \bibitem[Brown(2015)]{learning_javascript}
-Brown, Ethan (Hrsg.): 
+[Brown(2015)] Brown, Ethan (Hrsg.): 
 \emph{Learning Javascript}, O'Reilly 2015
 
 \bibitem[Cocos2D-X(2015)a]{cocos2d_main_features}
-\emph{Cocos2D-X - Developers Manual},
+[Cocos2D-X(2015)a] Cocos2D-X(2015)a: \emph{Cocos2D-X - Developers Manual},
 \url{http://www.cocos2d-x.org/wiki/Cocos2d-x}, letzter Zugriff: 29.12.2015
 
 \bibitem[Cocos2D-X(2015)b]{cocos2d_relationships}
-\emph{Cocos2D-X - Relationships in Cocos2D Family},
+[Cocos2D-X(2015)b] Cocos2D-X(2015)b: \emph{Cocos2D-X - Relationships in Cocos2D Family},
 \url{http://www.cocos2d-x.org/wiki/Relationships_in_Cocos2d_Family}, letzter Zugriff: 05.01.2016
 
 \bibitem[Cocos2D-X(2015)c]{cocos2d_docs}
-\emph{Cocos2D-X - Dokumentation},
+[Cocos2D-X(2015)c] Cocos2D-X(2015)c: \emph{Cocos2D-X - Dokumentation},
 \url{http://www.cocos2d-x.org/reference/native-cpp/V3.9/index.html}, letzter Zugriff: 10.01.2016
 
 \bibitem[Distimo(2014)]{play_store_categories}
-\emph{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014. In Statista - Das Statistik-Portal.},
+[Distimo(2014)] Distimo(2014): \emph{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/321703/umfrage/beliebteste-app-kategorien-im-google-play-store-weltweit/}, letzter Zugriff: 14.12.2015
 
 \bibitem[El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M.(2015)]{cross_plattform_approaches} 
-El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M. :
+[El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M.(2015)] El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M. :
 \glqq Taxonomy of Cross-Platform Mobile Applications Development Approaches\grqq, 
 \emph{Ain Shams Engineering Journal}, 2015
 
 \bibitem[Fran Berkman(2012)]{microsoft_mobile}
-\emph{Microsoft Mobile: From Pocket PC to Windows Phone 8},
+[Fran Berkman(2012)] Fran Berkman(2012): \emph{Microsoft Mobile: From Pocket PC to Windows Phone 8},
 \url{http://mashable.com/2012/10/29/microsoft-mobile-history/#DYxZxZ7wTuqD}, letzter Zugriff: 25.11.2015
 
 \bibitem[Golem(2015)]{wp_with_android_ios}
-\emph{Microsoft demonstriert Android- und iOS-Apps unter Windows},
+[Golem(2015)] Golem(2015): \emph{Microsoft demonstriert Android- und iOS-Apps unter Windows},
 \url{http://www.golem.de/news/windows-10-microsoft-demonstriert-android-und-ios-apps-unter-windows-1504-113812.html}, letzter Zugriff: 25.11.2015
 
 \bibitem[Hölzl \& Raed \& Wirsing(2013)]{java_kompakt}
-Hözlz, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.): 
+[Hölzl \& Raed \& Wirsing(2013)] Hölzl, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.): 
 \emph{Java kompakt Eine Einführung in die Software-Entwicklung
 	mit Java}, Springer 2013
 
 \bibitem[IDC(2015)]{marktanteile_betriebssysteme}
-\emph{Prognose zu den Marktanteilen der Betriebssysteme am Absatz vom Smartphones weltweit in den Jahren 2015 und 2019. In Statista - Das Statistik-Portal.},
+[IDC(2015)] IDC(2015): \emph{Prognose zu den Marktanteilen der Betriebssysteme am Absatz vom Smartphones weltweit in den Jahren 2015 und 2019. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/182363/umfrage/prognostizierte-marktanteile-bei-smartphone-betriebssystemen/}, letzter Zugriff: 14.12.2015
 
 \bibitem[James Whitcomb Riley(1849–1916)]{ducktest}
-\emph{Ententest - Begriffsentstehung},
+[James Whitcomb Riley(1849–1916)] James Whitcomb Riley(1849–1916): \emph{Ententest - Begriffsentstehung},
 \url{https://de.wikipedia.org/wiki/Ententest}, letzter Zugriff: 05.01.2016
 
 \bibitem[JetBrains(2015)]{appcode}
-\emph{AppCode},
+[JetBrains(2015)] JetBrains(2015): \emph{JetBrains AppCode},
 \url{https://www.jetbrains.com/objc/}, letzter Zugriff: 28.12.2015
 
 \bibitem[John Daintith(2004)]{native_software}
-\emph{A Dictionary of Computing - native software},
+[John Daintith(2004)] John Daintith(2004): \emph{A Dictionary of Computing - native software},
 \url{http://www.encyclopedia.com/doc/1O11-nativesoftware.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Junge(2015)]{ludologie}
-Junge, Prof. Dr. Jens:
+[Junge(2015)] Junge, Prof. Dr. Jens:
 \emph{Zur Begriffsklärung von Ludologie und Spielwissenschaft},
 \url{http://www.ludologie.de/neues-spiel/detailansicht/news/detail/News/zur-begriffsklaerung-von-ludologie-und-spielwissenschaft/}, letzter Zugriff: 28.01.2016
 
 \bibitem[Kantar(2015)]{marktanteile_betriebssysteme_laender}
-\emph{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015. In Statista - Das Statistik-Portal.},
+[Kantar(2015)] Kantar(2015): \emph{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/198453/umfrage/marktanteile-der-smartphone-betriebssysteme-am-absatz-in-ausgewaehlten-laendern/}, letzter Zugriff: 14.12.2015
 
 \bibitem[libGDX(2013)a]{libGDX_main_features}
-\emph{libGDX - Goals and Features},
+[libGDX(2013)a] libGDX(2013)a: \emph{libGDX - Goals and Features},
 \url{https://libgdx.badlogicgames.com/features.html}, letzter Zugriff: 29.12.2015
 
 \bibitem[libGDX(2013)b]{libGDX_docs}
-\emph{libGDX API},
+[libGDX(2013)b] libGDX(2013)b: \emph{libGDX API},
 \url{https://libgdx.badlogicgames.com/nightlies/docs/api/}, letzter Zugriff: 10.01.2016
 
 \bibitem[libGDX(2015)c]{libGDX_wiki}
-\emph{libGDX - Setting up your Development Environment (Eclipse, Intellij IDEA, NetBeans)},
+[libGDX(2015)c] libGDX(2015)c: \emph{libGDX - Setting up your Development Environment (Eclipse, Intellij IDEA, NetBeans)},
 \url{https://github.com/libgdx/libgdx/wiki/Setting-up-your-Development-Environment-(Eclipse,-Intellij-IDEA,-NetBeans)}, letzter Zugriff: 18.02.2016
 
 \bibitem[Lua(2015)]{lua_about}
-\emph{Lua - About},
+[Lua(2015)] Lua(2015): \emph{Lua - About},
 \url{http://www.lua.org/about.html}, letzter Zugriff: 05.01.2016
 
 \bibitem[Lumberyard(2016)]{lumberyard}
-\emph{Lumberyard Beta - Details},
+[Lumberyard(2016)] Lumberyard(2016): \emph{Lumberyard Beta - Details},
 \url{https://aws.amazon.com/de/lumberyard/details/}, letzter Zugriff: 18.02.2016
 
 \bibitem[Mac Developer Library(2014)]{objectiveC_about}
-\emph{About Objective-C},
+[Mac Developer Library(2014)] Mac Developer Library(2014): \emph{About Objective-C},
 \url{https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html/}, letzter Zugriff: 28.12.2015
 
 \bibitem[MacinCloud(2015)]{macincloud}
-\emph{MacinCloud},
+[MacinCloud(2015)] MacinCloud(2015): \emph{MacinCloud},
 \url{http://www.macincloud.com/}, letzter Zugriff: 28.12.2015
 
 \bibitem[MacLeod(2014)]{macLeod}
-MacLeod, Kevin:
+[MacLeod(2014)] MacLeod, Kevin:
 \emph{Monkeys Spinning Monkeys},
 Licensed under Creative Commons: By Attribution 3.0
 http://creativecommons.org/licenses/by/3.0/
 \url{http://incompetech.com/music/royalty-free}, letzter Zugriff: 28.01.2016
 
 \bibitem[Microsoft Developer(2015)]{WP10_SDK}
-\emph{Windows Software Development Kit (SDK) for Windows 10},
+[Microsoft Developer(2015)] Microsoft Developer(2015): \emph{Windows Software Development Kit (SDK) for Windows 10},
 \url{https://dev.windows.com/en-us/downloads/windows-10-sdk}, letzter Zugriff: 28.12.2015
 
-\bibitem[Microsoft(2014)]{microsoft_nokia}
-\emph{Microsoft - Microsoft und Nokia Geräte},
+\bibitem[Microsoft(2014)a]{microsoft_nokia}
+[Microsoft(2014)a] Microsoft(2014)a: \emph{Microsoft - Microsoft und Nokia Geräte},
 \url{https://www.microsoft.com/de-de/nokia.aspx}, letzter Zugriff: 25.11.2015
 
-\bibitem[Microsoft(2015)]{windows10_features}
-\emph{Microsoft - Windows 10 Features},
+\bibitem[Microsoft(2015)b]{windows10_features}
+[Microsoft(2015)b] Microsoft(2015)b: \emph{Microsoft - Windows 10 Features},
 \url{https://www.microsoft.com/de-de/windows/features}, letzter Zugriff: 25.11.2015
 
 \bibitem[MonoGame(2016)]{monogame}
-\emph{MonoGame - About},
+[MonoGame(2016)] MonoGame(2016): \emph{MonoGame - About},
 \url{http://www.monogame.net/about/}, letzter Zugriff: 18.02.2016
 
 \bibitem[MSDN(2015)]{WP10_Emulator}
-\emph{Microsoft-Emulator für Windows 10 Mobile},
+[MSDN(2015)] MSDN(2015): \emph{Microsoft-Emulator für Windows 10 Mobile},
 \url{https://msdn.microsoft.com/library/windows/apps/mt162269.aspx}, letzter Zugriff: 28.12.2015
 
 \bibitem[Nextpeer(2016)]{nextpeer}
-\emph{Nextpeer},
+[Nextpeer(2016)] Nextpeer(2016): \emph{Nextpeer},
 \url{https://www.nextpeer.com/}, letzter Zugriff: 01.02.2016
 
 \bibitem[Open Handset Alliance - Alliance Members(2015)]{alliance_members}
-\emph{Members of the Open Handset Alliance},
+[Open Handset Alliance - Alliance Members(2015)] Open Handset Alliance - Alliance Members(2015): \emph{Members of the Open Handset Alliance},
 \url{http://www.openhandsetalliance.com/oha_members.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Open Handset Alliance - Alliance Overview(2015)]{alliance_overview}
-\emph{Overview of the Open Handset Alliance},
+[Open Handset Alliance - Alliance Overview(2015)] Open Handset Alliance - Alliance Overview(2015): \emph{Overview of the Open Handset Alliance},
 \url{http://www.openhandsetalliance.com/oha_overview.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Open Handset Alliance - Android Overview(2015)]{android_overview}
-\emph{Overview of Android by the Open Handset Alliance},
+[Open Handset Alliance - Android Overview(2015)] Open Handset Alliance - Android Overview(2015): \emph{Overview of Android by the Open Handset Alliance},
 \url{http://www.openhandsetalliance.com/android_overview.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Oracle - Java SE(2015)]{java_jdk}
-\emph{Java SE Development Kit 8 Downloads},
+[Oracle - Java SE(2015)] Oracle - Java SE(2015): \emph{Java SE Development Kit 8 Downloads},
 \url{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Piskel(2015)]{piskel}
-\emph{Piskel - Pixel Art and Animated Sprites},
+[Piskel(2015)] Piskel(2015): \emph{Piskel - Pixel Art and Animated Sprites},
 \url{http://www.piskelapp.com/}, letzter Zugriff: 28.01.2016
 
 \bibitem[Play Game Services(2015)]{play_game_services}
-\emph{Play Games Services},
+[Play Game Services(2015)] Play Game Services(2015): \emph{Play Games Services},
 \url{https://developers.google.com/games/services/}, letzter Zugriff: 01.02.2016
 
 \bibitem[PocketGamer.biz(2015)]{app_store_categories}
-\emph{Ranking der Top-20-Kategorien im App Store im Dezember 2015. In Statista - Das Statistik-Portal.},
+[PocketGamer.biz(2015)] PocketGamer.biz(2015): \emph{Ranking der Top-20-Kategorien im App Store im Dezember 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/166976/umfrage/beliebteste-kategorien-im-app-store/}, letzter Zugriff: 15.12.2015
 
 \bibitem[Reddit(2015)]{wp_pros_cons}
-\emph{Reddit - Pros and cons of Windows phone, and why should I buy one instead of an android or a iPhone?},
+[Reddit(2015)] Reddit(2015): \emph{Reddit - Pros and cons of Windows phone, and why should I buy one instead of an android or a iPhone?},
 \url{https://www.reddit.com/r/windowsphone/comments/3h21lf/pros_and_cons_of_windows_phone_and_why_should_i/}, letzter Zugriff: 25.11.2015
 
 \bibitem[RoboVM(2016)]{roboVM}
-\emph{RoboVM - Create truly native iOS apps in Java},
+[RoboVM(2016)] RoboVM(2016): \emph{RoboVM - Create truly native iOS apps in Java},
 \url{https://robovm.com/}, letzter Zugriff: 15.02.2016
 
 \bibitem[Salen \& Zimmerman(2004)]{salen_zimmerman}
-Salen, Katie \& Zimmerman, Eric: 
+[Salen \& Zimmerman(2004)] Salen, Katie \& Zimmerman, Eric: 
 \glqq Unit 1: Core Concepts: Defining Games\grqq, 
 (Hrsg.): \emph{Rules of Play: Game Design Fundamentals}, The MIT Press 2004
 
 \bibitem[Schmidt(2015)]{java_9}
-\emph{heise Developer - Java 9: Pläne für Release im Herbst 2016},
+[Schmidt(2015)] Schmidt, Julia: \emph{heise Developer - Java 9: Pläne für Release im Herbst 2016},
 \url{http://www.heise.de/developer/meldung/Java-9-Plaene-fuer-Release-im-Herbst-2016-2635526.html}, letzter Zugriff: 06.01.2016
 
 \bibitem[Skeet(2014)]{csharp_in_depth}
-Skeet, Jon (Hrsg.): 
+[Skeet(2014)] Skeet, Jon (Hrsg.): 
 \emph{C\# in Depth}, Manning 2014
 
 \bibitem[Statista(2015)]{apps_in_stores}
-\emph{Anzahl der angebotenen Apps in den Top App-Stores im Mai 2015. In Statista - Das Statistik-Portal.},
+[Statista(2015)] Statista(2015): \emph{Anzahl der angebotenen Apps in den Top App-Stores im Mai 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/208599/umfrage/anzahl-der-apps-in-den-top-app-stores/}, letzter Zugriff: 14.12.2015
 
 \bibitem[Sue Smith(2013)]{android_sdk_requirements}
-\emph{Android SDK Requirements},
+[Sue Smith(2013)] Sue Smith(2013): \emph{Android SDK Requirements},
 \url{http://code.tutsplus.com/tutorials/android-sdk-requirements--mobile-20086}, letzter Zugriff: 24.11.2015
 
 \bibitem[t3n(2015)]{t3n_xcode7}
-\emph{Xcode 7: Apps auch ohne Entwickler-Account auf dem iPhone testen},
+[t3n(2015)] t3n(2015): \emph{Xcode 7: Apps auch ohne Entwickler-Account auf dem iPhone testen},
 \url{http://t3n.de/news/xcode-7-apps-ohne-615214/}, letzter Zugriff: 28.12.2015
 
 \bibitem[techopedia(2015)]{cross_plattform_explanation}
-\emph{Cross-Platform Development},
+[techopedia(2015)] techopedia(2015): \emph{Cross-Platform Development},
 \url{https://www.techopedia.com/definition/30026/cross-platform-development}, letzter Zugriff: 21.12.2015
 
 \bibitem[the iphone wiki(2015)]{ios_codenames}
-\emph{iOS Firmwares},
+[the iphone wiki(2015)] the iphone wiki(2015): \emph{iOS Firmwares},
 \url{https://www.theiphonewiki.com/wiki/Firmware}, letzter Zugriff: 24.11.2015
 
 \bibitem[Unify Community Wiki(2014)]{unity_unityscript_vs_javascript}
-\emph{Unify Community Wiki - UnityScript versus JavaScript},
+[Unify Community Wiki(2014)] Unify Community Wiki(2014): \emph{Unify Community Wiki - UnityScript versus JavaScript},
 \url{http://wiki.unity3d.com/index.php/UnityScript_versus_JavaScript}, letzter Zugriff: 05.01.2016
 
 \bibitem[Unity3D(2014)d]{unity_languages}
-\emph{Unity3D - Documentation, Unity scripting languages and you},
+[Unity3D(2014)d] Unity3D(2014)d: \emph{Unity3D - Documentation, Unity scripting languages and you},
 \url{http://blogs.unity3d.com/2014/09/03/documentation-unity-scripting-languages-and-you/}, letzter Zugriff: 05.01.2016
 
 \bibitem[Unity3D(2015)a]{unity_public_relations}
-\emph{Unity3D - Public Relations},
+[Unity3D(2015)a] Unity3D(2015)a: \emph{Unity3D - Public Relations},
 \url{https://unity3d.com/public-relations}, letzter Zugriff: 29.12.2015
 
 \bibitem[Unity3D(2015)b]{unity_managed_plugins}
-\emph{Unity3D Documentation - Managed Plugins},
+[Unity3D(2015)b] Unity3D(2015)b: \emph{Unity3D Documentation - Managed Plugins},
 \url{http://docs.unity3d.com/Manual/UsingDLL.html}, letzter Zugriff: 05.01.2016
 
 \bibitem[Unity3D(2015)c]{unity_products}
-\emph{Unity3D - Get Unity},
+[Unity3D(2015)c] Unity3D(2015)c: \emph{Unity3D - Get Unity},
 \url{http://unity3d.com/get-unity}, letzter Zugriff: 05.01.2016
 
 \bibitem[Unity3D(2015)d]{unity_docs}
-\emph{Unity3D - Scripting API},
+[Unity3D(2015)d] Unity3D(2015)d: \emph{Unity3D - Scripting API},
 \url{http://docs.unity3d.com/ScriptReference/index.html}, letzter Zugriff: 10.01.2016
 
 \bibitem[Unity3D(2016)e]{unity_code_editor}
-\emph{Unity3D - Tutorials: Scripting},
+[Unity3D(2016)e] Unity3D(2016)e: \emph{Unity3D - Tutorials: Scripting},
 \url{https://unity3d.com/learn/tutorials/topics/scripting}, letzter Zugriff: 10.02.2016
 
 \bibitem[Vehse(2014)]{cross_plattform_development_vehse} 
-Vehse, Benjamin:
+[Vehse(2014)] Vehse, Benjamin:
 \glqq Plattformabhängige und –unabhängige
 Entwicklung mobiler Anwendungen am
 Beispiel von Geo-Wikipedia-App\grqq, 
 \emph{Bachelor-Thesis}, 2014
 
 \bibitem[Visual Studio(2016)]{visual_studio}
-\emph{Visual Studio - Tools für alle Entwickler und alle Apps},
+[Visual Studio(2016)] Visual Studio(2016): \emph{Visual Studio - Tools für alle Entwickler und alle Apps},
 \url{https://www.visualstudio.com/de-de/dn469161}, letzter Zugriff: 15.02.2016
 
 \bibitem[Wikipedia - Flappy Bird(2015)]{flappy_bird}
-\emph{Flappy Bird},
+[Wikipedia - Flappy Bird(2015)] Wikipedia - Flappy Bird(2015): \emph{Flappy Bird},
 \url{https://de.wikipedia.org/wiki/Flappy_Bird}, letzter Zugriff: 28.01.2016
 
 \bibitem[Wikipedia - Liste von Android-Versionen(2015)]{android_version_releases}
-\emph{Übersicht von allen Android Versionen mit Veröffentlichungsdatum},
+[Wikipedia - Liste von Android-Versionen(2015)] Wikipedia - Liste von Android-Versionen(2015): \emph{Übersicht von allen Android Versionen mit Veröffentlichungsdatum},
 \url{https://de.wikipedia.org/wiki/Liste_von_Android-Versionen}, letzter Zugriff: 24.11.2015
 
 \bibitem[Wikipedia - Windows 10(2015)]{WP10_version_releases}
-\emph{Microsoft Windows 10 Mobile},
+[Wikipedia - Windows 10(2015)] Wikipedia - Windows 10(2015): \emph{Microsoft Windows 10 Mobile},
 \url{https://de.wikipedia.org/wiki/Microsoft_Windows_10_Mobile}, letzter Zugriff: 28.12.2015
 
 \bibitem[Wikipedia - Windows Phone 7(2015)]{WP7_version_releases}
-\emph{Microsoft Windows Phone 7},
+[Wikipedia - Windows Phone 7(2015)] Wikipedia - Windows Phone 7(2015): \emph{Microsoft Windows Phone 7},
 \url{https://de.wikipedia.org/wiki/Microsoft_Windows_Phone_7}, letzter Zugriff: 28.12.2015
 
 \bibitem[Wikipedia - Windows Phone 8(2015)]{WP8_version_releases}
-\emph{Microsoft Windows Phone 8},
+[Wikipedia - Windows Phone 8(2015)] Wikipedia - Windows Phone 8(2015): \emph{Microsoft Windows Phone 8},
 \url{https://de.wikipedia.org/wiki/Microsoft_Windows_Phone_8}, letzter Zugriff: 28.12.2015
 
 \bibitem[XMLVM(2011)]{XMLVM_Toolchain}
-\emph{XMLVM - Overview: Toolchain},
+[XMLVM(2011)] XMLVM(2011): \emph{XMLVM - Overview: Toolchain},
 \url{http://xmlvm.org/toolchain/}, letzter Zugriff: 25.12.2015
 
 \bibitem[YoYo Games(2013)]{WP8_requirements}
-\emph{Requirements for Windows Phone development},
+[YoYo Games(2013)] YoYo Games(2013): \emph{Requirements for Windows Phone development},
 \url{http://help.yoyogames.com/entries/23355146-Requirements-for-Windows-Phone-development}, letzter Zugriff: 28.12.2015
 
 
