@@ -186,8 +186,7 @@ Nachteile:
 \end{itemize}
 
 \subsection{iOS}
-iOS ist das mobile Betriebssystem des Unternehmens Apple und ist ein Derivat von Mac OS X, welches wiederum auf Unix basiert. Es wird ausschließlich von Apple entwickelt und ist somit nur auf den eigenen Geräten iPhone, iPad und iPod touch zu finden. Mit der Entwicklung wurde unter externer und interner Geheimhaltung 2005 begonnen und das Resultat der Öffentlichkeit zum ersten Mal Anfang 2007 vorgestellt. Bis zur Version 4.0, wurde iOS mit dem Namen iPhoneOS betitelt. Das Konzept und Design ist schwerpunktmäßig auf hohe Benutzerfreundlichkeit und Funktionalität ausgelegt. 
-%TODO: QUELLE ANGEBEN!
+iOS ist das mobile Betriebssystem des Unternehmens Apple und ist ein Derivat von Mac OS X, welches wiederum auf Unix basiert. Es wird ausschließlich von Apple entwickelt und ist somit nur auf den eigenen Geräten iPhone, iPad und iPod touch zu finden. Mit der Entwicklung wurde unter externer und interner Geheimhaltung 2005 begonnen und das Resultat der Öffentlichkeit zum ersten Mal Anfang 2007 vorgestellt. Bis zur Version 4.0, wurde iOS mit dem Namen iPhoneOS betitelt \citep{apple_ios}. Das Konzept und Design ist schwerpunktmäßig auf hohe Benutzerfreundlichkeit und Funktionalität ausgelegt. 
 
 Durch die proprietäre Struktur des Systems sind eigene Derivate nicht möglich. Benutzer sind für den Bezug von Applikationen auf den offiziellen App Store angewiesen.
 Ebenso bei der Hardwarewahl an die Produktpalette von Apple gebunden, welche jährlich eine neue Generation veröffentlicht. Die Personalisierung der Geräte ist dabei nur bedingt möglich, da Anbieter von Drittsoftware keinen Zugriff auf das System haben. Apple bietet jedoch den Vorteil einer Qualitätssicherung, da Applikationen vor der Veröffentlichung einer recht strengen Prüfung unterzogen werden.
@@ -409,49 +408,48 @@ Sie befindet sich derzeit in der stabilen Version 7 und liefert das benötigte S
 Eine Alternative bietet JetBrains IDE Appcode, welches eine kompatible, aber kostenpflichtige Erweiterung zu Xcode ist \citep{appcode}.
 
 \subsection{Windows Phone}
-Microsoft setzt für die Kompilierung und Realisierung für Windows Phone Projekte eine Visual Studio IDE voraus, welche für unkommerzielle Entwicklungen kostenfrei ist.
-%QUELLE?
+Microsoft setzt für die Kompilierung und Realisierung für Windows Phone Projekte eine Visual Studio IDE voraus, welche für unkommerzielle Entwicklungen kostenfrei ist \citep{visual_studio}.
 
 \section{Native Spieleentwicklung}
 Bei der nativen Entwicklung basieren die mobilen Applikationen auf den jeweiligen SDKs. Auch mobile Spiele können auf nativem Weg realisiert werden. Die Verwendung der mitgelieferten Grafikfunktionen für die Visualisierung und selbst definierte Spielweltlogik, kann schon eine Basis für einfache 2D Spiele verkörpern. Durch die freie Grafikbibliothek OpenGL können Spielinhalte in 2D oder sogar 3D dargestellt werden. Allerdings ist OpenGL nicht für Windows Phone verfügbar, denn hier wird das eigene Pendant, DirectX, verwendet. Um die Spieleentwicklung zu erleichtern, können spezialisierte Frameworks und Engines genutzt werden, die eigens für die native Entwicklung von Spielen konzipiert wurden und auf die gewünschte Plattform abgestimmt sind. In den folgenden Unterkapiteln werden beispielhafte Werkzeuge für die jeweiligen Plattformen aufgelistet.
  
-%MARKER: Rechtschreib-Korrektur
+
 \subsection{Android}
 Für Android existieren einige Frameworks, wovon jedoch viele auf einem veralteten Stand sind. Das ist häufig damit verbunden, dass diese aus privatem Interesse entstanden sind und ein unkommerzielles, kostenloses Vertriebsmodell betreiben. Daher sind regelmäßige Aktualisierungen oft nicht gewährleistet und manche Arbeiten wurden auch ganz eingestellt.
 
 \bigskip
 \textbf{AndEngine}\\
 Eine Game Engine, die auf OpenGL basiert und für 2D Spiele ausgelegt ist.
-Die letzte Aktualisierung erfolgte im Dezember 2013.
+Die letzte Aktualisierung erfolgte im Dezember 2013 \citep{andEngine}.
 
 \bigskip
 \textbf{Cocos2D-Android}\\
-Eine Implementierung von Cocos2D für Android. Die Weiterentwicklung wurde allerdings eingestellt und die letzte Änderung erfolgte im Januar 2010.
+Eine Implementierung von Cocos2D für Android. Die Weiterentwicklung wurde allerdings eingestellt und die letzte Änderung erfolgte im Januar 2010 \citep{cocos2d_android}.
 
 \bigskip
 \textbf{jPCT-AE}\\
-Eine 3D Engine, die auf jPCT für Desktopanwendungen mit Java basiert und für Android portiert wurde. Die Grafik wird von OpenGL 1.x und 2.0 unterstützt. Das Projekt wird aktuell weiterentwickelt und ist frei verfügbar.
+Eine 3D Engine, die auf jPCT für Desktopanwendungen mit Java basiert und für Android portiert wurde. Die Grafik wird von OpenGL 1.x und 2.0 unterstützt. Das Projekt wird aktuell weiterentwickelt und ist frei verfügbar \citep{jpct_ae}.
+
 
 \subsection{iOS}
 Auch für iOS sind diverse Frameworks erhältlich. Die Suche nach einer aktuellen Entwicklungsunterstützung gestaltet sich hier ein wenig einfacher, wobei man aber, genau wie bei Android, auch auf aufgegebene Projekte stößt. Ein großer Vorteil besteht aber durch SpriteKit, da dies von Apple selbst entwickelt wurde und eine gewisse Sicherheit bei zukünftiger Unterstützung gewährleistet.
 
 \bigskip
 \textbf{SpriteKit}\\
-Eine Eigenentwicklung von Apple für 2D Spiele auf iOS und OS X. Es kann Objective-C oder Swift genutzt werden.
+Eine Eigenentwicklung von Apple für 2D Spiele auf iOS und OS X. Es kann Objective-C oder Swift genutzt werden \citep{about_spritekit}.
 
 \bigskip
 \textbf{Cocos2D-iPhone}\\
-Ein Abkömmling von Cocos2D für iOS mit den Implementierungen für Objective-C und zukünftig auch Swift. Dies ist einer der offiziellen Hauptzweige von Cocos2D, der stetig aktualisiert wird.
+Ein Abkömmling von Cocos2D für iOS mit den Implementierungen für Objective-C und zukünftig auch Swift. Dies ist einer der offiziellen Hauptzweige von Cocos2D, der stetig aktualisiert wird \citep{cocos2d_iphone}.
 
 \bigskip
 \textbf{Sparrow}\\
-Eine aktuelle Open Source Game Engine für iOS Spiele, die ausschließlich Objective-C unterstützt.
+Eine aktuelle Open Source Game Engine für iOS Spiele, die ausschließlich Objective-C unterstützt \citep{sparrow}.
 
-%QUELLEN?
 
 \subsection{Windows Phone}
-Frameworks, die einzig und allein für Windows Phone Spiele ausgelegt sind, waren nicht direkt ausfindig zu machen. Microsoft selbst rät zu dem eigenen XNA Framework, womit auch die meisten Entertainment Plattformen von Microsoft bedient werden können. Hauptsächlich werden hier Cross Plattform Tools genutzt, da die Verbreitung von entsprechender Hardware noch relativ gering ausfällt. Auch durch das neue Windows 10 und den Wunsch nach universellen Anwendungslösungen, besteht derzeit ein noch nicht abgeschlossener Änderungsprozess. Dadurch werden spezialisierte Lösungen für eine Windows Gerätekategorie zukünftig vermutlich eher uninteressant.
-%QUELLEN XNA?
+Frameworks, die einzig und allein für Windows Phone Spiele ausgelegt sind, waren nicht direkt ausfindig zu machen. Microsoft selbst rät zu dem eigenen XNA Framework, womit auch die meisten Entertainment Plattformen von Microsoft bedient werden können \citep{xna}. Hauptsächlich werden hier Cross Plattform Tools genutzt, da die Verbreitung von entsprechender Hardware noch relativ gering ausfällt. Auch durch das neue Windows 10 und den Wunsch nach universellen Anwendungslösungen, besteht derzeit ein noch nicht abgeschlossener Änderungsprozess. Dadurch werden spezialisierte Lösungen für eine Windows Gerätekategorie zukünftig vermutlich eher uninteressant.
+
 
 \section{Zusammengefasste Übersicht}
 Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzelnen Systeme bieten.
@@ -662,13 +660,13 @@ Tabelle \ref{table_all_approaches} fasst die Ansätze zur plattformübergreifend
 
 \section{Plattformübergreifende Entwicklung mobiler Applikationen ohne den Schwerpunkt Spieleentwicklung}
 Plattformübergreifende Entwicklung für mobile Plattformen ist nicht nur für die Spieleentwicklung interessant.
-In der Bachelorthesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier der Fokus nicht auf mobilen Spieleapplikationen und zugehörigen Entwicklungswerkzeugen. Vehse geht in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen ein und klassifiziert deren Resultate. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Im Gegensatz zu der Arbeit von Benjamin Vehse, setzt diese Thesis den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht daher nicht weiter auf die in seiner genannten und analysierten Entwicklungswerkzeuge ein.
+In der Bachelorthesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier der Fokus nicht auf mobilen Spieleapplikationen und zugehörigen Entwicklungswerkzeugen. Vehse geht in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen ein und klassifiziert deren Resultate. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Im Gegensatz zu der Arbeit von Benjamin Vehse, setzt diese Bachelorthesis den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht daher nicht weiter auf die in seiner genannten und analysierten Entwicklungswerkzeuge ein.
 
-
+%MARKER: Rechtschreib-Korrektur
 \chapter{Plattformübergreifende Spieleentwicklung}
 
 \section{Definition von Anforderungen für vergleichbare Entwicklungstools}
-Das Angebot an Tools für die plattformübergreifende Spieleentwicklung ist vielfältig und es bestehen Unterschiede in der Funktionalität und den Möglichkeiten. Da ein Vergleich aller angebotenen Produkte den Umfang dieser Arbeit drastisch überschreiten würde, werden zuerst grundlegende Anforderungen definiert.
+Das Angebot an Tools für die plattformübergreifende Spieleentwicklung ist vielfältig und es bestehen Unterschiede in der Funktionalität sowie den Möglichkeiten. Da ein Vergleich aller angebotenen Produkte den Umfang dieser Arbeit drastisch überschreiten würde, werden zuerst grundlegende Anforderungen definiert.
  
 \bigskip
 Das Framework soll folgende Anforderungen erfüllen:
@@ -716,7 +714,7 @@ Dies ist eine kostenlose, Open Source Spiele-Engine von Amazon, die zur Zeit der
 %TODO: Kapitel 6
 \chapter{Analyse der Frameworks}
 \label{chapter:Analyse_der_Frameworks}
-%Features und Einschränkungen
+
 
 \section{Zielplattformen}
 Die Menge an Zielplattformen unterscheidet sich in den Bereichen Mobil, Destop und Web nur geringfügig. In Tabelle \ref{zielplattformen_frameworks} wird deutlich, dass sich die Menge an unterstützten Plattformen in diesen Kategorien, bei Cocos2D-x und Unity3D kaum unterscheidet. Das Blackberry OS wurde von beiden, hauptsächlich mangels Nachfrage, aus dem Programm genommen. Einzig libGDX stellt noch die Möglichkeit, Spiele hierfür zu entwickeln. Dafür befinden sich in dem Katalog von libGDX die meisten Lücken, wovon die gravierendste, aber derzeit noch verzeihbare, das Fehlen von Windows Phone und Universal Windows ist. Dennoch bieten alle drei Frameworks die Möglichkeit, gleichzeitige Entwicklung bei iOS und Android, als die wichtigsten mobilen Plattformen zuzulassen. 
@@ -961,31 +959,7 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 	\label{Unity_Produkte}\citep{unity_products}
 \end{table}
 
-%OPTIONAL: Vergleichstabelle
-%\section{Kosten-Nutzen Vergleich}
-%Vergleichstabelle zu den Variationen der Projektanforderungen im Zusammenhang mit den Möglichkeiten und Kosten der Frameworks
 
-%OPTIONAL!!!
-%\chapter{Analyse der Marktanteile}
-%\section{Menge an Firmen und Entwicklern}
-%\section{Menge an Games}
-
-
-%OPTIONAL!!!
-%\chapter{Grundgerüst und Aufbau eines Cross-Plattform Projekts}
-%\section{Geteilter Content}
-%\section{Plattformabhängiger Content}
-%\section{Grundaufbau bei Engines}
-%\section{Grundaufbau bei Frameworks}
-
-%OPTIONAL!!!
-%\chapter{Game-typische Design Patterns und Architekturen}
-%\section{Architekturen}
-%\section{Patterns}
-%\section{Verweis auf Bachelorarbeit: „Use of Design Patterns for mobile game Development“}
-
-
-%TODO: Kapitel 13
 \chapter{Konzeption und Implementierung einer Beispielapplikation}
 Um die Möglichkeiten der gewählten Entwicklungstools tiefgehender analysieren zu können, sollten die theoretischen Informationen um praktische Erkenntnisse ergänzt werden. Demnach wird als Teil dieser Arbeit ein Beispiel-Spiel konzipiert, mit den jeweiligen Tools umgesetzt und daraus Applikationen für verschiedene Plattformen erzeugt. Die Anwendung soll dann Anhand von vereinbarten Metriken bemessen und analysiert werden. Die gewonnenen Resultate werden daraufhin in Zusammenhang mit den theoretischen Informationen komplementiert und die Entwicklungstools als Ganzes verglichen. 
 
@@ -1192,7 +1166,6 @@ In diesem Punkt enttäuschte Cocos2D-X leider mehr als zuvor angenommen. Die off
 Im Gegensatz dazu, macht Unity3D es einem leichter. Einen Neuling mag dieser umfangreiche Editor zunächst mehr fordern, hingegen werden für jede Erfahrungsstufe Hilfestellungen geboten. Die Vielfalt an Unterstützung ist immens, fast immer mit praktischen Beispielen vertieft und gut sortiert. Wenn es passiert, dass überholte Methoden verwendet werden, hilft einem die unterstützte IDE oder die Dokumentation sofort weiter. Ein weiterer Vorteil und Zeitersparnis ist das direkte testen des Spiels innerhalb des Unity Editors. Das Testspiel konnte somit ohne Hindernisse umgesetzt werden.
 
 
-%TODO
 \chapter{Analyse der Test-Applikationen}
 
 %TODO: Auf Analyse der Frameworks eingehen
@@ -1360,6 +1333,10 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 %------------------------------ LITERATURVERZEICHNIS----------------------
 %TODO:Alphabetisch sortieren!
 \begin{thebibliography}{}
+	
+\bibitem[AndEngine(2013)]{andEngine}
+[AndEngine(2013)] AndEngine(2013): \emph{Free Android 2D OpenGL Game Engine},
+\url{https://github.com/nicolasgramlich/AndEngine}, letzter Zugriff: 28.12.2015
 
 \bibitem[Android Develop Tools(2015)]{android_studio}
 [Android Develop Tools(2015)] Android Develop Tools(2015): \emph{Android Studio Overview},
@@ -1397,6 +1374,14 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 \bibitem[Brown(2015)]{learning_javascript}
 [Brown(2015)] Brown, Ethan (Hrsg.): 
 \emph{Learning Javascript}, O'Reilly 2015
+
+\bibitem[Cocos2D-Android(2010)]{cocos2d_android}
+[Cocos2D-Android(2010)] Cocos2D-Android(2010): \emph{cocos2d for Android: A framework for building 2D games for the Android platform},
+\url{https://code.google.com/archive/p/cocos2d-android/}, letzter Zugriff: 28.12.2015
+
+\bibitem[Cocos2D-iPhone(2015)]{cocos2d_iphone}
+[Cocos2D-iPhone(2015)] Cocos2D-iPhone(2015): \emph{Cocos2D - ObjC Site},
+\url{http://www.cocos2d-iphone.org/}, letzter Zugriff: 28.12.2015
 
 \bibitem[Cocos2D-X(2015)a]{cocos2d_main_features}
 [Cocos2D-X(2015)a] Cocos2D-X(2015)a: \emph{Cocos2D-X - Developers Manual},
@@ -1447,6 +1432,10 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 \bibitem[John Daintith(2004)]{native_software}
 [John Daintith(2004)] John Daintith(2004): \emph{A Dictionary of Computing - native software},
 \url{http://www.encyclopedia.com/doc/1O11-nativesoftware.html}, letzter Zugriff: 24.11.2015
+
+\bibitem[jPCT-AE(2015)]{jpct_ae}
+[jPCT-AE(2015)] jPCT-AE(2015): \emph{jPCT 3D engine - the free 3D solution for Java and Android},
+\url{http://www.jpct.net/jpct-ae/index.html}, letzter Zugriff: 28.12.2015
 
 \bibitem[Junge(2015)]{ludologie}
 [Junge(2015)] Junge, Prof. Dr. Jens:
@@ -1561,6 +1550,14 @@ http://creativecommons.org/licenses/by/3.0/
 [Skeet(2014)] Skeet, Jon (Hrsg.): 
 \emph{C\# in Depth}, Manning 2014
 
+\bibitem[Sparrow(2015)]{sparrow}
+[Sparrow(2015)] Sparrow(2015): \emph{Sparrow - The Open Source Game Engine for iOS},
+\url{http://gamua.com/sparrow/}, letzter Zugriff: 28.12.2015
+
+\bibitem[SpriteKit(2015)]{about_spritekit}
+[SpriteKit(2015) SpriteKit(2015): \emph{iOS Developer Library - About SpriteKit},
+\url{https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Introduction/Introduction.html}, letzter Zugriff: 28.12.2015
+
 \bibitem[Statista(2015)]{apps_in_stores}
 [Statista(2015)] Statista(2015): \emph{Anzahl der angebotenen Apps in den Top App-Stores im Mai 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/208599/umfrage/anzahl-der-apps-in-den-top-app-stores/}, letzter Zugriff: 14.12.2015
@@ -1620,6 +1617,10 @@ Beispiel von Geo-Wikipedia-App\grqq,
 [Visual Studio(2016)] Visual Studio(2016): \emph{Visual Studio - Tools für alle Entwickler und alle Apps},
 \url{https://www.visualstudio.com/de-de/dn469161}, letzter Zugriff: 15.02.2016
 
+\bibitem[Wikipedia - Apple iOS(2015)]{apple_ios}
+[Wikipedia - Apple iOS(2015)] Wikipedia - Apple iOS(2015): \emph{Apple iOS},
+\url{https://de.wikipedia.org/wiki/Apple_iOS}, letzter Zugriff: 24.11.2015
+
 \bibitem[Wikipedia - Flappy Bird(2015)]{flappy_bird}
 [Wikipedia - Flappy Bird(2015)] Wikipedia - Flappy Bird(2015): \emph{Flappy Bird},
 \url{https://de.wikipedia.org/wiki/Flappy_Bird}, letzter Zugriff: 28.01.2016
@@ -1643,6 +1644,10 @@ Beispiel von Geo-Wikipedia-App\grqq,
 \bibitem[XMLVM(2011)]{XMLVM_Toolchain}
 [XMLVM(2011)] XMLVM(2011): \emph{XMLVM - Overview: Toolchain},
 \url{http://xmlvm.org/toolchain/}, letzter Zugriff: 25.12.2015
+
+\bibitem[XNA(2015)]{xna}
+[XNA(2015)] XNA(2015): \emph{Microsoft Developer Network - XNA Game Studio 4.0},
+\url{https://msdn.microsoft.com/de-de/library/bb200104(v=xnagamestudio.40).aspx}, letzter Zugriff: 28.12.2015
 
 \bibitem[YoYo Games(2013)]{WP8_requirements}
 [YoYo Games(2013)] YoYo Games(2013): \emph{Requirements for Windows Phone development},
