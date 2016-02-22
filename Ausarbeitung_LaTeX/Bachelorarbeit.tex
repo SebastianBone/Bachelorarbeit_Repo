@@ -65,6 +65,7 @@ Diese besonderen Frameworks und Engines für die plattformübergreifende Spielee
 \section{Motivation}
 %TODO: Definition mobile App und Definition eines Spiels
 %TODO: Quellen innerhalb eines Satzes und NICHT danach! 
+%TODO: Seiten, Abbildungen und Textsprünge überprüfen
 \section{Gliederung}
 Die Thesis \emph{„Analyse und Evaluierung von plattformübergreifenden Spiel-Engines und Frameworks, anhand der Implementierung einer mobilen Beispielapplikation“} ist in zehn Kapitel unterteilt, die das Thema systematisch aufbauen und analysieren.
 
@@ -384,47 +385,44 @@ Tabelle \ref{tab_WP_versions} berücksichtigt alle Versionen ab Windows Phone 7.
 In der nativen Entwicklung werden für jede Zielplattform bestimmte Programmiersprachen unterstützt. 
 
 \subsection{Android}
-Android Applikationen werden grundsätzlich in Java entwickelt. Demnach ist es notwendig, zusätzlich eine aktuelle Java Version (JDK) zu installieren. Diese wird von dem Unternehmen Oracle in der aktuellen Version 8  vertrieben. In Kapitel \ref{subsec:libGDX} wird noch etwas detaillierter auf Java eingegangen. 
-\citep{java_jdk}
+Android Applikationen werden grundsätzlich in Java entwickelt. Demnach ist es notwendig, zusätzlich eine aktuelle Java Version (JDK) zu installieren. Diese wird von dem Unternehmen Oracle in der aktuellen Version 8  vertrieben \citep{java_jdk}. In Kapitel \ref{subsec:libGDX} wird noch etwas detaillierter auf Java eingegangen. 
+
 
 \subsection{iOS}
-Die derzeitige, primäre Programmiersprache für iOS und OS X ist die objektorientierte Objective-C, die eine Erweiterung von C ist und Einflüsse von Smalltalk aufweist. Von Smalltalk werden beispielsweise die Syntax dessen Objekteigenschaften abgeleitet. Trotzdem besteht bei nicht-objektorientierten Operationen weiterhin die Nähe zur C Syntax. Objective-C befindet sich aktuell in der Version 2.0. \citep{objectiveC_about}
+Die primäre Programmiersprache für iOS und OS X ist derzeit die objektorientierte Sprache Objective-C, die eine Erweiterung von C ist und Einflüsse von Smalltalk aufweist. Von Smalltalk werden beispielsweise die Syntax deren Objekteigenschaften abgeleitet. Trotzdem besteht bei nicht-objektorientierten Operationen weiterhin die Nähe zur C Syntax. Objective-C befindet sich aktuell in der Version 2.0 \citep{objectiveC_about}.
 
-Alternativ kann die relativ junge Sprache Swift verwendet werden. Diese ist ebenfalls objektorientiert und in der aktuellen Version 2.0. Im Dezember 2015 wurde der Quellcode Open Source zur Verfügung gestellt. Swift soll Objective-C allerdings nicht ersetzen, sondern eine zusätzliche Möglichkeit darstellen. Die beiden Sprachen sind miteinander kompatibel, so dass es möglich ist beide innerhalb eines Projekts zu nutzen.
-\citep{swift_about}
+Alternativ kann die relativ junge Sprache Swift verwendet werden. Diese ist ebenfalls objektorientiert und in der aktuellen Version 2.0. Im Dezember 2015 wurde der Quellcode Open Source zur Verfügung gestellt. Swift soll Objective-C allerdings nicht ersetzen, sondern eine zusätzliche Möglichkeit darstellen \citep{swift_about}. Die beiden Sprachen sind miteinander kompatibel, so dass es möglich ist, beide innerhalb eines Projekts zu nutzen.
 
 \subsection{Windows Phone}
-Für die Programmierung der Logik, hat man als Entwickler die Freiheit C\#, Visual Basic, JavaScript oder C++ zu nutzen. Um die Benutzeroberflächen zu gestalten, wird hauptsächlich die Sprache XAML (Extensible Application Markup Language) eingesetzt. 
+Für die Programmierung der Logik hat ein Entwickler die Freiheit C\#, Visual Basic, JavaScript oder C++ zu nutzen. Um die Benutzeroberflächen zu gestalten, wird hauptsächlich die Sprache XAML (Extensible Application Markup Language) eingesetzt. 
 
 
 \section{Entwicklungsumgebungen}
 Für die Entwicklung werden seitens der Betreiber jeweils verschiedene IDEs (Integrated Development Environment)  unterstützt und empfohlen. Eine Besonderheit bei IDEs für mobile Systeme ist die Unterstützung eines Simulators. Dieser virtualisiert ein spezifiziertes Gerät, um die Anwendung direkt testen zu können.
 
 \subsection{Android}
-Android empfiehlt die eigene, offizielle IDE Android Studio. Diese ist kostenfrei erhältlich und basiert auf der IDE von JetBrains namens IntelliJ IDEA. \citep{android_studio} Als alternative gilt der Open Source Vorgänger Eclipse.
+Android empfiehlt die eigene, offizielle IDE Android Studio. Diese ist kostenfrei erhältlich und basiert auf der IDE IntelliJ IDEA von JetBrains \citep{android_studio}. Als Alternative gilt der Open Source Vorgänger Eclipse.
 
 \subsection{iOS}
 Xcode ist die IDE von Apple, ohne die eine Kompilierung von iOS Projekten nicht möglich ist.
-Diese befindet sich derzeit in der stabilen Version 7 und liefert das benötigte SDK, so wie einen umfangreichen Simulator der alle mobilen Apple Geräte virtualisieren kann. Xcode ist ebenfalls verpflichtend, wenn die kompilierte Anwendung auf ein Mobilgerät installiert und getestet werden soll. Seit dem 3. Quartal 2015 ist dafür auch keine kostenpflichtige Entwicklerlizenz mehr nötig, sondern nur noch bei einer Veröffentlichung im App Store. \citep{t3n_xcode7}
-Eine alternative bietet JetBrains IDE Appcode, welches eine kompatible, aber kostenpflichtige Erweiterung zu Xcode ist.
-\citep{appcode}
-
+Sie befindet sich derzeit in der stabilen Version 7 und liefert das benötigte SDK sowie einen umfangreichen Simulator der alle mobilen Apple Geräte virtualisieren kann. Xcode ist ebenfalls verpflichtend, wenn die kompilierte Anwendung auf ein Mobilgerät installiert und getestet werden soll. Seit dem 3. Quartal 2015 ist dafür keine kostenpflichtige Entwicklerlizenz mehr nötig, denn diese wird nur noch bei einer Veröffentlichung im App Store verlangt \citep{t3n_xcode7}.
+Eine Alternative bietet JetBrains IDE Appcode, welches eine kompatible, aber kostenpflichtige Erweiterung zu Xcode ist \citep{appcode}.
 
 \subsection{Windows Phone}
-Microsoft setzt für die Kompilierung und Realisierung für WP Projekte eine Visual Studio IDE voraus, welche für Entwicklungen außerhalb eines Unternehmens kostenfrei ist.
-
+Microsoft setzt für die Kompilierung und Realisierung für Windows Phone Projekte eine Visual Studio IDE voraus, welche für unkommerzielle Entwicklungen kostenfrei ist.
+%QUELLE?
 
 \section{Native Spieleentwicklung}
-Bei der nativen Entwicklung, basieren die mobilen Applikationen auf den jeweiligen SDKs. Auch mobile Spiele können auf nativem Wege realisiert werden. Die Verwendung der mitgelieferten Grafikfunktionen für die Visualisierung und selbst definierte Spielweltlogik, können schon eine Basis für einfache 2D Spiele verkörpern. Durch die freie Grafikbibliothek OpenGL können Spielinhalte in 2D oder sogar 3D dargestellt werden. Allerdings ist OpenGL nicht für Windows Phone verfügbar, denn hier wird das eigene Pendant DirectX verwendet. Um die Spieleentwicklung zu erleichtern, können spezialisierte Frameworks und Engines genutzt werden, die eigens für die Entwicklung von Spielen konzipiert wurden und auf die gewünschte Plattform abgestimmt sind. In den folgenden Unterkapiteln werden beispielhafte Werkzeuge für die jeweiligen Plattformen aufgelistet.
+Bei der nativen Entwicklung basieren die mobilen Applikationen auf den jeweiligen SDKs. Auch mobile Spiele können auf nativem Weg realisiert werden. Die Verwendung der mitgelieferten Grafikfunktionen für die Visualisierung und selbst definierte Spielweltlogik, kann schon eine Basis für einfache 2D Spiele verkörpern. Durch die freie Grafikbibliothek OpenGL können Spielinhalte in 2D oder sogar 3D dargestellt werden. Allerdings ist OpenGL nicht für Windows Phone verfügbar, denn hier wird das eigene Pendant, DirectX, verwendet. Um die Spieleentwicklung zu erleichtern, können spezialisierte Frameworks und Engines genutzt werden, die eigens für die native Entwicklung von Spielen konzipiert wurden und auf die gewünschte Plattform abgestimmt sind. In den folgenden Unterkapiteln werden beispielhafte Werkzeuge für die jeweiligen Plattformen aufgelistet.
  
 %MARKER: Rechtschreib-Korrektur
 \subsection{Android}
-Für Android existieren einige Frameworks, wovon jedoch viele nicht immer auf dem neuesten Stand sind. Das ist häufig damit verbunden, dass diese aus privatem Interesse entstanden sind und ein unkommerzielles, kostenloses Vertriebsmodell betreiben. Daher sind regelmäßige Aktualisierungen oft nicht gewährleistet und manche Arbeiten wurden auch ganz eingestellt.
+Für Android existieren einige Frameworks, wovon jedoch viele auf einem veralteten Stand sind. Das ist häufig damit verbunden, dass diese aus privatem Interesse entstanden sind und ein unkommerzielles, kostenloses Vertriebsmodell betreiben. Daher sind regelmäßige Aktualisierungen oft nicht gewährleistet und manche Arbeiten wurden auch ganz eingestellt.
 
 \bigskip
 \textbf{AndEngine}\\
-Eine Game Engine die auf OpenGL basiert und für 2D Spiele ausgelegt ist.
-Die Letzte Aktualisierung erfolgte im Dezember 2013.
+Eine Game Engine, die auf OpenGL basiert und für 2D Spiele ausgelegt ist.
+Die letzte Aktualisierung erfolgte im Dezember 2013.
 
 \bigskip
 \textbf{Cocos2D-Android}\\
@@ -432,31 +430,31 @@ Eine Implementierung von Cocos2D für Android. Die Weiterentwicklung wurde aller
 
 \bigskip
 \textbf{jPCT-AE}\\
-Eine 3D Engine die auf jPCT für Desktopanwendungen mit Java basiert und für Android portiert wurde. Die Grafik wird von OpenGL 1.x und 2.0 unterstützt. Das Projekt wird aktuell auch weiterentwickelt und ist frei verfügbar.
+Eine 3D Engine, die auf jPCT für Desktopanwendungen mit Java basiert und für Android portiert wurde. Die Grafik wird von OpenGL 1.x und 2.0 unterstützt. Das Projekt wird aktuell weiterentwickelt und ist frei verfügbar.
 
 \subsection{iOS}
-Auch für iOS bestehen diverse Frameworks. Die Suche nach einer aktuellen Entwicklungsunterstützung gestaltet sich hier ein wenig einfacher, wobei man aber genau wie bei Android auch auf aufgegebene Projekte stößt. Ein großer Vorteil besteht aber durch SpriteKit, da dies ein Produkt von Apple selbst ist und eine gewisse Sicherheit bei zukünftiger Unterstützung gewährleistet.
+Auch für iOS sind diverse Frameworks erhältlich. Die Suche nach einer aktuellen Entwicklungsunterstützung gestaltet sich hier ein wenig einfacher, wobei man aber, genau wie bei Android, auch auf aufgegebene Projekte stößt. Ein großer Vorteil besteht aber durch SpriteKit, da dies von Apple selbst entwickelt wurde und eine gewisse Sicherheit bei zukünftiger Unterstützung gewährleistet.
 
 \bigskip
 \textbf{SpriteKit}\\
-Eigenentwicklung von Apple für 2D Spiele auf iOS und OS X. Es kann Objective-C oder Swift genutzt werden.
+Eine Eigenentwicklung von Apple für 2D Spiele auf iOS und OS X. Es kann Objective-C oder Swift genutzt werden.
 
 \bigskip
 \textbf{Cocos2D-iPhone}\\
-Abkömmling von Cocos2D für iOS mit den Implementierungen für Objective-C und zukünftig auch Swift. Dies ist einer der Hauptzweige von Cocos2D der stetig aktualisiert wird.
+Ein Abkömmling von Cocos2D für iOS mit den Implementierungen für Objective-C und zukünftig auch Swift. Dies ist einer der offiziellen Hauptzweige von Cocos2D, der stetig aktualisiert wird.
 
 \bigskip
 \textbf{Sparrow}\\
 Eine aktuelle Open Source Game Engine für iOS Spiele, die ausschließlich Objective-C unterstützt.
 
-\subsection{Windows Phone}
-Frameworks die einzig und allein für Windows Phone Spiele ausgelegt sind, waren nicht direkt ausfindig zu machen. Microsoft selbst rät zu dem eigenen XNA Framework, womit auch die meisten Entertainment Plattformen von Microsoft bedient werden können. Hauptsächlich werden hier Cross Plattform Tools genutzt, da die Verbreitung von entsprechender Hardware noch relativ gering ausfällt. Auch durch das neue Windows 10 und der Wunsch zu universellen Anwendungslösungen, besteht derzeit ein noch nicht abgeschlossener Änderungsprozess. Dadurch werden spezialisierte Lösungen für eine Windows Gerätekategorie zukünftig vermutlich eher uninteressant.
+%QUELLEN?
 
+\subsection{Windows Phone}
+Frameworks, die einzig und allein für Windows Phone Spiele ausgelegt sind, waren nicht direkt ausfindig zu machen. Microsoft selbst rät zu dem eigenen XNA Framework, womit auch die meisten Entertainment Plattformen von Microsoft bedient werden können. Hauptsächlich werden hier Cross Plattform Tools genutzt, da die Verbreitung von entsprechender Hardware noch relativ gering ausfällt. Auch durch das neue Windows 10 und den Wunsch nach universellen Anwendungslösungen, besteht derzeit ein noch nicht abgeschlossener Änderungsprozess. Dadurch werden spezialisierte Lösungen für eine Windows Gerätekategorie zukünftig vermutlich eher uninteressant.
+%QUELLEN XNA?
 
 \section{Zusammengefasste Übersicht}
 Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzelnen Systeme bieten.
-
-
 
 \begin{table}[htbp]
 	\centering
@@ -482,15 +480,9 @@ Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzel
 	\label{platform_differnces}
 \end{table}
 
-%OPTIONAL!!!
-%\chapter{Stores für mobile Spiele}
-%\section{Allgemeine Bedingungen für Entwickler}
-%\section{Maximale App-Größe}
-%\section{Anforderungen an den Quellcode}
-%\section{Kosten und Abgaben}
 
 \chapter{Plattformübergreifende Entwicklung}
-Die Entwicklung von Software-Produkten und Services, welche auf mehreren Systemen oder Laufzeitumgebungen funktioniert, wird als plattformübergreifende oder auch Cross-Plattform Entwicklung definiert. Um dies zu gewährleisten nutzen Entwickler unterschiedliche Methoden und Techniken, um verschiedene Systeme mit einer Projektstruktur zu erreichen.\citep{cross_plattform_explanation}
+Die Entwicklung von Softwareprodukten und Services, welche auf mehreren Systemen oder Laufzeitumgebungen funktioniert, wird als plattformübergreifende oder auch Cross-Plattform Entwicklung definiert. Um dies zu gewährleisten, nutzen Entwickler unterschiedliche Methoden und Techniken, um verschiedene Systeme mit einer Projektstruktur zu erreichen \citep{cross_plattform_explanation}.
 
 \begin{figure}[htbp]
 	\centering
@@ -500,38 +492,38 @@ Die Entwicklung von Software-Produkten und Services, welche auf mehreren Systeme
 
 
 \section{Ziel}
-Die Idee und das Ziel von plattformübergreifender Entwicklung sind, dass eine Softwareanwendung auf mehr als einer spezifischen digitalen Umgebung zufriedenstellend funktioniert. Diese Vorgehensweise wird angewandt, um ein Softwareprodukt auf mehreren proprietären Betriebssystemen zu vertreiben. Dies soll die Entwicklungszeit und sich daraus ergebene Kosten einsparen. Durch die Entwicklung von mobilen Geräten, sowie die zunehmende Verbreitung von Open Source Technologien, entstanden sukzessiv unterschiedliche Ansätze zur Realisierung.
+Die Idee und das Ziel von plattformübergreifender Entwicklung sind, dass eine Softwareanwendung auf mehr als einer spezifischen digitalen Umgebung zufriedenstellend funktioniert. Diese Vorgehensweise wird angewandt, um ein Softwareprodukt auf mehreren proprietären Betriebssystemen zu vertreiben. Dies soll die Entwicklungszeit und sich daraus ergebene Kosten einsparen. Durch die Entwicklung von mobilen Geräten sowie die zunehmende Verbreitung von Open Source Technologien entstanden sukzessiv unterschiedliche Ansätze zur Realisierung.
 
-Die Nutzung dieser Arbeitsweisen hat aber nicht nur Vorteile. Als nachteilig gilt die potentiell geringere Effizienz der Anwendung gegenüber der nativen Entwicklung. Beispielsweise enthält es redundante Prozesse oder für jede Plattform einen eigenen Datenspeicherordner. Die Reduzierung von Komplexitäten kann auch bis zur „Verdummung“ ausarten, um das Programm für weniger anspruchsvolle Softwareumgebungen anzugleichen. 
+Die Nutzung dieser Arbeitsweisen hat aber nicht nur Vorteile. Als nachteilig gilt die potentiell geringere Effizienz der Anwendung gegenüber der nativen Entwicklung. Beispielsweise enthält das Programm redundante Prozesse oder für jede Plattform einen eigenen Datenspeicherordner. Die Reduzierung von Komplexitäten kann auch bis zur „Verdummung“ des Programms ausarten, um das Programm für weniger anspruchsvolle Softwareumgebungen anzugleichen. 
 
-Trotz mancher momentanen Grenzen bietet die plattformübergreifende Entwicklung ausreichende Möglichkeiten, die eine derartige Projektstruktur befürworten.\citep{cross_plattform_explanation}
+Trotz mancher momentanen Grenzen bietet die plattformübergreifende Entwicklung ausreichende Möglichkeiten, die eine derartige Projektstruktur befürworten \citep{cross_plattform_explanation}.
 
 \section{Funktionsweise und Realisierungsansätze}
-Zu den grundlegenden Strategien gehört, dass ein Projekt oder Programm in verschiedene spezifische Betriebssystemversionen kompiliert wird. Weitere Methoden beinhalten die Verwendung von Teilbäumen in der Projektstruktur, um die Anwendung bestmöglich an die Eigenheiten der entsprechenden Zielplattform anzupassen. Ein anderer Ansatz ist die Abstraktion des Codes auf unterschiedlichen Ebenen, um sich mehreren Softwareumgebungen anzunähern. Softwareprojekte die diese Verfahren anwenden, kann man als plattformunabhängig, genauer gesagt plattformübergreifend bezeichnen, da sie die unterstützten Systeme gleich wertet und keines bevorzugt.\citep{cross_plattform_explanation}
+Zu den grundlegenden Strategien gehört, dass ein Projekt oder Programm auf einen allgemein verständlichen Zwischencode (z.B. Bytecode) reduziert wird, um daraufhin zu verschiedenen Zielbetriebssystemen kompiliert zu werden. Weitere Methoden beinhalten die Verwendung von Teilbäumen in der Projektstruktur, um die Anwendung bestmöglich an die Eigenheiten der entsprechenden Zielplattform anzupassen. Ein anderer Ansatz ist die Abstraktion des Codes auf unterschiedlichen Ebenen, um sich mehreren Softwareumgebungen anzunähern. Softwareprojekte, die solche Verfahren anwenden, kann man als plattformunabhängig, genauer gesagt plattformübergreifend, bezeichnen, da sie die unterstützten Systeme gleich werten und keines bevorzugen \citep{cross_plattform_explanation}.
 
 \bigskip
-Die Entwicklung von plattformübergreifenden Anwendungen auf mobilen Systemen wird in sechs verschiedene Ansätze kategorisiert. (Abb. \ref{graph_cross_plattform_approaches})
+Die Entwicklung von plattformübergreifenden Anwendungen auf mobilen Systemen wird in sechs verschiedene Ansätze kategorisiert. Diese Ansätze werden zum Teil in Unteransätze aufgeteilt, wie in Abbildung \ref{graph_cross_plattform_approaches} zu sehen ist.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Bilder/Cross_Plattform_Ansaetze}
-	\caption{Haupt- und Nebenansätze zur Entwicklung von mobilen plattformübergreifenden Anwendungen}\label{graph_cross_plattform_approaches}
+	\caption{Haupt- und Unteransätze zur Entwicklung von mobilen, plattformübergreifenden Anwendungen}\label{graph_cross_plattform_approaches}
 \end{figure}
 
-In den folgenden Unterkapiteln werden die einzelnen Ansätze und Unteransätze näher betrachtet. Die Analyse und Betrachtung basiert auf den Informationen der Ausaurbeitung von \citep{cross_plattform_approaches}.
+In den folgenden Unterkapiteln werden die einzelnen Ansätze und Unteransätze näher betrachtet. Die Analyse und Betrachtung der folgenden Abschnitte basieren auf den Informationen der Ausaurbeitung von \textit{„Taxonomy of Cross-Platform Mobile Applications Development Approaches“} \citep{cross_plattform_approaches}.
 
 \subsection{Kompilierung}
-Kompilierung(Compilation) ist ein Ansatz mit zwei Unterkategorien:
+Der Kompilierungsansatz wird in zwei Unterkategorien aufgeteilt:
 
 \begin{itemize}
 	\item Cross-Compiler
 	\item Trans-Compiler
 \end{itemize}
 
-Der Compiler ist ein Programm, welches den Quellcode einer High-Level Programmiersprache in einen Low-Level Code übersetzt wird. Dieser Low-Level Code ist ein Binärcode in Maschinensprache, der von dem Prozessor verstanden wird. Dieser Konvertierungsprozess wird als Kompilierung bezeichnet.
+Der Compiler ist ein Programm, welches den Quellcode einer High-Level Programmiersprache in einen Low-Level Code übersetzt. Dieser Low-Level Code ist ein Binärcode in Maschinensprache, der von Prozessoren verstanden wird. Dieser Konvertierungsprozess wird als Kompilierung bezeichnet.
 
 \bigskip
-Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unterschiedlich zu dem System ist, auf dem der kompilierte Code läuft. Die Zielsysteme können Betriebssysteme, Prozessoren oder eine Kombination aus beiden sein. Abbildung \ref{graph_compilation_XMLVM} stellt eine von XMLVM gebotene Lösung zu Cross-Compiling dar. Dies nutzt XML für die Frontend Darstellung und für die Verarbeitung des Bytecodes eine virtuelle Maschine(VM).
+Man spricht von einem \textbf{Cross-Compiler}, wenn das System auf dem der Compiler sich befindet unterschiedlich zu dem System ist, auf dem der kompilierte Code ausgeführt werden soll. Die Zielsysteme können Betriebssysteme, Prozessoren oder eine Kombination aus beiden sein. Abbildung \ref{graph_compilation_XMLVM} stellt eine von XMLVM gebotene Lösung eines Cross-Compilers dar. Dieser Compiler nutzt XML für die Darstellung des Frontends und eine virtuelle Maschine (VM) für die Verarbeitung des Bytecodes.
 
 \begin{figure}[htbp]
 	\centering
@@ -540,16 +532,16 @@ Man spricht von einem \textbf{Cross-Compiler}, wenn das System des Compilers unt
 \end{figure}
 
 \bigskip
-Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in eine andere High-Level Programmiersprache. Da viele Sprachen jedoch unterschiedliche Eigenschaften und Leistungsmerkmale besitzen, muss der generierte Code unter Umständen nachbearbeitet werden, wenn der Compiler diese bei der Übersetzung nicht unterstützt. Auch ist der Code durch die automatisierte Erzeugung in der Regel nur schwer lesbar. Es besteht auch eine Abhängigkeit zu regelmäßigen Updates, um die Änderungen der Quell- und Zielsysteme aktuell zu halten.
+Ein \textbf{Trans-Compiler} kompiliert eine High-Level Programmiersprache in eine andere High-Level Programmiersprache. Da viele Sprachen jedoch unterschiedliche Eigenschaften und Leistungsmerkmale besitzen, muss der generierte Code unter Umständen nachbearbeitet werden, wenn der Compiler die Quelleigenschaften nicht für die Zielsprache übersetzen kann. Zudem ist der Code durch die automatisierte Erzeugung in der Regel nur schwer von Menschen lesbar. Es besteht außerdem eine Abhängigkeit zu regelmäßigen Updates, um die Änderungen der Quell- und Zielsysteme aktuell zu halten und aufeinander abzustimmen.
 
 \subsection{Komponentenbasiert}
-Die Komponente besteht aus einem Paket oder einem Modul, dessen Funktionen und Daten untereinander in Relation stehen. Jede Komponente besitzt eine Schnittstelle, dass die Servicedienste spezifiziert, welche von anderen Komponenten genutzt werden können. Die Kommunikation findet ausschließlich über die Schnittstellen statt, so dass eine Komponente keinerlei Informationen über den Aufbau einer anderen benötigt. 
+Die Komponente besteht aus einem Paket oder einem Modul, dessen Funktionen und Daten untereinander in Relation stehen. Jede Komponente besitzt eine Schnittstelle, welche die Servicedienste spezifiziert, die von anderen Komponenten genutzt werden können. Die Kommunikation findet ausschließlich über die Schnittstellen statt, so dass eine Komponente keinerlei Informationen über den internen Aufbau einer anderen benötigt. 
 
 \bigskip
-Ein beispielhafter Lösungsansatz ist der \textbf{Component-Based Mobile Web Application of Cross-Plattform}. Dieser komponentenbasierte Ansatz versucht die Entwicklung mobiler Web-Apps dahingehend zu vereinfachen, dass durch das Konzept von Softwarekomponenten, die Kernfunktionalitäten modular aufgeteilt werden. Diese Module beinhalten Speichermanagement, Netzwerkkommunikation, Grafik, Dateisystem und die Systemdienstkomponenten. Dadurch erhalten die Komponenten eine Wiederverwertbarkeit und vereinfacht die Migration auf andere Plattformen. Jede Plattform kann dieselben Schnittstellen nutzen, benötigt jedoch eine eigene innere Implementierung für die Unterstützung. 
+Ein theoretischer, komponentenbasierter Lösungsansatz der nicht offiziell betitelt ist, versucht die Entwicklung mobiler Web-Apps dahingehend zu vereinfachen, dass durch das Konzept von Softwarekomponenten, die Kernfunktionalitäten modular aufgeteilt werden. Diese Module beinhalten Speichermanagement, Netzwerkkommunikation, Grafik, Dateisystem und die Systemdienstkomponenten. Dadurch erhalten die Komponenten eine Wiederverwertbarkeit und vereinfachen die Migration auf andere Plattformen. Jede Plattform kann dieselben Schnittstellen nutzen, benötigt jedoch eine eigene innere Implementierung für die Unterstützung. 
 
 \subsection{Interpretierung}
-Bei der Interpretierung übersetzt ein Interpreter (Dolmetscher) den Quellcode in ausführbare Anweisungen. Dies geschieht in Echtzeit mit Hilfe einer dedizierten Maschine. Hierbei existieren drei Unteransätze:
+Bei der Interpretierung übersetzt ein Interpreter (Dolmetscher) den Quellcode, meist in Form von Skriptsprachen, in ausführbare Anweisungen. Dies geschieht in Echtzeit mit Hilfe einer dedizierten Maschine. Hierbei existieren drei Unteransätze:
 
 \begin{itemize}
 	\item Virtuelle Maschine (VM)
@@ -557,7 +549,7 @@ Bei der Interpretierung übersetzt ein Interpreter (Dolmetscher) den Quellcode i
 	\item Laufzeit Interpretation (Runtime Interpretation)
 \end{itemize}
 
-Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). Diese verfügt über eine eigene komplette Hardwarearchitektur wie einer CPU, Stack, Register und ein korrespondierendes Befehlssystem. Die Grundidee hierbei ist es die mobile App mit einer plattformübergreifenden Sprache zu entwickeln, die auf der dedizierten, virtuellen Maschine läuft und auf entsprechenden Plattformen installiert ist. In Abbildung \ref{graph_interpreter_Dalvik} wird der Interpretierungsablauf der von Android bekannten Dalvik VM dargestellt.
+Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). Diese verfügt über eine eigene, komplette Hardwarearchitektur mit CPU, Stack, Register und einem korrespondierenden Befehlssystem. Die Grundidee hierbei ist es, die mobile App mit einer plattformübergreifenden Sprache zu entwickeln, die auf der dedizierten, virtuellen Maschine läuft und auf entsprechenden Plattformen installiert ist. In Abbildung \ref{graph_interpreter_Dalvik} wird der Interpretierungsablauf der von Android bekannten Dalvik VM dargestellt.
 
 \begin{figure}[htbp]
 	\centering
@@ -566,7 +558,7 @@ Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). 
 \end{figure}
 
 \bigskip
-\textbf{Webbasierte} Tools verwenden Technologien wie HTML(5), Javascript und CSS, die auf verschiedenen Plattformen ausführbar sind. Der Zugriff auf Hardwarekomponenten wie Kamera und Sensoren erfolgt durch Wrapper. Wrapper sind Adapter oder Schnittstellen, um auf die nativen APIs zugreifen zu können. Abbildung \ref{graph_interpreter_PhoneGap} zeigt die Kommunikation und Interpretierung des Webbasierten Interpreters PhoneGap von Adobe.
+\textbf{Webbasierte} Tools verwenden Technologien wie HTML(5), Javascript und CSS, die auf verschiedenen Plattformen ausführbar sind. Der Zugriff auf Hardwarekomponenten wie Kamera und Sensoren erfolgt durch Wrapper. Wrapper sind Adapter oder Schnittstellen, um auf die nativen APIs zugreifen zu können. Abbildung \ref{graph_interpreter_PhoneGap} zeigt die Kommunikation und Interpretierung des webbasierten Interpreters PhoneGap von Adobe.
 
 \begin{figure}[htbp]
 	\centering
@@ -575,7 +567,7 @@ Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). 
 \end{figure} 
 
 \bigskip
-Die \textbf{Laufzeit} ist eine Ausführungsumgebung und eine Schicht, welche die mobile App auf der nativen Plattform lauffähig macht. Bei diesem Ansatz wird der Quellcode in Bytecode umgewandelt und dann zur Laufzeit von einer virtuellen Maschine ausgeführt. In Abbildung \ref{graph_interpreter_Titanium} wird die Verarbeitung von Appcelerators Titanium-Interpreters dargestellt.
+Die \textbf{Laufzeit} ist eine Schicht und Ausführungsphase, welche die mobile App auf der nativen Plattform lauffähig macht. Bei diesem Ansatz wird der Quellcode in Bytecode umgewandelt und dann zur Laufzeit ebenfalls von einer virtuellen Maschine ausgeführt. In Abbildung \ref{graph_interpreter_Titanium} wird die Verarbeitung von Appcelerators Titanium-Interpreters dargestellt.
 
 \begin{figure}[htbp]
 	\centering
@@ -584,23 +576,23 @@ Die \textbf{Laufzeit} ist eine Ausführungsumgebung und eine Schicht, welche die
 \end{figure}
 
 \subsection{Modellierung}
-Bei der Modellierung verwenden Entwickler abstrakte Modelle, um die Funktionen und / oder die Benutzeroberfläche der Anwendungen zu beschreiben. Diese Modelle werden für jede Zielplattform in entsprechenden Quellcode transformiert. Hierbei gibt es die Ansätze des Model-Based User Interface Development (MB-UID) und des Model-Driven Development (MDD).
+Bei der Modellierung verwenden Entwickler abstrakte Modelle, um die Funktionen und/oder die Benutzeroberfläche der Anwendungen zu beschreiben. Diese Modelle werden für jede Zielplattform in entsprechenden Quellcode transformiert. Hierbei gibt es die Ansätze des Model-Based User Interface Development (MB-UID) und des Model-Driven Development (MDD).
 
 \bigskip
-\textbf{MB-UID} wird genutzt, um die Benutzeroberfläche durch die formale Beschreibung von Aufgaben, Daten und Benutzern einer App automatisch zu generieren. Hierbei wird zwischen der Benutzeroberfläche und der App-Logik unterschieden.
-Für die Generierung existieren zwei Strategien.
+\textbf{MB-UID} wird genutzt, um die Benutzeroberfläche durch die formale Beschreibung von Aufgaben, Daten und Benutzern einer App automatisch zu generieren. Hierbei wird zwischen der Benutzeroberfläche und der Logik unterschieden.
+Für die Generierung existieren zwei Strategien:
 
 \begin{itemize}
-	\item Eine Generierung zur Laufzeit der App, die eine Websysteme adaptiert und basiert auf Anfrage- und Antwortprotokollen (request / response). Eingeschränkt wird dies durch die Voraussetzung einer dauerhaften Verbindung zu einem Server.
+	\item Die Generierung zur Laufzeit der App, die Websysteme adaptiert und auf Anfrage- und Antwortprotokollen (request/response) basiert. Eingeschränkt wird dies durch die Voraussetzung einer dauerhaften Verbindung zu einem Server.
 	
-	\item Die Generierung während der Entwicklungszeit, also vor Ausführung der Anwendung. Hier kann der Entwickler das generierte Interface überprüfen und zu jeder Plattform spezifische Funktionalitäten hinzufügen. Dabei kann die Funktion zur Verbindungsart festgelegt werden, also ob eine dauerhafte Verbindung bestehen soll oder zu einem selbst bestimmten Zeitpunkt synchronisiert werden soll.
+	\item Die Generierung während der Entwicklungszeit, also vor Ausführung der Anwendung. Hier kann der Entwickler das generierte Interface überprüfen und zu jeder Plattform spezifische Funktionalitäten hinzufügen. Dabei kann die Funktion zur Verbindungsart festgelegt werden, ob eine dauerhafte Verbindung bestehen soll oder zu einem selbst bestimmten Zeitpunkt synchronisiert wird.
 \end{itemize}
 
 \bigskip
 Das Hauptkonzept von \textbf{MDD} ist die Generierung von plattformspezifischen Versionen, basierend auf dem plattformunabhängigen, abstrakten Modell. Das Modell wird zum Beispiel durch Domain-Specific Language (DSL) beschrieben.
 
 \subsection{Cloudbasiert}
-In diesem Ansatz geschieht die Verarbeitung der Anwendung nicht lokal auf dem Gerät, sondern auf einem Cloudserver. Dabei werden einige Cloudeigenschaften verwendet, wie Flexibilität, Virtualisierung, Sicherheit und dynamisches Management. Die Clientanwendung ist dabei weitest möglich reduziert, da diese nur Basisprozesse benötigt. Dies wird Thin-Client genannt, da wie in Abbildung \ref{client_aufgaben} nur Ein- und Ausgabe verarbeitet werden müssen. Cloudbasierte Anwendungen sollen dadurch besonders energieeffizient sein.
+In diesem Ansatz wird die Logik der Anwendung nicht lokal auf dem Gerät verarbeitet, sondern auf einem Cloudserver. Dabei werden einige Cloudeigenschaften genutzt, wie Flexibilität, Virtualisierung, Sicherheit und dynamisches Management. Die Clientanwendung ist dabei weitestmöglich reduziert, da diese nur Basisprozesse zur Kommunikation benötigt. Dies wird Thin-Client genannt, da, wie in Abbildung \ref{client_aufgaben}, nur Ein- und Ausgabe verarbeitet werden müssen. Cloudbasierte Anwendungen sollen dadurch besonders energieeffizient sein.
 
 \begin{figure}[htbp]
 	\centering
@@ -608,13 +600,13 @@ In diesem Ansatz geschieht die Verarbeitung der Anwendung nicht lokal auf dem Ge
 	\caption{Aufgaben von Client-Anwendungen}\label{client_aufgaben}
 \end{figure}
 
-Da zur Zeit der Bearbeitung zu diesem Ansatz keine direkten Realisierungen gefunden worden, sondern überwiegend der theoretische Aufbau einer solchen Applikation, wird dieser Teil nicht weiter vertieft.
+Da zur Zeit der Bearbeitung zu diesem Ansatz keine praktischen Umsetzungen gefunden wurden, sondern nur der theoretische Aufbau einer solchen Applikation, wird dieser Teil mangels Beispielen nicht weiter vertieft.
 
 \subsection{Vereinigung}
-Dieser Ansatz versucht die besten Eigenschaften verschiedener Ansätze zusammenzuführen, von den jeweiligen Vorteilen zu profitieren und Nachteile zu minimieren.
+Dieser Ansatz versucht die besten Eigenschaften verschiedener Ansätze zusammenzuführen (Merge), von den jeweiligen Vorteilen zu profitieren und Nachteile zu minimieren.
 
 \bigskip
-Ein \textbf{unbetitelter Lösungsansatz} vereinigt den komponentenbasierten Ansatz mit dem Cross Compiler und einer darauf angepassten Universalsprache. Um die nativen Hardwarefunktionen wie Kamera und GPS, sowie native Softwareeigenschaften wie Buttons und andere Interaktionsfelder anzusprechen, wird eine Sammlung an Komponenten erstellt. Implementierungen dieser Komponenten können durch gemeinsame Schnittstellen für jede Zielplattform erfolgen. Dieses Framework soll dem Entwickler ermöglichen, Applikationen zu entwickeln, die auf nativen Code und der Universalsprache basieren. Diese Sprache wird der App als zusätzliche Kommunikationsschicht und Schnittstelle hinzugefügt, um die Komponenten und deren Methoden anzusprechen.(Abb. \ref{graph_merge_component_based}) Der Entwickler implementiert nur eine minimale Struktur der App auf nativer Basis, welche die Benutzerschnittstelle und Navigation beinhaltet. An welcher Stelle und auf welche Weise die Komponenten integriert werden, wird durch die Universalsprache definiert. Das Framework regelt die Codeintegrierung innerhalb des nativen Codes. Bei diesem Lösungsansatz ist es erforderlich die Benutzerschnittstelle für jede Plattform manuell zu definieren. Dabei liegt der funktionale Fokus auf allgemeingültigen Funktionen, ohne Berücksichtigung der plattformspezifischen.
+Ein unbetitelter Lösungsansatz vereinigt den komponentenbasierten Ansatz mit dem Cross-Compiler und einer darauf angepassten Universalsprache. Um die nativen Hardwarefunktionen wie Kamera und GPS sowie native Softwareeigenschaften wie Buttons und andere Interaktionsfelder anzusprechen, wird eine Sammlung an spezialisierten Komponenten erstellt. Implementierungen dieser Komponenten können durch gemeinsame Schnittstellen für jede Zielplattform erfolgen. Dieses Framework soll dem Entwickler ermöglichen Applikationen zu entwickeln, die auf nativen Code und der definierten Universalsprache basieren. Diese Sprache wird der App als zusätzliche Kommunikationsschicht und Schnittstelle hinzugefügt, um die Komponenten und deren Methoden anzusprechen (vgl. Abb. \ref{graph_merge_component_based}). Der Entwickler implementiert nur eine minimale Grundstruktur der App auf nativer Basis, welche die Benutzerschnittstelle und Navigation beinhaltet. An welcher Stelle und auf welche Weise die Komponenten integriert werden, wird durch die Universalsprache definiert. Das Framework regelt die Codeintegrierung innerhalb des nativen Codes. Bei diesem Lösungsansatz ist es erforderlich, die Benutzerschnittstelle für jede Plattform manuell zu definieren. Dabei liegt der funktionale Fokus auf allgemeingültigen Methoden.
 
 \begin{figure}[htbp]
 	\centering
@@ -623,7 +615,7 @@ Ein \textbf{unbetitelter Lösungsansatz} vereinigt den komponentenbasierten Ansa
 \end{figure}
 
 \bigskip
-\textbf{Integrated Cross-Platform Mobile Development (ICPMD)} ist eine weitere Lösung die auf dem Merge-Prinzip aufbaut und drei Verwendungsszenarios unterstützt. Diese Szenarios sind, wie in Abbildung \ref{graph_merge_integrated_based} dargestellt, abhängig von dem gegebenen Input.
+\textbf{Integrated Cross-Platform Mobile Development (ICPMD)} ist eine weitere Lösung, die auf dem Vereinigungsprinzip aufbaut und drei Verwendungsszenarios unterstützt. Diese Szenarios sind, wie in Abbildung \ref{graph_merge_integrated_based} dargestellt, abhängig von dem gegebenen Input.
 
 \bigskip 
 Der Entwickler hat…
@@ -631,9 +623,9 @@ Der Entwickler hat…
 \begin{enumerate}
 	\item …bereits ein bestehendes Projekt (z.B. Windows Phone) und möchte dies auf weitere Plattformen (z.B. iOS und Android) ausweiten.
 	
-	\item …definierte Anforderungen und möchte daraus, auf bestimmte Zielplattformen, eine mobile App erzeugen.
+	\item …definierte Anforderungen und möchte daraus, auf bestimmten Zielplattformen, eine mobile App erzeugen.
 	
-	\item …ein Projekt basierend auf dem abstrakten Modell und möchte dies aktualisieren und dann speichern oder daraus, auf bestimmte Zielplattformen, eine mobile App erzeugen.
+	\item …ein Projekt basierend auf dem abstrakten Modell und möchte dies aktualisieren und speichern oder daraus, auf bestimmten Zielplattformen, eine mobile App erzeugen.
 \end{enumerate}
 
 \begin{figure}[htbp]
@@ -643,24 +635,24 @@ Der Entwickler hat…
 \end{figure}
 
 \section{Übersicht der Ansätze}
-Tabelle \ref{table_all_approaches} fasst die vorigen Ansätze zur plattformübergreifenden Entwicklung in Kurzform zusammen, benennt die jeweiligen Vor- und Nachteile, sowie die Namen bekannter Lösungen.
+Tabelle \ref{table_all_approaches} fasst die Ansätze zur plattformübergreifenden Entwicklung in Kurzform zusammen und benennt die jeweiligen Vor- und Nachteile, sowie die Projekttitel bekannter Lösungen.
 
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{|c|c|p{8cm}|p{6cm}|p{3,2cm}|}
+		\begin{tabular}{|c|c|p{5cm}|p{6cm}|p{3,2cm}|}
 			\hline
 			\rowcolor[HTML]{000000} 
 			{\color[HTML]{FFFFFF} \textbf{Ansatz}} & {\color[HTML]{FFFFFF} \textbf{Unteransatz}} & \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Pro}}}                                                                                                                                                                                                                                                 & \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Contra}}}                                                                                                                    & \multicolumn{1}{c|}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{\begin{tabular}[c]{@{}c@{}}Beispielhafte\\ Lösungsansätze\end{tabular}}}} \\ \hline
-			\textbf{Kompilierung}                  & Cross-Compiler                              & Wiederverwertung eines existierenden Quellcodes durch Cross-Kompilierung auf eine andere Plattform.Die resultierende Applikation ist native und besitzt somit die Vorteile einer nativen App.                                                                                                                                    & Die Zuordnungen zwischen zwei Sprachen ist sehr aufwendig, so dass hauptsächlich die gemeinsamen Eigenschaften berücksichtigt werden.                                                                  & MoSync, Corona, Neomades, XMLVM                                                                            \\ \hline
-			\textbf{}                              & Trans-Compiler                              & Kann genutzt werden, um veraltete Applikationen und deren veralteter Code auf eine neuere Version derselben Sprache zu übersetzen. Wiederverwertung eines existierenden Quellcodes durch Trans-Kompilierung auf eine andere Plattform.Die resultierende Applikation ist native und besitzt somit die Vorteile einer nativen App. & Konzentriert sich ausschließlich auf die gemeinsamen APIs der Quell- und der Zielsprache. Benötigt regelmäßige Aktualisierungen, um die Änderungen der APIs in Quell- und Zielsprache zu unterstützen. & JUniversal                                                                                                                                    \\ \hline
-			\textbf{Komponentenbasiert}            &                                             & Vereinfacht die Unterstützung neuer Plattformen durch definierte Schnittstellen bei implementierten Komponenten.                                                                                                                                                                                                                 & Konzentriert sich nur auf die Gemeinsamkeiten der unterstützten Plattformen.                                                                                                                           & Theoretisch                                                                                                                                        \\ \hline
-			\textbf{Interpretation}                & Webbasiert                                  & Leicht zu erlernen und zu benutzen, da es auf bekannten Web-Technologien aufbaut.                                                                                                                                                                                                                                                & Die Benutzerschnittstelle von webbasierten Apps besitzen nicht das gleiche Aussehen und Handhabung wie bei nativen Apps. Geringere Perfomance gegenüber nativen Apps.                                  & PhoneGap, Rhomobile, xFace                                            \\ \hline
+			\textbf{Kompilierung}                  & Cross-Compiler                              & Wiederverwertung eines existierenden Quellcodes durch Cross-Kompilierung auf eine andere Plattform. Die resultierende Applikation ist nativ und besitzt somit derartige Vorteile.                                                                                                                                    & Die Zuordnungen zwischen zwei Sprachen sind sehr aufwendig, so dass hauptsächlich die gemeinsamen Eigenschaften berücksichtigt werden.                                                                  & MoSync, Corona, Neomades, XMLVM                                                                            \\ \hline
+			\textbf{}                              & Trans-Compiler                              & Kann genutzt werden, um veraltete Applikationen und deren veralteten Code auf eine neuere Version derselben Sprache zu übersetzen. Wiederverwertung eines existierenden Quellcodes durch Trans-Kompilierung auf eine andere Plattform. Die resultierende Applikation ist nativ und besitzt somit derartige Vorteile. & Konzentriert sich ausschließlich auf die gemeinsamen APIs von Quell- und Zielsprache. Benötigt regelmäßige Aktualisierungen, um jeweilige Änderungen zu unterstützen. & JUniversal                                                                                                                                    \\ \hline
+			\textbf{Komponentenbasiert}            &                                             & Vereinfacht die Unter-stützung neuer Plattformen durch definierte Schnittstellen bei implementierten Komponenten.                                                                                                                                                                                                                 & Konzentriert sich nur auf die Gemeinsamkeiten der unterstützten Plattformen.                                                                                                                           & Theoretisch                                                                                                                                        \\ \hline
+			\textbf{Interpretierung}                & Webbasiert                                  & Leicht zu erlernen und zu benutzen, da es auf bekannten Web-Technologien aufbaut.                                                                                                                                                                                                                                                & Die Benutzerschnittstelle von webbasierten Apps besitzen nicht das gleiche Aussehen und Handhabung wie bei nativen Apps. Geringere Perfomance gegenüber nativen Apps.                                  & PhoneGap, Rhomobile, xFace                                            \\ \hline
 			\textbf{}                              & Virtuelle Maschine                          & Geringere Gesamtgröße und schnellerer Download der Apps, da alle benötigten Bibliotheken und Funktionen in der VM gespeichert sind.                                                                                                                                                                                              & Langsame Ausführung der Applikation auf der VM. Die VM muss erst aus einem Store geladen werden, was auf iOS nicht unterstützt wird.                                                                   & MobDSL                                                                                                                                               \\ \hline
-			\textbf{}                              & Laufzeit                                    & Der Quellcode muss nur einmal geschrieben werden.                                                                                                                                                                                                                                                                                & Die Perfomance beim Laden der App ist gering, da der Interpretierungsvorgang bei jeder einzelnen Ausführung stattfindet.                                                                               & Titanium, Xamarin                                        \\ \hline
-			\textbf{Modellierung}                  & MD-UID                                      & Spart Entwicklungszeit durch Generierung des UI-Codes. Nützlich für Prototyping, durch schnelle UI-Entwicklung und dadurch frühe Evaluierung der Benutzerfreundlichkeit.                                                                                                                                                         & Muss sich bei den einzelnen Plattformen auf ähnliche Benutzerschnittstellen konzentrieren.                                                                                                             &  XMobile                                                                                                                                            \\ \hline
-			\textbf{}                              & MDD                                         & Die Modellierungssprache ist effektiv, um Anforderungen zu definieren. Der Fokus liegt auf der Funktionalität und nicht an der technischen Implementierung.                                                                                                                                                                      & Kann existierenden, nativen Quellcode nicht verarbeiten.                                                                                                                                               & JSAF, MD2, Jelly, AppliDE                                                                             \\ \hline
-			\textbf{Cloudbasiert}                 &                                             & Verarbeitungsprozesse werden in eine Cloud ausgelagert.                                                                                                                                                                                                                                                                          & Das Endgerät und die App benötigen eine schnelle, permanente Netzwerkverbindung.                                                                                                                       &  Theoretisch                                                                                                                                         \\ \hline
+			\textbf{}                              & Laufzeit                                    & Der Quellcode muss nur einmal geschrieben werden.                                                                                                                                                                                                                                                                                & Geringe Perfomance beim Laden der App, da der Interpretierungsvorgang bei jeder einzelnen Ausführung stattfindet.                                                                               & Titanium                                       \\ \hline
+			\textbf{Modellierung}                  & MD-UID                                      & Spart Entwicklungszeit durch Generierung des UI-Codes. Nützlich für Prototyping, durch schnelle UI-Entwicklung und frühe Evaluierung der Benutzerfreundlichkeit.                                                                                                                                                         & Muss sich bei den einzelnen Plattformen auf verallgemeinerte Benutzerschnittstellen konzentrieren.                                                                                                             &  XMobile                                                                                                                                            \\ \hline
+			\textbf{}                              & MDD                                         & Die Modellierungssprache ist effektiv, um Anforderungen zu definieren. Der Fokus liegt auf der Funktionalität und nicht auf der technischen Implementierung.                                                                                                                                                                      & Kann existierenden, nativen Quellcode nicht verarbeiten.                                                                                                                                               & JSAF, MD2, Jelly, AppliDE                                                                             \\ \hline
+			\textbf{Cloudbasiert}                 &                                             & Verarbeitungsprozesse werden auf einen Cloudserver ausgelagert.                                                                                                                                                                                                                                                                          & Das Endgerät und die App benötigen eine schnelle, permanente Netzwerkverbindung.                                                                                                                       &  Theoretisch                                                                                                                                         \\ \hline
 			\textbf{Vereinigung}                   &                                             & Vorteile aus den Stärken anderer Ansätze. Bietet dem Entwickler vielseitige Möglichkeiten.                                                                                                                                                                                                                                       & Benötigt hohen Entwicklungsaufwand.                                                                                                                                                                    &  ICPMD                                                                                                                                             \\ \hline
 		\end{tabular}
 	}
@@ -670,7 +662,7 @@ Tabelle \ref{table_all_approaches} fasst die vorigen Ansätze zur plattformüber
 
 \section{Plattformübergreifende Entwicklung mobiler Applikationen ohne den Schwerpunkt Spieleentwicklung}
 Plattformübergreifende Entwicklung für mobile Plattformen ist nicht nur für die Spieleentwicklung interessant.
-In der Thesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier nicht der Fokus auf Game-spezifischen Applikationen und Entwicklungswerkzeugen. Hier wird in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen eingegangen und deren Resultate klassifiziert. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Im Gegensatz zu der Arbeit von Benjamin Vehse, setzt diese Thesis den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht von daher nicht weiter auf die genannten und vorangegangenen Entwicklungswerkzeuge ein.
+In der Bachelorthesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier der Fokus nicht auf mobilen Spieleapplikationen und zugehörigen Entwicklungswerkzeugen. Vehse geht in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen ein und klassifiziert deren Resultate. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Im Gegensatz zu der Arbeit von Benjamin Vehse, setzt diese Thesis den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht daher nicht weiter auf die in seiner genannten und analysierten Entwicklungswerkzeuge ein.
 
 
 \chapter{Plattformübergreifende Spieleentwicklung}
