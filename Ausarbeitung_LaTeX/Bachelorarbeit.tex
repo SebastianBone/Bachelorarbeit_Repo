@@ -118,7 +118,7 @@ Eine Statistik über die Marktanteile der mobilen Betriebssysteme bei Smartphone
 
 Die Grafik verdeutlicht, dass Geräte mit Android Systemen den Markt eindeutig dominieren, direkt gefolgt von iOS und Windows Phone. Laut Prognose wird sich auch in den nächsten Jahren an dieser Hierarchie nichts ändern.
 Abbildung \ref{graph_mobile_systems_laender} gibt weiteren Aufschluss über die Verteilung der Systeme nach ausgewählten Ländern. Die Daten beziehen sich auf die Verkäufe von August bis Oktober 2015, welche von Kantar \citep{marktanteile_betriebssysteme_laender} im Dezember 2015 veröffentlicht wurden. 
-Man kann anhand der Daten schlussfolgern, dass Android, iOS und Windows Phone derzeit die drei relevantesten Systeme auf dem mobilen Markt sind.
+Man kann anhand der Daten schlussfolgern, dass Android und iOS derzeit die beiden relevantesten Systeme auf dem mobilen Markt sind. Mit deutlich geringeren Nutzerzahlen steht Windows Phone an dritter Stelle. 
 %TODO: Auswertungstext der Grafiken
 
 \begin{figure}[htbp]
@@ -662,53 +662,61 @@ Tabelle \ref{table_all_approaches} fasst die Ansätze zur plattformübergreifend
 Plattformübergreifende Entwicklung für mobile Plattformen ist nicht nur für die Spieleentwicklung interessant.
 In der Bachelorthesis „\textit{Plattformabhängige und –unabhängige Entwicklung mobiler Anwendungen am Beispiel von Geo-Wikipedia-App}“ \citep{cross_plattform_development_vehse} wird ebenfalls die plattformübergreifende Entwicklung analysiert, jedoch liegt hier der Fokus nicht auf mobilen Spieleapplikationen und zugehörigen Entwicklungswerkzeugen. Vehse geht in Kapitel 2.2 auch auf die verschiedenen Herangehensweisen ein und klassifiziert deren Resultate. Weiterhin wird eine Auswahl der bekannteren Cross-Plattform Entwicklungstools (PhoneGap, Xamarin, Appcelerator) analysiert. Im Gegensatz zu der Arbeit von Benjamin Vehse, setzt diese Bachelorthesis den Schwerpunkt auf Frameworks und Engines zur Spieleentwicklung und geht daher nicht weiter auf die in seiner genannten und analysierten Entwicklungswerkzeuge ein.
 
-%MARKER: Rechtschreib-Korrektur
+
 \chapter{Plattformübergreifende Spieleentwicklung}
 
-\section{Definition von Anforderungen für vergleichbare Entwicklungstools}
-Das Angebot an Tools für die plattformübergreifende Spieleentwicklung ist vielfältig und es bestehen Unterschiede in der Funktionalität sowie den Möglichkeiten. Da ein Vergleich aller angebotenen Produkte den Umfang dieser Arbeit drastisch überschreiten würde, werden zuerst grundlegende Anforderungen definiert.
+\section{Definition von Anforderungen für vergleichbare Entwicklungswerkzeuge}
+Das Angebot an Werkzeugen für die plattformübergreifende Spieleentwicklung ist vielfältig und es bestehen Unterschiede in der Funktionalität sowie den Möglichkeiten. Zum Zeitpunkt der Bearbeitung dieser Arbeit, wurden bei Wikipedia ca. 140 verschiedene, plattformübergreifende Werkzeuge zur Spieleentwicklung aufgelistet \citep{list_of_game_engines}. Da ein Vergleich von allen Produkten solcher Art den Umfang dieser Arbeit drastisch überschreiten würde, werden zuerst grundlegende Anforderungen definiert, um eine spezifischere Auswahl treffen zu können.
  
 \bigskip
 Das Framework soll folgende Anforderungen erfüllen:
 \begin{itemize}
 	\item Mobile Geräte gehören zu den Zielplattformen, wobei mindestens Android und iOS enthalten sein müssen.
-	\item Sowohl 2D, als auch 3D Spiele können entwickelt werden.
+	\item Es können 2D als auch 3D Spiele entwickelt werden.
 	\item Es steht mindestens eine objektorientierte, statisch typisierte Programmiersprache zur Wahl.
-	\item Es handelt sich um ein aktuelles Framework, mit regelmäßigen Updates und einer aktiven Entwicklergemeinschaft.
+	\item Es handelt sich um ein aktuelles Framework, mit regelmäßigen Updates, Dokumentation und einer aktiven Entwicklergemeinschaft.
 	\item Ein kostenfrei und kommerziell nutzbarer Produkttyp steht zur Auswahl.
 \end{itemize}
 
-Trotz der geforderten Übereinstimmungen ist es wünschenswert, dass für die Codebasis nicht dieselben Programmiersprachen genutzt werden, um den Vergleich abwechslungsreicher und kontrastvoller zu gestalten. Android und iOS sind derzeit die beiden entscheidenden mobilen Plattformen und sollen als Testsysteme für die Beispielapplikation genutzt werden. Zudem ist es wichtig, dass die Entwicklungswerkzeuge den aktuellen Stand der Zielsysteme unterstützen und sich regelmäßig weiterentwickeln. Dazu gehört eine dem Zustand entsprechende Dokumentation, als auch eine lebendige Community. Dies soll für die nähere Zukunft eine gewisse Sicherheit der weiteren Existenz gewährleisten. Statisch typisierte Programmiersprachen bieten bei qualifiziertem Umgang oft bessere Performanceleistungen, im Vergleich zu dynamischen Skriptsprachen. Durch diese Anforderung wird partiell vorausgesetzt, dass der plattformübergreifende Ansatz durch Kompilierung umgesetzt wird. Daraus folgt, dass Frameworks ausgeschlossen werden, die hybride Applikationen erzeugen. Dies sind Apps die auf webbasierten Techniken, wie HTML, CSS und JavaScript basieren. Für Smartphones ist es heutzutage technisch keine besondere Eigenschaft mehr, 3D Spiele zu unterstützen. Die Konzeption der Beispielapplikation soll sich deshalb die Wahl zwischen 2D und 3D vorbehalten können. Ein kostenfreier Bezug sichert eine größere Entwicklercommunity und die Möglichkeit, sich barrierefrei und ohne Zeitdruck mit einem Werkzeug zu arbeiten. Anhand dieser Anforderungen werden passende Werkzeuge ausgewählt.
+
+Die definierten Anforderungen sind nicht willkürlich gewählt und folgendermaßen gerechtfertigt:
+
+\bigskip
+Wie in der Marktanalyse der mobilen Systeme aus Kapitel \ref{subsec:Marktanteile_mobile_Systeme} ermittelt wurde, sind Android und iOS derzeit die beiden entscheidenden mobilen Plattformen und sind daher für die spätere Beispielapplikation maßgebliche Voraussetzungen. Zudem ist es wichtig, dass die Entwicklungswerkzeuge den aktuellen, technischen Stand der Zielsysteme unterstützen und sich regelmäßig weiterentwickeln. Dazu gehört eine zur Version passende, aktuelle Dokumentation. Eine aktive und lebendige Community von Nutzern und Entwicklern ist wichtig, um eventuelle Problemstellungen leichter lösen zu können sowie potentielle Bugs ausfindig zu machen und diese gegebenenfalls zu melden. Diese Faktoren sind wichtig, um für die nähere Zukunft eine kalkulierbare Sicherheit der weiteren Existenz der Entwicklungssoftware zu gewährleisten. Die Möglichkeit eine statisch typisierte Programmiersprache zu nutzen wird vorausgesetzt, da diese, im Vergleich zu dynamischen Skriptsprachen, bei qualifiziertem Umgang in der Regel bessere Performanceleistungen bieten. Auch eventuelle Fehler werden dadurch schon bei der Kompilierung aufgedeckt und nicht erst zur Laufzeit. Durch diese Anforderung wird partiell vorausgesetzt, dass der plattformübergreifende Ansatz die Kompilierung enthält. Daraus folgt, dass Frameworks ausgeschlossen werden, die ausschließlich mit webbasierten Techniken, wie HTML, CSS und JavaScript, arbeiten. Viele aktuelle Smartphones sind von ihrer technischen Ausstattung befähigt, 3D Spiele zu unterstützen und darzustellen. Die Konzeption der Beispielapplikation soll sich deshalb die Wahl zwischen 2D und 3D vorbehalten können. Ein kostenfreier Bezug und uneingeschränkte Nutzung sichert eine größere Entwicklercommunity und vergrößert die Menge des geteilten Wissens. Weiterhin gibt dies die Möglichkeit, barrierefrei und ohne Zeitdruck mit einem Werkzeug zu arbeiten und das Resultat bei Wunsch zu veröffentlichen.
+
+\bigskip
+Trotz der geforderten Übereinstimmungen ist es wünschenswert, dass für den Basisquellcode der Projekte nicht dieselben Programmiersprachen genutzt werden, um den Vergleich abwechslungsreicher und kontrastvoller zu gestalten. Anhand dieser Anforderungen werden passende Werkzeuge ausgewählt.
+
 
 \section{Gamespezifische Frameworks und Engines}
-Aufgrund der zuvor gestellten Anforderungen, wurde die Auswahl der Vergleichswerkzeuge stark reduziert. Die Wahl fiel auf die beiden Frameworks libGDX und Cocos2D-X und die Engine Unity3D, welche zu den populärsten Tools in der Spieleentwicklung zählen. Diese werden in den folgenden Unterkapiteln vorgestellt und darauf in Kapitel \ref{chapter:Analyse_der_Frameworks} anhand der theoretischen Angaben und Möglichkeiten analysiert.
+Aufgrund der zuvor gestellten Anforderungen, wurde die Auswahl der Vergleichswerkzeuge bedeutend reduziert. Die Wahl fiel auf die beiden Frameworks libGDX und Cocos2D-X sowie die Engine Unity3D. Diese werden in den folgenden Unterkapiteln kurz vorgestellt und darauf in Kapitel \ref{chapter:Analyse_der_Frameworks} anhand der theoretischen Angaben und Möglichkeiten analysiert.
 
 \subsection{libGDX}
-Das auf Java basierende Entwicklungsframework libGDX ist unter Apache 2.0 lizensiert und Open Source. libGDX bringt eine Menge an grundlegenden Bibliotheken für 2D und 3D Spiele mit. Dabei wird aber nicht jede Eventualität abgedeckt, was aber auch gar nicht gewollt ist. Für spezielle Fälle sollen bei Bedarf dem Projekt entsprechend spezialisierte Module hinzugefügt werden. Dies kann bei der Erstellung eines neuen Projekts oder nachträglich geschehen. Dies soll garantieren, dass nur die Funktionalität integriert ist, die auch wirklich benötigt wird. Dafür arbeitet libGDX stark mit anderen quelloffenen Frameworks und Bibliotheken zusammen. Durch die Programmiersprache Java, ist die Erstellung von Android Anwendungen problemlos möglich. Für die Generierung von iOS Apps werden die Fähigkeiten des Kompilierer RoboVM verwendet. \citep{libGDX_main_features}
+Das auf Java basierende Entwicklungsframework libGDX ist unter Apache 2.0 lizensiert.  libGDX ist Open Source und bringt eine Menge an grundlegenden Bibliotheken für die Erstellung von 2D und 3D Spielen mit. Dabei wird allerdings nicht jede Eventualität abgedeckt, denn für spezielle Fälle sollen dem Projekt bei Bedarf entsprechend spezialisierte Module hinzugefügt werden. Dies kann bei der Erstellung eines neuen Projekts oder nachträglich geschehen. Dieses modulare Konzept soll garantieren, dass nur die Funktionalität integriert ist, die auch wirklich benötigt wird. Dafür arbeitet libGDX verstärkt mit anderen quelloffenen Frameworks und Bibliotheken zusammen. Die zur Verfügung stehende Programmiersprache ist Java, welche die Erstellung von Android Anwendungen problemlos möglich macht. Für die Generierung von iOS Apps wird auf die Fähigkeiten des Kompilierers RoboVM zurückgegriffen \citep{libGDX_main_features}. 
 
 
 \subsection{Cocos2D-X}
-Cocos2D-X ist ein Open Source Framework, unter MIT lizensiert. Auch hier bestehen zahlreiche Schnittstellen und Kooperationen mit externen Anbietern, wovon einige bereits schon in die Bibliothek integriert wurden. Entwickler haben für die Codebasis die Wahl zwischen C++, Lua und JavaScript. Cocos2D-X ist der plattformübergreifende Ableger der vielseitigen Cocos Reihe. Trotz der Namensgebung können 3D Anwendungen erstellt werden. Das Programm Cocos Studio unterstützt bei der Gestaltung von Spielszenen, wobei die grafische Oberfläche mit Texturen, Sprites und Menüobjekten angeordnet und daraufhin für die IDE exportiert werden kann, um die Spiellogik zu implementieren. Projekte können aus der Kommandozeile oder einer eigenen Desktopanwendung namens Cocos heraus erstellt werden. Cocos2D-X findet laut eigenen Angaben auch unter größeren Spieleentwicklern Anklang und wird häufig in ostasiatischen Ländern wie China, Japan und Südkorea verwendet. \citep{cocos2d_main_features}
+Cocos2D-X ist ein Open Source Framework und unter dem MIT (Massachusetts Institute of Technology) lizensiert. Auch hier bestehen zahlreiche Schnittstellen und Kooperationen mit externen Anbietern spezieller Frameworks, wovon einige bereits fester Bestandteil der Standardbibliothek sind. Entwickler haben für die Codebasis die Wahl zwischen C++, Lua und JavaScript. Cocos2D-X ist der plattformübergreifende Ableger der vielgesichtigen Cocos Reihe. Trotz der Namensgebung können auch 3D Anwendungen erstellt werden. Das optionale Programm Cocos Studio unterstützt bei der Gestaltung von Spielszenen. Damit kann die grafische Ebene mit Texturen, Sprites und Menüobjekten angeordnet und daraufhin für die IDE exportiert werden, um die zugehörige Spiellogik zu implementieren. Projekte können aus der Kommandozeile oder einer eigenen Desktopanwendung namens Cocos heraus erstellt werden. Cocos2D-X findet laut eigenen Angaben auch bei großen Spieleentwicklern wie Konami Anklang und wird häufig in ostasiatischen Ländern wie China, Japan und Südkorea verwendet \citep{cocos2d_main_features}. 
 
 
 \subsection{Unity3D}
-Unity3D ist derzeit die international führende Game-Engine. Das System ist proprietär, besitzt aber eine riesige Menge an Schnittstellen für die Nutzung von Objekten externer Anwendungen. Auch wird hier die größte Anzahl an aktuellen Zielplattformen unterstützt. Unity3D findet Verwendung bei Entwicklern verschiedenster Bereiche, wie Hobby, Indie und sogar bei professionellen Studios. In dem Editor der Engine können Spieleelemente direkt in der Szene hinzugefügt, transformiert, mit Komponenten erweitert und direkt getestet werden. Spiellogik kann durch C\# Klassen, UnityScript oder Boo Skripte in einer IDE umgesetzt werden. Diese können auch einem Gameobjekt als Komponente hinzugefügt werden. Werte von globalen Variablen oder Objekte sind im Editor direkt veränderbar. Zudem ist es möglich, Objekte innerhalb eines Tests zur Laufzeit anzupassen. Mit sogenannten Prefabs hat man die Möglichkeit, Kompositionen von Spielobjekten zur Wieder- und Mehrfachverwendung zu speichern. Der zugehörige Assetstore stellt einen vielfältigen Marktplatz dar, der verschiedenste Spielinhalte oder komplette Projekte anbietet. \citep{unity_public_relations}
+Unity3D ist derzeit die international führende Game-Engine. Das System ist proprietär, besitzt aber eine große Anzahl an Schnittstellen, für die Nutzung externer Datenobjekte und zusätzlichen Services. Des Weiteren wird durch diese Engine die größte Anzahl an aktuellen Zielplattformen unterstützt. Unity3D findet Verwendung bei Entwicklern verschiedenster Interessengebiete, wie Hobby, Indieentwickler und bei professionellen Studios. Innerhalb des Editors der Engine können Spieleelemente einer Szene direkt hinzugefügt, transformiert, mit Komponenten erweitert und unmittelbar getestet werden. Die Spiellogik kann durch C\#, UnityScript oder Boo Skripte in einer externen IDE umgesetzt, einem Gameobjekt als Komponente hinzugefügt werden oder als eigenständige Klassen operieren. Werte von globalen Objekten und Variablen sind im Editor durch ein entsprechend erzeugtes Formfeld veränderbar. Zudem ist es möglich Objekte zur Laufzeit im Editor anzupassen und hinzuzufügen. Mit sogenannten Prefabs hat man die Möglichkeit, Kompositionen von Spielobjekten zur Wieder- und Mehrfachverwendung zu speichern. Der zugehörige Assetstore stellt einen vielfältigen Marktplatz dar, der verschiedenste Spielinhalte oder komplette Projekte anbietet \citep{unity_public_relations}. 
 
 
 \subsection{Weitere Frameworks}
-Weitere Werkzeuge zur Spieleentwicklung, die den Anforderungen entsprechen, aber nicht für den Vergleich weiter analysiert werden konnten, sollen an dieser Stelle kurz erwähnt werden.
+Weitere Werkzeuge zur Spieleentwicklung die den Anforderungen entsprechen, aber nicht für den Vergleich weiter analysiert werden, sollen an dieser Stelle kurz erwähnt werden.
 
 \bigskip
 \textbf{MonoGame}\\
-Eine Open Source Implementierung von Microsofts XNA Framework, das eine Vielzahl an Zielplattformen aus verschiedenen Bereichen unterstützt. Als Programmiersprache wird C\# genutzt. \citep{monogame}
+Eine Open Source Implementierung von Microsofts XNA Framework, die eine Vielzahl an Zielplattformen aus verschiedenen Bereichen unterstützt. Als Programmiersprache wird C\# genutzt \citep{monogame}. 
 
 \bigskip
 \textbf{AppGameKit}\\
-Eine Lösung zur Spielentwicklung die zwar offiziell nicht kostenfrei, aber für kleines Geld erhältlich ist. Es kann C++ oder eine eigens kreierte Skriptsprache namens BASIC genutzt werden. \citep{appgamekit}
+Eine Lösung zur Spielentwicklung die zwar offiziell nicht kostenfrei, aber für kleines Geld erhältlich ist. Es können C++ oder eine eigens kreierte Skriptsprache namens BASIC genutzt werden \citep{appgamekit}. 
 
 \bigskip
 \textbf{Lumberyard}\\
-Dies ist eine kostenlose, Open Source Spiele-Engine von Amazon, die zur Zeit der Bearbeitung als Betaversion veröffentlicht wurde und basiert auf der CryEngine. \citep{lumberyard}
+Dies ist eine kostenlose, Open Source Spiele-Engine von Amazon die zur Zeit der Bearbeitung als Betaversion veröffentlicht wurde und auf der CryEngine basiert \citep{lumberyard}.
 
 
 %TODO: Kapitel 6
@@ -717,7 +725,7 @@ Dies ist eine kostenlose, Open Source Spiele-Engine von Amazon, die zur Zeit der
 
 
 \section{Zielplattformen}
-Die Menge an Zielplattformen unterscheidet sich in den Bereichen Mobil, Destop und Web nur geringfügig. In Tabelle \ref{zielplattformen_frameworks} wird deutlich, dass sich die Menge an unterstützten Plattformen in diesen Kategorien, bei Cocos2D-x und Unity3D kaum unterscheidet. Das Blackberry OS wurde von beiden, hauptsächlich mangels Nachfrage, aus dem Programm genommen. Einzig libGDX stellt noch die Möglichkeit, Spiele hierfür zu entwickeln. Dafür befinden sich in dem Katalog von libGDX die meisten Lücken, wovon die gravierendste, aber derzeit noch verzeihbare, das Fehlen von Windows Phone und Universal Windows ist. Dennoch bieten alle drei Frameworks die Möglichkeit, gleichzeitige Entwicklung bei iOS und Android, als die wichtigsten mobilen Plattformen zuzulassen. 
+Die Anzahl der unterstützten Zielplattformen in den Kategorien Mobil, Destop und Web unterscheidet sich bei den drei Werkzeugen nur geringfügig. In Tabelle \ref{zielplattformen_frameworks} wird gezeigt, dass sich Cocos2D-x und Unity3D dieselben mobilen Systeme unterstützen. In dem Bereich unterscheidet sich libGDX von den anderen Beiden. Die Möglichkeit für das Blackberry OS Spiele zu entwickeln ist in diesem Vergleich einzig mit libGDX möglich. Dafür muss bei der Nutzung von libGDX auf Windows Phone verzichtet werden, was aber zukünftig durch Windows 10 Universal Applikationen wieder abgedeckt wird. Alle drei Werkzeuge bieten aber die vorausgesetzte Möglichkeit gleichzeitig die Systeme von iOS und Android zu bedienen \citep{unity_public_relations,cocos2d_main_features,libGDX_main_features}. 
 
 \begin{table}[htbp]
 	\centering
@@ -746,68 +754,68 @@ Die Menge an Zielplattformen unterscheidet sich in den Bereichen Mobil, Destop u
 			\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Gesamt}}             & {\cellcolor[HTML]{BEBEBE} 9}                 & {\cellcolor[HTML]{BEBEBE} 8}                & {\cellcolor[HTML]{BEBEBE} 10}                 \\
 		\end{tabular}
 	}
-	\caption{Unterstützte Zielplattformen der Frameworks}
+	\caption{Unterstützte Zielplattformen der Spieleframeworks}
 	\label{zielplattformen_frameworks}\citep{unity_public_relations,cocos2d_main_features,libGDX_main_features}
 \end{table}
 
 \section{Programmiersprachen}
-Die gewählten Spieleframeworks unterscheiden sich bei den verfügbaren Programmiersprachen komplett untereinander. Das verschafft Entwicklern mit unterschiedlichen Kenntnissen, einen leichteren Einstieg in die Spieleentwicklung, durch die Wahl einer vertrauten Sprache. Da manche Frameworks auch mehr als eine Sprache unterstützen, werden diese zugunsten der Übersichtlichkeit in eigenen Unterkapiteln behandelt.
+Bei der Wahl der Programmiersprachen unterscheiden sich die gewählten Spieleframeworks komplett voneinander. Entwickler mit unterschiedlichen Kenntnissen, kann durch die Wahl einer vertrauten Sprache somit ein leichterer Einstieg in die Spieleentwicklung geboten werden. Da zwei der Frameworks mehr als eine Sprache unterstützen, werden diese zugunsten der Übersichtlichkeit in eigenen Unterkapiteln behandelt. Auch wenn der Anforderung nach hauptsächlich die objektorientierten, statisch typisierten Sprachen entscheidend sind, werden zugunsten der Vollständigkeit alle verfügbaren Sprachen erwähnt.
 
 \subsection{libGDX}
 \label{subsec:libGDX}
-\textbf{libGDX} nutzt einzig und allein Java für die Entwicklung, was für reine Android Spiele ein großer Vorteil ist. Denn dadurch werden bei der Kompilierung kaum Kompromisse eingegangen.
-Java ist eine weitverbreitete, objektorientierte Programmiersprache, die erstmalig 1995 von dem Unternehmen Sun Microsystem vorgestellt wurde. 2010 übernahm das Unternehmen Oracle Sun Microsystem und die Weiterentwicklung von Java. Es entstanden verschiedene spezialisierte Technologielösungen. Die bekanntesten und meistgenutzten stellen dabei Java SE (Standard Edition) und Java EE (Enterprise Edition) dar. Java SE beinhaltet die komplette Standardbibliothek, wobei Java EE um Bibliotheken für die Entwicklung von Server-, Netzwerk- und Webanwendungen erweitert wurde. Das derzeit aktuelle JDK 8 soll 2016 auf Version 9 aufsteigen. \citep{java_9}
-Die Sprache gilt als plattformübergreifend, da Programme in einer virtuelle Maschine ausgeführt werden, der JVM(Java Virtual Machine). Diese führt den bei der Kompilierung erstellten Bytecode aus und prüft das Programm auf Laufzeitfehler. 
-Die Syntax lehnt sich an C++ und C. Die Typisierung ist statisch und gilt allgemein als sicher im Speicherbereich. \citep{java_kompakt}
+libGDX nutzt einzig und allein Java für die Entwicklung, was für reine Android Spiele ein großer Vorteil ist. Denn dadurch müssen bei der Kompilierung kaum Kompromisse eingegangen werden.
+Java ist eine weitverbreitete, objektorientierte Programmiersprache, die erstmalig 1995 von dem Unternehmen Sun Microsystem vorgestellt wurde. 2010 übernahm das Unternehmen Oracle Sun Microsystem und damit auch die Weiterentwicklung von Java. Es entstanden verschiedene, spezialisierte Technologielösungen. Die bekanntesten und meistgenutzten stellen dabei Java SE (Standard Edition) und Java EE (Enterprise Edition) dar. Java SE beinhaltet die komplette Standardbibliothek, wobei Java EE um Bibliotheken für die Entwicklung von Server-, Netzwerk- und Webanwendungen erweitert wurde \citep{java_kompakt}. Das derzeit aktuelle JDK 8 soll 2016 auf Version 9 aufsteigen \citep{java_9}. 
+Die Sprache gilt als plattformübergreifend, da Programme in einer virtuelle Maschine, der JVM (Java Virtual Machine), ausgeführt werden. Diese virtuelle Maschine führt den bei der Kompilierung erstellten Bytecode aus und prüft das Programm vorweg auf Laufzeitfehler. 
+Die Syntax wurde von C++ und C beeinflusst und besitzt eine statische Typisierung \citep{java_kompakt}. 
 
 \subsection{Cocos2D-X}
-Mit \textbf{Coco2D-X} hat man die Wahl zwischen C++, Lua und JavaScript, welche auf allen unterstützten Plattformen funktionieren. Einzige Einschränkung liegt bei JavaScript, da diese sich bei Cocos2D-X nicht mit Windows Phone verknüpfen lässt. \citep{cocos2d_main_features}
+Mit Coco2D-X hat man die Wahl zwischen C++, Lua und JavaScript, welche für fast alle unterstützten Plattformen nutzbar sind. Einzige Einschränkung liegt bei JavaScript, denn diese lässt sich bei Cocos2D-X nicht mit Windows Phone verknüpfen lässt \citep{cocos2d_main_features}. 
 
 \bigskip
-Lua ist eine schnelle, von der Syntax simpel gehaltene Skriptsprache, mit objektorientierten Eigenschaften. Die geschriebenen Skripte werden durch einen Interpreter in Bytecode übersetzt und ist kompatibel mit der Sprache C. Lua befindet sich derzeit in Version 5.3 und wird häufig in der Spieleentwicklung eingesetzt. \citep{lua_about}
+Lua ist eine von der Syntax simpel gehaltene Skriptsprache, mit objektorientierten Eigenschaften. Die geschriebenen Skripte werden durch einen Interpreter in Bytecode übersetzt und sind kompatibel mit der Sprache C. Lua befindet sich derzeit in Version 5.3 und wird häufig in der Spieleentwicklung eingesetzt \citep{lua_about}.
 
 \bigskip
-Mit der Unterstützung von C++, welches direkt von C abgeleitet ist, hat man die Möglichkeit äußerst performante und portable Software zu schreiben. Voraussetzung ist dabei ein sicherer Umgang, da C++ im Vergleich mit anderen High-Level Sprachen, sich weniger um Logikfehler kümmert und entsprechend auch keine Warnungen ausgibt. Die aktuelle Version ist C++14.
+Mit der Unterstützung von C++ hat man durch die die Möglichkeit äußerst performante und portable Software zu schreiben, da diese direkt von C abgeleitet und kompatibel ist. C++ hat eine komplexere Syntax im Vergleich zu anderen High-Level Sprachen, zählt aber zu den schnellsten Programmiersprachen der Welt. Seit 1998 ist C++ ISO standardisiert und mit der aktuellen Version 14 verfügbar. Es werden zudem die prozeduralen, generischen und objektorientierten Programmierparadigmen unterstützt \citep{cplusplus}. 
+
 
 \bigskip
-Für Entwickler die beispielsweise Erfahrungen im Webbereich besitzen, bietet die Verwendung von JavaScript einen weiteren Einstieg in Cocos2D-X.
-JavaScript ist eine Skriptsprache die es seit 1995 gibt und für dynamisches HTML in Webbrowsern entwickelt wurde. Trotz der Namensähnlichkeit zu Java, unterscheiden sich die beiden Sprachen grundlegend voneinander. JavaScript wird in der Regel genutzt um Client-seitige Logik innerhalb von HTML Dokumenten zu ermöglichen. Mit der Programmiersprache Java hingegen, können eigenständige Anwendungen aufgebaut werden. Die Sprache folgt Spezifikationen der privaten Normungsorganisation ECMA (European Computer Manufacturers Association), die Standardisierungen von Informationstechnologien entwickelt, die Richtigkeit deren Verwendung fördert und eine frei zugängliche Veröffentlichung dazu liefert. Der standardisierte Kern von JavaScript, wird als ECMAScript (ECMA 262) bezeichnet und beschreibt eine dynamische Typisierung, mit objektorientierten, aber klassenlosen Eigenschaften. Objekte basieren auf sogenannten Prototypen, die als Funktionen beschrieben werden. Nach der Instanziierung ist es möglich, das Objekt um zusätzliche Eigenschaften zu erweitern. Skripte können imperativ, aber auch funktional aufgebaut werden. Geschriebene Skripte werden durch einen Interpreter übersetzt. Basierend auf JavaScript, entstanden viele Bibliotheken und Frameworks, um beispielsweise serverseitige Netzwerkanwendungen zu betreiben (Node.js) oder Entwurfsmuster aus der Softwareentwicklung zu nutzen (Angular.js).
-ECMAScript befindet sich seit 2015 in Version 6. \citep{learning_javascript}
+Für Entwickler die Erfahrungen im Webbereich besitzen, bietet die Verwendung von JavaScript  im Gegensatz zu C++ einen leichteren Einstieg in Cocos2D-X.
+JavaScript ist eine Skriptsprache die es seit 1995 gibt und für dynamisches HTML in Webbrowsern entwickelt wurde. Trotz der Namensähnlichkeit zu Java, unterscheiden sich die beiden Sprachen grundlegend voneinander. JavaScript wird in der Regel genutzt um in  HTML Dokumenten clientseitige Logik zu ermöglichen. Mit der Programmiersprache Java können hingegen auch eigenständige Anwendungen aufgebaut werden. JavaScript folgt den Spezifikationen der privaten Normungsorganisation ECMA (European Computer Manufacturers Association) die Standardisierungen von Informationstechnologien entwickelt und die Richtigkeit deren Verwendung fördert als auch eine frei zugängliche Veröffentlichung dazu liefert. Der standardisierte Kern von JavaScript, wird als ECMAScript (ECMA 262) bezeichnet und beschreibt die Eigenschaften mit einer dynamischen Typisierung, die objektorientiert, aber klassenlose sind. Objekte basieren in JavaScript auf sogenannten Prototypen, die als Funktionen geschrieben werden. Nach der Instanziierung ist es möglich das Objekt um zusätzliche Eigenschaften zu erweitern. Skripte können imperativ aber auch funktional aufgebaut werden. Geschriebene Skripte werden durch einen Interpreter übersetzt. Basierend auf JavaScript entstanden viele verschiedene Bibliotheken und Frameworks. Mit Node.js können dann beispielsweise serverseitige Netzwerkanwendungen betrieben werden. Durch Angular.js werden bekannte Entwurfsmuster aus der Softwareentwicklung zugänglich, die der Skriptsprache normalerweise verwehrt wären. ECMAScript befindet sich seit 2015 in Version 6 \citep{learning_javascript}.
+ 
 
 \subsection{Unity3D}
-In \textbf{Unity3D} finden die Sprachen C\#, UnityScript und Boo Verwendung. Alle für Unity3D nutzbaren Sprachen entspringen Microsofts .NET Framework. Das bedeutet auch, dass es möglich ist weitere .NET Sprachen zu benutzen, wenn diese ihre Skripte in das DLL (Dynamically Linked Library) Format kompilieren können. Diese DLL Dateien können dann dem Unity Projekt hinzugefügt und verwendet werden. \citep{unity_managed_plugins}
+In Unity3D finden die Sprachen C\#, UnityScript und Boo nutzerseitige Verwendung. Diese Sprachen entspringen Microsofts .NET Framework, was den Vorteil bietet auch weitere .NET Sprachen zu benutzen zu können. Voraussetzung dafür ist, dass diese ihre Skripte in das DLL (Dynamically Linked Library) Format kompilieren können. Diese DLL Dateien können dann einem Unity Projekt hinzugefügt und verwendet werden \citep{unity_managed_plugins}. Für die Kompilierung nutzt Unity3D primär die Open Source alternative zu .NET, namens Mono.
 
 \bigskip
-Boo ist eine von Python beeinflusste Sprache für .NET und Mono, welche ohne Klammern und Semikolons auskommt. Die Typisierung ist generell statisch, kann aber trotzdem dynamische \textit{Duck-Typing} Eigenschaften nutzen. \citep{boo_about} Der Name Duck-Typing entsprang dem sogenannten \textit{Ententest} zur Typisierung, welcher wiederum auf einem Gedicht von James Whitcomb Riley zurückzuführen ist.
+Boo ist eine von Python beeinflusste Sprache für .NET als auch Mono und verzichtet auf Klammern und Semikolons in der Syntax. Die Typisierung ist generell statisch, kann aber trotzdem dynamische \textit{Duck-Typing} Eigenschaften nutzen. Beim Duck-Typing werden Objekte nicht durch ihre Klasse typisiert, sondern durch die Art der vorhandenen Attribute und Methoden. Daher findet die Typisierung erst zur Laufzeit durch den Interpreter statt \citep{boo_about}. Der Name Duck-Typing entspringt dem sogenannten \textit{Ententest} zur allgemeinen Typisierung. Dieser Test wurde von einem Gedicht von James Whitcomb Riley inspiriert.
 
 \bigskip
 “\emph{When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.}” \citep{ducktest}
 
-\bigskip
-Beim Duck-Typing werden Objekte nicht durch ihre Klasse typisiert, sondern durch die vorhandenen Attribute und Methoden. Daher findet die Typisierung erst zur Laufzeit durch den Interpreter statt. Aufgrund des seltenen Gebrauchs, wird Boo seit Unity 5.0 in der Dokumentation nicht mehr unterstützt.
 
 \bigskip
-Oft wird UnityScript in der Unity Community, aber auch von dem Unternehmen selbst, fälschlicherweise mit JavaScript gleichgesetzt, als wären die beiden Sprachen äquivalent. Auch wenn syntaktische Ähnlichkeiten bestehen, gibt es große semantische Unterschiede.
-UnityScript kann, wie die meisten objektorientierten Programmiersprachen, Klassen definieren und daraus Objekte erstellen. JavaScript hingegen besitzt zwar ebenfalls objektorientierte Eigenschaften, wobei diese anstatt Klassen aber sogenannte Prototypes verwendet. Des Weiteren kann UnityScript im Gegensatz zu JavaScript, Klassen, Objekte, Funktionen und Variablen mit Zugriffsmodifikatoren/Sichtbarkeiten versehen. UnityScript wurde speziell für die Unity3D Engine konzipiert und ist proprietär, was es schwierig macht, genaue Spezifikationen zu finden. \citep{unity_unityscript_vs_javascript}
+UnityScript wird innerhalb der eigenen Community oft, aber auch von dem Unternehmen selbst, fälschlicherweise mit JavaScript gleichgesetzt, so als wären die beiden Sprachen äquivalent. Auch wenn syntaktische Ähnlichkeiten bestehen, gibt es große semantische Unterschiede.
+UnityScript kann wie die meisten objektorientierten Programmiersprachen Klassen definieren und daraus Objekte erstellen. JavaScript hingegen besitzt zwar ebenfalls objektorientierte Eigenschaften, wobei aber wie zuvor beschrieben statt Klassen sogenannte Prototypes verwendet werden. Des Weiteren kann UnityScript im Gegensatz zu JavaScript Klassen, Objekte, Funktionen und Variablen mit Zugriffsmodifikatoren/Sichtbarkeiten versehen. UnityScript wurde speziell für die Unity3D Engine konzipiert und ist proprietär, was es erschwert genaue Spezifikationen zu finden \citep{unity_unityscript_vs_javascript}. 
 
 \bigskip
-C\# oder auch Visual C\# ist eine von Microsoft entwickelte Programmiersprache, die durch ECMA-334 standardisiert ist und sich aktuell in Version 6.0 befindet. Die Standardisierung bezieht sich allerdings nur auf die Sprache selbst und nicht auf Programme die in Verbindung mit dem .NET Framework realisiert worden. Alternativ zu .NET bietet Mono ein Open Source Framework inklusive Compiler für C\# an. Die Syntax der objektorientierten Sprache weißt große Ähnlichkeiten mit Java auf und wird oft mit dieser verglichen. Die Typisierung ist grundsätzlich statisch, wobei optional auch dynamische Typen genutzt werden können. \citep{csharp_in_depth}
-Laut Statistik, sind etwa 80\% der Unity Projekte in C\# geschrieben. \citep{unity_languages}
+C\# oder auch Visual C\# ist eine von Microsoft entwickelte Programmiersprache die durch ECMA-334 standardisiert ist und sich aktuell in Version 6.0 befindet. Die Standardisierung bezieht sich allerdings nur auf die Sprache selbst und nicht auf Programme die in Verbindung mit dem .NET Framework realisiert wurden. Die Syntax der objektorientierten Sprache weißt große Ähnlichkeiten mit Java auf. Die Typisierung ist grundsätzlich statisch, wobei optional auch dynamische Typen genutzt werden können. Mit C\# können in Unity3D auch typische Softwarearchitekturen realisiert werden \citep{csharp_in_depth}. 
+Laut einer eigenen Statistik von Unity3D sind etwa 80\% der Projekte in C\# geschrieben \citep{unity_languages}. 
+
 
 \section{Entwicklungsumgebungen}
-Für den Prozess der Entwicklung besteht bei jedem Framework die Wahlmöglichkeit zwischen mehreren IDEs. Praktisch kann selbstverständlich jeder textbasierte Editor zur Programmierung verwendet werden, aber um den Komfort von passendem Code-Highlighting und die direkte Projekterstellung zu nutzen, empfiehlt es sich die unterstützten Entwicklungsumgebungen zu verwenden. Diese stehen bei den drei vorgestellten Spieleframeworks in direkter Abhängigkeit zu dem verwendeten Betriebssystem.
+Für den Entwicklungsprozess besteht bei jedem Framework die Möglichkeit zwischen mehreren IDEs wählen zu können. Praktisch kann jeder textbasierte Editor für die Programmierung der Anwendung verwendet werden. Aber um den Komfort von der passenden Hervorhebung der Syntax und die direkte Kompilierungsmöglichkeit des Basiscodes zu erhalten, empfiehlt es sich auf die unterstützten Entwicklungsumgebungen zurückzugreifen. Diese sind bei den drei vorgestellten Spieleframeworks teilweise abhängig zu dem verwendeten Betriebssystem des Entwicklers.
 
 \subsection{Systembedingte Einschränkungen}
-Es gilt für jedwede Erzeugung von iOS Applikationen, das die Apple IDE Xcode unumgänglich ist. Diese ist auch ausschließlich unter OS X Systemen erhältlich und einsetzbar. Um die iOS Applikation testen zu können, benötigt man seit Xcode 7 nur noch eine gültige Apple ID. Um die App zu veröffentlichen, ist man letztlich aber dennoch verpflichtet eine Mitgliedschaft des Apple Developer Program zu erwerben. Diese geht mit aktuellen 99 US Dollar jährlich einher. In der Mitgliedschaft sind die Rechte zur Veröffentlichung von iOS, watchOS und OS X Anwendungen, sowie das Anlegen und Durchführen von Beta-Tests mit Testflight und diverse andere Features. \citep{apple_developer_program}
+Für jedwede Erzeugung von iOS Applikationen gilt, dass die Apple IDE Xcode unumgänglich ist. Diese ist ausschließlich unter OS X Systemen erhältlich und einsetzbar. Um die iOS Applikation testen zu können, benötigt man seit Xcode 7 nur noch eine gültige Apple ID. Um die App zu veröffentlichen, ist der Erwerb einer Mitgliedschaft des Apple Developer Program verpflichtend. Diese wird mit aktuell 99 US Dollar jährlich berechnet. In der Mitgliedschaft sind die Rechte zur Veröffentlichung von iOS, watchOS und OS X Anwendungen enthalten sowie das Anlegen und Durchführen von Beta-Tests mit Testflight \citep{apple_developer_program}.
 
 \bigskip
-Um iOS Apps mit libGDX zu erstellen, ist man zudem an einen speziellen Kompilierer gebunden, der Java in Obective-C Code übersetzen kann. Hierfür wird mit RoboVM zusammengearbeitet. Die Einbindung dieses Tools ist beispielsweise in Eclipse oder in auf Intellij IDEA basierten Entwicklungsumgebungen möglich. Eine eigene IDE mit Namen RoboVM Studio steht ebenfalls zur Wahl. Für die Nutzung von RoboVM fallen im Normalfall kosten ab derzeit 25 US Dollar für eine Einzellizenz an. Es werden jedoch auch reduzierte bis kostenfreie Modelle für Indie Entwickler oder Studenten angeboten. \citep{roboVM}
+Um mit libGDX iOS Apps erstellen zu können, besteht die Bindung an einen speziellen Kompilierer, mit dem Java in Obective-C Code übersetzt werden kann. Hierfür wird mit RoboVM zusammengearbeitet. Die Einbindung dieses Kompilierers ist beispielsweise in Eclipse, Intellij IDEA und auf IDEA basierten Entwicklungsumgebungen möglich. Eine eigene IDE mit Namen RoboVM Studio steht ebenfalls zur Wahl. Die Nutzung von RoboVM kostet derzeit 25 US Dollar bei einer Einzellizenz. Es werden aber auch reduzierte und kostenfreie Modelle für Indie Entwickler und Studenten angeboten \citep{roboVM}. 
 
 \bigskip
-Die Erstellung von Windows Phone Apps ist mit der Verwendung von Visual Studio verbunden. Diese benötigt mindestens Windows 7. Um den Simulator nutzen zu können, wird Microsofts Virtualisierungstechnik Hyper-V vorausgesetzt, wofür eine Windows 8 Pro oder Windows 10 Pro Version notwendig ist. \citep{visual_studio}
+Falls die Erstellung von Windows Phone Apps gefordert ist, wird die Verwendung von Visual Studio benötigt. Diese IDE setzt mindestens Windows 7 voraus. Um den Simulator nutzen zu können, wird Microsofts Virtualisierungstechnik Hyper-V vorausgesetzt. Hyper-V fordert wiederum  eine Windows 8 Pro oder Windows 10 Pro Version \citep{visual_studio}. 
 
 \subsection{Unterstützte IDEs}
-In Tabelle \ref{ides} werden die Editoren aufgelistet, die für die Bearbeitung des Quellcodes unterstützt und empfohlen werden. Abhängig welche Programmiersprache man bevorzugt, hat man pro Gameframework eine oder mehrere IDEs zur Auswahl. Wie im vorigen Kapitel bereits erwähnt, ist für jede iOS App Xcode unter OS X verpflichtend, ebenso wie Visual Studio für Windows Phone Anwendungen. Daher werden diese nicht zusätzlich für jedes Framework markiert. Die jeweiligen Vor- und Nachteile der einzelnen Entwicklungsumgebungen werden in dieser Arbeit nicht weiter behandelt und dieser Teil soll auch nicht weiter vertieft werden. Es dient lediglich der Vollständigkeit.
+In Tabelle \ref{ides} werden die IDEs aufgelistet die zur Bearbeitung des Quellcodes unterstützt und empfohlen werden. Abhängig welche Programmiersprache man bevorzugt, hat man je Spieleframework mehrere IDEs zur Auswahl. Wie im vorigen Kapitel bereits erwähnt, ist Xcode mit OS X für jede iOS App verpflichtend, ebenso wie Visual Studio für Windows Phone Anwendungen nötig ist. Xcode kann bei Cocos2D-X für die Bearbeitung des Basiscodes verwendet werden, bei den anderen Frameworks nur für die Bearbeitung des kompilierten Codes. In der genannten Tabelle werden nicht alle unterstützten Programmiersprachen gelistet, sondern nur welche in Verbindung mit den Spieleframeworks relevant sind. Die jeweiligen Vor- und Nachteile der einzelnen Entwicklungsumgebungen werden in dieser Arbeit nicht weiter behandelt und auch nicht weiter vertieft, sondern dient lediglich der Vollständigkeit.
 
 \begin{table}[htbp]
 	\centering
@@ -823,7 +831,7 @@ In Tabelle \ref{ides} werden die Editoren aufgelistet, die für die Bearbeitung 
 			{\color[HTML]{000000} \textbf{NetBeans}}       & {\color[HTML]{000000} Windows / OS X}          & {\color[HTML]{000000} Java}                        & {\color[HTML]{000000} X}               & {\color[HTML]{000000} }                   & {\color[HTML]{000000} }                 \\
 			{\color[HTML]{000000} \textbf{RoboVM Studio}}  & {\color[HTML]{000000} Windows / OS X}          & {\color[HTML]{000000} Java}                        & {\color[HTML]{000000} X}               & {\color[HTML]{000000} }                   & {\color[HTML]{000000} }                 \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} \textbf{Xcode}}          & {\color[HTML]{000000} OS X}                    & {\color[HTML]{000000} C++}                         & {\color[HTML]{000000} }                & {\color[HTML]{000000} X}                  & {\color[HTML]{000000} }                 \\
+			{\color[HTML]{000000} \textbf{Xcode}}          & {\color[HTML]{000000} OS X}                    & {\color[HTML]{000000} Obj-C / C++}                         & {\color[HTML]{000000}X}                & {\color[HTML]{000000} X}                  & {\color[HTML]{000000}X }                 \\
 			{\color[HTML]{000000} \textbf{Cocos Code}}     & {\color[HTML]{000000} Windows / OS X}          & {\color[HTML]{000000} JavaScript / Lua}            & {\color[HTML]{000000} }                & {\color[HTML]{000000} X}                  & {\color[HTML]{000000} }                 \\
 			\rowcolor[HTML]{C0C0C0} 
 			\textbf{Visual Studio}                         & Windows                                        & C\# / C++                                          &                                        & X                                         & X                                       \\
@@ -835,17 +843,16 @@ In Tabelle \ref{ides} werden die Editoren aufgelistet, die für die Bearbeitung 
 \end{table}
 
 \section{Native Gerätefunktionen und Schnittstellen}
-Smartphones und Tablets besitzen in der Regel kaum oder gar keine Hardwarebuttons, die für Anwendungen neu belegbar sind. Spiele die für solche mobilen Systeme entworfen worden, greifen daher auf eine oder zwei der beiden populärsten Steuerungsmechanismen zurück.
+Smartphones und Tablets besitzen in der Regel kaum oder gar keine Hardwarebuttons die für Anwendungen mit einer neuen Funktionalität belegbar sind. Spiele die für mobile Systeme entworfen wurden greifen daher auf alternative Steuerungsmechanismen zurück.
 
 \bigskip
-Überwiegende Praxis ist es, den vorhandenen Touchscreen für Eingaben und Interaktionen zu nutzen. Dies kann über bekannte Gesten geschehen oder über die Virtualisierung von Aktionsflächen, wie zum Beispiel Buttons und Regler. Alle drei Frameworks verfügen über Möglichkeiten, verschiedene Touchgesten zu unterscheiden.
-Eine andere Möglichkeit in das Spielgeschehen einzugreifen, bieten die geräteseitigen Hardwaresensoren. Ein Anwendungsbeispiel für den Gyroskop Sensor, wäre bei Rennspielen die Simulierung eines Lenkrades, bei dem durch die Neigung des Gerätes gesteuert wird. Weiterhin gehören Accelerometer, GPS und sowohl eine Kamera zu den üblichen Gerätefunktionen.
+Überwiegende Praxis ist es, den vorhandenen Touchscreen für Eingaben und Interaktionen zu nutzen. Dies kann über Gesten geschehen oder über die Virtualisierung von Aktionsflächen, wie zum Beispiel Buttons und Schieberegler. Alle drei Spieleframeworks verfügen über Möglichkeiten verschiedene Touchgesten zu unterscheiden.
+Eine weitere Möglichkeit in das Spielgeschehen eingreifen zu können, bieten die geräteseitigen Sensoren. Zu den üblichen Sensoren gehören beispielsweise Gyroskop, Accelerometer und Kompass. Ein Anwendungsbeispiel für die Verwendung des Gyroskop Sensor wäre bei Rennspielen die Simulierung eines Lenkrads, wobei durch die Neigung des Gerätes gesteuert wird. Aber auch die Kamera zählt in diese Kategorie. Durch die Unterstützung von maschineller Bildverarbeitung können innerhalb von Echtzeitvideos Funktionalitäten hinterlegt werden. Ein theoretisches Beispiel dazu sind Spiele mit Augmented Reality.
 
 \bigskip
-\textbf{Unity3D} liefert für fast alle gängigen Gerätefunktionen entsprechende Schnittstellen, um diese zu nutzen oder mit Funktionen zu hinterlegen. Bei \textbf{libGDX} kann man auf die meisten Sensorentypen zugreifen, muss aber auf Kamera und GPS verzichten.
-Hingegen kann \textbf{Cocos2D-X} bisher nur den Accelerometer ansteuern, wenn dieser vorhanden ist. Gyroskop, Kamera, GPS Lokalisierung und weiteres werden derzeit nicht unterstützt. Dadurch dass die beiden Frameworks quelloffen sind, ist bei Bedarf eine eigene Implementation theoretisch dennoch möglich. Eine offizielle Erweiterung ist demnach auch abhängig von dem Streben der Entwickler-Community. 
-In Tabelle \ref{tab_schnittstellen} werden die häufigsten Gerätefunktionen und die Unterstützung durch eine Schnittstelle, der einzelnen Frameworks gelistet. 
-Der Vollständigkeit halber ist zu dem Punkt Netzwerkverbindung zu sagen, dass keines der drei Frameworks ein WLAN Modul oder mobiles Internet ein- und ausschalten kann. Aus Gründen der Sicherheit, kann dies nur der Nutzer selbst. Es kann lediglich getestet werden, ob eine aktive Verbindung existiert. Für die Prüfung einer Bluetooth Verbindung, gibt es derzeit für keines eine offizielle Schnittstelle. Wenn ein Projekt die Anforderung einer bestimmten Schnittstelle besitzt, die aber in dem gewählten Framework nicht vorhanden ist, hat man dennoch die Möglichkeit diese plattformabhängig zu implementieren.
+\textbf{Unity3D} liefert für fast alle gängigen Gerätefunktionen entsprechende Schnittstellen, um diese bei Bedarf mit Funktionalität zu hinterlegen \citep{unity_docs}. Bei \textbf{libGDX} kann auf die meisten Sensorentypen zugegriffen werden, ausschließlich der Kamera und GPS Lokalisierung \citep{libGDX_docs}. Im Vergleich zu den anderen kann \textbf{Cocos2D-X} bisher nur den Accelerometer ansteuern, wenn dieser vorhanden ist. Gyroskop, Kamera, GPS und weiteres werden derzeit nicht offiziell unterstützt \citep{cocos2d_docs}. 
+
+Dadurch dass die libGDX und Cocos2D-X quelloffen sind, ist bei Bedarf eine eigene Implementation dennoch möglich. In Tabelle \ref{tab_schnittstellen} werden die häufigsten Gerätefunktionen aufgelistet und die Unterstützung durch eine zugehörige Schnittstelle markiert. Der Punkt Netzwerkverbindung  ist so zu verstehen, dass keines der drei Spieleframeworks das WLAN Modul oder das mobile Internet selbstständig ein- und ausschalten kann. Aus Gründen der Sicherheit kann dies nur der Nutzer selbst. Es kann lediglich getestet werden ob eine Verbindung zu einem Netzwerk vorhanden oder möglich ist. Für die Prüfung einer Bluetooth Verbindung gibt es derzeit für keines der drei Spieleframeworks eine offizielle Schnittstelle.
 
 \begin{table}[htbp]
 	\centering
@@ -870,12 +877,12 @@ Der Vollständigkeit halber ist zu dem Punkt Netzwerkverbindung zu sagen, dass k
 
 
 \section{Game Services}
-Um die Motivation und die Wiederspielbarkeit zu erhöhen, sowie neue Inhalte zur Verfügung zu stellen, können verschiedene Funktionalitäten eingebunden werden. 
-Ein Erfolgssystem basiert auf dem Belohnungsprinzip und kann den Benutzer auf unterschiedliche Weise in seinem Spielverhalten motivieren. Durch definierte Herausforderungen werden verschiedene Aufgaben gestellt, wobei dem Spieler durch das Erreichen dieser, ein visuelles Feedback gegeben werden kann. Das kann beispielsweise in Form von Medaillen, Erhöhung des Spielerlevels oder einer Prozessleiste auftreten. Kompetitive Elemente können mit Bestenlisten erzielt werden, in denen bestimmte Metriken von den Spielern sortiert aufgelistet werden können. Ranglisten über die höchste Punktzahl oder die längste Spielzeit geben Anreiz sich mit anderen zu messen. 
-In rundenbasierten und Echtzeit Mehrspielermodi treten zwei oder mehr Spieler gegeneinander an, um in einem Wettbewerb den besten Spieler zu ermitteln. Eine andere beliebte Variante sind Modi, in denen die Teilnehmer kooperieren, um Spielziele gemeinsam zu erreichen oder einfach unterhaltsame Erfahrungen zu schaffen.
-Um verbesserungswürdige Schwachstellen in der Anwendung zu ermitteln und das Verhalten von Spielern zu messen, werden Analysesysteme verwendet. Diese ermöglichen Einblicke auf Aktivitäten und Fortschritte der Spieler und Informationen zu getätigten Käufen. Auch wie häufig ein Benutzer die Anwendung gebraucht kann gemessen werden. Diese Statistiken verhelfen zu einem besseren Verständnis der eigenen Anwendung.
-Für den Erwerb von zusätzlichen, applikationsinternen Inhalten und die Abwicklung von Zahlungen sind Shop Systeme notwendig. Dies wird bei plattformübergreifenden Applikationen durch die Implementierung einer Bibliothek ermöglicht, die zu den gewünschten Zielplattformen und deren Stores, passende Schnittstellen bereitstellt. 
-In Tabelle \ref{tab_game_services} werden APIs aufgelistet, die populäre Game Services in den Frameworks unterstützen. Die Tabelle zeigt ausschließlich APIs, die plattformübergreifende Eigenschaften aufweisen und auf den beiden wichtigsten, mobilen Zielplattformen iOS und Android funktionieren.
+Um die Motivation und die Wiederspielbarkeit zu erhöhen können verschiedene, meist cloudbasierte Services für optionale Spielinhalte eingebunden werden. Mit solchen Services können zum Beispiel Erfolgssysteme, Ranglisten und Mehrspielersysteme realisiert werden.
+Ein Erfolgssystem basiert auf dem Belohnungsprinzip und kann den Benutzer auf unterschiedliche Weise in seinem Spielverhalten motivieren. Durch definierte Herausforderungen werden verschiedene Aufgaben gestellt, wobei dem Spieler durch das Erreichen dieser ein visuelles Feedback gegeben werden kann. Das kann beispielsweise in Form von Medaillen, Erhöhung des Spielerlevels oder einer Prozessleiste umgesetzt werden. Kompetitive Elemente können mit Bestenlisten erzielt werden, in denen bestimmte, spielinterne Metriken der Spieler sortiert aufgelistet werden können. Ranglisten über die höchste Punktzahl oder die längste Spielzeit geben dem Spieler Anreiz sich zu verbessern und mit anderen zu messen. 
+In Mehrspielermodi die entweder rundenbasiert oder in Echtzeit ablaufen, treten zwei oder mehr Spieler gegeneinander an, um in einem Wettbewerb den besten Spieler zu ermitteln. Eine weitere Variante sind Modi, in denen die Teilnehmer kooperieren müssen, um Spielziele gemeinsam zu erreichen.
+Um verbesserungswürdige Schwachstellen in der Anwendung zu ermitteln und das Verhalten von Spielern zu messen, werden Analysesysteme eingesetzt. Diese Systeme ermöglichen Einblicke auf Aktivitäten und Fortschritte der Spieler sowie Informationen zu getätigten Käufen innerhalb der Anwendung. Auch die Häufigkeit der Nutzung der Anwendung wird messbar. Diese Statistiken können zu einem besseren Verständnis der eigenen Anwendung verhelfen.
+Für den Erwerb von zusätzlichen, anwendungsinternen Inhalten und die Abwicklung von Zahlungen, sind Shop Systeme notwendig. Dies wird bei plattformübergreifenden Applikationen durch die Implementierung einer Bibliothek ermöglicht, die zu den gewünschten Zielplattformen und zugehörigen Stores, passende Schnittstellen bereitstellt. 
+In Tabelle \ref{tab_game_services} werden APIs aufgelistet, die populäre Game Services in den Spieleframeworks unterstützen. Die Tabelle zeigt hauptsächlich APIs, die plattformübergreifende Eigenschaften aufweisen und auf den beiden Zielplattformen iOS und Android funktionieren. Die Cloudservices von Google Play Game Services, App42 und NextPeer bieten die meisten Schnittstellen zu den genannten Spielinhalten.
 
 \begin{table}[htbp]
 	\centering
@@ -902,22 +909,21 @@ In Tabelle \ref{tab_game_services} werden APIs aufgelistet, die populäre Game S
 
 \bigskip
 \textbf{Play Game Services} \\
-Das Framework von Google bietet zahlreiche Services für den mobilen Gaming-Bereich. Es werden die meisten in der Tabelle genannten Services für die plattformübergreifende Entwicklung unterstützt. Die Voraussetzung für den Spieler, um diese Features nutzen zu können, ist ein Account in dem Netzwerk Google+. Play Game Services bietet auch Services zur Analyse des Spielerverhaltens, jedoch sind die Angaben von Google und den Spieleentwicklungstools bezüglich der Unterstützung nicht eindeutig. Die Cloud Dienste von Google sind ohne Kosten implementierbar. \citep{play_game_services}
+Das Framework von Google bietet zahlreiche, plattformübergreifende Services für den mobilen Gaming-Bereich. Die Voraussetzung für den Spieler, um diese Features nutzen zu können, ist ein Account in Googles Netzwerk Google+. Obwohl dies in der Tabelle nicht markiert wurde, bietet Play Game Services Werkzeuge zur Analyse des Spielerverhaltens an. Die Angaben von Google und den Spieleframeworks sind bezüglich der Unterstützung von Analysemöglichkeiten nicht eindeutig. Die Cloud Dienste von Google sind kostenfrei nutzbar. \citep{play_game_services}. 
 
 \bigskip
 \textbf{App42} \\
-App42 von ShepHertz Technologies bietet ein umfangreiches Angebot an Cloud Diensten, welches für Indie-Entwickler größtenteils kostenfrei zur Verfügung steht. Es gibt Schnittstellen für eine Vielzahl an Plattformen und Frameworks, sowohl im nativen, als auch im plattformübergreifenden Bereich. Die wichtigsten Game Services werden alle unterstützt. \citep{app42}
+App42 von ShepHertz Technologies bietet ein umfangreiches Angebot an Cloudservices, die für Indieentwickler größtenteils kostenfrei zur Verfügung stehen. Es gibt Schnittstellen für eine Vielzahl an Plattformen und Frameworks, sowohl im nativen als auch im plattformübergreifenden Bereich \citep{app42}.
 
 \bigskip
 \textbf{NextPeer} \\
-NextPeer bietet für die drei Game Frameworks APIs für die Unterstützung von Multiplayer Spielen und Anbindungen an soziale Netzwerke. Für die Nutzung steht ebenfalls eine kostenfreie Variante zur Auswahl. \citep{nextpeer}
-
+NextPeer bietet für die drei Spieleframeworks APIs zur Unterstützung von Multiplayer Spielen und für Anbindungen an soziale Netzwerke. Für die Nutzung steht ebenfalls eine kostenfreie Variante zur Auswahl \citep{nextpeer}.
 
 \section{Produktvarianten}
-Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varianten sind durchaus möglich, aber derzeit sind keine weiteren populären Ableger bekannt. Die Community konzentriert sich demnach hauptsächlich auf die Weiterentwicklung der Hauptversion oder auf eigene Erweiterungen in Form von Plugins.
+Bei \textbf{libGDX} existieren keine weitere, offizielle Produktabspaltungen. Weitere populäre Derivate konnten nicht ermittelt werden, sondern nur Ableger die aus privatem Bestrebungen entstanden sind. Die offizielle Community konzentriert sich daher hauptsächlich auf die Unterstützung und Weiterentwicklung der Hauptversion oder auf spezialisierte Module zur Erweiterung.
 
 \bigskip
-\textbf{Cocos2D-X} ist eine von mehreren Abzweigungen aus der Cocos2D Familie. Stamm der Entwicklung bildet das mit Python entwickelte Cocos2D, welches selbige Sprache auch für die Entwicklung daraus resultierender Desktopanwendungen benutzt. Der erste daraus abgeleitete Ableger Cocos2D-iPhone oder auch bekannt als Cocos2D-ObjC, erlaubt die Implementierung auf mobile Apple Geräte. Diese können mit den plattformüblichen nativen Sprachen Objective-C und Swift konstruiert werden. Aus dieser Version entsprangen direkt wiederum viele weitere Varianten für gezielte Sprachen und Anwendungen, als auch das in dieser Arbeit behandelte Cocos2D-X für die Unterstützung multipler Plattformen. Die Cocos2D Frameworks iPhone, X, HTML5 und dem Editor SpriteBuilder sind kooperierende Projekte und folgen demselben Leitplan. Daher haben sie ein koordiniertes Updateverhalten. \citep{cocos2d_relationships}
+\textbf{Cocos2D-X} ist eine der offiziellen Abzweigungen aus der Cocos2D Familie. Die Basis bildet das mit Python entwickelte Cocos2D. Der erste, abgeleitete Ableger ist Cocos2D-iPhone oder auch bekannt als Cocos2D-ObjC. Diese Variante ist auf die Entwicklung mobiler Apple Geräte spezialisiert. Anwendungen können mit den plattformüblichen, nativen Sprachen Objective-C und Swift implementiert werden. Von dieser Version wurden wiederum weitere, spezialisierte Varianten abgeleitet. Dazu zählt Cocos2D-X, das die Unterstützung multipler Plattformen unterstützt. Die Ableger Cocos2D, -iPhone, -X, -HTML5 und der Editor SpriteBuilder gehören zu den offiziellen Projekten und werden durch ein koordiniertes Updateverhalten versorgt \citep{cocos2d_relationships}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -926,7 +932,7 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 \end{figure}
 
 \bigskip
-\textbf{Unity3D} bietet zwei verschiedene Hauptprodukte an, die Personal und die Professional Edition. Bei der Personal Edition handelt es sich um eine frei verfügbare Version, die für jeden zugängig ist. Diese kann für Privatanwender, zu Bildungszwecken und sogar für die kommerzielle Entwicklung benutzt werden. Die kostenfreie Version der Engine verfügt auch über alle essentiellen Funktionen. Sobald die allgemeinen Einnahmen einer Person oder eines Unternehmens mehr als 100.000 US-Dollar aus dem Vorjahr betragen, besteht die Verpflichtung auf die Professional Edition zu wechseln. In dieser bekommt man dann auch die Option auf zusätzliche Funktionen, wie Analyse Tools und die Möglichkeit Projekte in einer speziellen Cloud zu veröffentlichen. In Tabelle \ref{Unity_Produkte} werden die Möglichkeiten beider Editionen gegenübergestellt. Das Kostenmodell beginnt derzeit mit einem Abonnement von 75 US-Dollar pro Monat oder einer Einmalzahlung von 1.500 US-Dollar. Die mit der Einmalzahlung erworbene Dauerlizenz gilt allerdings nur für die aktuelle Version und deren Updates. Das bedeutet bei dem Erwerb von Unity Pro 5 hat man nicht automatisch die Nutzungsrechte für die darauf folgende Version 6. Diese müssten dann in Form eines kostenpflichtigen Upgrades erfolgen. Weitere optionale Erweiterungen können mit den iOS Pro und Android Pro Add-Ons erworben werden, die weitere Funktionen zur Personalisierung ermöglichen. Zusätzliche kostenpflichtige Pakete sind die professionelle Unterstützung bei Projekten oder der Zugang zum Quellcode der Engine. \citep{unity_products}
+\textbf{Unity3D} bietet zwei Produktvarianten an, die Personal und die Professional Edition. Bei der Personal Edition handelt es sich um eine frei verfügbare Version, die für jeden nutzbar ist. Diese kann für Privatanwender, zu Bildungszwecken und für kommerzielle Zwecke benutzt werden. Bei der kostenfreien Version der Engine wird dem Nutzer keine der Basisfunktionalitäten vorenthalten. Sobald die grundlegenden Einnahmen eines Entwicklers oder Unternehmens mehr als 100.000 US-Dollar aus dem Vorjahr betragen, besteht die Verpflichtung für kommerziellen Gebrauch die Professional Edition zu verwenden. In dieser werden weitere Optionen auf zusätzliche Services freigeschaltet, wie Analyse Tools und cloudbasierte Projekte. In Tabelle \ref{Unity_Produkte} werden die Möglichkeiten beider Editionen aufgelistet. Das Kostenmodell der Professional Edition beginnt derzeit für ein Abonnement mit 75 US-Dollar pro Monat oder bei einer Einmalzahlung von 1.500 US-Dollar. Die mit der Einmalzahlung erworbene Dauerlizenz gilt nur für die aktuelle Version und deren Updates. Das bedeutet, dass bei dem Erwerb von Unity Professional 5 nicht automatisch die Nutzungsrechte für die darauf folgende Version 6 erhalten werden. Diese müssten dann in Form eines kostenpflichtigen Upgrades erfolgen. Weitere, optionale Erweiterungen können mit den iOS Pro und Android Pro Add-Ons erworben werden, die weitere Möglichkeiten zur Personalisierung der Anwendung ermöglichen. Professionelle Projektunterstützung und der Zugang zum Quellcode der Engine, können durch zusätzliche, kostenpflichtige Pakete erworben werden \citep{unity_products}
 
 \begin{table}[htbp]
 	\centering
@@ -961,13 +967,13 @@ Das Java Framework \textbf{libGDX} ist das offizielle Kernprojekt. Eigene Varian
 
 
 \chapter{Konzeption und Implementierung einer Beispielapplikation}
-Um die Möglichkeiten der gewählten Entwicklungstools tiefgehender analysieren zu können, sollten die theoretischen Informationen um praktische Erkenntnisse ergänzt werden. Demnach wird als Teil dieser Arbeit ein Beispiel-Spiel konzipiert, mit den jeweiligen Tools umgesetzt und daraus Applikationen für verschiedene Plattformen erzeugt. Die Anwendung soll dann Anhand von vereinbarten Metriken bemessen und analysiert werden. Die gewonnenen Resultate werden daraufhin in Zusammenhang mit den theoretischen Informationen komplementiert und die Entwicklungstools als Ganzes verglichen. 
+Um die Möglichkeiten der gewählten Entwicklungstools tiefgehender analysieren zu können, sollten die theoretischen Informationen um praktische Erkenntnisse ergänzt werden. Demnach wird als Teil dieser Arbeit eine mobile Beispielapplikation konzipiert. Diese wird mit den gewählten Spieleframeworks plattformunabhängig umgesetzt, um somit Versionen für verschiedene Plattformen zu erzeugen. Die Anwendungsversion soll danach anhand von vereinbarten Metriken bemessen und analysiert werden. Die gewonnenen Resultate werden daraufhin in Zusammenhang mit den theoretischen Informationen komplementiert und die Entwicklungswerkzeuge als Ganzes verglichen. 
 
 \section{Definition von Anforderungen}
 \label{sec:definition_anforderungen}
-Applikationen aus den Kategorien Business, Unterhaltung und die meisten weiteren ohne den Fokus auf Spiele, greifen in der Regel auf plattformspezifische Benutzeroberflächen zurück. Native Apps besitzen jeweils technische und optische Konventionen. Cross-Plattform Apps versuchen diese möglichst genau zu generieren und einzuhalten, um dem Benutzer ein natives Look-and-Feel zu bieten. 
+Applikationen aus Kategorien die den Schwerpunkt nicht auf Spiele legen, sonder beispielsweise Business und Unterhaltung, greifen in der Regel auf plattformspezifische Benutzeroberflächen zurück. Native Apps besitzen systembedingte, technische und optische Konventionen. Cross-Plattform Apps versuchen diese oft möglichst genau abzubilden und die Konventionen einzuhalten, um dem Benutzer ein natives Look-and-Feel zu bieten oder den Vorgaben der Stores nachzukommen. 
 Meist folgen Spiele diesen Regeln nicht, da sie in Abhängigkeit des Spielprinzips auf unterschiedliche Eingabeelemente und UIs zurückgreifen. 
-Das Spiel als solches ist ein komplexes Phänomen, mit dem sich bereits Philosophen, Psychologen, Philanthropen und Forscher aus anderen Fachgebieten auseinandergesetzt haben. Ein Teilbereich der Spielwissenschaft, genannt Ludologie (Die Lehre über das Spiel), befasst sich unter anderem mit der Erforschung des digitalen Spielens. \citep{ludologie} Die Forschungsinhalte befassen sich unter anderem mit Fragestellungen aus den Bereichen:
+Das Spiel als solches ist ein komplexes Phänomen, das Forscher aus den unterschiedlichsten Fachbereichen beschäftigte und beschäftigt. Ein Teilbereich der Spielwissenschaft, genannt Ludologie (Die Lehre über das Spiel), befasst sich mit der Erforschung des Spielens und des digitalen Spielens \citep{ludologie}. Die Forschungsinhalte beschäftigen sich unter anderem mit Fragestellungen aus den Bereichen:
 
 \begin{itemize}
 	\item Geschichte des digitalen Spielens
@@ -978,40 +984,41 @@ Das Spiel als solches ist ein komplexes Phänomen, mit dem sich bereits Philosop
 \end{itemize}
 
 
-Wie definiert man aber nun den Inhalt und den Umfang eines Computerspiels?
-Um sich in den konkurrierenden Theorien zu verlieren, wird hierfür beispielhaft die Gebrauchsdefinitionen von Salen und Zimmerman herangezogen:
+Wie wird der elementare Inhalt und den Umfang eines Computerspiels definiert?
+
+\bigskip
+Um nicht alle konkurrierenden Theorien zu berücksichtigen, wird hierfür beispielhaft die Gebrauchsdefinitionen von Salen und Zimmerman herangezogen:
 
 \bigskip
 \emph{„A game is a system in which players engage in an artificial conflict, defined by rules, that results in a quantifiable outcome.”} \citep[80]{salen_zimmerman}
 \bigskip
 
-Aus dieser Definition lassen sich einige wesentliche Konzepte entnehmen.
+Aus dieser Definition werden einige wesentliche Konzepte entnommen und von Salen und Zimmerman näher erläutert:
 
 \bigskip
 \textbf{Spieler}\\
-Ein Spiel ist etwas, das ein oder mehrere Spieler aktiv spielen. Die Spieler interagieren mit dem System und Methoden des Spiels.
+Ein Spiel ist etwas, dass ein oder mehrere Spieler aktiv spielen. Die Spieler interagieren mit dem System und Methoden des Spiels.
 
 \bigskip
 \textbf{Konflikt}\\
-Der Konflikt bezeichnet den Wettkampfcharakter jedes Spiels. Dieser kann verschiedene Formen annehmen, wie kompetitive Elemente oder der Konflikt gegen das Spielsystem. 
+Der Konflikt bezeichnet den Wettkampfcharakter eines Spiels. Dieser kann verschiedene Formen annehmen, wie kompetitive Elemente oder der Konflikt gegen das Spielsystem selbst. 
 
 \bigskip
 \textbf{Regeln}\\
-Die Regeln liefern die Struktur des Spiels, in dem sie festlegen was der Spieler machen kann und was nicht.
+Die Regeln liefern die Struktur des Spiels, indem sie festlegen was der Spieler machen kann und was nicht.
 
 \bigskip
 \textbf{Quantifizierbares Ziel}\\
 Das Ergebnis eines Spiels ist entweder das der Spieler gewonnen oder verloren hat, oder eine Form eines Erfolgsfaktors erhält. Dieser Erfolgsfaktor kann sich beispielsweise durch ein höheres Level oder eine Art Punktzahl bemerkbar machen. 
-\citep[80]{salen_zimmerman}
 
 \bigskip
 Anhand dieser Definitionen werden die Anforderungen für die Beispielapplikation konkretisiert:
 
 \begin{itemize}
-	\item Es soll eine Spielfigur geben, auf die der Spieler Einfluss nehmen kann.
-	\item Die Spielfigur soll auf Hindernisse treffen, welche die Aktionen des Spielers beeinflussen können.
-	\item Der Spieler gewinnt, wenn er ein definiertes Ziel erreicht oder das Spiel nicht beendet wird.
-	\item Der Spieler verliert, wenn er eine definierte Anzahl an Fehlversuchen erreicht hat, das Spiel abbricht oder andere Aktionen ausführt, die gegensätzlich zum gewinnen des Spiels stehen.
+	\item Es soll eine Spielfigur vorhanden sein, auf die der Spieler Einfluss nehmen kann.
+	\item Die Spielfigur soll auf Hindernisse treffen, die die Aktionen des Spielers beeinflussen können.
+	\item Das Spiel gilt als gewonnen, wenn ein definiertes Ziel erreicht oder das Spiel nicht beendet wird.
+	\item Der Spieler verliert, wenn eine definierte Anzahl an Fehlversuchen erreicht werden, das Spiel abgebrochen wird oder andere Aktionen ausgeführt werden die gegensätzlich zum gewinnen des Spiels stehen.
 	\item Der Spieler soll einen Erfolgsfaktor erhalten, um seine Spielweise zu messen.
 \end{itemize}
 
@@ -1025,44 +1032,45 @@ Darüber hinaus werden weitere allgemeine Anforderungen gestellt, die häufig in
 	\item Ein Spielobjekt soll in allen Szenen verfügbar sein und seinen Status beibehalten.
 \end{itemize}
 
-Die Applikation soll zudem möglichst simpel gehalten werden, um sie Anhand der einfachsten und elementaren Eigenschaften zu bemessen.
+Die Applikation soll zudem möglichst simpel gehalten werden, um sie anhand der einfachsten und elementarsten Eigenschaften zu bemessen.
 
 
 \section{Spielidee}
-Ein mobiles Spiel das mitunter durch seine Einfachheit, in kürzester Zeit großen Erfolg erlangte, ist das Spiel Flappy Bird. \citep{flappy_bird}
-In diesem Spiel steuert der Spieler durch Antippen des Touchscreens die Flughöhe eines Vogels, um ihn vor dem Aufprall auf den Boden zu bewahren und durch entgegenkommende Hindernisse zu manövrieren. Hierbei handelt es sich um eine Art Endlos-Spiel, das sich dadurch auszeichnet, dass der Spieler solange spielt, bis er verliert. Verlieren kann man, indem die Spielfigur mit einem anderen Objekt kollidiert. Es verfügt zudem über eine Punktzahl, die sich erhöht, wenn der Vogel erfolgreich die Hindernisse passiert hat.
+Ein mobiles Spiel das mitunter durch seine Einfachheit in kürzester Zeit großen Erfolg erlangte, ist das Spiel Flappy Bird \citep{flappy_bird}.
+In diesem Spiel steuert der Spieler durch das Antippen des Touchscreens die Flughöhe eines Vogels, um ihn vor dem Aufprall auf den Boden zu bewahren und durch entgegenkommende Hindernisse zu manövrieren. Hierbei handelt es sich um eine Art Endlos-Spiel, das sich dadurch auszeichnet, dass der Spieler solange spielt bis er verliert. Ein Spiel wird verloren, wenn die Spielfigur mit einem anderen Objekt kollidiert. Es verfügt zudem über eine Punktzahl die sich erhöht, wenn der Vogel erfolgreich die Hindernisse passiert hat.
 
 \bigskip
-In der Anlehnung zu Flappy Bird entstanden zahlreiche Spiele die große Ähnlichkeit aufweisen. Auch wird dieses Spielprinzip häufig als Vorlage verwendet, um beispielhaft den Einstieg in die Spielentwicklung mit einer bestimmten Engine oder einem Framework zu erlernen. Da alle vorher genannten Anforderungen in dieses Spielprinzip hineinpassen, wurde für diese Arbeit ein Spiel konzipiert, das sich an dieser Vorlage orientiert. Das Spiel trägt den Titel: \textbf{Happy Bird}. 
+In der Anlehnung zu Flappy Bird entstanden zahlreiche Spiele die auf dieser Spielidee basieren. Dieses Spielprinzip wird häufig als Vorlage verwendet, um beispielhaft den Einstieg in die Spielentwicklung mit einer bestimmten Engine oder einem Framework zu erlernen. Da alle vorher genannten Anforderungen in dieses Spielprinzip hineinpassen, wurde für diese Arbeit ein Spiel konzipiert, das sich an dieser Vorlage orientiert. Das Spiel trägt den Titel: \textbf{Happy Bird}. 
 
 \section{Spielfluss}
-Das Spielprinzip und der Spielfluss bei Happy Bird sind denkbar einfach. Das Spiel wurde zudem auf den Portrait-Modus (Hochformat) festgelegt und es wird durchgängig eine Anzeige mit der aktuellen Framerate dargestellt.
+Das Spielprinzip und der Spielfluss bei Happy Bird sind einfach zu verstehen. Das Spiel ist auf den Portrait-Modus (Hochformat) festgelegt und für die spätere Analyse wird durchgängig eine Anzeige mit der aktuellen Framerate dargestellt.
 
 
 \begin{enumerate}
 	\item Das Spiel wird über das App Icon gestartet.
 	\item Direkt nach dem Start wird ein Logo des jeweiligen Frameworks oder Engine angezeigt.
-	\item Daraufhin gelangt man in ein Hauptmenü, das den Titel des Spiels, Hintergrundgrafiken und einen Startbutton anzeigt. Die Hintergrundmusik wird abgespielt.
+	\item Daraufhin wird ein Hauptmenü dargestellt, das den Titel des Spiels, Hintergrundgrafiken und einen Startbutton anzeigt. Die Hintergrundmusik wird abgespielt.
 	\item Bei betätigen des Startbuttons wird in die Spielszene gewechselt.
-	\item Die Spielszene beginnt mit den Hintergrundgrafiken und einem Vogel als Spielfigur.
-	\item Der Vogel verliert an Höhe, wenn der Spieler nichts tut und steigt bei antippen des Touchscreens an.
-	\item In einem festgelegten Intervall kommen der Figur nun Hindernisse in Form von grünen Röhren entgegen. Diese besitzen eine Lücke in der Mitte, durch die der Vogel hindurchmanövriert werden muss. Die Position der Lücke befindet sich in einer zufälligen, vertikalen Stelle innerhalb der Sichtbarkeit.
-	\item Wenn der Vogel erfolgreich das Hindernis passiert hat, erhält man einen Punkt, der oben links im Spiel zu der Gesamtpunktzahl hinzugefügt und dargestellt wird.
+	\item Die Spielszene beginnt mit den Hintergrundgrafiken und zeigt einen Vogel als Spielfigur.
+	\item Der Vogel verliert an Höhe, wenn der Spieler nichts tut und steigt bei Berührung des Touchscreens an.
+	\item In einem festgelegten Intervall kommen der Figur Hindernisse in Form von grünen Röhren entgegen. Diese besitzen eine Lücke durch die der Vogel hindurchmanövriert werden soll. Die Position der Lücke befindet sich in einer zufälligen, vertikalen Stelle innerhalb der Sichtbarkeit.
+	\item Wenn der Vogel erfolgreich ein Hindernis passiert hat, erhält der Spieler einen Punkt der oben links im Spiel zu der Gesamtpunktzahl hinzugefügt und dargestellt wird.
 	\item Das Spiel endet und gilt als verloren, wenn der Vogel mit einem der entgegenkommenden Hindernisse oder dem Boden kollidiert.
-	\item Der obere Rand der Spielszene wird durch eine unsichtbare Wand blockiert, die nicht passiert werden kann.
-	\item Bei verlorenem Spiel, wird in das Game Over Menü gewechselt, das wie das Hauptmenü aufgebaut ist. Dies zeigt den Game Over Status an und gibt die Möglichkeit, über den Startbutton ein neues Spiel zu starten.
+	\item Der obere Rand der Spielszene wird durch eine unsichtbare Wand begrenzt und kann nicht passiert werden.
+	\item Bei verlorenem Spiel wird in das Game Over Menü gewechselt das vom Aufbau dem Hauptmenü entspricht. In dieser Szene wird der Game Over Status angezeigt. Über den Startbutton kann ein neues Spiel gestartet werden.
 \end{enumerate}
 
 %TODO: Screenshots! Spielszenen / alle Frameworks / verschiedene Geräte
 
 
-Die in Kapitel \ref{sec:definition_anforderungen} definierten Anforderungen, werden somit alle umgesetzt. Die Spielfigur wird durch einen Spritesheet animiert und ist durch Touchscreen-Input steuerbar. Es werden Hindernisse erzeugt, die bei Kollision das Spielende hervorrufen. Der Spieler hat die Möglichkeit Punkte zu erhalten.
-Die Hintergrundmusik wird in allen drei Spielszenen gespielt. Sie startet bei Wechsel der Szene nicht von vorne, behält einen globalen Status bei und wird in einer Endlosschleife gespielt. Das Spiel wird komplett in 2D gehalten. Auf weitere diverse, für eine Testapplikation unnötige Benutzerannehmlichkeiten wurde verzichtet. Für die Versionierung der Projekte wird Git verwendet.
+Die in Kapitel \ref{sec:definition_anforderungen} definierten Anforderungen, werden durch die Spielidee und den Spielfluss somit komplett umgesetzt. Die Spielfigur wird mit Hilfe einer Spritesheet-Animation animiert und ist durch berühren des Touchscreen steuerbar. Es werden Hindernisse erzeugt, die bei Kollision das Spielende hervorrufen. Der Spieler hat die Möglichkeit Punkte zu erhalten.
+Die Hintergrundmusik wird in allen drei Spielszenen gespielt. Sie startet bei Wechsel der Szene nicht von vorne, behält einen globalen Status bei und läuf in einer Endlosschleife. Das Spiel wird komplett in 2D gehalten. Auf weitere, optionale Spielinhalte wird verzichtet, da diese für eine Testapplikation unnötig sind.
 
 
 \section{Verwendete Werkzeuge}
-In diesem Kapitel werden die genutzten Softwarewerkzeuge in Tabell \ref{genutzte_software} aufgelistet, die bei der Entwicklung der Testapplikation eingesetzt wurden.
+In diesem Kapitel werden die genutzten Softwarewerkzeuge in Tabelle \ref{genutzte_software} aufgelistet, die bei der Entwicklung der Testapplikation eingesetzt wurden. Für die Versionierung der Projekte wurde Git verwendet.
 
+%TODO: Versionen eintragen!!!!
 \begin{table}[htbp]
 	\centering
 	\resizebox{0.8\textwidth}{!}{%
@@ -1115,11 +1123,11 @@ Bei den eingesetzten und benötigten Komponenten existieren geringe Unterschiede
 	\caption{Spritesheet für die Animation der Spielfigur in Happy Bird}\label{spritesheet}
 \end{figure}
 
-Durch Zuhilfenahme der Property List (Liste von Eigenschaften), die in Zusammenhang mit dem Spritesheet erstellt werden kann, können Informationen über die einzelnen Sprites ausgelesen werden. Diese geben Auskunft über Namen, Größe, Offset, Skalierung und Rotation der einzelnen Grafiken auf dem Spritesheet und sind auf Basis von XML-Dateien gespeichert oder binär kodiert. Innerhalb der Anwendung können die einzelnen Grafiken dann in einer einstellbaren Geschwindigkeit und Dauer nacheinander angezeigt werden. Diese Art von Animation ähnelt einem Daumenkino.
-In Unity3D können ebenfalls Spritesheets genutzt werden, jedoch werden die Property Lists für die Teilung und den Informationshintergrund nicht benötigt. Komfortable Möglichkeiten bieten die sogenannten Prefabs. Ein Prefab kann spezifisch definierte Informationen und Eigenschaften über ein oder mehrere Gameobjekte tragen und diese in einem Objekt abrufbereit verfügbar machen. In Happy Bird werden die Pipe-Hindernisse beispielsweise als Prefab definiert, mit dem Inhalt der Grafiken, der Positionen und der Kollisionsboxen.
-Für die Erstellung der Grafiken und Animationen wurde der freie Online-Spriteeditor Piskel verwendet. \citep{piskel}
-Die genutzte Hintergrundmusik in Happy Bird, stammt von dem amerikanischen Komponisten und Musikproduzenten Kevin MacLeod. Das Musikstück mit dem Titel \emph{"Monkeys Spinning Monkeys"} ist unter der Creative Commons lizensiert und frei verfügbar. \citep{macLeod}
-In Tabelle \ref{spiel_komponenten} werden die Hauptkomponenten und ihre Eigenschaften, sowie einige Framework-abhängige Dateien aufgelistet.
+Durch Zuhilfenahme der Property List (Liste von Eigenschaften) die in Zusammenhang mit dem Spritesheet erstellt werden kann, können Informationen über die einzelnen Sprites ausgelesen werden. Diese geben Auskunft über Namen, Größe, Offset, Skalierung und Rotation der einzelnen Grafiken auf dem Spritesheet und sind auf Basis von XML-Dateien gespeichert oder binär kodiert. Innerhalb der Anwendung können die einzelnen Grafiken dann in einer einstellbaren Geschwindigkeit und Dauer nacheinander angezeigt werden. Diese Art von Animation ähnelt einem Daumenkino.
+In Unity3D können ebenfalls Spritesheets genutzt werden, jedoch werden die Property Lists für die Teilung und den Informationshintergrund nicht benötigt. Komfortable Möglichkeiten bieten die sogenannten Prefabs. Ein Prefab kann spezifisch definierte Informationen und Eigenschaften über ein oder mehrere Gameobjekte tragen und diese in einem Objekt abrufbereit verfügbar machen. In Happy Bird werden die Pipe-Hindernisse beispielsweise als Prefab definiert, mit den Informationen zu den Grafiken, Positionen und Kollisionsboxen.
+Für die Erstellung der Grafiken und Animationen wurde der freie Online-Spriteeditor Piskel verwendet \citep{piskel}. 
+Die verwendete Hintergrundmusik in Happy Bird stammt von dem amerikanischen Komponisten und Musikproduzenten Kevin MacLeod. Das Musikstück mit dem Titel \emph{"Monkeys Spinning Monkeys"} ist unter der Creative Commons lizensiert und frei verfügbar \citep{macLeod}. 
+In Tabelle \ref{spiel_komponenten} werden die Hauptkomponenten mit ihren Eigenschaften sowie einige Framework-abhängige Dateien aufgelistet.
 
 \begin{table}[htbp]
 	\centering
@@ -1153,19 +1161,9 @@ In Tabelle \ref{spiel_komponenten} werden die Hauptkomponenten und ihre Eigensch
 \end{table}
 
 \section{Programmierung}
-Für die Entwicklung wurde C++ bei Cocos2D-X, C\# bei Unity3D und Java bei libGDX für die Codebasis gewählt. Dies liegt darin begründet, dass diese objektorientierten, statisch typisierten Sprachen im Gegensatz zu den Skriptsprachen eine bessere Performance versprechen. Jedoch mit welcher Programmiersprache man die schnellsten und effizientesten Ergebnisse erzielen kann, steht zusätzlich in Verbindung mit der subjektiven Vorerfahrung.
-Während des Entwicklungsprozesses bestätigte sich ein weiterer wichtiger Faktor. Die Qualität der Dokumentation und Codebeispiele der Spieleframeworks. 
+Für die Entwicklung wurde den Anforderungen entsprechend C++ bei Cocos2D-X, C\# bei Unity3D und Java bei libGDX für die Codebasis gewählt. Mit welcher Programmiersprache die schnellsten und effizientesten Ergebnisse erzielt werden können steht in Verbindung mit der Vorerfahrung eines Entwicklers. Aber auch die Unterstützung durch eine qualitativ hochwertige Dokumentation und praktischer Beispiele. Für die Programmierung wurden die offiziellen Dokumentationen und Anleitungen zur Unterstützung verwendet. Eine wertende Aussage zu der Programmierung erfolgt im abschließenden Teil dieser Arbeit.
 
-\bigskip
-Für libGDX finden sich viele Beispiele zu verschiedenen Bereichen innerhalb des offiziellen Wiki, die funktional sind und zudem mit Texten zur Erklärung hinterlegt sind. Auch die Suche nach individuelleren Lösungen wird befriedigend gesättigt. Die Entwicklungsgeschwindigkeit ist für jemanden ohne Vorerfahrung von daher durchaus annehmbar.
-
-\bigskip
-In diesem Punkt enttäuschte Cocos2D-X leider mehr als zuvor angenommen. Die offizielle Dokumentation schwächelte zur Zeit der Entwicklung an vielen grundlegenden Stellen bezüglich der Aktualität. Dies muss nicht unbedingt tragisch sein, jedoch sind manche Einträge zu Standardlösungen nicht mehr ganz aktuell und lassen sich nicht mehr wie beschrieben anwenden. Das gleiche gilt für allgemeine Suchanfragen für Lösungen im Internet. Es ist als Anfänger von daher nicht trivial, für manche scheinbar einfache Problemstellungen herauszufinden, was die beste, empfohlene Vorgehensweise sein soll.
-
-\bigskip
-Im Gegensatz dazu, macht Unity3D es einem leichter. Einen Neuling mag dieser umfangreiche Editor zunächst mehr fordern, hingegen werden für jede Erfahrungsstufe Hilfestellungen geboten. Die Vielfalt an Unterstützung ist immens, fast immer mit praktischen Beispielen vertieft und gut sortiert. Wenn es passiert, dass überholte Methoden verwendet werden, hilft einem die unterstützte IDE oder die Dokumentation sofort weiter. Ein weiterer Vorteil und Zeitersparnis ist das direkte testen des Spiels innerhalb des Unity Editors. Das Testspiel konnte somit ohne Hindernisse umgesetzt werden.
-
-
+%MARKER: Korrektur!
 \chapter{Analyse der Test-Applikationen}
 
 %TODO: Auf Analyse der Frameworks eingehen
@@ -1322,8 +1320,16 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 
 %TODO
 \chapter{Fazit}
+Während des Entwicklungsprozesses bestätigte sich die Wichtigkeit über die Qualität der Dokumentation und Codebeispiele der Spieleframeworks. 
 
+\bigskip
+Für libGDX finden sich innerhalb des offiziellen Wiki viele, mit Texten zur Erklärung hinterlegte Beispiele zu verschiedenen Bereichen. Die Suche nach individuelleren Lösungen wird durch verschiedene Foren befriedigend gesättigt. Die Entwicklungsgeschwindigkeit ist für einen Entwickler ohne Vorerfahrung daher durchaus annehmbar.
 
+\bigskip
+In diesem Punkt enttäuschte Cocos2D-X leider mehr als zuvor angenommen. Die offizielle Dokumentation schwächelte zur Zeit der Entwicklung an vielen grundlegenden Stellen bezüglich der Aktualität. Dies muss nicht unbedingt tragisch sein, jedoch sind manche Einträge zu Standardlösungen nicht mehr ganz aktuell und lassen sich nicht mehr wie beschrieben anwenden. Das gleiche gilt für allgemeine Suchanfragen für Lösungen im Internet. Es ist als Anfänger von daher nicht trivial, für manche scheinbar einfache Problemstellungen herauszufinden, was die beste, empfohlene Vorgehensweise sein soll.
+
+\bigskip
+Im Gegensatz dazu, macht Unity3D es einem leichter. Einen Neuling mag dieser umfangreiche Editor zunächst mehr fordern, hingegen werden für jede Erfahrungsstufe Hilfestellungen geboten. Die Vielfalt an Unterstützung ist immens, fast immer mit praktischen Beispielen vertieft und gut sortiert. Wenn es passiert, dass überholte Methoden verwendet werden, hilft einem die unterstützte IDE oder die Dokumentation sofort weiter. Ein weiterer Vorteil und Zeitersparnis ist das direkte testen des Spiels innerhalb des Unity Editors. Das Testspiel konnte somit ohne Hindernisse umgesetzt werden.
 
 %--------------------- VERZEICHNISSE -------------------------------------
 
@@ -1374,6 +1380,10 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den zuvor definierten Met
 \bibitem[Brown(2015)]{learning_javascript}
 [Brown(2015)] Brown, Ethan (Hrsg.): 
 \emph{Learning Javascript}, O'Reilly 2015
+
+\bibitem[C++(2016)]{cplusplus}
+[C++(2016)] C++(2016): \emph{C++ - A Brief Description},
+\url{http://www.cplusplus.com/info/description/}, letzter Zugriff: 05.01.2016
 
 \bibitem[Cocos2D-Android(2010)]{cocos2d_android}
 [Cocos2D-Android(2010)] Cocos2D-Android(2010): \emph{cocos2d for Android: A framework for building 2D games for the Android platform},
@@ -1624,6 +1634,10 @@ Beispiel von Geo-Wikipedia-App\grqq,
 \bibitem[Wikipedia - Flappy Bird(2015)]{flappy_bird}
 [Wikipedia - Flappy Bird(2015)] Wikipedia - Flappy Bird(2015): \emph{Flappy Bird},
 \url{https://de.wikipedia.org/wiki/Flappy_Bird}, letzter Zugriff: 28.01.2016
+
+\bibitem[Wikipedia - List of game engines(2016)]{list_of_game_engines}
+[Wikipedia - List of game engines(2016)] Wikipedia - List of game engines(2016): \emph{List of game engines(2016)},
+\url{https://en.wikipedia.org/wiki/List_of_game_engines}, letzter Zugriff: 23.02.2016
 
 \bibitem[Wikipedia - Liste von Android-Versionen(2015)]{android_version_releases}
 [Wikipedia - Liste von Android-Versionen(2015)] Wikipedia - Liste von Android-Versionen(2015): \emph{Übersicht von allen Android Versionen mit Veröffentlichungsdatum},
