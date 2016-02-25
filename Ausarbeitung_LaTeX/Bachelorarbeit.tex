@@ -66,6 +66,19 @@ Diese besonderen Frameworks und Engines für die plattformübergreifende Spielee
 %TODO: Definition mobile App und Definition eines Spiels
 %TODO: Quellen innerhalb eines Satzes und NICHT danach! 
 %TODO: Seiten, Abbildungen und Textsprünge überprüfen
+Digitale Spiele sind ein Zeitvertreib der spätestens seit der Verbreitung von Smartphones, in der modernen Bevölkerung bei allen Altersgruppen und Gesellschaftsschichten Einzug gehalten hat. Mobile Betriebssysteme bieten somit Plattformen, die eine breite Nutzergruppe erreichbar macht. Die Uneinheitlichkeit dieser Systeme erweckt das entwicklerseitige Bedürfnis nach Softwareinstrumenten die plattformübergreifende Entwicklung ermöglicht. Der Einsatz dieser speziellen Entwicklungswerkzeuge rechtfertigt sich durch höhere Entwicklungsgeschwindigkeit und geringere Entwicklungskosten.
+
+\bigskip
+Gerade im Bereich der Spieleentwicklung besteht ein vielfältiges Angebot, was die Wahl nach einer passenden Software nicht trivial erscheinen lässt. Demnach stellt sich die Frage von welchen Faktoren eine geeignete Auswahl abhängt:
+
+\begin{itemize}
+	\item Welche Plattformen besitzen das höchste, wirtschaftliche Potential und bieten die größte Zielgruppe?
+	\item Welche Entwicklungswerkzeuge können diese Plattformen gleichzeitig erreichen?
+	\item Womit können die inhaltlichen und funktionalen Anforderungen am effektivsten erfüllt werden?
+\end{itemize}
+
+Diese grundlegenden Fragestellungen geben Anlass ausgewählte Spieleframeworks anhand ihrer theoretischen Möglichkeiten zu analysieren und durch die Entwicklung einer Beispielapplikation zu evaluieren. Um ein besseres Verständnis von plattformübergreifender Entwicklung zu gewinnen, soll weiterhin die Arbeitsweise dieses Prinzips näher betrachtet und mögliche Unterschiede ausgemacht werden. Durch die Bearbeitung soll ermittelt werden welche Software am besten zu gestellten Anforderungen passt, welche Schwächen ausfindig gemacht werden können und ob es eine eventuelle Allzwecklösung gibt.
+
 \section{Gliederung}
 Die Thesis \emph{„Analyse und Evaluierung von plattformübergreifenden Spiel-Engines und Frameworks, anhand der Implementierung einer mobilen Beispielapplikation“} ist in zehn Kapitel unterteilt, die das Thema systematisch aufbauen und analysieren.
 
@@ -1220,8 +1233,6 @@ Die Applikationen werden auf Smartphones mit Android und iOS System getestet. Di
 	\item Das Spiel wird auf dem internen Speicher installiert.
 \end{itemize}
 
-%TODO: Betriebssystem!
-%TODO: iPhone 4S !!!!
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
@@ -1230,14 +1241,14 @@ Die Applikationen werden auf Smartphones mit Android und iOS System getestet. Di
 			{\color[HTML]{FFFFFF} \textbf{Technische Daten}}       & {\color[HTML]{FFFFFF} \textbf{Android}}                                                          & {\color[HTML]{FFFFFF} \textbf{iOS}}                                                             \\
 			{\color[HTML]{000000} \textbf{Hersteller}}             & {\color[HTML]{000000} Samsung}                                                                   & {\color[HTML]{000000} Apple}                                                                    \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} \textbf{Modell}}                 & {\color[HTML]{000000} Galaxy S5+}                                                                & {\color[HTML]{000000} iPhone 4}                                                                 \\
-			{\color[HTML]{000000} \textbf{Artikelname}}            & {\color[HTML]{000000} G901F}                                                                     & {\color[HTML]{000000} }                                                                         \\
+			{\color[HTML]{000000} \textbf{Modell}}                 & {\color[HTML]{000000} Galaxy S5+}                                                                & {\color[HTML]{000000} iPhone 4S}                                                                 \\
+			{\color[HTML]{000000} \textbf{Artikelname}}            & {\color[HTML]{000000} G901F}                                                                     & {\color[HTML]{000000}- }                                                                         \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} \textbf{Betriebssystem}}         & {\color[HTML]{000000} Android 5.0.2 }                                                                          & {\color[HTML]{000000} }                                                                         \\
-			{\color[HTML]{000000} \textbf{System-on-a-Chip (SoC)}} & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Qualcomm Snapdragon 805\\ APQ8084\end{tabular}} & {\color[HTML]{000000} Apple A4}                                                                 \\
+			{\color[HTML]{000000} \textbf{Betriebssystem}}         & {\color[HTML]{000000} Android 5.0.2 }                                                                          & {\color[HTML]{000000} iOS 9.2.1 }                                                                         \\
+			{\color[HTML]{000000} \textbf{System-on-a-Chip (SoC)}} & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Qualcomm Snapdragon 805\\ APQ8084\end{tabular}} & {\color[HTML]{000000} Apple A5}                                                                 \\
 			\rowcolor[HTML]{C0C0C0} 
-			{\color[HTML]{000000} \textbf{Prozessor}}              & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Krait 450\\ 2500 MHz\\ 4 Kerne\end{tabular}}    & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}ARM Cortex A8\\ 800 MHz\\ 1 Kern\end{tabular}} \\
-			{\color[HTML]{000000} \textbf{Grafikprozessor}}        & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Qualcomm Adreno 420\\ 600 MHz\end{tabular}}     & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}PowerVR SGX 535\\ 200 MHz\end{tabular}}        \\
+			{\color[HTML]{000000} \textbf{Prozessor}}              & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Krait 450\\ 2500 MHz\\ 4 Kerne\end{tabular}}    & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}ARM Cortex A9\\ 800 MHz\\ 2 Kerne\end{tabular}} \\
+			{\color[HTML]{000000} \textbf{Grafikprozessor}}        & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}Qualcomm Adreno 420\\ 600 MHz\end{tabular}}     & {\color[HTML]{000000} \begin{tabular}[c]{@{}c@{}}PowerVR SGX 543MP\\2 x 200 MHz\end{tabular}}        \\
 			\rowcolor[HTML]{C0C0C0} 
 			{\color[HTML]{000000} \textbf{Arbeitsspeicher}}        & {\color[HTML]{000000} 2 GB}                                                                      & {\color[HTML]{000000} 512 MB}                                                                   \\
 			{\color[HTML]{000000} \textbf{Displaygröße}}           & {\color[HTML]{000000} 5,1 Zoll}                                                                  & {\color[HTML]{000000} 3,5 Zoll}                                                                 \\
@@ -1254,7 +1265,7 @@ Bei den eingesetzten Smartphones handelt es sich um gebrauchte Geräte, was bede
 
 \section{Messprotokoll}
 \label{sec:messprotokol}
-In diesem Teil der Arbeit werden die Messergebnisse zu den vorher definierten Metriken, in Zusammenhang mit den angegebenen Testgeräten aufgelistet. In Tabelle \ref{protokoll_android} sind die Ergebnisse der Android Version und in \ref{protokoll_ios} die der iOS Version zu sehen.
+In diesem Teil der Arbeit werden die Messergebnisse zu den vorher definierten Metriken, in Zusammenhang mit den angegebenen Testgeräten aufgelistet. In Tabelle \ref{protokoll_android} sind die Ergebnisse der Android Version und in Tabelle \ref{protokoll_ios} die der iOS Version zu sehen.
 
 \begin{table}[htbp]
 	\centering
