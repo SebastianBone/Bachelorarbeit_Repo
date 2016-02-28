@@ -26,9 +26,9 @@
 
 \newcommand{\erstpruef}{Prof. Dr. Edmund Weitz}
 \newcommand{\zweitpruef}{Prof. Dr. Andreas Plaß}
-%TODO: ABGABEDATUM eintragen!
-\date{vorläufige Fassung vom \today}   % Vorab-Version 
-%\date{\sffamily Hamburg, DD. MM. YYYY}  % Abgabedatum!
+
+%\date{vorläufige Fassung vom \today}   % Vorab-Version 
+\date{\sffamily Hamburg, 29. 02. 2016}  % Abgabedatum!
 
 %----------------------------- ANFANG --------------------------------------
 
@@ -37,12 +37,6 @@
 \setlength{\parindent}{0em}
 % Titelseite erzeugen
 \maketitle
-% Inhaltsverzeichnis erzeugen          
-\tableofcontents
-% Seitenumbruch
-\clearpage
-
-%----------------------------INHALT---------------------------------------
 
 %---------------------------ABSTRACT------------------------------------
 \onehalfspacing
@@ -58,18 +52,27 @@ Der Markt für mobile Geräte wie Smartphones und Tablets erfährt seit Jahren k
 Diese besonderen Frameworks und Engines für die plattformübergreifende Spieleentwicklung werden zunächst aufgrund ihrer Spezifikation begutachtet und daraufhin durch die Implementierung einer Beispielapplikation praktisch angewandt. Durch die gewonnenen theoretischen und praktischen Erkenntnisse und den abschließenden Vergleich kann evaluiert werden, dass die Wahl des passenden Entwicklungstools primär in Abhängigkeit zu der gestellten Anforderung steht. Jedoch kann Unity3D in den meisten Disziplinen seine Konkurrenz klar dominieren und nahezu als Alleskönner der Spieleentwicklung hervorgehoben werden.
 
 
+
+
+
+% Inhaltsverzeichnis erzeugen          
+\tableofcontents
+% Seitenumbruch
+\clearpage
+
+%----------------------------INHALT---------------------------------------
+
+
 %----------------------------TEXT-----------------------------------------------
 
 \chapter{Einleitung}
 
 \section{Motivation}
-%TODO: Definition mobile App und Definition eines Spiels
-%TODO: Quellen innerhalb eines Satzes und NICHT danach! 
 %TODO: Seiten, Abbildungen und Textsprünge überprüfen
 Digitale Spiele sind ein Zeitvertreib, der spätestens seit der Verbreitung von Smartphones in der modernen Bevölkerung bei allen Altersgruppen und Gesellschaftsschichten Einzug gehalten hat. Mobile Betriebssysteme bieten somit Plattformen, die eine breite Nutzergruppe erreichbar macht. Die Uneinheitlichkeit dieser Systeme erweckt das entwicklerseitige Bedürfnis nach Softwareinstrumenten, die plattformübergreifende Entwicklung ermöglicht. Der Einsatz dieser speziellen Entwicklungswerkzeuge rechtfertigt sich durch höhere Entwicklungsgeschwindigkeit und geringere Entwicklungskosten.
 
 \bigskip
-Gerade im Bereich der Spieleentwicklung besteht ein vielfältiges Angebot von plattformübergreifenden Frameworks und Engines, was die Wahl nach einer passenden Software nicht trivial erscheinen lässt. Demnach stellt sich die Frage von, welchen Faktoren eine geeignete Auswahl abhängt:
+Gerade im Bereich der Spieleentwicklung besteht ein vielfältiges Angebot von plattformübergreifenden Frameworks und Engines, was die Wahl nach einer passenden Software nicht trivial erscheinen lässt. Demnach stellt sich die Frage, von welchen Faktoren eine geeignete Auswahl abhängt:
 
 \begin{itemize}
 	\item Welche mobile Plattformen besitzen das höchste, wirtschaftliche Potential und bedienen die größte Zielgruppe?
@@ -107,7 +110,7 @@ Die Konzeption und darauf folgende Implementierung der Beispielapplikation sind 
 Im achten Kapitel werden die erzeugten Applikationen analysiert. Dafür werden als Erstes messbare Metriken definiert, um die Anwendungen vergleichbar zu machen. Danach werden die genutzten Testgeräte und die vorgenommenen Grundeinstellungen aufgezeigt. Die Messprotokolle mit den dokumentierten Ergebnissen werden im letzten Teil aufgelistet.
 
 \bigskip
-Das neunte Kapitel befasst sich mit dem Vergleich der gewonnenen Erkenntnisse aus den Analysen und der Messresultate. Dafür werden verschiedene Szenarien vorgestellt, welche Ausgangssituationen zeigen und zu Entscheidungen für ein zweckmäßiges Entwicklungstool führen.
+Das neunte Kapitel befasst sich mit dem Vergleich der gewonnenen Erkenntnisse aus den Analysen der Messresultate und des Entwicklungsprozesses sowie mit einer Empfehlung zur Benutzbarkeit der Spieleframeworks.
 
 \bigskip
 Das finale Kapitel gibt ein abschließendes Fazit zu der gesamten Arbeit ab.
@@ -132,7 +135,6 @@ Eine Statistik über die Marktanteile der mobilen Betriebssysteme bei Smartphone
 Die Grafik verdeutlicht, dass Geräte mit Android Systemen den Markt eindeutig dominieren, direkt gefolgt von iOS und Windows Phone. Laut Prognose wird sich auch in den nächsten Jahren an dieser Hierarchie nichts ändern.
 Abbildung \ref{graph_mobile_systems_laender} gibt weiteren Aufschluss über die Verteilung der Systeme nach ausgewählten Ländern. Die Daten beziehen sich auf die Verkäufe von August bis Oktober 2015, welche von Kantar \citep{marktanteile_betriebssysteme_laender} im Dezember 2015 veröffentlicht wurden. 
 Man kann anhand der Daten schlussfolgern, dass Android und iOS derzeit die beiden relevantesten Systeme auf dem mobilen Markt sind. Mit deutlich geringeren Nutzerzahlen steht Windows Phone an dritter Stelle. 
-%TODO: Auswertungstext der Grafiken
 
 \begin{figure}[htbp]
 	\centering
@@ -152,7 +154,7 @@ In Abbildung \ref{graph_apps_in_stores} wird die Gesamtquantität der Apps für 
 \end{figure}
 
 Der angegebene Wert für den Windows Phone Store ist laut der Quelle von September 2014 und schließt damit noch nicht die Windows 10 Universal Apps mit ein. Diese erschienen erst Mitte 2015, sollen für jedwede Windows 10 Hardware verfügbar sein und werden in einem separaten Windows Store angeboten. Im September 2015 waren rund 80\% der Downloads aus dem Windows Phone Store von Geräten mit der Version 8.1, etwa 15\% von 8.0 Benutzern und etwa 5\% von der alternden Version 7.8.
-Laut Microsoft wurden im September 2015 etwa 50\% der Applikationen mit Windows 10 aus dem neuen Windows Store heruntergeladen. Diese Statistik gibt jedoch wenig Aufschluss darüber, wie groß dabei der Anteil an mobilen Systemen ist. Jedoch dominiert die Kategorie Games bei Windows 10 Apps die Downloadzahlen mit fast 45\%.\citep{windows_store_trends_2015}
+Laut Microsoft wurden im September 2015 etwa 50\% der Applikationen mit Windows 10 aus dem neuen Windows Store heruntergeladen. Diese Statistik gibt jedoch wenig Aufschluss darüber, wie groß dabei der Anteil an mobilen Systemen ist. Jedoch dominiert die Kategorie Games bei Windows 10 Apps die Downloadzahlen mit fast 45\% \citep{windows_store_trends_2015}.
 
 \begin{figure}[htbp]
 	\centering
@@ -183,6 +185,7 @@ Dadurch gewährt Android den Entwicklern große Freiheit bei der Programmierung 
 
 Auch der Hardwarebereich bietet ein breites Spektrum an Geräten, deren Angebot von kostengünstig bis hochpreisig reicht und jede Qualitätsstufe bei der technischen Ausstattung abdeckt. Benutzer haben die Möglichkeit, die Benutzeroberfläche und Systemeigenschaften ihrer Geräte weitestgehend frei zu gestalten und zu personalisieren. Für die Beschaffung und Installation von neuen Applikationen sind sie auch nicht an einen offiziellen Store gebunden, sondern können diese aus verschiedensten Quellen beziehen.
 \\
+\pagebreak
 
 Vorteile:
 \begin{itemize}
@@ -204,6 +207,7 @@ iOS ist das mobile Betriebssystem des Unternehmens Apple und ist ein Derivat von
 Durch die proprietäre Struktur des Systems sind eigene Derivate nicht möglich. Benutzer sind für den Bezug von Applikationen auf den offiziellen App Store angewiesen.
 Ebenso bei der Hardwarewahl an die Produktpalette von Apple gebunden, welche jährlich eine neue Generation veröffentlicht. Die Personalisierung der Geräte ist dabei nur bedingt möglich, da Anbieter von Drittsoftware keinen Zugriff auf das System haben. Apple bietet jedoch den Vorteil einer Qualitätssicherung, da Applikationen vor der Veröffentlichung einer recht strengen Prüfung unterzogen werden.
 \\
+\pagebreak
 
 \textbf{Vorteile:}
 \begin{itemize}
@@ -270,6 +274,8 @@ Für den reinen Programmiervorgang von iOS Anwendungen ist prinzipiell jedes Sys
 
 \section{SDKs und Versionen}
 Software Development Kits, kurz SDKs, liefern dem Entwickler die Softwarebibliotheken, Anwendungen und bestenfalls eine aktuelle Dokumentation, um für eine bestimmte Zielplattform entwickeln zu können. Auch sind sie notwendig, um den geschriebenen Code je nach Art zu interpretieren oder zu kompilieren. Um die aktuellste Version eines mobilen Systems zu unterstützen, muss das SDK auf ebenso aktuellem Stand sein.
+
+\pagebreak
 
 \subsection{Android Versionen}
 Android Versionen sind nach süßen Leckereien benannt und den Anfangsbuchstaben nach alphabetisch aufsteigend, wie in Tabelle \ref{tab_android_vers} zu sehen ist.
@@ -393,6 +399,8 @@ Tabelle \ref{tab_WP_versions} berücksichtigt alle Versionen ab Windows Phone 7.
 	\label{tab_WP_versions}\citep{WP7_version_releases, WP8_version_releases, WP10_version_releases}
 \end{table}
 
+\pagebreak
+
 \section{Programmiersprachen}
 In der nativen Entwicklung werden für jede Zielplattform bestimmte Programmiersprachen unterstützt. 
 
@@ -422,6 +430,8 @@ Eine Alternative bietet JetBrains IDE Appcode, welches eine kompatible, aber kos
 
 \subsection{Windows Phone}
 Microsoft setzt für die Kompilierung und Realisierung für Windows Phone Projekte eine Visual Studio IDE voraus, welche für unkommerzielle Entwicklungen kostenfrei ist \citep{visual_studio}.
+
+\pagebreak
 
 \section{Native Spieleentwicklung}
 Bei der nativen Entwicklung basieren die mobilen Applikationen auf den jeweiligen SDKs. Auch mobile Spiele können auf nativem Weg realisiert werden. Die Verwendung der mitgelieferten Grafikfunktionen für die Visualisierung und selbst definierte Spielweltlogik, kann schon eine Basis für einfache 2D Spiele verkörpern. Durch die freie Grafikbibliothek OpenGL können Spielinhalte in 2D oder sogar 3D dargestellt werden. Allerdings ist OpenGL nicht für Windows Phone verfügbar, denn hier wird das eigene Pendant, DirectX, verwendet. Um die Spieleentwicklung zu erleichtern, können spezialisierte Frameworks und Engines genutzt werden, die eigens für die native Entwicklung von Spielen konzipiert wurden und auf die gewünschte Plattform abgestimmt sind. In den folgenden Unterkapiteln werden beispielhafte Werkzeuge für die jeweiligen Plattformen aufgelistet.
@@ -463,6 +473,7 @@ Eine aktuelle Open Source Game Engine für iOS Spiele, die ausschließlich Objec
 \subsection{Windows Phone}
 Frameworks, die einzig und allein für Windows Phone Spiele ausgelegt sind, waren nicht direkt ausfindig zu machen. Microsoft selbst rät zu dem eigenen XNA Framework, womit auch die meisten Entertainment Plattformen von Microsoft bedient werden können \citep{xna}. Hauptsächlich werden hier Cross Plattform Tools genutzt, da die Verbreitung von entsprechender Hardware noch relativ gering ausfällt. Auch durch das neue Windows 10 und den Wunsch nach universellen Anwendungslösungen, besteht derzeit ein noch nicht abgeschlossener Änderungsprozess. Dadurch werden spezialisierte Lösungen für eine Windows Gerätekategorie zukünftig vermutlich eher uninteressant.
 
+\pagebreak
 
 \section{Zusammengefasste Übersicht}
 Die Tabelle \ref{platform_differnces} soll eine kompaktere Übersicht der einzelnen Systeme bieten.
@@ -577,6 +588,8 @@ Die bekannteste \textbf{virtuelle Maschine} ist die Java Virtual Machine (JVM). 
 	\caption{Vereinfachter Ablauf des PhoneGap Interpreters von Adobe}\label{graph_interpreter_PhoneGap}
 \end{figure} 
 
+\pagebreak
+
 \bigskip
 Die \textbf{Laufzeit} ist eine Schicht und Ausführungsphase, welche die mobile App auf der nativen Plattform lauffähig macht. Bei diesem Ansatz wird der Quellcode in Bytecode umgewandelt und dann zur Laufzeit ebenfalls von einer virtuellen Maschine ausgeführt. In Abbildung \ref{graph_interpreter_Titanium} wird die Verarbeitung von Appcelerators Titanium-Interpreters dargestellt.
 
@@ -627,6 +640,8 @@ Ein unbetitelter Lösungsansatz vereinigt den komponentenbasierten Ansatz mit de
 
 \bigskip
 \textbf{Integrated Cross-Platform Mobile Development (ICPMD)} ist eine weitere Lösung, die auf dem Vereinigungsprinzip aufbaut und drei Verwendungsszenarios unterstützt. Diese Szenarios sind, wie in Abbildung \ref{graph_merge_integrated_based} dargestellt, abhängig von dem gegebenen Input.
+
+\pagebreak
 
 \bigskip 
 Der Entwickler hat…
@@ -734,7 +749,6 @@ Eine Lösung zur Spielentwicklung, die zwar offiziell nicht kostenfrei, aber fü
 Dies ist eine kostenlose, Open Source Spiele-Engine von Amazon, die zur Zeit der Bearbeitung als Betaversion veröffentlicht wurde und auf der CryEngine basiert \citep{lumberyard}.
 
 
-%TODO: Kapitel 6
 \chapter{Analyse der Frameworks}
 \label{chapter:Analyse_der_Frameworks}
 
@@ -988,7 +1002,11 @@ Um die Möglichkeiten der gewählten Entwicklungstools tiefgehender analysieren 
 \label{sec:definition_anforderungen}
 Applikationen, aus Kategorien die den Schwerpunkt nicht auf Spiele legen, sondern beispielsweise auf Business und Unterhaltung, greifen in der Regel auf plattformspezifische Benutzeroberflächen zurück. Native Apps besitzen systembedingte, technische und optische Konventionen. Cross-Plattform Apps versuchen diese oft möglichst genau abzubilden und die Konventionen einzuhalten, um dem Benutzer ein natives Look-and-Feel zu bieten oder den Vorgaben der Stores nachzukommen. 
 Meist folgen Spiele diesen Regeln nicht, da sie in Abhängigkeit des Spielprinzips auf unterschiedliche Eingabeelemente und UIs zurückgreifen. 
-Das Spiel als solches ist ein komplexes Phänomen, das Forscher aus den unterschiedlichsten Fachbereichen beschäftigte und beschäftigt. Ein Teilbereich der Spielwissenschaft, genannt Ludologie (Die Lehre über das Spiel), befasst sich mit der Erforschung des Spielens und des digitalen Spielens \citep{ludologie}. Die Forschungsinhalte beschäftigen sich unter anderem mit Fragestellungen aus den Bereichen:
+Das Spiel als solches ist ein komplexes Phänomen, das Forscher aus den unterschiedlichsten Fachbereichen beschäftigte und beschäftigt. Ein Teilbereich der Spielwissenschaft, genannt Ludologie (Die Lehre über das Spiel), befasst sich mit der Erforschung des Spielens und des digitalen Spielens \citep{ludologie}. 
+
+\pagebreak
+
+Die Forschungsinhalte beschäftigen sich unter anderem mit Fragestellungen aus den Bereichen:
 
 \begin{itemize}
 	\item Geschichte des digitalen Spielens
@@ -1075,8 +1093,6 @@ Das Spielprinzip und der Spielfluss bei Happy Bird sind einfach zu verstehen. Da
 	\item Bei verlorenem Spiel wird in das Game Over Menü gewechselt das vom Aufbau dem Hauptmenü entspricht. In dieser Szene wird der Game Over Status angezeigt. Über den Startbutton kann ein neues Spiel gestartet werden.
 \end{enumerate}
 
-%TODO: Screenshots! Spielszenen / alle Frameworks / verschiedene Geräte
-
 
 Die in Kapitel \ref{sec:definition_anforderungen} definierten Anforderungen werden durch die Spielidee und den Spielfluss somit komplett umgesetzt. Die Spielfigur wird mit Hilfe einer Spritesheet-Animation animiert und ist durch Berührung des Touchscreen steuerbar. Es werden Hindernisse erzeugt, die bei Kollision das Spielende hervorrufen. Der Spieler hat die Möglichkeit Punkte zu erhalten.
 Die Hintergrundmusik wird in allen drei Spielszenen gespielt. Sie startet bei Wechsel der Szene nicht von vorne, behält einen globalen Status bei und läuf in einer Endlosschleife. Das Spiel wird komplett in 2D gehalten. Auf weitere, optionale Spielinhalte wird verzichtet, da diese für eine Testapplikation unnötig sind.
@@ -1085,7 +1101,6 @@ Die Hintergrundmusik wird in allen drei Spielszenen gespielt. Sie startet bei We
 \section{Verwendete Werkzeuge}
 In diesem Kapitel werden die genutzten Softwarewerkzeuge in Tabelle \ref{genutzte_software} aufgelistet, die bei der Entwicklung der Testapplikation eingesetzt wurden. Für die Versionierung der Projekte wurde Git verwendet.
 
-%TODO: Versionen eintragen!!!!
 \begin{table}[htbp]
 	\centering
 	\resizebox{0.8\textwidth}{!}{%
@@ -1176,10 +1191,11 @@ In Tabelle \ref{spiel_komponenten} werden die Hauptkomponenten mit ihren Eigensc
 \end{table}
 
 \section{Programmierung}
-Für die Entwicklung wurde den Anforderungen entsprechend C++ bei Cocos2D-X, C\# bei Unity3D und Java bei libGDX für die Codebasis gewählt. Mit welcher Programmiersprache die schnellsten und effizientesten Ergebnisse erzielt werden können, steht in Verbindung mit der Vorerfahrung eines Entwicklers. Aber auch die Unterstützung durch eine qualitativ hochwertige Dokumentation und praktische Beispiele beeinflussen den Entwicklungsfortschritt. Für die Programmierung wurden die offiziellen Dokumentationen und Anleitungen zur Unterstützung verwendet. Es wurde zudem versucht, für die korrekte Darstellung alle gängigen Displaygrößen zu unterstützen. Die Darstellung konnte aber mangels Auswahl an Testgeräten nur innerhalb des Simulators getestet werden. Eine wertende Aussage zu der Programmierung erfolgt im abschließenden Teil dieser Arbeit.
+Für die Entwicklung wurde den Anforderungen entsprechend C++ bei Cocos2D-X, C\# bei Unity3D und Java bei libGDX für die Codebasis gewählt. Mit welcher Programmiersprache die schnellsten und effizientesten Ergebnisse erzielt werden können, steht in Verbindung mit der Vorerfahrung eines Entwicklers. Aber auch die Unterstützung durch eine qualitativ hochwertige Dokumentation und praktische Beispiele beeinflussen den Entwicklungsfortschritt. Für die Programmierung wurden die offiziellen Dokumentationen und Anleitungen zur Unterstützung verwendet. Es wurde zudem versucht, für die korrekte Darstellung alle gängigen Displaygrößen zu unterstützen. Die Darstellung konnte aber mangels Auswahl an Testgeräten nur innerhalb des Simulators getestet werden.
 
 
 \chapter{Analyse der Test-Applikationen}
+\label{sec:analyse_der_apps}
 
 \section{Definition von Metriken}
 Die erstellten Applikationen sollen näher analysiert und verglichen werden. Um dies möglichst objektiv und repräsentativ durchzuführen, werden vergleichbare Metriken definiert. Diese Metriken bilden anschließend den inhaltlichen Kern für das Messprotokoll in Kapitel \ref{sec:messprotokol}. Weiterhin muss für jede Metrik der Ablauf der Messung sowie der Ausgangszustand der verwendeten Testgeräte normiert werden.
@@ -1198,7 +1214,7 @@ Die Ressourcen sind die in Kapitel \ref{sec:eingesetze_komponenten} deklarierten
 
 \bigskip
 \textbf{Benötigter Arbeitsspeicher} \\
-Dieser Messwert dokumentiert die Größe des belegten Arbeitsspeichers zur Laufzeit. Auf den mobilen Testgeräten ist die Messung während der laufenden Anwendung nicht gleichzeitig möglich. Für die Erfassung des Werts muss die Applikation verlassen werden und aus den Systemeinstellungen abgelesen werden. Währenddessen bleibt die App im Hintergrund aktiv. Ein niedriger Wert gilt als positiv und ein hoher als negativ. Der Wert wird in Megabyte angegeben.
+Dieser Messwert dokumentiert die Größe des belegten Arbeitsspeichers zur Laufzeit. Auf den mobilen Testgeräten von Android ist die Messung während der laufenden Anwendung nicht gleichzeitig möglich. Für die Erfassung des Werts muss die Applikation verlassen werden und aus den Systemeinstellungen abgelesen werden. Währenddessen bleibt die App im Hintergrund aktiv. Bei iOS Geräten kann aus den Laufzeitanalyse-Tools von Xcode abgelesen werden. Ein niedriger Wert gilt als positiv und ein hoher als negativ. Der Wert wird in Megabyte angegeben.
 
 \bigskip
 \textbf{Ladegeschwindigkeit bei Neustart} \\
@@ -1267,6 +1283,13 @@ Bei den eingesetzten Smartphones handelt es sich um gebrauchte Geräte, was bede
 \label{sec:messprotokol}
 In diesem Teil der Arbeit werden die Messergebnisse zu den vorher definierten Metriken, in Zusammenhang mit den angegebenen Testgeräten, aufgelistet. In Tabelle \ref{protokoll_android} sind die Ergebnisse der Android Version und in Tabelle \ref{protokoll_ios} die der iOS Version zu sehen.
 
+\bigskip
+Erläuterung zu den Einträgen:
+
+Bestes Ergebnis = Hervorgehoben (fett)\\
+Teilergebnis (unfertig) = Stern (*)\\
+Kein Messergebnis = Strich (-)
+
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
@@ -1277,17 +1300,15 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den vorher definierten Me
 			\multicolumn{5}{l}{\cellcolor[HTML]{000000}{\color[HTML]{000000} }}                                                                                                                                                                                                              \\
 			\rowcolor[HTML]{000000} 
 			{\color[HTML]{FFFFFF} \textbf{Metrik}}                                                                      & {\color[HTML]{FFFFFF} \textbf{Wert}}  & {\color[HTML]{FFFFFF} \textbf{libGDX}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\ \hline
-			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ausgangsgröße \\ einer Basisapplikation\end{tabular}}} & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{29,09}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ des Spiels\end{tabular}}}            & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{19,7}                   & \multicolumn{1}{c|}{32,66}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Größe der Ressourcen}}                                                         & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{5,84}                   & \multicolumn{1}{c|}{4,91}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Benötigter Arbeitsspeicher}}                                                   & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{41,73}                   & \multicolumn{1}{c|}{113,63}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{0,85}                   & \multicolumn{1}{c|}{3,02}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{60}                   & \multicolumn{1}{c|}{60}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Mindestanforderung des Systems}}                                                                             & \multicolumn{1}{c|}{Versionsnummer}                 & \multicolumn{1}{c|}{2.3}                  & \multicolumn{1}{c|}{2.3}                   & \multicolumn{1}{c|}{2.3.1}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Codezeilen}}                                                                             & \multicolumn{1}{c|}{Zeilen}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{340}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ausgangsgröße \\ einer Basisapplikation\end{tabular}}} & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{\textbf{8,12}}                  & \multicolumn{1}{c|}{14,63}                   & \multicolumn{1}{c|}{29,09}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ des Spiels\end{tabular}}}            & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{*13,4}                  & \multicolumn{1}{c|}{\textbf{19,7}}                   & \multicolumn{1}{c|}{32,66}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Größe der Ressourcen}}                                                         & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{5,9}                  & \multicolumn{1}{c|}{5,9}                   & \multicolumn{1}{c|}{\textbf{4,9}}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Benötigter Arbeitsspeicher}}                                                   & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{*22,97}                  & \multicolumn{1}{c|}{\textbf{41,73}}                   & \multicolumn{1}{c|}{113,63}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{1.16}                  & \multicolumn{1}{c|}{\textbf{0,85}}                   & \multicolumn{1}{c|}{3,02}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{-}                  & \multicolumn{1}{c|}{\textbf{60}}                   & \multicolumn{1}{c|}{\textbf{60}}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent} & \multicolumn{1}{c|}{5}                  & \multicolumn{1}{c|}{5}                   & \multicolumn{1}{c|}{5}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Mindestanforderung des Systems}}                                                                             & \multicolumn{1}{c|}{Versionsnummer}                 & \multicolumn{1}{c|}{\textbf{2.3}}                  & \multicolumn{1}{c|}{\textbf{2.3}}                   & \multicolumn{1}{c|}{\textbf{2.3}}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Codezeilen}}                                                                             & \multicolumn{1}{c|}{Zeilen}                 & \multicolumn{1}{c|}{-}                  & \multicolumn{1}{c|}{340}                   & \multicolumn{1}{c|}{\textbf{104}}                   \\ \hline
 		\end{tabular}
 	}
 	\caption{Messprotokoll des Spiels auf Android}\label{protokoll_android}
@@ -1303,51 +1324,137 @@ In diesem Teil der Arbeit werden die Messergebnisse zu den vorher definierten Me
 			\multicolumn{5}{l}{\cellcolor[HTML]{000000}{\color[HTML]{000000} }}                                                                                                                                                                                                              \\
 			\rowcolor[HTML]{000000} 
 			{\color[HTML]{FFFFFF} \textbf{Metrik}}                                                                      & {\color[HTML]{FFFFFF} \textbf{Wert}}  & {\color[HTML]{FFFFFF} \textbf{libGDX}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\ \hline
-			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ausgangsgröße \\ einer Basisapplikation\end{tabular}}} & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{22,4}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ des Spiels\end{tabular}}}            & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{13,9}                   & \multicolumn{1}{c|}{38,8}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Größe der Ressourcen}}                                                         & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{5,84}                   & \multicolumn{1}{c|}{4,91}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Benötigter Arbeitsspeicher}}                                                   & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{20,3}                   & \multicolumn{1}{c|}{42,7}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{1,43}                   & \multicolumn{1}{c|}{7,62}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{60}                   & \multicolumn{1}{c|}{30}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Mindestanforderung des Systems}}                                                                             & \multicolumn{1}{c|}{Versionsnummer}                 & \multicolumn{1}{c|}{6.0}                  & \multicolumn{1}{c|}{6.0}                   & \multicolumn{1}{c|}{6.0}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{Codezeilen}}                                                                             & \multicolumn{1}{c|}{Zeilen}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{340}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
-			\multicolumn{1}{|c|}{\textbf{}}                                                                             & \multicolumn{1}{c|}{}                 & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ausgangsgröße \\ einer Basisapplikation\end{tabular}}} & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{48,9}                  & \multicolumn{1}{c|}{\textbf{7,2}}                   & \multicolumn{1}{c|}{22,4}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ des Spiels\end{tabular}}}            & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{*54,4}                  & \multicolumn{1}{c|}{\textbf{13,9}}                   & \multicolumn{1}{c|}{38,8}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Größe der Ressourcen}}                                                         & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{5,9}                  & \multicolumn{1}{c|}{5,9}                   & \multicolumn{1}{c|}{\textbf{4,9}}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Benötigter Arbeitsspeicher}}                                                   & \multicolumn{1}{c|}{MB}               & \multicolumn{1}{c|}{-}                  & \multicolumn{1}{c|}{\textbf{20,3}}                   & \multicolumn{1}{c|}{42,7}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  & \multicolumn{1}{c|}{Sekunden}         & \multicolumn{1}{c|}{2,18}                  & \multicolumn{1}{c|}{\textbf{1,43}}                   & \multicolumn{1}{c|}{7,62}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                           & \multicolumn{1}{c|}{Frames / Sekunde} & \multicolumn{1}{c|}{-}                  & \multicolumn{1}{c|}{\textbf{60}}                   & \multicolumn{1}{c|}{30}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{Prozent} & \multicolumn{1}{c|}{0}                  & \multicolumn{1}{c|}{0}                   & \multicolumn{1}{c|}{0}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Mindestanforderung des Systems}}                                                                             & \multicolumn{1}{c|}{Versionsnummer}                 & \multicolumn{1}{c|}{\textbf{6.0}}                  & \multicolumn{1}{c|}{\textbf{6.0}}                   & \multicolumn{1}{c|}{\textbf{6.0}}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Codezeilen}}                                                                             & \multicolumn{1}{c|}{Zeilen}                 & \multicolumn{1}{c|}{-}                  & \multicolumn{1}{c|}{340}                   & \multicolumn{1}{c|}{\textbf{104}}                   \\ \hline
 		\end{tabular}
 	}
 	\caption{Messprotokoll des Spiels auf iOS}\label{protokoll_ios}
 \end{table}
 
 
+\section{Auswertung der Messergebnisse}
+Die dokumentierten Messergebnisse aus Kapitel \ref{sec:messprotokol} sollen nun anhand der gemessenen Metriken verglichen werden. Das Ergebnis jeder Metrik wird nachfolgend erläutert, wobei einerseits die plattformabhängigen, als auch die gemeinsamen, plattformübergreifenden Daten, berücksichtigt werden.  Die Beispielapplikation konnte mit Cocos2D-X und Unity3D den Anforderungen nach umgesetzt werden. Die App konnte lediglich mit libGDX nicht final abgeschlossen werden, weshalb die Messergebnisse von diesem Framework nur den erreichten Stand abbilden. Es existiert die Spielszene inklusive des steuerbaren Vogels und Hindernisse, jedoch fehlen die Kollisionsabfragen, die Punktedarstellung, Hintergrundmusik und Szenenwechsel. Diese Ergebnisse geben dennoch eine ausreichende Einschätzung, um in den Vergleich miteinbezogen werden zu können. 
 
-%TODO: Kleines Nachwort zu den Ergebnissen. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.2\textwidth]{bilder/Unity_Android}
+	\caption{Mit Unity3D erstellte Spielszene unter Android}\label{game_unity}
+\end{figure}
 
-%TODO: And actually it's pretty easy to see what's taking all the space, rename the .apk to .zip and unzip it!On iOS rename the .ipa to .zip and unzip it. Then do Show Package Contents on the resulting expanded archive file.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.2\textwidth]{bilder/Cocos_iOS}
+	\caption{Mit Cocos2D-X erstellte Spielszene unter iOS}\label{game_cocos}
+\end{figure}
 
+Die Abbildung \ref{game_unity} zeigt die Spielszene mit dem Android Testgerät, welche mit Unity3D erstellt wurde. Die Punktzahl ist noch nicht zu sehen, da die Spielfigur sich noch vor dem ersten Hindernis befindet. Die Framerate unten links wurde durch ein eigenes Script hinzugefügt. 
+In Abbildung \ref{game_cocos} ist die gleiche Spielszene aus der Cocos2D-X Applikation unter iOS zu sehen. Die Unterschiede bei den Spielinhalten sind kaum auszumachen. Unten links wird die Framerate angezeigt, dessen Darstellung durch eine Standardfunktion zum debuggen ermöglicht wird.
+
+\bigskip
+\textbf{Ausgangsgröße einer Basisapplikation} \\
+Die Ausgangsgröße einer Basisapplikation ist bei Android mit 8,12 MB bei libGDX am geringsten, jedoch bei iOS im Gegensatz dazu mit 48,9 MB am größten. Die geringe Größe bei Android liegt vor allem an der verwendeten Sprache Java, dass die Erstellung nahezu nativ behandelt. Wodurch sich die überdurchschnittliche Größe der Anwendung bei iOS zusammensetzt, konnte nicht genauer analysiert werden. RoboVM nutzt zwar Xcode indirekt für die Erzeugung und Installation der Applikation auf einem Gerät, generiert aber dabei kein ausführbares Xcode Projekt. Dadurch konnten Xcodes Analysewerkzeuge nicht verwendet werden.
+Cocos2D-X besitzt bei beiden Plattformen einen geringen Speicherbedarf und kann sich in dieser Kategorie als der speichereffizienteste Kanditat hervortun.
+Unity3D benötigt bei beiden Plattformen eine ähnliche Grundgröße.
+
+\bigskip
+\textbf{Gesamtgröße des Spiels} \\
+Da die Applikation mit libGDX nicht finalisiert wurde, wird dieser Wert nur teilweise berücksichtigt. Durch die Aufaddierung der Ressourcen auf die Basisapplikation ist jedoch anzunehmen, dass sich die Steigerung des Speicherbedarfs bei fertiggestellter Anwendung nur geringfügig erhöht. Bei libGDX sowie Cocos2D-X ergeben sich die Gesamtgrößen der Applikationen scheinbar ausschließlich durch die Erweiterung der Ressourcen. Bei Unity3D war dies nicht der Fall. Die Vergrößerung der Android-App ist kleiner als die hinzugefügten Ressourcen, wodurch anzunehmen ist, dass die Spielelemente komprimiert werden. Anders ist es bei iOS, da hier die Vergrößerung etwa um die dreifache Ressourcengröße ausfällt. Cocos2D-X kann bei dieser Messkategorie, mit 19,7 MB bei Android und 13,9 MB bei iOS, als Sieger erklärt werden.
+
+
+\bigskip
+\textbf{Größe der Ressourcen} \\
+Die Größen der Ressourcen sind bei libGDX und Cocos2D-X gleich, da bei beiden Frameworks die gleichen Elemente genutzt werden. Unity3Ds Ressourcengröße ist im Vergleich am geringsten, obwohl sich in diesem Ordner zusätzlich die geschriebenen Skripte und die gespeicherten Szenen befinden.
+
+\bigskip
+\textbf{Benötigter Arbeitsspeicher} \\
+Die Reservierung des Arbeitsspeichers ist bei Unity3D am höchsten. Diesen Bereich kann Cocos2D-X ebenfalls für sich gewinnen, da der benötigte Arbeitsspeicher sehr gering ausfällt. Bei beiden Frameworks wird bei dem Android-Testgerät wesentlich mehr Arbeitsspeicher verwendet als bei dem iOS-Gerät. libGDX wird bei dieser Metrik nicht berücksichtigt. 
+
+
+\bigskip
+\textbf{Ladegeschwindigkeit bei Neustart} \\
+Der Ladevorgang ist bei den beiden Open Source Frameworks sehr kurz. Unity3D benötigt auf dem iOS-Gerät mit etwa 7,5 Sekunden am längsten, jedoch kann die Ladegeschwindigkeit bei Android mit den beiden anderen Frameworks mithalten. Die Darstellung des Ladebildschirms wird bei der Unity3D Personal Edition jedoch erzwungen, was die Geschwindigkeit beeinflusst. Cocos2D-X ist in dieser Kategorie das schnellste Framework.
+
+
+\bigskip
+\textbf{Frames pro Sekunde} \\
+Bei der Framerate konnten keine Daten für libGDX gesammelt werden, da die Implementierung der Darstellung nicht umgesetzt wurde. Cocos2D-X läuft auf beiden Plattformen mit stabilen 60 Frames pro Sekunde. Dies wird codeseitig festgelegt. Unity3D forciert das Testgerät standardmäßig zu keiner fest definierten Framerate, sondern passt diese der Leistung des Gerätes an. Das iOS Testgerät lief daher nur mit 30 Frames pro Sekunde. Es ist aber ebenfalls möglich, bei Unity3D eine Framerate vorzugeben. Alle Applikationen liefen jedoch flüssig und stabil, weshalb die Ergebnisse als gleichwertig angesehen werden.
+
+\bigskip
+\textbf{Akkuverbrauch} \\
+Der Akkuverbrauch ergab keine aussagekräftigen Ergebnisse. Bei dem iOS-Gerät war überhaupt kein Leistungsabfall zu vermerken, ähnlich der Differenz bei dem Android-Gerät. Grund hierfür kann der zu geringe Umfang der Applikation sein, da diese modernere Smartphones kaum fordert.
+
+
+\bigskip
+\textbf{Mindestanforderung des Systems} \\
+Auch bei den Mindestanforderungen gab es keine Differenzen. Alle Frameworks setzten die gleichen Mindestanforderungen voraus. Dies könnte ebenfalls mit der geringen technischen Anforderung einhergehen.
+
+\bigskip
+\textbf{Codezeilen} \\
+Die Zeilenanzahl des geschriebenen Code ist bei Unity3D am geringsten, da die Funktionalität durch die umfangreiche Bibliothek kompakt ausgedrückt werden kann. Bei Cocos2D-X ist deutlich mehr Code erforderlich, was sich hauptsächlich durch die Sprache C++ und die zusätzlich benötigten Header-Dateien ergibt. libGDX wurde durch die Unvollständigkeit der App nicht mit aufgeführt. Es zeichnete sich jedoch ein Umfang ab, der ähnliche Ausmaße wie Cocos2D-X annahm.
+
+\bigskip
+In Tabelle \ref{protokoll_gesamt} wird das Gesamtergebnis dargestellt, wobei das jeweils beste Spielefamework einer Metrik durch ein X markiert ist. Diese Bewertung ergibt sich aus den zusammengenommenen Ergbnissen beider Plattformen. Auch wenn libGDX nur teilweise berücksichtigt wurde, konnte es in der Gesamtwertung keinen eindeutigen Vorteil verzeichnen. Mit sechs gewonnenen Kategorien kann sich Cocos2D-X im Gebiet der Effizienz und Ausführungsgeschwindigkeit vor der Konkurrenz behaupten. 
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{cccc}
+			\rowcolor[HTML]{000000} 
+			\multicolumn{4}{c}{\cellcolor[HTML]{000000}{\color[HTML]{FFFFFF} \textbf{Gesamtergebnis}}}                                                                                                                                                                                 \\
+			\rowcolor[HTML]{000000} 
+			\multicolumn{4}{l}{\cellcolor[HTML]{000000}{\color[HTML]{000000} }}                                                                                                                                                                                                              \\
+			\rowcolor[HTML]{000000} 
+			{\color[HTML]{FFFFFF} \textbf{Metrik}}                                                                     & {\color[HTML]{FFFFFF} \textbf{libGDX}} & {\color[HTML]{FFFFFF} \textbf{Cocos2D}} & {\color[HTML]{FFFFFF} \textbf{Unity3D}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ausgangsgröße \\ einer Basisapplikation\end{tabular}}} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{X}}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Gesamtgröße \\ des Spiels\end{tabular}}}            & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{X}}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Größe der Ressourcen}}                                                         &  \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{\textbf{X}}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Benötigter Arbeitsspeicher}}                                                   &  \multicolumn{1}{c|}{-}                  & \multicolumn{1}{c|}{\textbf{X}}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ladegeschwindigkeit \\ bei Neustart\end{tabular}}}  &  \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{X}}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Frames pro Sekunde}}                                                            & \multicolumn{1}{c|}{-}                  & \multicolumn{1}{c|}{\textbf{X}}                   & \multicolumn{1}{c|}{\textbf{X}}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Akkuverbrauch}}                                                                & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Mindestanforderung des Systems}}                                                                             &  \multicolumn{1}{c|}{\textbf{}}                  & \multicolumn{1}{c|}{\textbf{X}}                   & \multicolumn{1}{c|}{\textbf{X}}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Codezeilen}}                                                                             & \multicolumn{1}{c|}{-}                  & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{\textbf{X}}                   \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Ergebnis}}                                                                             & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{6}}                   & \multicolumn{1}{c|}{\textbf{4}}                   \\ \hline
+		\end{tabular}
+	}
+	\caption{Gesamtergebnis anhand der Messerergebnisse}\label{protokoll_gesamt}
+\end{table}
 
 %\caption{Messprotokoll des Spiels auf Android}\label{protokoll_android}
 %Kosten, Performance, Akkuverbrauch, App-Daten-Aufteilung, Größe des benötigten Speichers, Größe des geteilten Contents, Stabilität, RAM, Code-Zeilen/-Größe, Entwicklungszeit(bedingt zu berücksichtigen), FPS
 
-%TODO
 \chapter{Vergleich zur Benutzbarkeit}
+In diesem Kapitel werden die Erfahrungen wiedergegeben, die während des Implementierungsprozess gewonnen wurden.
+
+\bigskip
+Durch die in Kapitel \ref{sec:analyse_der_apps} durchgeführte Messung und darauf folgende Auswertung stellte sich heraus, dass mit Cocos2D-X sehr effiziente Resultate erzielt werden können. Bei beiden Zielplattformen konnten kurze Ladezeiten, geringer Speicherbedarf und effektive Kompilierung ohne stark anwachsende Datenmengen beobachtet werden. Das Ergebnis wird allerdings zu Lasten von einer vergleichsweise umfangreicheren Einarbeitungszeit und ebenso intensiven Testphasen beeinflusst. Bei der Einarbeitung wurden durch die offizielle Dokumentation verständliche Erklärungen und Hilfen für die beste Vorgehensweise bereitgestellt. Die Sprache C++ spielt seine Vorteile als Basis für die Spieleentwicklung in der umgesetzten Beispielapplikation voll aus. Jedoch sind für erfolgreiche und stabile Resultate längere Entwicklungszeiten und fortgeschrittene Erfahrungswerte notwendig sowie der sichere Umgang mit dieser Sprache.
+
+\bigskip
+Während der Entwicklungszeit wurden die zuvor hohen Erwartungen an libGDX stark getrübt. Obwohl die Entwicklung der Android Applikation vergleichsweise die effizientesten Messergebnisse ergeben hat, waren die Ergebnisse bei iOS genau komplementär. Der Vorteil der Modularität wirkt sich bei mobilen Anwendungen demnach nur bei Android aus. Auch die Kompilierung mit RoboVM zu iOS ist befremdlich, da kein Xcode Projekt erzeugt wird und das Resultat dadurch nicht ausreichend kontrolliert werden kann. Es konnten aus der IDE auch keine Paketdateien (apk/ipa) mit libGDX erstellt werden. Diese Erkenntnisse stellen den Nutzen der plattformübergreifenden Eigenschaften im Mobilbereich in Frage. Während der Entwicklung traten zudem verschiedene Hürden in Erscheinung, die dem Fortschritt unnötig im Weg standen. Die Dokumentation macht anfänglich einen guten und umfangreichen Eindruck, jedoch stieß man bei der Suche nach Umsetzungsmöglichkeiten von scheinbar einfachen Anforderungen schnell an die Grenzen. Für die Realisierung geeigneter Physik und Kollisionsabfragen bei 2D Spielen wird in der Dokumentation das externe Framework Box2D vorgeschlagen, welches auch bei Cocos2D-X eingesetzt wurde. libGDX stellt dafür aber keine eigene Anleitung und verweist für die richtige Verwendung auf die Dokumentation von Box2D, welche allerdings nur Erklärungen für die Anwendung mit C++ bereitstellt. Auch die Einbindung von üblichen Schriftarten, wie TrueType Fonts, ist nicht möglich. Schrift innerhalb von Anwendungen wird bei libGDX durch pixelbasierte Bitmap-Schriften realisiert, die bei unterschiedlichen Bildschirmgrößen unschöne und unscharfe Skalierungen auslösen. Die Verwendung von libGDX zur Entwicklung von plattformübergreifenden, mobilen Spielen ist aufgrund der genannten Defizite nur bei gezielten Anforderungen ratsam. 
+
+\bigskip
+Die Ergebnisse der Applikationen durch die Engine Unity3D scheinen auf den ersten Blick moderat auszufallen. Im Bereich der Speicherverwendung wird eine höhere Grundgröße beansprucht, die aber durch den Einsatz von zusätzlichen Ressourcen und Hinzufügen von Komplexitäten verhältnismäßig gering zunimmt. Die Anwendungen laufen stabil und fehlerfrei. Die vorherige Erwartung einer umfangreichen Einarbeitungszeit konnte während der Entwicklung widerlegt werden. Umgang und Arbeit mit dem Editor sind intuitiv zu verstehen und verständlich aufgebaut. Die erforderliche Logik konnte mit Hilfe der unterstützten IDEs in kurzer Zeit umgesetzt, im Editor getestet und angepasst werden. Durch die Möglichkeit, den Entwicklungsstand innerhalb des Editors zu testen und während der Laufzeit Anpassungen vorzunehmen, konnte effektiv und zielgerichtet gearbeitet werden. Bei auftretenden Fehlern während der Tests wurde zudem sofort auf die richtige Codezeile innerhalb des Scripts verwiesen. Der Gebrauch von Prefabs für die Mehrfachverwendung von wiederkehrenden Spielinhalten erwies sich als komfortabel und effizient. Durch die umfangreiche Dokumentation mit vielen Anwendungsbeispielen und Tutorials sind Momente der Ratlosigkeit von kurzer Dauer. Die Kompilierung zu den Zielplattformen wurde problemlos durchgeführt und ergab auf den Testgeräten das durch den Editor vorausgesetzte Ergebnis. Der Gebrauch von Unity3D für die Erstellung von plattformübergreifenden, mobilen Spielen ist durch die hohe Entwicklungsgeschwindigkeit und die Abdeckung aller denkbaren spielebasierten Anforderungen durchaus empfehlenswert.
+
 
 %TODO
 \chapter{Fazit}
-
-%TODO: Verhältnismäßiger Größenunterschied im Vergleich zur Basisapp in Prozent
-
-
-Während des Entwicklungsprozesses bestätigte sich die Wichtigkeit über die Qualität der Dokumentation und Codebeispiele der Spieleframeworks. 
+Cocos2D-X und Unity3D lieferten bei der Implementierung und der anschließenden Messung äußerst zufriedenstellende Ergebnisse. Cocos2D-X bietet das höchste Potential bei der Performance von Anwendungen und kann sich der Unterstützung einer umfangreichen Community erfreuen, die sich um die stetige, zeitgemäße Weiterentwicklung bemüht. Bei Spielen mit einfachen Anforderungen und geringem Inhalt kann sich Cocos2D-X gut präsentieren. Bei steigendem Umfang mit ausgedehnter Komplexität und vielfältigen Inhalten kann die effiziente Entwicklung mit diesem Framework aber nur durch erheblichen Aufwand umgesetzt werden. Dadurch sind ökonomische, plattformübergreifende Entwicklungsprozesse zwar dennoch möglich, aber eher Entwicklern mit reichhaltiger Erfahrung vorbehalten.
 
 \bigskip
-Für libGDX finden sich innerhalb des offiziellen Wiki viele, mit Texten zur Erklärung hinterlegte Beispiele zu verschiedenen Bereichen. Die Suche nach individuelleren Lösungen wird durch verschiedene Foren befriedigend gesättigt. Die Entwicklungsgeschwindigkeit ist für einen Entwickler ohne Vorerfahrung daher durchaus annehmbar.
+libGDX bietet zwar für die meisten Bedingungen eine externe Schnittstellenlösung an, stellt diese aber nicht ausreichend an das eigene Framework angepasst zur Verfügung. Dadurch verlieren viele dieser Schnittstellen ihre Zweckmäßigkeit, wenn sie nur aus Gründen der Vollständigkeit eingebunden werden, ohne aber sorgfältig verwaltet zu werden.
 
 \bigskip
-In diesem Punkt enttäuschte Cocos2D-X leider mehr als zuvor angenommen. Die offizielle Dokumentation schwächelte zur Zeit der Entwicklung an vielen grundlegenden Stellen bezüglich der Aktualität. Dies muss nicht unbedingt tragisch sein, jedoch sind manche Einträge zu Standardlösungen nicht mehr ganz aktuell und lassen sich nicht mehr wie beschrieben anwenden. Das gleiche gilt für allgemeine Suchanfragen für Lösungen im Internet. Es ist als Anfänger von daher nicht trivial, für manche scheinbar einfache Problemstellungen herauszufinden, was die beste, empfohlene Vorgehensweise sein soll.
+Unity3D ergab bei der Analyse der Applikation scheinbar durchschnittliche Ergebnisse, welche von dieser aber stabil und effizient ausgeführt wurden. Die kurze Einarbeitungszeit, die schnelle Erstellung von zweckmäßigen Resultaten sowie die vielseitigen Unterstützungen und Hilfestellungen sind ein immenser ökonomischer Vorteil, den Privatnutzer, Indieentwickler und professionelle Studios für sich nutzen können. Unity3D bietet zudem die umfangreichsten Schnittstellen zu externen Services und Gerätefunktionen sowie die größte Menge an unterschiedlichen Zielplattformen in allen Kategorien. Daher kann die Behauptung aufgestellt werden, dass es kaum Anforderungen an die Realisierung eines digitalen, mobilen Spiels gibt, die ein Hindernis für die Engine Unity3D darstellt. Somit kann sich dieses Spieleframework als vielseitiger, intuitiver und innovativer Alleskönner behaupten, dessen zunehmende Verbreitung sich durchaus rechtfertigt.
 
-\bigskip
-Im Gegensatz dazu, macht Unity3D es einem leichter. Einen Neuling mag dieser umfangreiche Editor zunächst mehr fordern, hingegen werden für jede Erfahrungsstufe Hilfestellungen geboten. Die Vielfalt an Unterstützung ist immens, fast immer mit praktischen Beispielen vertieft und gut sortiert. Wenn es passiert, dass überholte Methoden verwendet werden, hilft einem die unterstützte IDE oder die Dokumentation sofort weiter. Ein weiterer Vorteil und Zeitersparnis ist das direkte testen des Spiels innerhalb des Unity Editors. Das Testspiel konnte somit ohne Hindernisse umgesetzt werden.
+
+
 
 %--------------------- VERZEICHNISSE -------------------------------------
 
@@ -1355,336 +1462,335 @@ Im Gegensatz dazu, macht Unity3D es einem leichter. Einen Neuling mag dieser umf
 \listoftables % Tabellenverzeichnis erzeugen
 
 %------------------------------ LITERATURVERZEICHNIS----------------------
-%TODO:Alphabetisch sortieren!
+%TODO:Alphabetisch sortieren! ECKIGE Klammern wegnehmen
 \begin{thebibliography}{}
 	
 \bibitem[AndEngine(2013)]{andEngine}
-[AndEngine(2013)] AndEngine(2013): \emph{Free Android 2D OpenGL Game Engine},
+AndEngine (2013): \emph{Free Android 2D OpenGL Game Engine},
 \url{https://github.com/nicolasgramlich/AndEngine}, letzter Zugriff: 28.12.2015
 
 \bibitem[Android Develop Tools(2015)]{android_studio}
-[Android Develop Tools(2015)] Android Develop Tools(2015): \emph{Android Studio Overview},
+Android Develop Tools (2015): \emph{Android Studio Overview},
 \url{http://developer.android.com/tools/studio/index.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Android Source - Codenames, Tags, and Build Numbers(2015)]{android_codenames}
-[Android Source - Codenames, Tags, and Build Numbers(2015)] Android Source - Codenames, Tags, and Build Numbers(2015):
+Android Source - Codenames, Tags, and Build Numbers (2015):
 \emph{Codenames, Tags, and Build Numbers in the history of Android},
 \url{https://source.android.com/source/build-numbers.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[App42(2016)]{app42}
-[App42(2016)] App42(2016): \emph{App42 Cloud API},
+App42 (2016): \emph{App42 Cloud API},
 \url{http://api.shephertz.com/}, letzter Zugriff: 01.02.2016
 
 \bibitem[AppGameKit(2015)]{appgamekit}
-[AppGameKit(2015)] AppGameKit(2015): \emph{AppGameKit - Platforms \& Features},
+AppGameKit (2015): \emph{AppGameKit - Platforms \& Features},
 \url{http://www.appgamekit.com/platforms-and-features.php}, letzter Zugriff: 18.02.2016
 
 \bibitem[Apple Developer(2015)a]{swift_about}
-[Apple Developer(2015)a] Apple Developer(2015)a: \emph{Swift - Overview},
+Apple Developer (2015)a: \emph{Swift - Overview},
 \url{https://developer.apple.com/swift/}, letzter Zugriff: 28.12.2015
 
 \bibitem[Apple Developer(2016)b]{apple_developer_program}
-[Apple Developer(2016)b] Apple Developer(2016)b: \emph{How the Program Works},
+Apple Developer (2016)b: \emph{How the Program Works},
 \url{https://developer.apple.com/programs/how-it-works/}, letzter Zugriff: 15.02.2016
 
-\bibitem[Bernardo Zamora(2015)]{windows_store_trends_2015}
-[Bernardo Zamora(2015)] Bernardo Zamora(2015): \emph{Blogs.Windows - Windows Store Trends - September 2015},
-\url{https://blogs.windows.com/buildingapps/2015/10/12/windows-store-trends-september-2015/}, letzter Zugriff: 15.12.2015
+\bibitem[Berkman(2012)]{microsoft_mobile}
+Berkman (2012): Berkman, Fran \emph{Microsoft Mobile: From Pocket PC to Windows Phone 8},
+\url{http://mashable.com/2012/10/29/microsoft-mobile-history/#DYxZxZ7wTuqD}, letzter Zugriff: 25.11.2015
 
 \bibitem[Boo(2015)]{boo_about}
-[Boo(2015)] Boo(2015): \emph{Boo - A scarily powerful language for .NET},
+Boo (2015): \emph{Boo - A scarily powerful language for .NET},
 \url{http://boo-language.github.io/}, letzter Zugriff: 05.01.2016
 
 \bibitem[Brown(2015)]{learning_javascript}
-[Brown(2015)] Brown, Ethan (Hrsg.): 
+Brown (2015): Brown, Ethan (Hrsg.): 
 \emph{Learning Javascript}, O'Reilly 2015
 
 \bibitem[C++(2016)]{cplusplus}
-[C++(2016)] C++(2016): \emph{C++ - A Brief Description},
+C++ (2016): \emph{C++ - A Brief Description},
 \url{http://www.cplusplus.com/info/description/}, letzter Zugriff: 05.01.2016
 
 \bibitem[Cocos2D-Android(2010)]{cocos2d_android}
-[Cocos2D-Android(2010)] Cocos2D-Android(2010): \emph{cocos2d for Android: A framework for building 2D games for the Android platform},
+Cocos2D-Android (2010): \emph{cocos2d for Android: A framework for building 2D games for the Android platform},
 \url{https://code.google.com/archive/p/cocos2d-android/}, letzter Zugriff: 28.12.2015
 
 \bibitem[Cocos2D-iPhone(2015)]{cocos2d_iphone}
-[Cocos2D-iPhone(2015)] Cocos2D-iPhone(2015): \emph{Cocos2D - ObjC Site},
+Cocos2D-iPhone (2015): \emph{Cocos2D - ObjC Site},
 \url{http://www.cocos2d-iphone.org/}, letzter Zugriff: 28.12.2015
 
 \bibitem[Cocos2D-X(2015)a]{cocos2d_main_features}
-[Cocos2D-X(2015)a] Cocos2D-X(2015)a: \emph{Cocos2D-X - Developers Manual},
+Cocos2D-X (2015)a: \emph{Cocos2D-X - Developers Manual},
 \url{http://www.cocos2d-x.org/wiki/Cocos2d-x}, letzter Zugriff: 29.12.2015
 
 \bibitem[Cocos2D-X(2015)b]{cocos2d_relationships}
-[Cocos2D-X(2015)b] Cocos2D-X(2015)b: \emph{Cocos2D-X - Relationships in Cocos2D Family},
+Cocos2D-X (2015)b: \emph{Cocos2D-X - Relationships in Cocos2D Family},
 \url{http://www.cocos2d-x.org/wiki/Relationships_in_Cocos2d_Family}, letzter Zugriff: 05.01.2016
 
 \bibitem[Cocos2D-X(2015)c]{cocos2d_docs}
-[Cocos2D-X(2015)c] Cocos2D-X(2015)c: \emph{Cocos2D-X - Dokumentation},
+Cocos2D-X (2015)c: \emph{Cocos2D-X - Dokumentation},
 \url{http://www.cocos2d-x.org/reference/native-cpp/V3.9/index.html}, letzter Zugriff: 10.01.2016
 
+\bibitem[Daintith(2004)]{native_software}
+Daintith (2004): Daintith, John: \emph{A Dictionary of Computing - native software},
+\url{http://www.encyclopedia.com/doc/1O11-nativesoftware.html}, letzter Zugriff: 24.11.2015
+
 \bibitem[Distimo(2014)]{play_store_categories}
-[Distimo(2014)] Distimo(2014): \emph{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014. In Statista - Das Statistik-Portal.},
+Distimo (2014): \emph{Anteil der im Google Play Store weltweit am häufigsten heruntergeladenen Apps nach Kategorien im Februar 2014. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/321703/umfrage/beliebteste-app-kategorien-im-google-play-store-weltweit/}, letzter Zugriff: 14.12.2015
 
 \bibitem[El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M.(2015)]{cross_plattform_approaches} 
-[El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M.(2015)] El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M. :
+El-Kassas, Wafaa S. \& Abdullah, Bassem A. \&  Yousef, Ahmed H. \&  Wahba, Ayman M. :
 \glqq Taxonomy of Cross-Platform Mobile Applications Development Approaches\grqq, 
 \emph{Ain Shams Engineering Journal}, 2015
 
-\bibitem[Fran Berkman(2012)]{microsoft_mobile}
-[Fran Berkman(2012)] Fran Berkman(2012): \emph{Microsoft Mobile: From Pocket PC to Windows Phone 8},
-\url{http://mashable.com/2012/10/29/microsoft-mobile-history/#DYxZxZ7wTuqD}, letzter Zugriff: 25.11.2015
-
 \bibitem[Golem(2015)]{wp_with_android_ios}
-[Golem(2015)] Golem(2015): \emph{Microsoft demonstriert Android- und iOS-Apps unter Windows},
+Golem (2015): \emph{Microsoft demonstriert Android- und iOS-Apps unter Windows},
 \url{http://www.golem.de/news/windows-10-microsoft-demonstriert-android-und-ios-apps-unter-windows-1504-113812.html}, letzter Zugriff: 25.11.2015
 
 \bibitem[Hölzl \& Raed \& Wirsing(2013)]{java_kompakt}
-[Hölzl \& Raed \& Wirsing(2013)] Hölzl, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.): 
+Hölzl, Matthias \& Raed, Allaithy \& Wirsing, Martin (Hrsg.): 
 \emph{Java kompakt Eine Einführung in die Software-Entwicklung
 	mit Java}, Springer 2013
 
 \bibitem[IDC(2015)]{marktanteile_betriebssysteme}
-[IDC(2015)] IDC(2015): \emph{Prognose zu den Marktanteilen der Betriebssysteme am Absatz vom Smartphones weltweit in den Jahren 2015 und 2019. In Statista - Das Statistik-Portal.},
+IDC (2015): \emph{Prognose zu den Marktanteilen der Betriebssysteme am Absatz vom Smartphones weltweit in den Jahren 2015 und 2019. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/182363/umfrage/prognostizierte-marktanteile-bei-smartphone-betriebssystemen/}, letzter Zugriff: 14.12.2015
 
-\bibitem[James Whitcomb Riley(1849–1916)]{ducktest}
-[James Whitcomb Riley(1849–1916)] James Whitcomb Riley(1849–1916): \emph{Ententest - Begriffsentstehung},
-\url{https://de.wikipedia.org/wiki/Ententest}, letzter Zugriff: 05.01.2016
-
 \bibitem[JetBrains(2015)]{appcode}
-[JetBrains(2015)] JetBrains(2015): \emph{JetBrains AppCode},
+JetBrains (2015): \emph{JetBrains AppCode},
 \url{https://www.jetbrains.com/objc/}, letzter Zugriff: 28.12.2015
 
-\bibitem[John Daintith(2004)]{native_software}
-[John Daintith(2004)] John Daintith(2004): \emph{A Dictionary of Computing - native software},
-\url{http://www.encyclopedia.com/doc/1O11-nativesoftware.html}, letzter Zugriff: 24.11.2015
-
 \bibitem[jPCT-AE(2015)]{jpct_ae}
-[jPCT-AE(2015)] jPCT-AE(2015): \emph{jPCT 3D engine - the free 3D solution for Java and Android},
+jPCT-AE (2015): \emph{jPCT 3D engine - the free 3D solution for Java and Android},
 \url{http://www.jpct.net/jpct-ae/index.html}, letzter Zugriff: 28.12.2015
 
 \bibitem[Junge(2015)]{ludologie}
-[Junge(2015)] Junge, Prof. Dr. Jens:
+Junge (2015): Junge, Prof. Dr. Jens:
 \emph{Zur Begriffsklärung von Ludologie und Spielwissenschaft},
 \url{http://www.ludologie.de/neues-spiel/detailansicht/news/detail/News/zur-begriffsklaerung-von-ludologie-und-spielwissenschaft/}, letzter Zugriff: 28.01.2016
 
 \bibitem[Kantar(2015)]{marktanteile_betriebssysteme_laender}
-[Kantar(2015)] Kantar(2015): \emph{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015. In Statista - Das Statistik-Portal.},
+Kantar (2015): \emph{Marktanteile der mobilen Betriebssysteme am Absatz von Smartphones in ausgewählten Ländern von August bis Oktober 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/198453/umfrage/marktanteile-der-smartphone-betriebssysteme-am-absatz-in-ausgewaehlten-laendern/}, letzter Zugriff: 14.12.2015
 
 \bibitem[libGDX(2013)a]{libGDX_main_features}
-[libGDX(2013)a] libGDX(2013)a: \emph{libGDX - Goals and Features},
+libGDX (2013)a: \emph{libGDX - Goals and Features},
 \url{https://libgdx.badlogicgames.com/features.html}, letzter Zugriff: 29.12.2015
 
 \bibitem[libGDX(2013)b]{libGDX_docs}
-[libGDX(2013)b] libGDX(2013)b: \emph{libGDX API},
+libGDX (2013)b: \emph{libGDX API},
 \url{https://libgdx.badlogicgames.com/nightlies/docs/api/}, letzter Zugriff: 10.01.2016
 
 \bibitem[libGDX(2015)c]{libGDX_wiki}
-[libGDX(2015)c] libGDX(2015)c: \emph{libGDX - Setting up your Development Environment (Eclipse, Intellij IDEA, NetBeans)},
+libGDX (2015)c: \emph{libGDX - Setting up your Development Environment (Eclipse, Intellij IDEA, NetBeans)},
 \url{https://github.com/libgdx/libgdx/wiki/Setting-up-your-Development-Environment-(Eclipse,-Intellij-IDEA,-NetBeans)}, letzter Zugriff: 18.02.2016
 
 \bibitem[Lua(2015)]{lua_about}
-[Lua(2015)] Lua(2015): \emph{Lua - About},
+Lua (2015): \emph{Lua - About},
 \url{http://www.lua.org/about.html}, letzter Zugriff: 05.01.2016
 
 \bibitem[Lumberyard(2016)]{lumberyard}
-[Lumberyard(2016)] Lumberyard(2016): \emph{Lumberyard Beta - Details},
+Lumberyard (2016): \emph{Lumberyard Beta - Details},
 \url{https://aws.amazon.com/de/lumberyard/details/}, letzter Zugriff: 18.02.2016
 
 \bibitem[Mac Developer Library(2014)]{objectiveC_about}
-[Mac Developer Library(2014)] Mac Developer Library(2014): \emph{About Objective-C},
+Mac Developer Library (2014): \emph{About Objective-C},
 \url{https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html/}, letzter Zugriff: 28.12.2015
 
 \bibitem[MacinCloud(2015)]{macincloud}
-[MacinCloud(2015)] MacinCloud(2015): \emph{MacinCloud},
+MacinCloud (2015): \emph{MacinCloud},
 \url{http://www.macincloud.com/}, letzter Zugriff: 28.12.2015
 
 \bibitem[MacLeod(2014)]{macLeod}
-[MacLeod(2014)] MacLeod, Kevin:
+MacLeod (2014): MacLeod, Kevin:
 \emph{Monkeys Spinning Monkeys},
 Licensed under Creative Commons: By Attribution 3.0
 http://creativecommons.org/licenses/by/3.0/
 \url{http://incompetech.com/music/royalty-free}, letzter Zugriff: 28.01.2016
 
 \bibitem[Microsoft Developer(2015)]{WP10_SDK}
-[Microsoft Developer(2015)] Microsoft Developer(2015): \emph{Windows Software Development Kit (SDK) for Windows 10},
+Microsoft Developer (2015): \emph{Windows Software Development Kit (SDK) for Windows 10},
 \url{https://dev.windows.com/en-us/downloads/windows-10-sdk}, letzter Zugriff: 28.12.2015
 
 \bibitem[Microsoft(2014)a]{microsoft_nokia}
-[Microsoft(2014)a] Microsoft(2014)a: \emph{Microsoft - Microsoft und Nokia Geräte},
+Microsoft (2014)a: \emph{Microsoft - Microsoft und Nokia Geräte},
 \url{https://www.microsoft.com/de-de/nokia.aspx}, letzter Zugriff: 25.11.2015
 
 \bibitem[Microsoft(2015)b]{windows10_features}
-[Microsoft(2015)b] Microsoft(2015)b: \emph{Microsoft - Windows 10 Features},
+Microsoft (2015)b: \emph{Microsoft - Windows 10 Features},
 \url{https://www.microsoft.com/de-de/windows/features}, letzter Zugriff: 25.11.2015
 
 \bibitem[MonoGame(2016)]{monogame}
-[MonoGame(2016)] MonoGame(2016): \emph{MonoGame - About},
+MonoGame (2016): \emph{MonoGame - About},
 \url{http://www.monogame.net/about/}, letzter Zugriff: 18.02.2016
 
 \bibitem[MSDN(2015)]{WP10_Emulator}
-[MSDN(2015)] MSDN(2015): \emph{Microsoft-Emulator für Windows 10 Mobile},
+MSDN (2015): \emph{Microsoft-Emulator für Windows 10 Mobile},
 \url{https://msdn.microsoft.com/library/windows/apps/mt162269.aspx}, letzter Zugriff: 28.12.2015
 
 \bibitem[Nextpeer(2016)]{nextpeer}
-[Nextpeer(2016)] Nextpeer(2016): \emph{Nextpeer},
+Nextpeer (2016): \emph{Nextpeer},
 \url{https://www.nextpeer.com/}, letzter Zugriff: 01.02.2016
 
 \bibitem[Open Handset Alliance - Alliance Members(2015)]{alliance_members}
-[Open Handset Alliance - Alliance Members(2015)] Open Handset Alliance - Alliance Members(2015): \emph{Members of the Open Handset Alliance},
+Open Handset Alliance - Alliance Members (2015): \emph{Members of the Open Handset Alliance},
 \url{http://www.openhandsetalliance.com/oha_members.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Open Handset Alliance - Alliance Overview(2015)]{alliance_overview}
-[Open Handset Alliance - Alliance Overview(2015)] Open Handset Alliance - Alliance Overview(2015): \emph{Overview of the Open Handset Alliance},
+Open Handset Alliance - Alliance Overview (2015): \emph{Overview of the Open Handset Alliance},
 \url{http://www.openhandsetalliance.com/oha_overview.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Open Handset Alliance - Android Overview(2015)]{android_overview}
-[Open Handset Alliance - Android Overview(2015)] Open Handset Alliance - Android Overview(2015): \emph{Overview of Android by the Open Handset Alliance},
+Open Handset Alliance - Android Overview (2015): \emph{Overview of Android by the Open Handset Alliance},
 \url{http://www.openhandsetalliance.com/android_overview.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Oracle - Java SE(2015)]{java_jdk}
-[Oracle - Java SE(2015)] Oracle - Java SE(2015): \emph{Java SE Development Kit 8 Downloads},
+Oracle - Java SE (2015): \emph{Java SE Development Kit 8 Downloads},
 \url{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}, letzter Zugriff: 24.11.2015
 
 \bibitem[Piskel(2015)]{piskel}
-[Piskel(2015)] Piskel(2015): \emph{Piskel - Pixel Art and Animated Sprites},
+Piskel (2015): \emph{Piskel - Pixel Art and Animated Sprites},
 \url{http://www.piskelapp.com/}, letzter Zugriff: 28.01.2016
 
 \bibitem[Play Game Services(2015)]{play_game_services}
-[Play Game Services(2015)] Play Game Services(2015): \emph{Play Games Services},
+Play Game Services (2015): \emph{Play Games Services},
 \url{https://developers.google.com/games/services/}, letzter Zugriff: 01.02.2016
 
 \bibitem[PocketGamer.biz(2015)]{app_store_categories}
-[PocketGamer.biz(2015)] PocketGamer.biz(2015): \emph{Ranking der Top-20-Kategorien im App Store im Dezember 2015. In Statista - Das Statistik-Portal.},
+PocketGamer.biz (2015): \emph{Ranking der Top-20-Kategorien im App Store im Dezember 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/166976/umfrage/beliebteste-kategorien-im-app-store/}, letzter Zugriff: 15.12.2015
 
 \bibitem[RoboVM(2016)]{roboVM}
-[RoboVM(2016)] RoboVM(2016): \emph{RoboVM - Create truly native iOS apps in Java},
+RoboVM (2016): \emph{RoboVM - Create truly native iOS apps in Java},
 \url{https://robovm.com/}, letzter Zugriff: 15.02.2016
 
 \bibitem[Salen \& Zimmerman(2004)]{salen_zimmerman}
-[Salen \& Zimmerman(2004)] Salen, Katie \& Zimmerman, Eric: 
+Salen \& Zimmerman (2004): Salen, Katie \& Zimmerman, Eric: 
 \glqq Unit 1: Core Concepts: Defining Games\grqq, 
 (Hrsg.): \emph{Rules of Play: Game Design Fundamentals}, The MIT Press 2004
 
 \bibitem[Schmidt(2015)]{java_9}
-[Schmidt(2015)] Schmidt, Julia: \emph{heise Developer - Java 9: Pläne für Release im Herbst 2016},
+Schmidt (2015): Schmidt, Julia: \emph{heise Developer - Java 9: Pläne für Release im Herbst 2016},
 \url{http://www.heise.de/developer/meldung/Java-9-Plaene-fuer-Release-im-Herbst-2016-2635526.html}, letzter Zugriff: 06.01.2016
 
 \bibitem[Skeet(2014)]{csharp_in_depth}
-[Skeet(2014)] Skeet, Jon (Hrsg.): 
+Skeet (2014): Skeet, Jon (Hrsg.): 
 \emph{C\# in Depth}, Manning 2014
 
+\bibitem[Smith(2013)]{android_sdk_requirements}
+Smith (2013): Smith, Sue \emph{Android SDK Requirements},
+\url{http://code.tutsplus.com/tutorials/android-sdk-requirements--mobile-20086}, letzter Zugriff: 24.11.2015
+
 \bibitem[Sparrow(2015)]{sparrow}
-[Sparrow(2015)] Sparrow(2015): \emph{Sparrow - The Open Source Game Engine for iOS},
+Sparrow (2015): \emph{Sparrow - The Open Source Game Engine for iOS},
 \url{http://gamua.com/sparrow/}, letzter Zugriff: 28.12.2015
 
 \bibitem[SpriteKit(2015)]{about_spritekit}
-[SpriteKit(2015) SpriteKit(2015): \emph{iOS Developer Library - About SpriteKit},
+SpriteKit (2015): \emph{iOS Developer Library - About SpriteKit},
 \url{https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Introduction/Introduction.html}, letzter Zugriff: 28.12.2015
 
 \bibitem[Statista(2015)]{apps_in_stores}
-[Statista(2015)] Statista(2015): \emph{Anzahl der angebotenen Apps in den Top App-Stores im Mai 2015. In Statista - Das Statistik-Portal.},
+Statista (2015): \emph{Anzahl der angebotenen Apps in den Top App-Stores im Mai 2015. In Statista - Das Statistik-Portal.},
 \url{http://de.statista.com/statistik/daten/studie/208599/umfrage/anzahl-der-apps-in-den-top-app-stores/}, letzter Zugriff: 14.12.2015
 
-\bibitem[Sue Smith(2013)]{android_sdk_requirements}
-[Sue Smith(2013)] Sue Smith(2013): \emph{Android SDK Requirements},
-\url{http://code.tutsplus.com/tutorials/android-sdk-requirements--mobile-20086}, letzter Zugriff: 24.11.2015
-
 \bibitem[t3n(2015)]{t3n_xcode7}
-[t3n(2015)] t3n(2015): \emph{Xcode 7: Apps auch ohne Entwickler-Account auf dem iPhone testen},
+t3n (2015): \emph{Xcode 7: Apps auch ohne Entwickler-Account auf dem iPhone testen},
 \url{http://t3n.de/news/xcode-7-apps-ohne-615214/}, letzter Zugriff: 28.12.2015
 
 \bibitem[techopedia(2015)]{cross_plattform_explanation}
-[techopedia(2015)] techopedia(2015): \emph{Cross-Platform Development},
+techopedia (2015): \emph{Cross-Platform Development},
 \url{https://www.techopedia.com/definition/30026/cross-platform-development}, letzter Zugriff: 21.12.2015
 
 \bibitem[the iphone wiki(2015)]{ios_codenames}
-[the iphone wiki(2015)] the iphone wiki(2015): \emph{iOS Firmwares},
+the iphone wiki (2015): \emph{iOS Firmwares},
 \url{https://www.theiphonewiki.com/wiki/Firmware}, letzter Zugriff: 24.11.2015
 
 \bibitem[Unify Community Wiki(2014)]{unity_unityscript_vs_javascript}
-[Unify Community Wiki(2014)] Unify Community Wiki(2014): \emph{Unify Community Wiki - UnityScript versus JavaScript},
+Unify Community Wiki (2014): \emph{Unify Community Wiki - UnityScript versus JavaScript},
 \url{http://wiki.unity3d.com/index.php/UnityScript_versus_JavaScript}, letzter Zugriff: 05.01.2016
 
 \bibitem[Unity3D(2014)d]{unity_languages}
-[Unity3D(2014)d] Unity3D(2014)d: \emph{Unity3D - Documentation, Unity scripting languages and you},
+Unity3D (2014)d: \emph{Unity3D - Documentation, Unity scripting languages and you},
 \url{http://blogs.unity3d.com/2014/09/03/documentation-unity-scripting-languages-and-you/}, letzter Zugriff: 05.01.2016
 
 \bibitem[Unity3D(2015)a]{unity_public_relations}
-[Unity3D(2015)a] Unity3D(2015)a: \emph{Unity3D - Public Relations},
+Unity3D (2015)a: \emph{Unity3D - Public Relations},
 \url{https://unity3d.com/public-relations}, letzter Zugriff: 29.12.2015
 
 \bibitem[Unity3D(2015)b]{unity_managed_plugins}
-[Unity3D(2015)b] Unity3D(2015)b: \emph{Unity3D Documentation - Managed Plugins},
+Unity3D (2015)b: \emph{Unity3D Documentation - Managed Plugins},
 \url{http://docs.unity3d.com/Manual/UsingDLL.html}, letzter Zugriff: 05.01.2016
 
 \bibitem[Unity3D(2015)c]{unity_products}
-[Unity3D(2015)c] Unity3D(2015)c: \emph{Unity3D - Get Unity},
+Unity3D (2015)c: \emph{Unity3D - Get Unity},
 \url{http://unity3d.com/get-unity}, letzter Zugriff: 05.01.2016
 
 \bibitem[Unity3D(2015)d]{unity_docs}
-[Unity3D(2015)d] Unity3D(2015)d: \emph{Unity3D - Scripting API},
+Unity3D (2015)d: \emph{Unity3D - Scripting API},
 \url{http://docs.unity3d.com/ScriptReference/index.html}, letzter Zugriff: 10.01.2016
 
 \bibitem[Unity3D(2016)e]{unity_code_editor}
-[Unity3D(2016)e] Unity3D(2016)e: \emph{Unity3D - Tutorials: Scripting},
+Unity3D (2016)e: \emph{Unity3D - Tutorials: Scripting},
 \url{https://unity3d.com/learn/tutorials/topics/scripting}, letzter Zugriff: 10.02.2016
 
 \bibitem[Vehse(2014)]{cross_plattform_development_vehse} 
-[Vehse(2014)] Vehse, Benjamin:
+Vehse (2014): Vehse, Benjamin:
 \glqq Plattformabhängige und –unabhängige
 Entwicklung mobiler Anwendungen am
 Beispiel von Geo-Wikipedia-App\grqq, 
 \emph{Bachelor-Thesis}, 2014
 
 \bibitem[Visual Studio(2016)]{visual_studio}
-[Visual Studio(2016)] Visual Studio(2016): \emph{Visual Studio - Tools für alle Entwickler und alle Apps},
+Visual Studio (2016): \emph{Visual Studio - Tools für alle Entwickler und alle Apps},
 \url{https://www.visualstudio.com/de-de/dn469161}, letzter Zugriff: 15.02.2016
 
+\bibitem[Whitcomb Riley(1849–1916)]{ducktest}
+Whitcomb Riley (1849–1916): Whitcomb Riley, James \emph{Ententest - Begriffsentstehung},
+\url{https://de.wikipedia.org/wiki/Ententest}, letzter Zugriff: 05.01.2016
+
 \bibitem[Wikipedia - Apple iOS(2015)]{apple_ios}
-[Wikipedia - Apple iOS(2015)] Wikipedia - Apple iOS(2015): \emph{Apple iOS},
+Wikipedia - Apple iOS (2015): \emph{Apple iOS},
 \url{https://de.wikipedia.org/wiki/Apple_iOS}, letzter Zugriff: 24.11.2015
 
 \bibitem[Wikipedia - Flappy Bird(2015)]{flappy_bird}
-[Wikipedia - Flappy Bird(2015)] Wikipedia - Flappy Bird(2015): \emph{Flappy Bird},
+Wikipedia - Flappy Bird (2015): \emph{Flappy Bird},
 \url{https://de.wikipedia.org/wiki/Flappy_Bird}, letzter Zugriff: 28.01.2016
 
 \bibitem[Wikipedia - List of game engines(2016)]{list_of_game_engines}
-[Wikipedia - List of game engines(2016)] Wikipedia - List of game engines(2016): \emph{List of game engines(2016)},
+Wikipedia - List of game engines (2016): \emph{List of game engines(2016)},
 \url{https://en.wikipedia.org/wiki/List_of_game_engines}, letzter Zugriff: 23.02.2016
 
 \bibitem[Wikipedia - Liste von Android-Versionen(2015)]{android_version_releases}
-[Wikipedia - Liste von Android-Versionen(2015)] Wikipedia - Liste von Android-Versionen(2015): \emph{Übersicht von allen Android Versionen mit Veröffentlichungsdatum},
+Wikipedia - Liste von Android-Versionen (2015): \emph{Übersicht von allen Android Versionen mit Veröffentlichungsdatum},
 \url{https://de.wikipedia.org/wiki/Liste_von_Android-Versionen}, letzter Zugriff: 24.11.2015
 
 \bibitem[Wikipedia - Windows 10(2015)]{WP10_version_releases}
-[Wikipedia - Windows 10(2015)] Wikipedia - Windows 10(2015): \emph{Microsoft Windows 10 Mobile},
+Wikipedia - Windows 10 (2015): \emph{Microsoft Windows 10 Mobile},
 \url{https://de.wikipedia.org/wiki/Microsoft_Windows_10_Mobile}, letzter Zugriff: 28.12.2015
 
 \bibitem[Wikipedia - Windows Phone 7(2015)]{WP7_version_releases}
-[Wikipedia - Windows Phone 7(2015)] Wikipedia - Windows Phone 7(2015): \emph{Microsoft Windows Phone 7},
+Wikipedia - Windows Phone 7 (2015): \emph{Microsoft Windows Phone 7},
 \url{https://de.wikipedia.org/wiki/Microsoft_Windows_Phone_7}, letzter Zugriff: 28.12.2015
 
 \bibitem[Wikipedia - Windows Phone 8(2015)]{WP8_version_releases}
-[Wikipedia - Windows Phone 8(2015)] Wikipedia - Windows Phone 8(2015): \emph{Microsoft Windows Phone 8},
+Wikipedia - Windows Phone 8 (2015): \emph{Microsoft Windows Phone 8},
 \url{https://de.wikipedia.org/wiki/Microsoft_Windows_Phone_8}, letzter Zugriff: 28.12.2015
 
 \bibitem[XMLVM(2011)]{XMLVM_Toolchain}
-[XMLVM(2011)] XMLVM(2011): \emph{XMLVM - Overview: Toolchain},
+XMLVM (2011): \emph{XMLVM - Overview: Toolchain},
 \url{http://xmlvm.org/toolchain/}, letzter Zugriff: 25.12.2015
 
 \bibitem[XNA(2015)]{xna}
-[XNA(2015)] XNA(2015): \emph{Microsoft Developer Network - XNA Game Studio 4.0},
+XNA (2015): \emph{Microsoft Developer Network - XNA Game Studio 4.0},
 \url{https://msdn.microsoft.com/de-de/library/bb200104(v=xnagamestudio.40).aspx}, letzter Zugriff: 28.12.2015
 
 \bibitem[YoYo Games(2013)]{WP8_requirements}
-[YoYo Games(2013)] YoYo Games(2013): \emph{Requirements for Windows Phone development},
+YoYo Games (2013): \emph{Requirements for Windows Phone development},
 \url{http://help.yoyogames.com/entries/23355146-Requirements-for-Windows-Phone-development}, letzter Zugriff: 28.12.2015
 
+\bibitem[Zamora(2015)]{windows_store_trends_2015}
+Zamora (2015): Zamora, Bernardo: \emph{Blogs.Windows - Windows Store Trends - September 2015},
+\url{https://blogs.windows.com/buildingapps/2015/10/12/windows-store-trends-september-2015/}, letzter Zugriff: 15.12.2015
 
 \end{thebibliography}
 %----------------------------- EIGENSTÄNDIGKEITSERKLÄRUNG-----------------
